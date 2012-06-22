@@ -1,0 +1,62 @@
+Release notes
+=============
+
+Documentation
+=============
+See http://dybdahl.dk/dxgettext/ for documentation.
+
+
+C++ Builder
+===========
+C++ Builder users should read the CPPBUILDER.txt file.
+
+
+If you are converting from Delphi Integrated Translation Environment
+====================================================================
+Use the ixtopo and dfntopo to convert Delphi ITE XML files and
+DFN files to .po files.
+
+
+Delphi 5 users
+==============
+There is a special version of gnugettext.pas for Delphi 5 users
+located in the delphi5 subdirectory.
+
+
+Freepascal users
+================
+Have a look in the freepascal subdirectory.
+
+
+How to best see the example
+===========================
+Before you can run the example, you must compile the .po files
+in the locale subdirectory. Just click on the with the right mouse
+button and choose "Compile to mo file".
+
+
+Windows 2003 incompatibility with some Delphi versions
+======================================================
+There is a bug in some Delphi versions related to Windows 20003
+and the SysUtils.GetEnvironmentVariable() function call, which
+is used by dxgettext. In order to fix it, open SysUtils.pas
+(delphi\Source\Rtl\Sys) and replace the GetEnvironmentVariable
+function with the following:
+
+function GetEnvironmentVariable(const Name: string): string;
+var
+Len: integer;
+W : String;
+begin
+Result := '';
+SetLength(W,1);
+Len := GetEnvironmentVariable(PChar(Name), PChar(W), 1);
+if Len > 0 then
+begin
+SetLength(Result, Len - 1);
+GetEnvironmentVariable(PChar(Name), PChar(Result), Len);
+end;
+end;
+
+This was found in a newsgroup somewhere, but the original author
+cannot be found any more and therefore cannot be credited.
