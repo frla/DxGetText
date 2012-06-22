@@ -1,0 +1,39 @@
+Source code -> PO files
+=======================
+This happens using dxgettext and ggdxgettext with normal use.
+
+PAS files are scanned as usually.
+Win32 DFM files are scanned as usually.
+.net DFM files are not scanned.
+
+
+
+Source code -> generate translation code
+========================================
+This happens when asked by dxgettext or ggdxgettext using a special option.
+
+PAS files that contain a TWinForm.InitializeComponent procedure are scanned.
+DPR files are not scanned.
+The InitializeComponent procedure is copied to another procedure
+named TWinForm.TranslateComponent, but all lines that don't contain
+a literal string are removed. Literal strings are encapsulated in
+dgettext(domain,...). domain is a parameter that defaults to 'default'.
+
+DFM files only exist for VCL apps. They are scanned, and the output
+is put into a similar TranslateComponent procedure.
+
+It is obvious to use {$REGION} for the part that is generated, but an early
+version of this software could create a separate file instead that just contains
+the code like:
+
+Button1.Caption:=_('&OK');
+
+Then the user would only need to modify TWinForm.Create to contain:
+
+{$I WinFormTranslator.pas}
+
+It is up to the programmer to remove the lines in WinFormTranslator, that
+should not be translated. By removing the lines, they won't be scanned either.
+A future version could make it possible to rescan without having to remove the
+lines again, by looking at which lines where commented out by the programmer -
+and if a line was commented out, it will also be commented out in the new version.

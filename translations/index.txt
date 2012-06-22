@@ -1,3 +1,0 @@
-The templates subdirectory contains templates for many things
-that need to be translated. Each language then has a directory
-containing the actual translations.
