@@ -226,19 +226,14 @@ begin
   Result := Pointer(L and IMAGE_OFFSET_STRIP_HIGH);
 end;
 
-{ This function converts a pointer to a wide char string into a pascal ansistring }
+{ This function converts a pointer to a wide char string into a pascal string }
 
-function WideCharToAnsiStr(WStr: PWChar; Len: Integer): ansistring;
+function WideCharToStr(WStr: PWChar; Len: Integer): string;
 begin
   if Len = 0 then Len := -1;
   Len := WideCharToMultiByte(CP_ACP, 0, WStr, Len, nil, 0, nil, nil);
   SetLength(Result, Len);
-  WideCharToMultiByte(CP_ACP, 0, WStr, Len, PAnsiChar(Result), Len, nil, nil);
-end;
-
-function WideCharToStr(WStr: PWChar; Len: Integer): string;
-begin
-  Result:=copy(WStr,1,len);  { TODO : Check if this works! }
+  WideCharToMultiByte(CP_ACP, 0, WStr, Len, PChar(Result), Len, nil, nil);
 end;
 
 { Exceptions }
@@ -587,7 +582,7 @@ begin
           begin
             Inc(P);
             ID := ((FDirEntry.Name - 1) shl 4) + Cnt;
-            Add(Format('%d,  "%s"', [ID, WideCharToAnsiStr(P, Len)]));
+            Add(Format('%d,  "%s"', [ID, WideCharToStr(P, Len)]));
             Inc(P, Len);
           end;
           Inc(Cnt);

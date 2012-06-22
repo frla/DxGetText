@@ -7,10 +7,8 @@ uses
   SysUtils,
   Windows,
   uOutput in 'uOutput.pas' {FormOutput},
-  appconsts in '..\..\dxgettext\appconsts.pas',
-  assembleengine in '..\assemble\assembleengine.pas',
-  consoleoutput in '..\..\dxgettext\consoleoutput.pas',
-  ConsoleAppHandler in '..\..\dxgettext\ConsoleAppHandler.pas';
+  ConsoleApp in 'ConsoleApp.pas',
+  appconsts in '..\..\dxgettext\appconsts.pas';
 
 {$R *.res}
 

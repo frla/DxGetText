@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, XPMan, ExtCtrls, StrUtils;
+  Dialogs, StdCtrls, XPMan, ExtCtrls;
 
 type
   TFormRun = class(TForm)
@@ -17,20 +17,12 @@ type
     CheckBoxCreateBackup: TCheckBox;
     CheckBoxSaveSettings: TCheckBox;
     CheckBoxNonAscii: TCheckBox;
-    cb_CreateRemovedAndNewFile: TCheckBox;
-    cb_PreserveStateFuzzy: TCheckBox;
     procedure ButtonGoClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ButtonChooseTranslationClick(Sender: TObject);
     procedure ButtonChooseTemplateClick(Sender: TObject);
   private
-    function ExecuteConsoleApplication(const xWorkingDirectory,
-                                             xApplicationName,
-                                             xParameters: String): Boolean;
-    function GetRemovedAndNewFileName(const xFileNameTimeStamp: TDateTime;
-                                      const xTranslationFile,
-                                            xSuffix: String): TFileName;
     { Private declarations }
   public
     { Public declarations }
@@ -42,246 +34,98 @@ var
 implementation
 
 uses
-  ConsoleAppHandler, gnugettext, shellapi, IniFiles, appconsts,
-  msgmergedxengine;
+  ConsoleApp, gnugettext, shellapi, IniFiles, appconsts, msgmergedxengine;
 
 {$R *.dfm}
 
-function ShellEscape(s:String): String;
+function shellescape (s:string):string;
 var
-  i: Integer;
+  i:integer;
 begin
   Result:='';
-
-  for i := 1 to length(s) do
-  begin
-    if s[i] = '"' then
-      Result := Result + '\"'
+  for i:=1 to length(s) do begin
+    if s[i]='"' then
+      Result:=Result+'\"'
     else
-    if s[i] = '\' then
-      Result := Result + '\\'
+    if s[i]='\' then
+      Result:=Result+'\\'
     else
-      Result := Result + s[i];
-  end;
-end;
-
-function TFormRun.ExecuteConsoleApplication(const xWorkingDirectory,
-                                                  xApplicationName,
-                                                  xParameters: String): Boolean;
-var
-  lCurrentDirectory: TFileName;
-  lOutput, lCommand: String;
-  lAppOutput: TStringList;
-  lRes: DWORD;
-begin
-  Result := False;
-
-  GetDir(0, lCurrentDirectory);
-  try
-    ChDir(xWorkingDirectory);
-
-    lCommand := xApplicationName;
-    if not (xApplicationName[Length(xApplicationName)] = ' ') or
-           (xParameters[1] = ' ') then
-    begin
-      lCommand := lCommand + ' ';
-    end;
-    lCommand := lCommand + shellescape(xParameters);
-
-    lAppOutput := TStringList.Create;
-    try
-      lRes := ExecConsoleApp( 'bash.exe', '-c "' + lCommand + '"',
-                              lAppOutput, nil);
-
-      lOutput := Trim(lAppOutput.Text);
-
-      if ((lOutput <> '') and
-          not AnsiStartsText('Execution succes', lOutput)) then
-      begin
-        ShowMessage (lOutput);
-        ShowMessage (Format(_('Because there was unexpected output from %s, ' +
-                              'no merging has been done.'), [xApplicationName]));
-        exit;
-      end;
-
-      if (lRes <> 0) then
-      begin
-        raise Exception.Create(Format(_('%s failed with exit code %s.'),
-                                      [xApplicationName, IntToStr(lRes)]));
-      end;
-    finally
-      FreeAndNil(lAppOutput);
-    end;
-
-    Result := True;
-  finally
-    ChDir(lCurrentDirectory);
-  end;
-end;
-
-function TFormRun.GetRemovedAndNewFileName(const xFileNameTimeStamp: TDateTime;
-                                           const xTranslationFile, xSuffix: String): TFileName;
-var
-  i: Integer;
-  lTempFileName, lFileNumber: TFileName;
-const
-  cMaxCnt = 9999;
-  cFileExtension = '.po';
-begin
-  Result := '';
-
-  lTempFileName := ExtractFilePath(xTranslationFile)+
-                   FormatDateTime('yyyy-mm-dd hhnn ', xFileNameTimeStamp) +
-                   Trim(ChangeFileExt(ExtractFileName(xTranslationFile), '')) + ' ' +
-                   Trim(xSuffix);
-
-  //*** if no file with this name exists return the name, else search for a
-  //    file with a file number offset
-  if not FileExists(lTempFileName +'.po') then
-  begin
-    Result := lTempFileName + cFileExtension;
-  end
-  else
-  begin
-    // Nach alten Backup-Dateien suchen:
-    for i := 1 to cMaxCNT do
-    begin
-      lFileNumber := Format('%4.4d', [i]);
-
-      Result := lTempFileName + ' ' + lFileNumber + cFileExtension;
-      if not FileExists(Result) then
-      begin
-        Break;
-      end;
-    end;
+      Result:=Result+s[i];
   end;
 end;
 
 procedure TFormRun.ButtonGoClick(Sender: TObject);
 var
-  lTranslation, lTranslationBackup, lTemplate, lTempFileName,
-  lRemovedAndNewFileName: String;
-  lFileNameTimeStamp: TDateTime;
-  ini: TIniFile;
-  lMsgMergeDxEngine: TMsgMergeDxEngine;
+  res:DWORD;
+  AppOutput:TStringList;
+  output:string;
+  translation,translationbackup:string;
+  template:string;
+  tempfilename:string;
+  ini:TIniFile;
+  cmdline:string;
+  msgmergedxengine:TMsgMergeDxEngine;
 begin
-  screen.cursor := crHourglass;
+  screen.cursor:=crHourglass;
   try
-    lTranslation := ExpandFileName(EditTranslation.Text);
-    if not fileexists(lTranslation) then
+    translation:=ExpandFileName(EditTranslation.Text);
+    if not fileexists(translation) then
       raise Exception.Create (_('The specified translation file does not exist.'));
-
-    lTemplate := ExpandFileName(EditTemplate.Text);
-    if not fileexists(lTemplate) then
+    template:=ExpandFileName(EditTemplate.Text);
+    if not fileexists(template) then
       raise Exception.Create (_('The specified template file does not exist.'));
-
-    lTempFileName := ChangeFileExt(lTranslation, '.pox');
-
-    if CheckBoxNonAscii.Checked then
-    begin
+    tempfilename:=ChangeFileExt(translation,'.pox');
+    if CheckBoxNonAscii.Checked then begin
       // Non-ASCII support required. Use internal function.
-      lMsgMergeDxEngine := TMsgMergeDxEngine.Create;
+      msgmergedxengine:=TMsgMergeDxEngine.Create;
       try
-        lMsgMergeDxEngine.translationfilename  := lTranslation;
-        lMsgMergeDxEngine.templatefilename     := lTemplate;
-        lMsgMergeDxEngine.outputfilename       := lTempFileName;
-        lMsgMergeDxEngine.PreserveStateFuzzy   := cb_PreserveStateFuzzy.Checked;
-        lMsgMergeDxEngine.Execute;
+        msgmergedxengine.translationfilename:=translation;
+        msgmergedxengine.templatefilename:=template;
+        msgmergedxengine.outputfilename:=tempfilename;
+        msgmergedxengine.Execute;
       finally
-        FreeAndNil (lMsgMergeDxEngine);
+        FreeAndNil (msgmergedxengine);
       end;
-    end
-    else
-    begin
+    end else begin
       // ASCII only. Use external msgmerge.exe
-      if not ExecuteConsoleApplication( ExtractFilePath(ParamStr(0)),
-                                        'msgmerge.exe',
-                                        '--no-fuzzy-matching ' +
-                                        '-q "' +
-                                        lTranslation + '" "' +
-                                        lTemplate + '" ' +
-                                        '-o "' + lTempFileName + '" 2>&1') then
-      begin
-        Exit;
-      end;
-    end;
-
-    lTranslationBackup := changefileext(lTranslation, '.~po');
-
-    if Fileexists (lTranslationBackup) then
-    begin
-      Deletefile (lTranslationBackup);
-    end;
-
-    if cb_CreateRemovedAndNewFile.Checked then
-    begin
-      lFileNameTimeStamp := Now;
-
-      //*** Create a file with the removed Strings
-      lRemovedAndNewFileName := GetRemovedAndNewFileName(lFileNameTimeStamp,
-                                                         lTranslation, 'removed');
-      if not ExecuteConsoleApplication( ExtractFilePath(ParamStr(0)),
-                                        'msgremove.exe',
-                                        ' "' + lTranslation + '" ' +
-                                        '-i "' + lTempFileName + '" ' +
-                                        '-o "' + lRemovedAndNewFileName + '"') then
-      begin
-        Exit;
-      end;
-
-      //*** Create a file with the new Strings
-      lRemovedAndNewFileName := GetRemovedAndNewFileName(lFileNameTimeStamp,
-                                                         lTranslation, 'new');
-      if not ExecuteConsoleApplication( ExtractFilePath(ParamStr(0)),
-                                        'msgremove.exe',
-                                        ' "' + lTempFileName + '" ' +
-                                        '-i "' + lTranslation + '" ' +
-                                        '-o "' + lRemovedAndNewFileName + '"') then
-      begin
-        Exit;
-      end;
-    end;
-
-    if not RenameFile(lTranslation, lTranslationBackup) then
-    begin
-      raise Exception.Create (Format(_('Cannot rename %s to %s'),
-                                     [lTranslation, lTranslationBackup]));
-    end;
-
-    if not RenameFile(lTempFileName, lTranslation) then
-    begin
-      raise Exception.Create (Format(_('Cannot rename %s to %s'),
-                                     [lTempFileName, lTranslation]));
-    end;
-
-    if fileexists(lTempFileName) then
-    begin
-      deletefile (lTempFileName);
-    end;
-
-    if not CheckBoxCreateBackup.Checked then
-    begin
-      deletefile (lTranslationBackup);
-    end;
-
-    if MessageDlg(_('The template was merged into the translation file.' + sLineBreak +
-                    'Do you want to open the translation file now?' + sLineBreak +
-                    '(This requires you to have a .po file editor installed)'),
-                  mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-    begin
-      ShellExecute (Application.Handle, 'open', PChar(lTranslation),
-                    nil, nil, SW_RESTORE);
-    end;
-
-    if CheckBoxSaveSettings.Checked then
-    begin
-      ini := TIniFile.Create(ChangeFileExt(lTranslation, '.ini'));
+      AppOutput:=TStringList.Create;
       try
-        ini.WriteString('ggmerge', 'template'            , lTemplate);
-        ini.WriteBool  ('ggmerge', 'createbackup'        , CheckBoxCreateBackup      .Checked);
-        ini.WriteBool  ('ggmerge', 'supportnonascii'     , CheckBoxNonAscii          .Checked);
-        ini.WriteBool  ('ggmerge', 'preserveStateFuzzy'  , cb_PreserveStateFuzzy     .Checked);
-        ini.WriteBool  ('ggmerge', 'createfilenewremoved', cb_CreateRemovedAndNewFile.Checked);
+        chdir (extractfilepath(paramstr(0)));
+        cmdline:='msgmerge.exe -q "'+shellescape(translation)+'" "'+shellescape(template)+'" -o "'+shellescape(tempfilename)+'" 2>&1';
+        res:=ExecConsoleApp('bash.exe','-c "'+shellescape(cmdline)+'"',AppOutput,nil);
+        output:=trim(AppOutput.Text);
+        if output<>'' then begin
+          ShowMessage (output);
+          ShowMessage (_('Because there was unexpected output from msgmerge.exe, no merging has been done.'));
+          exit;
+        end;
+        if res<>0 then
+          raise Exception.Create (Format(_('msgmerge.exe failed with exit code %s.'),[IntToStr(res)]));
+      finally
+        FreeAndNil (AppOutput);
+      end;
+    end;
+    translationbackup:=changefileext(translation,'.~po');
+    if Fileexists (translationbackup) then
+      Deletefile (translationbackup);
+    if not RenameFile(translation,translationbackup) then
+      raise Exception.Create (Format(_('Cannot rename %s to %s'),[translation,translationbackup]));
+    if not RenameFile(tempfilename,translation) then
+      raise Exception.Create (Format(_('Cannot rename %s to %s'),[tempfilename,translation]));
+    if fileexists(tempfilename) then
+      deletefile (tempfilename);
+    if not CheckBoxCreateBackup.Checked then
+      deletefile (translationbackup);
+    if MessageDlg(_('The template was merged into the translation file.'+sLineBreak+
+                    'Do you want to open the translation file now?'+sLineBreak+
+                    '(This requires you to have a .po file editor installed)'),mtConfirmation,[mbYes,mbNo],0)=mrYes then
+      ShellExecute (Application.Handle,'open',PChar(translation),nil,nil,SW_RESTORE);
+    if CheckBoxSaveSettings.Checked then begin
+      ini:=TIniFile.Create (ChangeFileExt(translation,'.ini'));
+      try
+        ini.WriteString('ggmerge','template',template);
+        ini.WriteBool('ggmerge','createbackup',CheckBoxCreateBackup.Checked);
+        ini.WriteBool('ggmerge','supportnonascii',CheckBoxNonAscii.Checked);
       finally
         FreeAndNil (ini);
       end;
@@ -294,35 +138,26 @@ end;
 
 procedure TFormRun.FormCreate(Sender: TObject);
 var
-  lIni: TIniFile;
-  lIniFileName: String;
+  ini:TIniFile;
+  inifilename:string;
 begin
   if paramcount=1 then
-  begin
-    EditTranslation.Text := ExpandFileName(paramstr(1));
-  end;
-
+    EditTranslation.Text:=ExpandFileName(paramstr(1));
   TranslateComponent (self);
   FormResize (self);
-
-  lIniFileName := ChangeFileExt(EditTranslation.Text, '.ini');
-
-  CheckBoxSaveSettings.Checked := FileExists(lIniFileName);
-
-  if CheckBoxSaveSettings.Checked then
-  begin
-    lIni := TIniFile.Create(lIniFileName);
+  inifilename:=ChangeFileExt(EditTranslation.Text,'.ini');
+  CheckBoxSaveSettings.Checked:=FileExists(inifilename);
+  if CheckBoxSaveSettings.Checked then begin
+    ini:=TIniFile.Create (inifilename);
     try
-      EditTemplate              .Text    := lIni.ReadString('ggmerge', 'template'            , '');
-      CheckBoxCreateBackup      .Checked := lIni.ReadBool  ('ggmerge', 'createbackup'        , CheckBoxCreateBackup      .Checked);
-      CheckBoxNonAscii          .Checked := lIni.ReadBool  ('ggmerge', 'supportnonascii'     , CheckBoxNonAscii          .Checked);
-      cb_PreserveStateFuzzy     .Checked := lIni.ReadBool  ('ggmerge', 'preserveStateFuzzy'  , cb_PreserveStateFuzzy     .Checked);
-      cb_CreateRemovedAndNewFile.Checked := lIni.ReadBool  ('ggmerge', 'createfilenewremoved', cb_CreateRemovedAndNewFile.Checked);
+      EditTemplate.Text:=ini.ReadString('ggmerge','template','');
+      CheckBoxCreateBackup.Checked:=ini.ReadBool('ggmerge','createbackup',CheckBoxCreateBackup.Checked);
+      CheckBoxNonAscii.Checked:=ini.ReadBool('ggmerge','supportnonascii',CheckBoxNonAscii.Checked);
     finally
-      FreeAndNil(lIni);
+      FreeAndNil (ini);
     end;
   end;
-  Caption := Caption + ' (ggmerge ' + Version + ')';
+  Caption:=Caption+' (ggmerge '+Version+')';
 end;
 
 procedure TFormRun.FormResize(Sender: TObject);
@@ -332,39 +167,35 @@ end;
 
 procedure TFormRun.ButtonChooseTranslationClick(Sender: TObject);
 var
-  lod: TOpenDialog;
+  od:TOpenDialog;
 begin
-  lod := TOpenDialog.Create(self);
+  od:=TOpenDialog.Create(self);
   try
-    lod.FileName := EditTranslation.Text;
-    lod.DefaultExt := 'po';
-    lod.Filter := _('Translation files (*.po)|*.po|All files (*.*)|*.*');
-    lod.Options := [ofHideReadOnly, ofNoChangeDir, ofPathMustExist,
-                    ofFileMustExist, ofNoReadOnlyReturn, ofEnableSizing];
-    if lod.Execute then
-      EditTranslation.Text := lod.FileName;
+    od.FileName:=EditTranslation.Text;
+    od.DefaultExt:='po';
+    od.Filter:=_('Translation files (*.po)|*.po|All files (*.*)|*.*');
+    od.Options:=[ofHideReadOnly,ofNoChangeDir,ofPathMustExist,ofFileMustExist,ofNoReadOnlyReturn,ofEnableSizing];
+    if od.Execute then
+      EditTranslation.Text:=od.FileName;
   finally
-    FreeAndNil (lod);
+    FreeAndNil (od);
   end;
 end;
 
 procedure TFormRun.ButtonChooseTemplateClick(Sender: TObject);
 var
-  lod: TOpenDialog;
+  od:TOpenDialog;
 begin
-  lod := TOpenDialog.Create(self);
+  od:=TOpenDialog.Create(self);
   try
-    lod.FileName := EditTemplate.Text;
-    lod.DefaultExt := 'po';
-    lod.Filter := _('Template files (*.po;*.pot)|*.po;*.pot|All files (*.*)|*.*');
-    lod.Options := [ofHideReadOnly, ofNoChangeDir, ofPathMustExist,
-                    ofFileMustExist, ofNoReadOnlyReturn, ofEnableSizing];
-    if lod.Execute then
-    begin
-      EditTemplate.Text := lod.FileName;
-    end;
+    od.FileName:=EditTemplate.Text;
+    od.DefaultExt:='po';
+    od.Filter:=_('Template files (*.po;*.pot)|*.po;*.pot|All files (*.*)|*.*');
+    od.Options:=[ofHideReadOnly,ofNoChangeDir,ofPathMustExist,ofFileMustExist,ofNoReadOnlyReturn,ofEnableSizing];
+    if od.Execute then
+      EditTemplate.Text:=od.FileName;
   finally
-    FreeAndNil (lod);
+    FreeAndNil (od);
   end;
 end;
 

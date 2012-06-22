@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2005-04-19 10:14\n"
+"POT-Creation-Date: 2005-03-21 17:11\n"
 "PO-Revision-Date: 2003-03-02 18:54\n"
 "Last-Translator: Christophe Thiaux <vl70m@free.fr>\n"
 "MIME-Version: 1.0\n"
@@ -122,8 +122,8 @@ msgstr "すべて"
 msgid "Actions"
 msgstr "アクション"
 
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
 #: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:145 
 #: Win32/vcl/CustomizeDlg.dfm:144
 msgid ""
@@ -155,6 +155,13 @@ msgstr "アクション(&C):"
 #: Win32/vcl/CustomizeDlg.dfm:215
 msgid "Description"
 msgstr "説明"
+
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:229 
+#: Win32/vcl/CustomizeDlg.dfm:228
+msgid "HintLbl"
+msgstr ""
 
 #. CustomizeFrm..Tabs..OptionsTab..Caption
 #. CustomizeFrm..ActionList1..ResetUsageDataActn..Category
@@ -2666,13 +2673,13 @@ msgstr "不明"
 msgid "FormatEdit"
 msgstr "FormatEdit"
 
-#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:203 
 msgid ""
 "Starting value for date ranges, Intial value for single valued dimensions"
 msgstr ""
 
-#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:216 
 msgid ""
 "Fieldname (for a summary, the original field used to calculate the summary)"
@@ -2754,7 +2761,7 @@ msgstr "最大値"
 msgid "Current"
 msgstr "現在"
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:423 
 #, fuzzy
 msgid "Limit on the number of dimensions which can be loaded at one time"
@@ -2765,7 +2772,7 @@ msgstr "一度に処理できる集計の最大数"
 msgid "Limit on the number of summaries which can be loaded at one time"
 msgstr "一度に処理できる集計の最大数"
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:445 
 #, fuzzy
 msgid "Limit on the number of storage cells which can be loaded at one time"
@@ -3351,7 +3358,7 @@ msgstr "インデックス ファイル"
 msgid "&Add..."
 msgstr "追加(&A)..."
 
-#. IndexFiles..OpenDialog....Filter
+#. IndexFiles..OpenDialog....OnClick
 #: Win32/Property_Editors/Ixedit.dfm:91 
 msgid ""
 "dBASE Multiple Index (*.MDX)|*.mdx|dBase Index (*.NDX)|*.ndx|FoxPro Index (*."
@@ -3385,8 +3392,8 @@ msgstr "読み込み(&L)..."
 msgid "&Save..."
 msgstr "保存(&S)..."
 
-#. PictureEditorDlg..OpenDialog....Filter
-#. PictureEditorDlg..SaveDialog....Filter
+#. PictureEditorDlg..OpenDialog....OnClick
+#. PictureEditorDlg..SaveDialog....Top
 #: Win32/Property_Editors/PicEdit.dfm:103 
 #: Win32/Property_Editors/PicEdit.dfm:111
 msgid ""
@@ -3443,8 +3450,8 @@ msgstr "エディタ(&C)..."
 msgid "TXT"
 msgstr ""
 
-#. StrEditDlg..OpenDialog....Filter
-#. StrEditDlg..SaveDialog....Filter
+#. StrEditDlg..OpenDialog....DefaultExt
+#. StrEditDlg..SaveDialog....HelpContext
 #: Win32/Property_Editors/StrEdit.dfm:71 
 #: Win32/Property_Editors/StrEdit.dfm:80
 msgid ""
@@ -18362,10 +18369,9 @@ msgstr ""
 #: IntraWeb/IWResourceStrings.pas:276 
 msgid ""
 "You have attempted to post or refresh data from a page that  depends on "
-"information that is no longer available to the server application.\n"
-"\n"
-"Your attempted changes will be ignored. You will now be resynced to the "
-"current place in the application."
+"information that is no longer available to the server application.Your "
+"attempted changes will be ignored. You will now be resynced to the current "
+"place in the application."
 msgstr ""
 
 #. Programmer's name for it: ResourceNotFound
@@ -18400,8 +18406,8 @@ msgstr ""
 #. Programmer's name for it: InvalidBrowser
 #: IntraWeb/IWResourceStrings.pas:282 
 msgid ""
-"Your browser was detected as %s, identifying itself as %s.\n"
-"One of the following browsers is required:\n"
+"Your browser was detected as %s, identifying itself as %s.One of the "
+"following browsers is required:"
 msgstr ""
 
 #. Programmer's name for it: MessageDialog
@@ -18799,8 +18805,8 @@ msgstr "許されていない Movie フォーマット"
 #. Programmer's name for it: LayoutMgrNeeded32
 #: IntraWeb/IWResourceStrings.pas:372 
 msgid ""
-"For HTML 3.2 a layout manager is required. Make sure that you have one\n"
-" associated to the form and this it's Able property is set to True"
+"For HTML 3.2 a layout manager is required. Make sure that you have one "
+"associated to the form and this it's Able property is set to True"
 msgstr ""
 
 #. Log Messages
@@ -19073,9 +19079,7 @@ msgstr "戻る(&P)"
 #. TimeEdit
 #. Programmer's name for it: InvalidTimeEditFormat
 #: IntraWeb/IWResourceStrings.pas:442 
-msgid ""
-"The value of %s is in an incorrect format.\n"
-"Please correct the value."
+msgid "The value of %s is in an incorrect format.Please correct the value."
 msgstr ""
 
 #. Programmer's name for it: MissingContainerOnFrame
@@ -21045,12 +21049,14 @@ msgstr "%0:s型から %1:s 型へのバリアント型変換はできません"
 msgid "Overflow while converting variant of type (%s) into type (%s)"
 msgstr "%0:s 型から %1:s 型へのバリアント型変換でのオーバーフローエラー"
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10911 
 msgid ""
 "This module was compiled with a trial version of Kylix.\n"
 "The trial period has expired.\n"
 msgstr ""
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10916 
 msgid ""
 "This module was compiled with a trial version of Delphi.\n"

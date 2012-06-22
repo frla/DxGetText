@@ -236,7 +236,6 @@ const
 implementation
 
 
-
 procedure GetExecutableInfo( const Filename: String; var BinaryType, Subsystem: DWORD);
 var
   f: File;
@@ -319,8 +318,8 @@ of function
 }
 
 const
-  CR = $0D;
-  LF = $0A;
+  CR = #$0D;
+  LF = #$0A;
   TerminationWaitTime = 5000;
   ExeExt = '.EXE';
   ComExt = '.COM'; {the original dot com}
@@ -333,20 +332,16 @@ var
   TempHandle,
   WriteHandle,
   ReadHandle: THandle;
-  ReadBuf: array[0..2 (* $100*)] of AnsiChar;
+  ReadBuf: array[0..2 (* $100*)] of Char;
   BytesRead: Cardinal;
-  LineBuf: array[0..$100] of AnsiChar;
+  LineBuf: array[0..$100] of Char;
   LineBufPtr: Integer;
   Newline: Boolean;
   i: Integer;
   BinType, SubSyst: DWORD;
 
   Ext, CommandLine: String;
-  {$ifdef UNICODE}  // >=D2009
-  AppNameBuf: array[0..MAX_PATH] of WideChar;
-  {$else}
   AppNameBuf: array[0..MAX_PATH] of Char;
-  {$endif}
   ExeName: PChar;
 
 {$IFDEF DEBUG}
@@ -357,16 +352,13 @@ var
 {$ENDIF}
 
 procedure OutputLine;
-var
-  LineBufUnicode:string;
 begin
   LineBuf[LineBufPtr]:= #0;
-  LineBufUnicode:=string(LineBuf);
   with AppOutput do
-    if Newline then
-      Add(LineBufUnicode)
-    else
-      Strings[Count-1]:= LineBufUnicode; {should never happen with count = 0}
+  if Newline then
+    Add(LineBuf)
+  else
+    Strings[Count-1]:= LineBuf; {should never happen with count = 0}
   Newline:= false;
   LineBufPtr:= 0;
   if Assigned(OnNewLine) then
@@ -384,7 +376,7 @@ begin
   end else
   if (Ext = '') or (Ext = ExeExt) or (Ext = ComExt) then  {locate and test the application}
   begin
-    if SearchPath(nil, PChar(ApplicationName), ExeExt, High(AppNameBuf)-Low(AppNameBuf), AppNameBuf, ExeName) = 0 then
+    if SearchPath(nil, PChar(ApplicationName), ExeExt, SizeOf(AppNameBuf), AppNameBuf, ExeName) = 0 then
       raise EInOutError.CreateFmt('Could not find file %s', [ApplicationName]);
     if Ext = ComExt then
       BinType:= SCS_DOS_BINARY
@@ -514,11 +506,11 @@ begin
         Inc(ReadCount);
 {$ENDIF}
         for  i:= 0 to BytesRead - 1 do begin
-          if (ord(ReadBuf[i]) = ord(LF)) then begin
+          if (ReadBuf[i] = LF) then begin
             OutputLine;
             Newline:= true;
           end else
-          if (ord(ReadBuf[i]) = ord(CR)) then begin
+          if (ReadBuf[i] = CR) then begin
             OutputLine;
           end else begin
             LineBuf[LineBufPtr]:= ReadBuf[i];
@@ -553,12 +545,6 @@ begin
       if PerfFreq > 0 then
       begin
         QueryPerformanceCounter(EndExec);
-
-        if (Result <> 0) then
-          AppOutput.Add(Format('Execution failed! (error result: %d)',[Result]))
-        else
-          AppOutput.Add('Execution succes');
-
         AppOutput.Add(Format('Debug: (readcount = %d), ExecTime = %.3f ms',
           [ReadCount, ((EndExec - StartExec)*1000.0)/PerfFreq]))
       end else

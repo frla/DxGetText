@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2005-04-19 10:14\n"
+"POT-Creation-Date: 2005-03-21 17:11\n"
 "PO-Revision-Date: 2003-04-02 17:48+0100\n"
 "Last-Translator: Andrea Carli <ctime@bin.it>\n"
 "MIME-Version: 1.0\n"
@@ -119,8 +119,8 @@ msgstr "Tutti"
 msgid "Actions"
 msgstr "Icone"
 
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
 #: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:145 
 #: Win32/vcl/CustomizeDlg.dfm:144
 msgid ""
@@ -151,6 +151,13 @@ msgstr ""
 #: dUnit/Contrib/DUnitWizard/Source/DelphiExperts/DUnitProject/XPDUnitSetup.dfm:271
 #: Win32/vcl/CustomizeDlg.dfm:215
 msgid "Description"
+msgstr ""
+
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:229 
+#: Win32/vcl/CustomizeDlg.dfm:228
+msgid "HintLbl"
 msgstr ""
 
 #. CustomizeFrm..Tabs..OptionsTab..Caption
@@ -2638,13 +2645,13 @@ msgstr "(Sconosciuto)"
 msgid "FormatEdit"
 msgstr ""
 
-#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:203 
 msgid ""
 "Starting value for date ranges, Intial value for single valued dimensions"
 msgstr ""
 
-#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:216 
 msgid ""
 "Fieldname (for a summary, the original field used to calculate the summary)"
@@ -2727,7 +2734,7 @@ msgstr ""
 msgid "Current"
 msgstr ""
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:423 
 msgid "Limit on the number of dimensions which can be loaded at one time"
 msgstr ""
@@ -2737,7 +2744,7 @@ msgstr ""
 msgid "Limit on the number of summaries which can be loaded at one time"
 msgstr ""
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:445 
 msgid "Limit on the number of storage cells which can be loaded at one time"
 msgstr ""
@@ -3334,7 +3341,7 @@ msgstr "%s%s%s Index Files"
 msgid "&Add..."
 msgstr ""
 
-#. IndexFiles..OpenDialog....Filter
+#. IndexFiles..OpenDialog....OnClick
 #: Win32/Property_Editors/Ixedit.dfm:91 
 msgid ""
 "dBASE Multiple Index (*.MDX)|*.mdx|dBase Index (*.NDX)|*.ndx|FoxPro Index (*."
@@ -3369,8 +3376,8 @@ msgstr ""
 msgid "&Save..."
 msgstr ""
 
-#. PictureEditorDlg..OpenDialog....Filter
-#. PictureEditorDlg..SaveDialog....Filter
+#. PictureEditorDlg..OpenDialog....OnClick
+#. PictureEditorDlg..SaveDialog....Top
 #: Win32/Property_Editors/PicEdit.dfm:103 
 #: Win32/Property_Editors/PicEdit.dfm:111
 msgid ""
@@ -3429,8 +3436,8 @@ msgstr "&UpdateSQL Editor..."
 msgid "TXT"
 msgstr ""
 
-#. StrEditDlg..OpenDialog....Filter
-#. StrEditDlg..SaveDialog....Filter
+#. StrEditDlg..OpenDialog....DefaultExt
+#. StrEditDlg..SaveDialog....HelpContext
 #: Win32/Property_Editors/StrEdit.dfm:71 
 #: Win32/Property_Editors/StrEdit.dfm:80
 msgid ""
@@ -18463,10 +18470,9 @@ msgstr ""
 #: IntraWeb/IWResourceStrings.pas:276 
 msgid ""
 "You have attempted to post or refresh data from a page that  depends on "
-"information that is no longer available to the server application.\n"
-"\n"
-"Your attempted changes will be ignored. You will now be resynced to the "
-"current place in the application."
+"information that is no longer available to the server application.Your "
+"attempted changes will be ignored. You will now be resynced to the current "
+"place in the application."
 msgstr ""
 
 #. Programmer's name for it: ResourceNotFound
@@ -18500,8 +18506,8 @@ msgstr ""
 #. Programmer's name for it: InvalidBrowser
 #: IntraWeb/IWResourceStrings.pas:282 
 msgid ""
-"Your browser was detected as %s, identifying itself as %s.\n"
-"One of the following browsers is required:\n"
+"Your browser was detected as %s, identifying itself as %s.One of the "
+"following browsers is required:"
 msgstr ""
 
 #. Programmer's name for it: MessageDialog
@@ -18889,8 +18895,8 @@ msgstr ""
 #. Programmer's name for it: LayoutMgrNeeded32
 #: IntraWeb/IWResourceStrings.pas:372 
 msgid ""
-"For HTML 3.2 a layout manager is required. Make sure that you have one\n"
-" associated to the form and this it's Able property is set to True"
+"For HTML 3.2 a layout manager is required. Make sure that you have one "
+"associated to the form and this it's Able property is set to True"
 msgstr ""
 
 #. Log Messages
@@ -19154,9 +19160,7 @@ msgstr "Anteprima"
 #. TimeEdit
 #. Programmer's name for it: InvalidTimeEditFormat
 #: IntraWeb/IWResourceStrings.pas:442 
-msgid ""
-"The value of %s is in an incorrect format.\n"
-"Please correct the value."
+msgid "The value of %s is in an incorrect format.Please correct the value."
 msgstr ""
 
 #. Programmer's name for it: MissingContainerOnFrame
@@ -21152,12 +21156,14 @@ msgstr ""
 msgid "Overflow while converting variant of type (%s) into type (%s)"
 msgstr ""
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10911 
 msgid ""
 "This module was compiled with a trial version of Kylix.\n"
 "The trial period has expired.\n"
 msgstr ""
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10916 
 msgid ""
 "This module was compiled with a trial version of Delphi.\n"

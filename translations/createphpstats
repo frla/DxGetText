@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python2.3
 
 import commands
 import os
@@ -8,10 +8,9 @@ import string
 import urllib
 
 def postat (basedir, langcode, filepath, filename, counter):
-	tmpfilename="/tmp/deleteme22-"+str(counter)+".po"
+	tmpfilename="/tmp/deleteme-"+str(counter)+".po"
 	textdomain=os.path.splitext(os.path.split(filename)[1])[0]
-	cmdline="LANG=C && msgmerge -o "+tmpfilename+" \""+filepath+"/"+filename+"\" \""+filepath+"/../templates/"+filename+"\""
-	mergeoutput=commands.getoutput(cmdline)
+	mergeoutput=commands.getoutput("LANG=C && msgmerge -o "+tmpfilename+" \""+filepath+"/"+filename+"\" \""+filepath+"/../templates/"+filename+"\"")
 	filename=filepath+"/"+filename
 	stats=commands.getoutput("LANG=C && msgfmt --statistics -o "+tmpfilename+" "+tmpfilename)
 	if string.find(string.digits,stats[0])==-1:

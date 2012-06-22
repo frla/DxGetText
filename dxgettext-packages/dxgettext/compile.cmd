@@ -1,53 +1,43 @@
 @echo off
 
-Rem    Set user path (you must modify)
-set SourceDir=D:\svn\dxGetText\dxgettext
-set InnoDir=C:\Program Files (x86)\Inno Setup 5
+set sourcedir=\source\dxgettext\trunk\dxgettext\
+set pkgdir=\source\dxgettext\trunk\dxgettext-packages\
 
-Rem    additional Path, do not change
-set TargetDir=%SourceDir%\..\dxgettext-packages\dxgettext\dxgettext
+move stripifdef.exe dxgettext\
 
-pushd "%SourceDir%"
+pushd "%sourcedir%"
 
-Rem    Call Batch "rsvars" to set variables (Delphi)
-call rsvars
-
-Rem    Compile the "dxGetText"-project
-call "msbuild.exe" %SourceDir%\_dxGetText.groupproj /target:Build /p:config=Release
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%dxgettext\" dxgettext
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%dxgettext\" ggdxgettext
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\assemble\" assemble
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\assemble\" ggassemble
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\dxgreg\" dxgreg
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\ggmerge\" ggmerge
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\ggmerge\" msgmergedx
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\ggfmt\" ggfmt
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgimport\" msgimport
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgstripCR\" msgstripCR
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgmergePOT\" msgmergePOT
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgsplitTStrings\" msgsplitTStrings
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgmkignore\" msgmkignore
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgremove\" msgremove
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\msgshowheader\" msgshowheader
+call %pkgdir%dxgettext\compileprj.cmd "%pkgdir%" "%sourcedir%tools\stripifdef\" stripifdef
 
 popd
 
-Rem    Copy the new Files into the release folder
-copy "%SourceDir%\output\release\dxgettext.exe"              "%TargetDir%\"
-copy "%SourceDir%\output\release\ggdxgettext.exe"            "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\assemble.exe"         "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\dxgreg.exe"           "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\ggassemble.exe"       "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\ggfmt.exe"            "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\ggmerge.exe"          "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgimport.exe"        "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgmergedx.exe"       "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgmergePOT.exe"      "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgmkignore.exe"      "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgremove.exe"        "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgshowheader.exe"    "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgsplitTStrings.exe" "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\msgstripCR.exe"       "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\ResStringsToPo.exe"   "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\stripifdef.exe"       "%TargetDir%\"
-copy "%SourceDir%\output\release\tools\translation.exe"      "%TargetDir%\"
-copy "%SourceDir%\output\release\gorm\Gorm.exe"              "%TargetDir%\"
+move dxgettext\stripifdef.exe .
 
 pause
 
-Rem    Copy additional files
-copy %SourceDir%\sample\gnugettext.pas dxgettext\gnugettext.pas
+stripifdef %sourcedir%sample\gnugettext.pas dxgettext\gnugettext.pas
 copy dxgettext\gnugettext.pas dxgettext\example\gnugettext.pas
+copy %sourcedir%sample\gnugettext.pas dxgettext\delphi5\gnugettext.pas
+copy %sourcedir%sample\gnugettextD5.pas dxgettext\delphi5\gnugettextD5.pas
 
-copy %SourceDir%\languages\languagecodes.pas dxgettext\
-copy %SourceDir%\languages\languagecodes.po dxgettext\
-copy %SourceDir%\languages\languagecodes.txt dxgettext\
+copy %sourcedir%languages\languagecodes.pas dxgettext\
+copy %sourcedir%languages\languagecodes.po dxgettext\
+copy %sourcedir%languages\languagecodes.txt dxgettext\
 
-"%InnoDir%\iscc.exe" setup.iss
-
+"c:\programmer\Inno Setup 4\iscc.exe" setup.iss
 pause

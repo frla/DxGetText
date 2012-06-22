@@ -1,18 +1,14 @@
 unit xgettext;
 (****************************************************************)
 (*                                                              *)
-(*  (C) Copyright by Lars B. Dybdahl, Jens Berke and            *)
-(*        Jacques Garcia Vazquez                                *)
+(*  (C) Copyright by Lars B. Dybdahl                            *)
 (*  E-mail: Lars@dybdahl.dk, phone +45 70201241                 *)
 (*  You received this file under the Mozilla Public License 1.1 *)
 (*                                                              *)
 (*  See http://dybdahl.dk/dxgettext/ for more information       *)
 (*                                                              *)
-(****************************************************************)
-
-{$ifndef UNICODE}
-{$message error 'compiling this unit requires a unicode string aware compiler'}
-{$endif}
+(* modifed jgv 2003.05.13                                     *)
+(**************************************************************)
 
 interface
 
@@ -20,75 +16,12 @@ uses
   Classes, poparser;
 
 type
-  {TXExcludeFormClassProperties: represents 1..n properties of a certain class
-   that shall be excluded from string extraction in form files. }
-  TXExcludeFormClassProperties = class(TCollectionItem)
-  private
-    FProperties: TStringList;
-    FNameOfClass: string;
-    procedure SetNameOfClass(const Value: string);
-  public
-    constructor Create(Collection: TCollection); override;
-    destructor Destroy; override;
-    function ExcludeFormClassProperty(aPropertyname: string): boolean;
-    procedure AddFormClassProperty(aPropertyname: string);
-    property NameOfClass: string read FNameOfClass write SetNameOfClass; // "Classname" already used by TObject => needed other name
-  end;
-
-  {TXExcludeFormClassPropertyList: represents a collection of
-   TXExcludeFormClassProperties}
-  TXExcludeFormClassPropertyList = class(TCollection)
-  private
-    function GetItems(Index: integer): TXExcludeFormClassProperties;
-    procedure SetItem(Index: integer;
-      const Value: TXExcludeFormClassProperties);
-    function Add: TXExcludeFormClassProperties;
-    function AddFormClass(aClassname: string): TXExcludeFormClassProperties;
-  public
-    function FindItem(aClassname: string): TXExcludeFormClassProperties;
-    function ExcludeFormClassProperty(aClassname, aPropertyname: string): Boolean;
-    function AddFormClassProperty(aClassPropertyname: string): TXExcludeFormClassProperties;
-    property Items[Index: integer]: TXExcludeFormClassProperties read GetItems write SetItem; default;
-  end;
-
-  {TXExcludes: holds all information about what shall be excluded from string
-   extraction, specified in a "ggexclude.cfg" file }
-  TXExcludes = class(TObject)
-  private
-    FFormClasses: TStringList;
-    FFormInstances: TStringList;
-    FDirectories: TStringList;
-    FFiles: TStringList;
-    FBaseDirectory: string;
-    FExcludeFormClassPropertyList: TXExcludeFormClassPropertyList;
-    FLastErrorMsg: string;
-    function GetFullInternalPath(s:string): string;
-  public
-    constructor Create;
-    destructor Destroy; override;
-    procedure Clear;
-    function AddDirectory(aDirectory: string): boolean;
-    function AddFormFile(aFilename: string): boolean;
-    function AddFormClass(aClassname: string): boolean;
-    function AddFormClassProperty(aPropertyname: string): boolean;
-    function AddFormInstance(aInstanceName: string): boolean;
-    function ExcludeDirectory(aDirectory: string): Boolean;
-    function ExcludeFormFile(aFilename: string): Boolean;
-    function ExcludeFormClass(aClassname: string): Boolean;
-    function ExcludeFormClassProperty(aClassname, aPropertyname: string): Boolean; overload;
-    function ExcludeFormClassProperty(aClassname: string): Boolean; overload;
-    function ExcludeFormInstance(aFilename, aInstanceName: string): boolean;
-    function FormClassHasWildcard(aClassname: string): Boolean;
-    property BaseDirectory: string read FBaseDirectory write FBaseDirectory;
-    property LastErrorMsg: string read FLastErrorMsg;
-  end;
-
-  TOnOverwrite = Procedure (sender: TObject; const aFileName: string; var Overwrite: boolean) of object;
+  TOnOverwrite = Procedure (sender: TObject; const aFileName: wideString; var Overwrite: boolean) of object;
   TWarningType=
     (wtGenericWarning, wtUnexpectedException, wtConstantReplaced,
      wtSyntaxError, wtParameterError, wtExtendedDirectiveError, wtNonAscii,
      wtNotImplemented,
-     wtExcludeFile);
+     wtNGettext); // This means that ngettext() was found, which generates msgid_plural entries in default.po
   TXGTDomain=
     class
     public
@@ -98,11 +31,9 @@ type
       destructor Destroy; override;
     end;
   TOnProgress=
-    procedure (const CurrentTask, CurrentFileName: string;
-               const LineNumber: Integer) of object;
+    procedure (CurrentTask:widestring;CurrentFileName:widestring;LineNumber:Integer) of object;
   TOnWarning=
-    procedure (WarningType: TWarningType; const Msg, Line: string;
-               const Filename: string; LineNumber:Integer) of object;
+    procedure (WarningType:TWarningType;Msg,Line:widestring;Filename:widestring;LineNumber:Integer) of object;
   TXGetText =
     class
     private
@@ -110,39 +41,34 @@ type
       domainlist: TStringList; // Strings are domain name, values are TXGTDomain
       constlist:TStringList;   // List of consts. Strings are names, Objects are TConst
       definedDomain: string;
-      procedure doHandleExtendedDirective (var line: string);
+      procedure doHandleExtendedDirective (line: wideString);
       procedure ClearConstList;
-      function GetDomain(const domain: string): TXGTDomain;
-      procedure AddTranslation(const domain:string; const aMsgid: string; const Comments, Location: string);
-      procedure WriteAll(const Destinationpath:string; const domain: string);
-      function MakePathLinuxRelative(const path: string): string;
+      function GetDomain(domain: widestring): TXGTDomain;
+      procedure AddTranslation(domain:widestring; msgid: widestring; Comments, Location: widestring);
+      procedure WriteAll(Destinationpath:widestring; domain: widestring);
+      function MakePathLinuxRelative(path: widestring): widestring;
     private
       resourcestringmode: Integer;  // 0=None, 1=Const, 2=Resourcestring
-      CurrentFilename:string;
-      LastLineRead:string;
-      FLineNr: Integer;
-      FLines: TStringList;
-      commentmode:string; // Empty means that dxreadln is not inside a comment
-      lastcomment:string;
+      CurrentFilename:widestring;
+      LastLineRead:widestring;
+      linenr:Integer;
+      commentmode:widestring; // Empty means that dxreadln is not inside a comment
+      lastcomment:widestring;
       BaseDirectoryList:TStringList; // Always ends in a pathdelimiter
       BaseDirectory:string;
-      Excludes: TXExcludes;
-      procedure WritePoFiles (const DestinationPath: string);
-      procedure Warning (WarningType:TWarningType;const msg:string); overload;
-      procedure Warning (WarningType:TWarningType;const Msg,Line:string;const Filename:string;LineNumber:Integer); overload;
-      procedure dxreadln (var line:string; var firstline:boolean; var isutf8:boolean); // same as system.readln, but takes care of comments
-      procedure extractstring(var source:string;var res: string);
-      function readstring(var line: string; var firstline:boolean; var isutf8:boolean): string; // Reads a pascal ansistring constant
-      function isStringObjectPascalFormat(const xMsgId: String): TObjectPascalFormat;
-      procedure ExtractFromPascal(const sourcefilename: string);
-      procedure ExtractFromDFM(const sourcefilename: string);
-      procedure ExtractFromRC(const sourcefilename: string);
+      procedure WritePoFiles (DestinationPath: widestring);
+      procedure Warning (WarningType:TWarningType;msg:widestring);
+      procedure dxreadln (var src:TextFile;var line:widestring); // same as system.readln, but takes care of comments
+      procedure extractstring(var source:widestring;var res: widestring);
+      function readstring(var line: widestring; var src: TextFile): widestring; // Reads a pascal ansistring constant
+      procedure ExtractFromPascal(sourcefilename: widestring);
+      procedure ExtractFromDFM(sourcefilename: widestring);
+      procedure ExtractFromRC(sourcefilename: widestring);
       {$ifdef mswindows}
-      procedure ExtractFromEXE(const sourcefilename: string);
+      procedure ExtractFromEXE(sourcefilename: widestring);
       {$endif}
-      procedure ExtractFromFile(const sourcefilename: string);
-      procedure ExtractFromFileMasks(const mask: string);
-      procedure ParseExcludeFile;
+      procedure ExtractFromFile(sourcefilename: widestring);
+      procedure ExtractFromFileMasks(mask: widestring);
     public
       // When set, only default domain is written to a file, and this file has it's filename from this variable
       SingleOutputFilename:string;
@@ -154,20 +80,18 @@ type
       UseIgnoreFile:boolean; // Will make sure that no item from ignore.po is stored in other files
       AllowNonAscii:boolean;
       OrderbyMsgid:boolean;
-      PreserveUserComments: Boolean;
-      MaxWidth: integer;
       NoWildcards:boolean;
       filemasks:TStringList;
       DestinationPath:string;
       CFiles:TStringList;   // This will contain filenames of C/C++ source files to be scanned elsewhere
       OnOverwrite: TOnOverwrite;
+
       constructor Create;
       destructor Destroy; override;
-      procedure AddBaseDirectory (const path:string);
+      procedure AddBaseDirectory (path:string);
       procedure AddDelphiFilemasks;
       procedure AddKylixFilemasks;
       procedure HandleIgnores;
-      procedure HandleComments;
       procedure Execute;
     end;
 
@@ -181,13 +105,13 @@ uses
   Windows, ExeImage, rxtypes,
 {$endif}
   SysUtils, Math, appconsts, gnugettext, xgettexttools, Masks,
-  ignoredetector, StrUtils;
+  ignoredetector, strutils;
 
 type
   TConst=
     class
-      name:string;
-      value:string;
+      name:widestring;
+      value:widestring;
     end;
   EGetText=
     class (Exception)
@@ -199,37 +123,30 @@ const
   cDomainDefinition = 'text-domain';  // Changes default text domain for strings
   cScanResetOption  = 'reset';        // Changes back to default behaviour
 
-  { consts for exclusion of files, directories, properties and classes from extraction: }
-  cExcludeFormInstance = 'exclude-form-instance';
-  cExcludeFormClassProperty = 'exclude-form-class-property';
-  cExcludeFormClass = 'exclude-form-class';
-  cExcludeFile = 'exclude-file';
-  cExcludeDir = 'exclude-dir';
-
-function RemoveNuls (const s:string):string;
-// Since PluralSplitter is used to separate msgid_plural values inside msgid strings
-// in this software, PluralSplitter cannot be present in msgid values. In order to
-// prevent this, this function replaces PluralSplitter with '#0'.
+function RemoveNuls (const s:widestring):widestring;
+// Since #0 is used to separate msgid_plural values inside msgid strings
+// in this software, #0 cannot be present in msgid values. In order to
+// prevent this, this function replaces #0 with '#0'.
 var
   p:integer;
 begin
   Result:=s;
   while true do begin
-    p:=pos(PluralSplitter,Result);
+    p:=pos(#0,Result);
     if p=0 then break;
     Result:=MidStr(Result,1,p-1)+'#0'+MidStr(Result,p+1,maxint);
   end;
 end;
 
-procedure TXGetText.extractstring(var source: string; var res: string);
+procedure TXGetText.extractstring(var source: widestring; var res: widestring);
 const whitespace=[#0..#32];
 // Extracts the Pascal coded string at the beginning of source.
 // Returns the result in res.
 // Removes the extracted data from source.
 var
-  charset: set of ansichar;
-  s: string;
-  constname,uconstname:string;
+  charset: set of char;
+  s: widestring;
+  constname,uconstname:widestring;
   idx:integer;
 begin
   res := '';
@@ -246,12 +163,12 @@ begin
             s := '';
             charset := ['0'..'9'];
           end;
-          while (source <> '') and (ord(source[1])<=255) and (ansichar(ord(source[1])) in charset) do begin
+          while (source <> '') and (ord(source[1])<=255) and (char(ord(source[1])) in charset) do begin
             s := s + source[1];
             delete(source, 1, 1);
           end;
           res := res + widechar(StrToInt(s));
-          while (source<>'') and (ord(source[1])<=255) and (ansichar(ord(source[1])) in whitespace) do delete (source,1,1);
+          while (source<>'') and (ord(source[1])<=255) and (char(ord(source[1])) in whitespace) do delete (source,1,1);
           if (length(trim(source))>=2) and (copy(source,1,1)='+') then delete (source,1,1);
         end;
       '''':
@@ -259,7 +176,7 @@ begin
           delete(source, 1, 1);
           while true do begin
             if source = '' then begin
-              Warning (wtSyntaxError, _('Single quote detected - string starts but does not end'));
+              Warning (wtSyntaxError,_('Single quote detected - string starts but does not end'));
               exit;
             end;
             if copy(source, 1, 1) = '''' then begin
@@ -281,7 +198,7 @@ begin
       'a'..'z','A'..'Z','_':
         begin
           constname:='';
-          while (source<>'') and (ord(source[1])<=255) and (ansichar(ord(source[1])) in ['a'..'z','A'..'Z','_','0'..'9']) do begin
+          while (source<>'') and (ord(source[1])<=255) and (char(ord(source[1])) in ['a'..'z','A'..'Z','_','0'..'9']) do begin
             constname:=constname+source[1];
             delete (source,1,1);
           end;
@@ -298,14 +215,6 @@ begin
             // Don't make a warning on this one because it is so common
             res:=res+#10;
           end else
-          if uconstname='EOF' then begin
-            // Don't make a warning on this one because it is so common
-            res:=res+#26;
-          end else
-          if uconstname='EOL' then begin
-            // Don't make a warning on this one because it is so common
-            res:=res+#10;
-          end else
           if (uconstname='DEPRECATED') or (uconstname='PLATFORM') or (uconstname='LIBRARY') then begin
             // The hinting directive was detected and ignored.
           end else
@@ -318,31 +227,29 @@ begin
     else
       break;
     end;
-    while (source<>'') and (ord(source[1])<=255) and (ansichar(ord(source[1])) in whitespace) do
-      delete (source,1,1);
-    if (length(trim(source))>=2) and (copy(source,1,1)='+') then
-      delete (source,1,1);
-    while (source<>'') and (ord(source[1])<=255) and (ansichar(ord(source[1])) in whitespace) do
-      delete (source,1,1);
+    while (source<>'') and (ord(source[1])<=255) and (char(ord(source[1])) in whitespace) do delete (source,1,1);
+    if (length(trim(source))>=2) and (copy(source,1,1)='+') then delete (source,1,1);
+    while (source<>'') and (ord(source[1])<=255) and (char(ord(source[1])) in whitespace) do delete (source,1,1);
   end;
 end;
 
-function TXGetText.readstring(var line: string; var firstline:boolean; var isutf8:boolean): string;
+function TXGetText.readstring(var line: widestring; var src: TextFile): widestring;
 var
-  s: string;
+  s: widestring;
   pluscoming:boolean;
+  i:integer;
+  ansis:ansistring;
+  found:boolean;
 begin
   Result := '';
   while true do begin
-    if line='' then
-      dxreadln(line, firstline, isutf8);
     extractstring(line, s);
     Result := Result + s;
     line := trim(line);
     pluscoming:=(line='');
     if (line='+') or pluscoming then begin
       // This is a multi-line string
-      dxreadln(line, firstline, isutf8);
+      dxreadln(src, line);
       line := trim(line);
       if pluscoming then begin
         if copy(line,1,1)='+' then begin
@@ -357,9 +264,26 @@ begin
     end else
       break;
   end;
+  // Find out if there is just one character above 255
+  found:=False;
+  for i:=1 to length(Result) do begin
+    if ord(Result[i])>=256 then begin
+      found:=True;
+      break;
+    end;
+  end;
+  if not found then begin
+    // Assume the string is not unicode, but the local character set.
+    // Move all characters to an ansistring
+    SetLength (ansis,length(Result));
+    for i:=1 to length(Result) do
+      ansis[i]:=char(ord(Result[i]));
+    // Convert from local character set to widestring
+    Result:=StringToWidestring(ansis);
+  end;
 end;
 
-function TXGetText.MakePathLinuxRelative (const path:string):string;
+function TXGetText.MakePathLinuxRelative (path:widestring):widestring;
 var
   baselen:integer;
 begin
@@ -381,40 +305,34 @@ begin
   {$endif}
 end;
 
-procedure TXGetText.ExtractFromPascal(const sourcefilename: string);
+procedure TXGetText.ExtractFromPascal(sourcefilename: widestring);
 // I didn't have a Pascal parser available when this code was written.
 var
-  line, uline:string;
-  s:string;
-  msgid: string;
+  src: TextFile;
+  line, uline:widestring;
+  s:widestring;
+  msgid: widestring;
   p, p2, idx:Integer;
-  domain: string;
+  domain: widestring;
   co:TConst;
-  constident:string;
+  constident:widestring;
   idlength,idoffset:integer;
   idplural:boolean;
-  firstline:boolean;
-  isutf8:boolean;
 begin
   if lowercase(extractfilename(sourcefilename)) = 'gnugettext.pas' then exit;
   if lowercase(extractfilename(sourcefilename)) = 'gnugettextd5.pas' then exit;
   ClearConstList;
-
-  FLines := TStringList.Create;
+  FileMode:=fmOpenRead;
+  AssignFile(src, sourcefilename);
+  Reset(src);
   try
-    FLines.LoadFromFile(sourcefilename);
-    firstline:=True;
     definedDomain := '';
     lastcomment := '';
     resourcestringmode := 0;
-    FLineNr := 0;
-    while FLineNr < FLines.Count do begin
-      dxreadln(line, firstline, isutf8);
+    linenr := 0;
+    while not eof(src) do begin
+      dxreadln(src, line);
       line := trim(line);
-
-      // don't parse lines behind "end."
-      if LowerCase(line) = 'end.' then
-        Break;
 
       s := ConvertWhitespaceToSpaces (uppercase(line)) + ' ';
 
@@ -453,14 +371,14 @@ begin
 
           delete(line, 1, p - 1);
           // Extract the string
-          msgid:=RemoveNuls(readstring(line, firstline, isutf8));
+          msgid:=RemoveNuls(readstring(line, src));
           if resourcestringmode=2 then begin
             if constident<>'' then begin
               if lastcomment<>'' then
                 lastcomment:=lastcomment+sLinebreak;
               lastcomment:=lastcomment+'Programmer''s name for it: '+constident;
             end;
-            AddTranslation('default', msgid, lastcomment, MakePathLinuxRelative(sourcefilename)+':'+IntToStr(FLineNr));
+            AddTranslation('default', msgid, lastcomment, MakePathLinuxRelative(sourcefilename)+':'+IntToStr(linenr));
             lastcomment := '';
           end;
           if constident<>'' then begin
@@ -479,7 +397,7 @@ begin
               if lastcomment <> '' then
                 lastcomment := lastcomment + sLinebreak;
               lastcomment := lastcomment + 'Programmer''s name for it: ' + constident;
-              AddTranslation (definedDomain, msgid, lastcomment, MakePathLinuxRelative(sourcefilename)+':'+IntToStr(FLineNr));
+              AddTranslation (definedDomain, msgid, lastcomment, MakePathLinuxRelative(sourcefilename)+':'+IntToStr(linenr));
               lastcomment := '';
             end;
           end;
@@ -515,53 +433,41 @@ begin
 
           domain := 'default';
           idoffset:=0;
-          if copy(uline,p,1)='_' then begin
-            idlength:=1;
-            idplural:=False;
-          end else begin
-            idlength:=7;
-            if uppercase(copy(line, p - 1, 1)) = 'D' then begin
-              domain := '';
-              idlength:=8;
-              idoffset:=-1;
-            end;
-            if uppercase(copy(line, p - 2, 2)) = 'DC' then begin
-              domain := '';
-              idlength:=9;
-              idoffset:=-2;
-            end;
-            idplural:=False;
-            if uppercase(copy(line, p - 2, 2)) = 'DN' then begin
-              domain := '';
-              idlength:=9;
-              idoffset:=-2;
-              idplural:=True;
-            end else
-            if uppercase(copy(line, p - 1, 1)) = 'N' then begin
-              idlength:=8;
-              idoffset:=-1;
-              idplural:=True;
-            end
-            else if (uppercase(copy(line, p + idlength, 5)) = '_NOOP') then
-            begin
-              //*** Implement the extraction for getText_noop (no operation,
-              //    only extraction) function
-              //    see gettext manual
-              //      4.7 - Special Cases of Translatable Strings
-              //      http://www.gnu.org/software/hello/manual/gettext/Special-cases.html#Special-cases
-              idlength := idlength + 5;
-            end;
+          if copy(uline,p,1)='_' then idlength:=1
+                                 else idlength:=7;
+          if uppercase(copy(line, p - 1, 1)) = 'D' then begin
+            domain := '';
+            idlength:=8;
+            idoffset:=-1;
           end;
-          if ((p + idoffset = 1) or
-              (not ((ord(uline[p + idoffset - 1]) <= 255) and
-                    (ansichar(ord(uline[p + idoffset - 1])) in ['a'..'z','A'..'Z','_','0'..'9'])))) and
-             (length(line) >= p + idlength + idoffset) and
-             (not ((ord(uline[p + idoffset + idlength]) <= 255) and
-                   (ansichar(ord(uline[p + idoffset + idlength])) in ['a'..'z','A'..'Z','_','0'..'9']))) then
-          begin
+          if uppercase(copy(line, p - 2, 2)) = 'DC' then begin
+            domain := '';
+            idlength:=9;
+            idoffset:=-2;
+          end;
+          idplural:=False;
+          if uppercase(copy(line, p - 2, 2)) = 'DN' then begin
+            domain := '';
+            idlength:=9;
+            idoffset:=-2;
+            idplural:=True;
+          end else
+          if uppercase(copy(line, p - 1, 1)) = 'N' then begin
+            idlength:=8;
+            idoffset:=-1;
+            idplural:=True;
+          end;
+          if ((p+idoffset=1) or (not ((ord(uline[p+idoffset-1])<=255) and (char(ord(uline[p+idoffset-1])) in ['a'..'z','A'..'Z','_','0'..'9'])))) and
+              (length(line)>=p+idlength+idoffset) and (not ((ord(uline[p+idoffset+idlength])<=255) and (char(ord(uline[p+idoffset+idlength])) in ['a'..'z','A'..'Z','_','0'..'9']))) then begin
+            if (idoffset=-1) and (idlength=8) and (uppercase(copy(line,p-1,8))='NGETTEXT') then begin
+              // This string may not be wider than 80 characters.
+              Warning (wtNGettext,_('ngettext() encountered. This will create msgid_plural entries in the'+sLineBreak+
+                                    'default.po file, which may render it uneditable by some GUI po file editors.'+sLineBreak+
+                                    'Consider to use dngettext() instead, putting the msgid_plural entries into'+sLineBreak+
+                                    'a separate .po file.'));
+            end;
             line := trim(copy(line, p + idlength+idoffset, maxint));
-            if copy(line, 1, 1) = '(' then
-            begin
+            if copy(line, 1, 1) = '(' then begin
               line := trim(copy(line, 2, maxint));
               if domain = '' then begin
                 // get first parameter
@@ -577,7 +483,7 @@ begin
               end;
 
               // Get parameter that contains the msgid
-              msgid := RemoveNuls(readstring(line, firstline, isutf8));
+              msgid := RemoveNuls(readstring(line, src));
               if idplural then begin
                 line := trim(line);
                 if copy(line, 1, 1) = ',' then begin
@@ -586,11 +492,9 @@ begin
                 end else begin
                   Warning (wtSyntaxError,_('Missing comma after first parameter'));
                 end;
-                if line='' then
-                  dxreadln(line, firstline, isutf8);
-                msgid := msgid+PluralSplitter+RemoveNuls(readstring(line, firstline, isutf8));
+                msgid := msgid+#0+RemoveNuls(readstring(line,src));
               end;
-              AddTranslation(domain, msgid, lastcomment, MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(FLineNr));
+              AddTranslation(domain, msgid, lastcomment, MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(linenr));
               lastcomment := '';
             end { if a parenthesis is found };
           end else begin
@@ -600,7 +504,7 @@ begin
       end { if resourcestringmode };
     end;
   finally
-    FreeAndNil(FLines);
+    CloseFile(src);
   end;
 
   If length (definedDomain) > 0 then begin
@@ -629,8 +533,6 @@ begin
   constlist.Sorted:=True;
   constlist.Duplicates:=dupError;
   constlist.CaseSensitive:=True;
-  Excludes := TXExcludes.Create;
-  MaxWidth := 70;
 end;
 
 destructor TXGetText.Destroy;
@@ -646,67 +548,30 @@ begin
   FreeAndNil (filemasks);
   FreeAndNil (CFiles);
   FreeAndNil (ignorelist);
-  FreeAndNil(Excludes);
   inherited;
 end;
 
-procedure TXGetText.ExtractFromDFM(const sourcefilename: string);
+procedure TXGetText.ExtractFromDFM(sourcefilename: widestring);
 var
-  fs,
   src: TStream;
   mem: TMemoryStream;
-  line, lastline:string;
-  s: string;
-  i:integer;
+  line, lastline:widestring;
+  s: widestring;
   indent: integer;
-  comment: string;
-  p: integer;
+  comment: widestring;
+  p, linenr: integer;
   scope: TStringList;
-  propertyname: string;
+  propertyname: widestring;
   multilinevalue: boolean;
-  mvalue: string;
+  mvalue: widestring;
   p1, p2, p3: integer;
-  pClassname: integer;
   c:char;
-  classnamepart: string;
-  linechar:char;
-  currentclassname: string;
-  classnames: TStringList;
-  instancenames: TStringList;
-  excludeclass:boolean;
-  excludeinstance:boolean;
-  collectionlevel:integer; // will be increased which each occurence of a collection, in order to recognize nested collections
-  collectionpropertyname:string; // will be the propertyname of the highest-level collection property
-
-  procedure AddEntry(const aValue:string);
-  var
-    propname:string;
-  begin
-    if collectionlevel > 0 then
-      propname := collectionpropertyname
-    else
-      propname := propertyname;
-    if not excludeclass and not excludeinstance and not Excludes.ExcludeFormClassProperty(classnames[indent], propname) then begin
-      comment := scope2comment(scope, propertyname);
-      AddTranslation('default', RemoveNuls(aValue), comment, MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(FLineNr));
-    end;
-  end;
-
 begin
-  src := TMemoryStream.Create;
-  fs  := TFileStream.Create(sourcefilename,fmOpenRead);
-  try
-    fs.Position := 0;
-    src.CopyFrom(fs, fs.Size);  //copy to far more efficient memorystream (no more expensive filereads!)
-    src.Position := 0;
-  finally
-    fs.Free;
-  end;
+  src:=TFileStream.Create(sourcefilename,fmOpenRead);
   try
     // Check for empty file
     if src.Read(c,1)=0 then
       exit;
-
     // Check for binary dfm file
     src.Seek(0, soFromBeginning);
     if c=#$FF then begin
@@ -719,114 +584,29 @@ begin
     src.Seek(0,soFrombeginning);
 
     scope := TStringList.Create;
-    classnames := TStringlist.Create;
-    instancenames := TStringlist.Create;
     try
-      classnames.Add(''); // we need that one because "indent" might start with 0
-      instancenames.Add('');
-      FLineNr := 0;
+      linenr := 0;
       line := '';
       propertyname := '';
-      collectionpropertyname := '';
       multilinevalue := false;
-      collectionlevel := 0;
       while true do begin
         // Get next line and check it out
         lastline := line;
-        if not StreamReadln (src, line, true) then break;
-        inc(FLineNr);
+        if not StreamReadln (src, line) then break;
+        inc(linenr);
         indent := measureindent(line);
         line := trim(line);
-        if line='' then continue;  // *** ABORT IF LINE IS EMPTY ***
-
-        // Check if a collection starts or ends in this line.
-        // If we have nested collections, the nesting-level
-        // will be remembered                                                    
-        if RightStr(line, 3) = '= <' then
-          inc(collectionlevel);
-        if RightStr(lowercase(line), 4) = 'end>' then begin
-          dec(collectionlevel);
-          if collectionlevel = 0 then
-            collectionpropertyname := '';
-        end;
-
-        // Always adjust the count of "classnames" to the current "indent"
-        // and make sure, the a bigger indent gets the same classname as the
-        // smaller indent before. This will be overwritten as soon as we reach
-        // an line containing "object", "inherited" or "inline", like this:
-        //
-        // object Form1: TForm      indent = 0, classname[0] = 'TForm'
-        //  Caption = 'Form1'       indent = 1, classname[1] = 'TForm'
-        //  object Edit1: TEdit     indent = 1, classname[1] = 'TEdit'
-        //   Left = 1;              indent = 2, classname[2] = 'TEdit'
-        while indent < classnames.Count-1 do begin
-          classnames.Delete(classnames.Count-1);
-          instancenames.Delete(instancenames.Count-1);
-        end;
-        while indent > classnames.Count-1 do begin
-          classnames.Add(classnames[classnames.Count-1]);
-          instancenames.Add(instancenames[instancenames.Count-1]);
-        end;
-
-        // check for occurence of a classname and remember it at the current indention.
-        // Take into account that some properties might contain identifiers as part
-        // of their name, e.g. "InlineSkaterCount" or "InheritedFromGrandPa"
-        if (Pos(':', line) > 0) and ((Pos('object ', lowercase(line)) > 0) or (Pos('inherited ', lowercase(line)) > 0) or (Pos('inline ', lowercase(line)) > 0)) then begin
-          pClassname := Pos(':', line);
-          if pClassname > 0 then begin
-            currentclassname := '';
-            classnamepart := Trim(Copy(line, pClassname+1, Length(line)-pClassname+1));
-            for i := 1 to Length(classnamepart) do
-            begin
-              // be aware of constructs like "TScrollbox [0]" or other unlikely things, simply just get only the chars that are valid for classnames
-              linechar := classnamepart[i];
-              {$ifdef UNICODE} // >=D2009
-              if not CharInSet(linechar,['a'..'z','A'..'Z','_','0'..'9']) then
-              {$else}
-              if not (linechar in ['a'..'z','A'..'Z','_','0'..'9']) then
-              {$endif}
-                break
-              else
-                currentclassname := currentclassname + linechar;
-            end;
-            classnames[indent] := currentclassname;
-            // remember the name of instance of that class as well in the same way
-            p := Pos(' ', line);
-            instancenames[indent] := Copy(line, p +1, pClassname -p -1);
-          end;
-        end;
-
-        // check if the whole class shall be excluded
-        excludeclass := Excludes.ExcludeFormClass(classnames[indent]);
-        excludeinstance := false;
-        if not excludeclass then begin
-          for i := indent downto 0 do // check parent classes if they contain a wildcard
-            if Excludes.FormClassHasWildcard(classnames[i]) then begin
-              excludeclass := true;
-              break;
-            end;
-          if not excludeclass then begin
-            excludeinstance := Excludes.ExcludeFormInstance(sourcefilename, instancenames[indent]);
-            if not excludeinstance then begin
-              for i := indent downto 0  do
-                if Excludes.ExcludeFormInstance(sourcefilename, instancenames[i]) then begin
-                  excludeinstance := true;
-                  break;
-                end;
-            end;
-          end;
-        end;
 
         // Check for changes in scope
         if (indent < scope.Count) and multilinevalue then begin
           multilinevalue := false;
-          AddEntry(mvalue);
+          comment := scope2comment(scope, propertyname);
+          AddTranslation('default', RemoveNuls(mvalue), comment, MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(linenr));
           scope.Delete(scope.count - 1);
         end;
         while indent < scope.Count do begin
           scope.Delete(scope.count - 1);
         end;
-
         if indent > scope.Count then begin
           p := pos(' ', lastline);
           if p = 0 then s := lastline else s := copy(lastline, p + 1, maxint);
@@ -841,7 +621,7 @@ begin
         end;
 
         // Analyze the line
-        p := pos(' =', line);
+        p := pos(' = ', line);
         p1 := pos('''', line);
         p2 := pos('#', line);
         if p1 = 0 then p1 := maxint;
@@ -851,9 +631,6 @@ begin
         // Extract property name if the line contains such one
         if (p <> 0) and (p < p3) then begin
           propertyname := trim(copy(line, 1, p - 1));
-          // is we're in a collection (and it's the highest level if there are nested collections), remember the property name of that collection
-          if (collectionlevel = 1) and (collectionpropertyname = '') then
-            collectionpropertyname := propertyname;
           multilinevalue := false;
         end;
 
@@ -864,52 +641,47 @@ begin
           if multilinevalue then begin
             mvalue := mvalue + s;
             if trim(line) <> '+' then begin
-              AddEntry(mvalue);
+              comment := scope2comment(scope, propertyname);
+              AddTranslation('default', RemoveNuls(mvalue), comment, MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(linenr));
               mvalue:='';
             end;
           end else begin
-            AddEntry(s);
+            comment := scope2comment(scope, propertyname);
+            AddTranslation('default', RemoveNuls(s), comment, MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(linenr));
           end;
         end;
       end;
     finally
       FreeAndNil(scope);
-      FreeAndNil(classnames);
     end;
   finally
     FreeAndNil (src);
   end;
 end;
 
-procedure TXGetText.AddTranslation(const domain, aMsgid: string; const Comments,
-  Location: string);
+procedure TXGetText.AddTranslation(domain, msgid: widestring; Comments,
+  Location: widestring);
 // Adds something to translate to the list
 var
   it: TPoEntry;
   i, e: integer;
   sl: TStringList;
   dom:TXGTDomain;
-  smsgid,
-  lookupvalue:string;
+  lookupvalue:ansistring;
 begin
-  smsgid := aMsgid;
-
   // Check, that all parts of msgid are nonempty, if there are multiple parts
-  if smsgid<>'' then begin
-    for i:=1 to length(smsgid)+1 do begin
-      if copy(PluralSplitter+smsgid+PluralSplitter,i,2)=PluralSplitter+PluralSplitter then
+  if msgid<>'' then begin
+    for i:=1 to length(msgid)+1 do begin
+      if copy(#0+msgid+#0,i,2)=#0#0 then
         raise Exception.Create('Illegal msgid_plural value: It contained empty strings.');
     end;
   end;
 
   // Check for non-ascii characters
-  if not AllowNonAscii then
-  begin
-    for i:=1 to length(smsgid) do
-    begin
-      if ord(smsgid[i])>=128 then
-      begin
-        Warning (wtNonAscii,format(_('msgid contains non-ascii characters: "%s"'),[smsgid]));
+  if not AllowNonAscii then begin
+    for i:=1 to length(msgid) do begin
+      if ord(msgid[i])>=128 then begin
+        Warning (wtNonAscii,format(_('msgid contains non-ascii characters: "%s"'),[msgid]));
         // Don't add an invalid msgid
         exit;
       end;
@@ -918,22 +690,22 @@ begin
 
   // Remove any Carriage Returns
   while true do begin
-    i:=pos(#13,smsgid);
+    i:=pos(#13,msgid);
     if i=0 then break;
-    delete (smsgid,i,1);
+    delete (msgid,i,1);
   end;
 
   // Don't add empty strings
-  if smsgid = '' then exit;
+  if msgid = '' then exit;
 
   // Don't add numbers
-  val(smsgid, i, e);
-  if (e = 0) and (smsgid = IntToStr(i)) then exit;
+  val(msgid, i, e);
+  if (e = 0) and (msgid = IntToStr(i)) then exit;
 
   dom:=GetDomain(domain);
   sl:=TStringList.Create;
   try
-    sl.Text := smsgid;
+    sl.Text := utf8encode(msgid);
     if sl.Count=0 then
       lookupvalue:='Weird, but happens if the string contains weird ascii chars'
     else
@@ -942,50 +714,34 @@ begin
     FreeAndNil(sl);
   end;
   it:=nil;
-  if dom.msgid.Find(lookupvalue,i) then
-  begin
+  if dom.msgid.Find(lookupvalue,i) then begin
     // Scroll back to the first in the list that has the same
     // first line in msgid
-    while (i > 0) and
-          (dom.msgid.Strings[i - 1] = lookupvalue) do
+    while (i > 0) and (dom.msgid.Strings[i - 1] = lookupvalue) do
       dec(i);
-
     // Now loop through all those in the list it may be
-    while true do
-    begin
+    while true do begin
       it := dom.msgid.Objects[i] as TPoEntry;
-
       // Check if we found the correct one
-      if it.msgid = smsgid then
-        break;
+      if it.msgid = msgid then break;
       // Check if we have scrolled past the last one
-
-      if (i = dom.msgid.Count - 1) or
-         (dom.msgid.Strings[i+1] <> lookupvalue) then
-      begin
+      if (i = dom.msgid.Count - 1) or (dom.msgid.Strings[i+1] <> lookupvalue) then begin
         it := nil;
         break;
       end;
-
       inc(i);
     end;
   end;
-
-  if it = nil then
-  begin
+  if it = nil then begin
     it := TPoEntry.Create;
-
     dom.msgid.AddObject(lookupvalue, it);
-    it.msgid := smsgid;
-    it.IsObjectPascalFormat := IsStringObjectPascalFormat(smsgid);
+    it.msgid := msgid;
     dom.order.AddObject(lookupvalue, it);
   end;
-
-  if comments<>'' then
-  begin
+  if comments<>'' then begin
     sl:=TStringList.Create;
     try
-      sl.Text:=comments;
+      sl.Text:=utf8encode(comments);
       for i:=0 to sl.Count-1 do begin
         it.AutoCommentList.Add('#. '+sl.Strings[i]);
       end;
@@ -994,17 +750,17 @@ begin
     end;
   end;
 
-  it.AutoCommentList.Add('#: ' + RemoveFilenameSpaces(Location));
+  it.AutoCommentList.Add('#: '+RemoveFilenameSpaces(utf8encode(Location)));
 end;
 
-procedure TXGetText.WriteAll(const Destinationpath, domain: string);
+procedure TXGetText.WriteAll(Destinationpath, domain: widestring);
 // Outputs a .po file
 var
   destination: TFileStream;
   i: integer;
   item: TPoEntry;
   dom:TXGTDomain;
-  filename: string;
+  filename: widestring;
   orderlist:TStrings;
   overwrite: boolean;
 begin
@@ -1035,53 +791,51 @@ begin
   destination:=TFileSTream.Create (filename, fmCreate);
   try
     // Write a dummy header that the user can modify
-    StreamWriteDefaultPoTemplateHeader(destination,Format(_('dxgettext %s'),[version]));
+    StreamWriteDefaultPoTemplateHeader(destination,Format(_('dxgettext %s'),(.version.)));
 
     // Write out all msgids
     if OrderbyMsgid then orderlist:=dom.msgid
                     else orderlist:=dom.order;
     for i := 0 to orderlist.Count - 1 do begin
       item := orderlist.Objects[i] as TPoEntry;
-      item.WriteToStream(destination, MaxWidth);
+      item.WriteToStream(destination);
     end;
   finally
     FreeAndNil (destination);
   end;
 end;
 
-procedure TXGetText.ExtractFromFile(const sourcefilename: string);
+procedure TXGetText.ExtractFromFile(sourcefilename: widestring);
 var
-  ext:string;
+  ext:widestring;
 begin
   CurrentFilename:=sourcefilename;
-  FLineNr:=0;
-  if ExpandFileName(CurrentFilename)<>CurrentFilename then
-    CurrentFilename:=BaseDirectory+CurrentFilename;
-  if Excludes.ExcludeDirectory(ExtractFilePath(CurrentFilename)) or Excludes.ExcludeFormFile(CurrentFilename) then
-    Exit;
+  linenr:=0;
+  if ExpandFileName(sourcefilename)<>sourcefilename then
+    sourcefilename:=BaseDirectory+SourceFilename;
   try
-    ext:=uppercase(ExtractFileExt(CurrentFilename));
+    ext:=uppercase(ExtractFileExt(sourcefilename));
     if (ext='.C') or (ext='.CPP') then
-      CFiles.Add(CurrentFilename)
+      CFiles.Add(sourcefilename)
     else begin
       if Assigned(OnProgress) then
-        OnProgress (Format(_('Reading %s'),[CurrentFilename]),CurrentFilename,0);
+        OnProgress (Format(_('Reading %s'),[sourcefilename]),sourcefilename,0);
       if (ext='.DFM') or (ext='.XFM') then
-        ExtractFromDFM(CurrentFilename)
+        ExtractFromDFM(sourcefilename)
       else
       if ext='.RC' then
-        ExtractFromRC(CurrentFilename)
+        ExtractFromRC(sourcefilename)
       else
 {$ifdef mswindows}
       if (ext='.DLL') or (ext='.EXE') or (ext='.BPL') then
-        ExtractFromEXE(CurrentFilename)
+        ExtractFromEXE(sourcefilename)
       else
 {$endif}
       if (ext='.PAS') or (ext='.DPR') or (ext='.INC') then
-        ExtractFromPascal(CurrentFilename)
+        ExtractFromPascal(sourcefilename)
       else begin
         Warning (wtParameterError,Format(_('WARNING: Unknown file extension %s. Reading file as being pascal source.'),[ext]));
-        ExtractFromPascal(CurrentFilename)
+        ExtractFromPascal(sourcefilename)
       end;
     end;
   except
@@ -1095,22 +849,21 @@ begin
   CurrentFilename:='';
 end;
 
-procedure TXGetText.ExtractFromFileMasks(const mask:string);
+procedure TXGetText.ExtractFromFileMasks(mask:widestring);
 var
   sr: TSearchRec;
   more: boolean;
-  sMask,
-  curdir:string;
+  curdir:widestring;
   dirlist:TStringList;
   sl:TStringList;
   i, idx:integer;
   maskcheck:TMask; // This is only necessary because of a bug in the Windows API FindFirst()
 begin
-  sMask:=ExpandFileName(BaseDirectory+mask);
+  mask:=ExpandFileName(BaseDirectory+mask);
   dirlist:=TStringList.Create;
   try
-    dirlist.Add(ExtractFilePath(sMask));
-    sMask := ExtractFileName(sMask);
+    dirlist.Add(ExtractFilePath(mask));
+    mask:=ExtractFileName(mask);
 
     if recurse then begin
       idx:=0;
@@ -1134,11 +887,11 @@ begin
     for idx:=0 to dirlist.Count-1 do begin
       curdir:=dirlist.Strings[idx];
 
-      maskcheck:=TMask.Create (sMask);
+      maskcheck:=TMask.Create (mask);
       sl:=TStringList.Create;
       try
         // Extract from all files in current directory
-        more := FindFirst(curdir+sMask, faAnyFile-faDirectory, sr) = 0;
+        more := FindFirst(curdir+mask, faAnyFile-faDirectory, sr) = 0;
         while more do begin
           // The following if is only necessary, because several Windows versions
           // have a bug in FindFirst, that makes "test.cpp,v" match on the
@@ -1161,7 +914,7 @@ begin
   end;
 end;
 
-function TXGetText.GetDomain(const domain: string): TXGTDomain;
+function TXGetText.GetDomain(domain: widestring): TXGTDomain;
 var
   i: integer;
 begin
@@ -1173,20 +926,10 @@ begin
   end;
 end;
 
-procedure TXGetText.dxreadln (var line:string; var firstline:boolean; var isutf8:boolean);
+procedure TXGetText.dxreadln(var src: TextFile; var line: widestring);
 var
   i:integer;
-
-  procedure GetNextLine(var _Line: string);
-  begin
-    if FLineNr < FLines.Count  then begin
-      _Line :=  FLines[FLineNr];
-      Inc(FLineNr);
-    end else
-      _Line := '';
-  end;
-
-  procedure cutuntil (const endtag:string);
+  procedure cutuntil (endtag:widestring);
   var p:integer;
   begin
     p:=i+length(endtag)-1;
@@ -1201,43 +944,19 @@ var
     line:=copy(line,1,i-1);
     commentmode:=endtag;
   end;
-
-  procedure GetIt;
-  //var
-  //  aline:RawByteString;
-  begin
-   GetNextLine(line);
-    //readln(src, aline);
-    {
-    if firstline then begin
-      if copy(line,1,3)=#$EF#$BB#$BF then begin
-        delete (line,1,3);
-        isutf8:=True;
-      end;
-      firstline:=False;
-    end;
-    if isutf8 then begin
-      line:= UTF8ToUnicodeString(aline);
-    end else
-      line:= string(ansistring(aline));
-    }
-  end;
-
 begin
   line:='';
-  //while (not eof(src)) and (line='') do begin
-  while (FLineNr < FLines.Count) and
-        (line='') do
-  begin
+  while (not eof(src)) and (line='') do begin
     if commentmode<>'' then begin
       while true do begin
-        if FLineNr >= FLines.Count then begin
+        if eof(src) then begin
           line:='';
           exit;
         end;
-        GetIt;
+        readln (src, line);
         line:=trim(line);
         LastLineRead:=line;
+        inc (linenr);
         i:=pos(commentmode,line);
         if i<>0 then begin
           delete (line,1,i+length(commentmode)-1);
@@ -1246,21 +965,20 @@ begin
         end;
       end;
     end else begin
-      GetIt;
+      readln (src, line);
       line:=trim(line);
       LastLineRead:=line;
-      if line='' then
+      inc (linenr);
+      if trim(line)='' then
         lastcomment:='';
     end;
     i:=1;
     while i<=length(line) do begin
-      //if copy(line,i,1)='''' then begin
-      if (line[i] = '''') then begin
+      if copy(line,i,1)='''' then begin
         // A string was detected - find the end of it.
         inc (i);
         while true do begin
-          //if copy(line,i,1)='''' then begin
-          if (line[i] = '''') then begin
+          if copy(line,i,1)='''' then begin
             inc (i);
             break;
           end;
@@ -1270,8 +988,7 @@ begin
           inc (i);
         end;
       end else
-      if (line[i] = '/') and (copy(line,i,2)='//') then
-      begin
+      if copy(line,i,2)='//' then begin
         // The rest of the line is a comment
         if lastcomment<>'' then
           lastcomment:=lastcomment+sLineBreak;
@@ -1279,22 +996,20 @@ begin
         line:=copy(line,1,i-1);
         exit;
       end else
-      //if copy(line,i,1)='{' then begin
-      if line[i] = '{' then
-      begin
+      if copy(line,i,1)='{' then begin
         if pos (cDefineDirective, lowercase(copy(line,1,length(cDefineDirective)))) = 1 then
           doHandleExtendedDirective (line);
 
         // Bracket comment
         cutuntil ('}');
       end else
-      if (line[i] = '(') and (copy(line,i,2)='(*') then begin
+      if copy(line,i,2)='(*' then begin
         // Bracket comment, Danish style
         cutuntil ('*)');
       end else
         inc (i);
     end;
-    line := trim(line);
+    line:=trim(line);
   end;
 end;
 
@@ -1320,7 +1035,7 @@ begin
   inherited;
 end;
 
-procedure TXGetText.WritePoFiles (const DestinationPath:string);
+procedure TXGetText.WritePoFiles (DestinationPath:widestring);
 var
   i:integer;
 begin
@@ -1338,26 +1053,18 @@ begin
   end;
 end;
 
-procedure TXGetText.Warning(WarningType:TWarningType;const msg: string);
+procedure TXGetText.Warning(WarningType:TWarningType;msg: widestring);
 begin
   if Assigned(OnWarning) then
-    OnWarning (WarningType,msg,LastLineRead,CurrentFilename,FLineNr);
+    OnWarning (WarningType,msg,LastLineRead,CurrentFilename,linenr);
 end;
 
-procedure TXGetText.Warning(WarningType: TWarningType; const Msg,
-  Line: string; const Filename:string;LineNumber: Integer);
-begin
-  if Assigned(OnWarning) then
-    OnWarning (WarningType,msg,Line,Filename,linenumber);
-end;
-
-procedure TXGetText.ExtractFromRC(const sourcefilename: string);
+procedure TXGetText.ExtractFromRC(sourcefilename: widestring);
 var
   tf:TextFile;
-  aline:ansistring;
-  line:string;
+  line:widestring;
   p, i:integer;
-  ident:string;
+  ident:widestring;
 begin
   // Currently, this scanner is based on the RC file that was included
   // with DBISAM version 3. It may not work with other RC files, but
@@ -1367,12 +1074,11 @@ begin
   AssignFile (tf,sourcefilename);
   Reset (tf);
   try
-    FLineNr:=0;
+    linenr:=0;
     while not eof(tf) do begin
       // Get next line
-      readln (tf,aline);
-      line:=string(aline);
-      inc (FLineNr);
+      readln (tf,line);
+      inc (linenr);
       line:=trim(line);
       LastLineRead:=line;
 
@@ -1390,36 +1096,16 @@ begin
           delete (line,1,p);
           i:=1;
           while i<=length(line) do begin
-            if copy(line,i,2)='\n' then begin
-              delete (line,i,1);
-              line[i]:=#10;
-            end else
-            if copy(line,i,2)='\r' then begin
-              delete (line,i,1);
-              line[i]:=#13;
-            end else
-            if copy(line,i,2)='\t' then begin
-              delete (line,i,1);
-              line[i]:=#9;
-            end else
-            if copy(line,i,2)='\f' then begin
-              delete (line,i,1);
-              line[i]:=#26;
-            end else
             if line[i]='\' then begin
-              case line[i+1] of
-                'n': line[i+1] := #10;
-                'r': line[i+1] := #13;
-                't': line[i+1] := #9;
-              end;
               delete (line,i,1);
+              inc (i);
             end else
             if line[i]='"' then begin
               delete (line,i,maxint);
             end;
               inc (i);
           end;
-          AddTranslation('default',RemoveNuls(line),ident,MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(FLineNr));
+          AddTranslation('default',RemoveNuls(line),ident,MakePathLinuxRelative(sourcefilename) + ':' + IntToStr(linenr));
         end;
       end;
     end;
@@ -1428,7 +1114,7 @@ begin
   end;
 end;
 
-procedure TXGetText.AddBaseDirectory(const path: string);
+procedure TXGetText.AddBaseDirectory(path: string);
 begin
   if path<>'' then
     BaseDirectoryList.Add(IncludeTrailingPathDelimiter(path))
@@ -1456,7 +1142,6 @@ begin
   // Iterate base directories
   for j:=0 to BaseDirectoryList.Count-1 do begin
     BaseDirectory:=BaseDirectoryList.Strings[j];
-    ParseExcludeFile;
     for i:=0 to filemasks.count-1 do begin
       if NoWildcards then begin
         ExtractFromFile(filemasks.Strings[i]);
@@ -1468,9 +1153,6 @@ begin
 
   // Handle ignores
   HandleIgnores;
-
-  //*** Handle comments
-  HandleComments;
 
   // Write files
   if UpdateIgnore then
@@ -1498,7 +1180,7 @@ begin
 end;
 
 
-procedure TXGetText.doHandleExtendedDirective(var line: string);
+procedure TXGetText.doHandleExtendedDirective(line: wideString);
 Const
   cErrOptionUnknown = '{gnugettext: Unknonw option.';
   cErrMissingStart = '{gnugettext: reset found without scan-all.';
@@ -1509,7 +1191,7 @@ Var
 begin
   delete (line, 1, length(cDefineDirective));
   line := trim (line);
-  if IsDirective(cScanOption, line) then begin
+  if pos (cScanOption, lowerCase (copy (line, 1, length(cScanOption)))) = 1 then begin
     delete (line, 1, length (cScanOption));
     line := trim (line);
     if pos (cDomainDefinition, lowerCase (copy (line, 1, length(cDomainDefinition)))) = 1 then begin
@@ -1542,7 +1224,7 @@ begin
     end
     else definedDomain := 'default';
   end
-  else if IsDirective(cScanResetOption, line) then begin
+  else if pos (cScanResetOption, lowerCase (copy (line, 1, length(cScanResetOption)))) = 1 then begin
     if length (definedDomain) = 0 then Warning(wtExtendedDirectiveError, _(cErrMissingStart))
     else definedDomain := ''
   end
@@ -1552,12 +1234,12 @@ begin
 end;
 
 {$ifdef mswindows}
-procedure TXGetText.ExtractFromEXE(const sourcefilename: string);
+procedure TXGetText.ExtractFromEXE(sourcefilename: widestring);
   procedure recurse (rl:TResourceList);
   var
     r:TResourceItem;
     i,j:integer;
-    ws:string;
+    ws:widestring;
     itemno:integer;
   begin
     for i:=0 to rl.Count-1 do begin
@@ -1606,13 +1288,7 @@ begin
 
   // Add new ignores to new ignore list and update autocomments
   if UpdateIgnore then begin
-    for j := 0 to dom.order.Count - 1 do
-    begin
-      if Assigned(OnProgress) then
-      begin
-        OnProgress (_('Update ignore list'), '', 0);
-      end;
-
+    for j := 0 to dom.order.Count-1 do begin
       item := dom.order.Objects[j] as TPoEntry;
       ignoreitem:=ignorelist.Find(item.MsgId);
       if ignoreitem=nil then begin
@@ -1629,581 +1305,14 @@ begin
   end;
 
   // Remove ignores from default list
-  if UseIgnoreFile then
-  begin
-    for j := dom.order.Count - 1 downto 0 do
-    begin
-      if Assigned(OnProgress) then
-      begin
-        OnProgress (_('Remove ignored strings from template'), '', 0);
-      end;
-
-      item := dom.order.Objects[j] as TPoEntry;
-      if ignorelist.Find(item.MsgId) <> nil then
-      begin
+  if UseIgnoreFile then begin
+    for j:=dom.order.Count-1 downto 0 do begin
+      item:=dom.order.Objects[j] as TPoEntry;
+      if ignorelist.Find(item.MsgId)<>nil then
         // Only delete from order list
         dom.order.Delete (j);
-      end;
     end;
   end;
 end;
-
-procedure TXGetText.HandleComments;
-var
-  i, j: integer;
-  lDomain: TXGTDomain;
-  lItem, lTemplatItem: TPoEntry;
-  lFileName: TFileName;
-  lTemplateList: TPoEntryList;
-begin
-  //*** preserve comments from a existing template-file
-  if PreserveUserComments then
-  begin
-    //DestinationPath+'ignore.po'
-    for i := 0 to domainlist.Count - 1 do
-    begin
-      lFileName := IncludeTrailingPathDelimiter(DestinationPath) +
-                   domainlist.Strings[i] + '.po';
-
-      if Assigned(OnProgress) then
-      begin
-        OnProgress (_('copy user comments from existing template'), lFileName, 0);
-      end;
-
-      if FileExists (lFileName) then
-      begin
-        lDomain := GetDomain(domainlist.Strings[i]);
-
-        //** Read existing Template file
-        lTemplateList := TPoEntryList.Create;
-        try
-          lTemplateList.LoadFromFile(lFileName);
-
-          for j := lDomain.Order.Count - 1 downto 0 do
-          begin
-            lItem        := lDomain.order.Objects[j] as TPoEntry;
-            lTemplatItem := lTemplateList.Find(lItem.MsgId);
-
-            if (lTemplatItem <> nil) then
-            begin
-              //*** copy the existing comment to the new template (new template
-              //    can not have user comments)
-              lItem.UserCommentList.Append(lTemplatItem.UserCommentList.Text);
-            end;
-          end;
-        finally
-          lTemplateList.Free;
-        end;
-      end;
-    end;
-  end;
-end;
-
-function TXGetText.isStringObjectPascalFormat(const xMsgId: String): TObjectPascalFormat;
-begin
-  Result := opfUndefined;
-
-  if (pos('%', xMsgId) > 0) then
-  begin
-    result := opfFalse;
-  end;
-
-  if (pos('%s', xMsgId) > 0) or
-     (pos('%d', xMsgId) > 0) or
-     (pos('%f', xMsgId) > 0) or
-     (pos('%%', xMsgId) > 0) then
-  begin
-    Result := opfTrue;
-  end;
-end;
-
-procedure TXGetText.ParseExcludeFile;
-const
- cExcludeFilename = 'ggexclude.cfg';
-var
-  excludefile: string;
-  F: TextFile;
-  section,
-  line: string;
-  lnr: integer;
-  added:boolean;
-begin
-  lnr := 0;
-  Excludes.Clear;
-  Excludes.Basedirectory := BaseDirectory;
-  excludefile :=BaseDirectory;
-  if RightStr(excludefile, 1) <> PathDelim then
-    excludefile := excludefile + PathDelim;
-  excludefile := ExpandFilename(excludefile + cExcludeFilename);
-  if not FileExists(excludefile) then
-    Exit;
-  section := '';
-  FileMode:=fmOpenRead;
-  AssignFile(F, excludefile);
-  Reset(F);
-  try
-    if Assigned(OnProgress) then
-      OnProgress (Format(_('Reading %s'),[excludefile]),excludefile,0);
-    while not EOF(F) do begin
-      Readln(F, line);
-      line := Trim(line);
-      inc(lnr);
-      if line <> '' then begin // skip empty lines
-        if line[1] = '#' then // skip remarks
-          Continue;
-        if line[1] = '[' then begin // entering new section
-          if RightStr(line, 1) = ']' then begin
-            section := LowerCase(Copy(line, 2, Length(line) - 2));
-            if (section <> cExcludeDir)
-              and (section <> cExcludeFile)
-              and (section <> cExcludeFormClass)
-              and (section <> cExcludeFormClassProperty)
-              and (section <> cExcludeFormInstance) then
-                Warning(wtExcludeFile, Format(_('Line %d: Unknown section'), [lnr]), section, excludefile, lnr);
-             continue;
-          end else
-            Warning(wtExcludeFile, Format(_('Line %d: Looks like a section but has no closing square brackets'), [lnr]), line, excludefile, lnr);
-        end;
-        added := true;
-        if section = cExcludeDir then
-          added := Excludes.AddDirectory(line)
-        else if section = cExcludeFile then
-          added := Excludes.AddFormFile(line)
-        else if section = cExcludeFormClass then
-          added := Excludes.AddFormClass(line)
-        else if section = cExcludeFormClassProperty then
-          added := Excludes.AddFormClassProperty(line)
-        else if section = cExcludeFormInstance then
-          added := Excludes.AddFormInstance(line);
-        if not added then
-          Warning(wtExcludeFile, Format(_('Line %d: %s'), [lnr, Excludes.LastErrorMsg]), line, excludefile, lnr);
-      end;
-    end;
-  finally
-    CloseFile(F);
-  end;
-end;
-
-{ TXExcludes }
-
-function TXExcludes.AddDirectory(aDirectory: string): boolean;
-begin
-  Result := True;
-  aDirectory := Trim(aDirectory);
-  if aDirectory = '' then
-    Exit;
-  if BaseDirectory <> '' then begin
-    aDirectory := GetFullInternalPath(aDirectory);
-    if RightStr(aDirectory, 1) = PathDelim then
-      aDirectory := Copy(aDirectory, 1, Length(aDirectory) -1);
-    if DirectoryExists(aDirectory) then begin
-      {$ifdef mswindows}
-      FDirectories.Add(AnsiLowerCase(aDirectory));
-      {$else}
-      FFiles.Add(aDirectory);
-      {$endif}
-    end else begin
-      Result := False;
-      FLastErrorMsg := Format(_('Directory %s doesn''t exist'), [aDirectory]);
-    end;
-  end;
-end;
-
-
-function TXExcludes.AddFormClass(aClassname: string): boolean;
-begin
-  Result := True;
-  if aClassname = '' then
-    Exit;
-  if Pos('.', aClassname) > 0 then begin
-    Result := False;
-    FLastErrorMsg := Format(_('Wrong section: %s is a property name and not a class'), [aClassname]);
-  end else begin
-    aClassname := Trim(Lowercase(aClassname));
-    FFormClasses.Add(aClassname);
-  end;
-end;
-
-function TXExcludes.AddFormClassProperty(aPropertyname: string): boolean;
-var
-  p:integer;
-begin
-  Result := True;
-  p := Pos('.', aPropertyname);
-  if p = 0 then begin
-    Result := False;
-    FLastErrorMsg := Format(_('Wrong section: %s seems to be a class and not a property name'), [aPropertyname]);
-  end else 
-    FExcludeFormClassPropertyList.AddFormClassProperty(aPropertyname);
-end;
-
-function TXExcludes.AddFormFile(aFilename: string): boolean;
-var
-  wildcardfilecount: integer;
-begin
-  Result := True;
-  aFilename := Trim(aFilename);
-  if aFilename = '' then
-    Exit;
-  if BaseDirectory <> '' then begin
-    wildcardfilecount := 0;
-    // if a wildcard is used, add all possible Delphi- or Kylix-files to the list
-    if RightStr(aFilename, 2) = '.*' then begin
-      aFilename := Copy(aFilename, 1, Length(aFilename) -2);
-      if AddFormFile(aFilename + '.dpr') then
-        inc(wildcardfilecount);
-      if AddFormFile(aFilename + '.pas') then
-        inc(wildcardfilecount);
-      if AddFormFile(aFilename + '.dfm') then
-        inc(wildcardfilecount);
-      if AddFormFile(aFilename + '.xfm') then
-        inc(wildcardfilecount);
-      if AddFormFile(aFilename + '.inc') then
-        inc(wildcardfilecount);
-      if AddFormFile(aFilename + '.rc') then
-        inc(wildcardfilecount);
-      if wildcardfilecount = 0 then begin
-        Result := False;
-        FLastErrorMsg := Format(_('No file found for "%s.*"'), [aFilename]);
-      end;
-      Exit;
-    end;
-
-    aFilename := GetFullInternalPath(aFilename);
-    if FileExists(aFilename) then begin
-      {$ifdef mswindows}
-      FFiles.Add(AnsiLowerCase(aFilename));
-      {$else}
-      FFiles.Add(aFilename);
-      {$endif}
-    end else begin
-      Result := False;
-      FLastErrorMsg := Format(_('File %s doesn''t exist'), [aFilename]);
-    end;
-  end;
-end;
-
-function TXExcludes.AddFormInstance(aInstanceName: string): boolean;
-var
-  filenamepart,
-  instancenamepart: string;
-  i: integer;
-  p: integer;
-begin
-  Result := True;
-  aInstanceName := Trim(aInstanceName);
-  if aInstanceName = '' then
-    Exit;
-
-  // Search from the end of the line
-  // Take into account that filenames might be absolute, containing
-  // ':' on Windows; and that a file-ext might be there.
-  p := 0;
-  for i := Length(aInstanceName) downto 1 do begin
-    if aInstanceName[i] = ':' then begin
-      p := i;
-      break;
-    end;
-  end;
-
-  if p = 0 then begin
-    Result := False;
-    FLastErrorMsg := Format(_('Wrong syntax: No ":" found in %s'), [aInstanceName]);
-    exit;
-  end;
-
-  if p = Length(aInstanceName) then begin
-    Result := False;
-    FLastErrorMsg := Format(_('Wrong syntax: ":" is at the end of the line of %s'), [aInstanceName]);
-    exit;
-  end;
-
-  filenamepart := GetFullInternalPath(LeftStr(aInstanceName, p-1));
-  if not FileExists(filenamepart) then begin
-    Result := False;
-    FLastErrorMsg := Format(_('File "%s" doesn''t exist'), [filenamepart]);
-    exit;
-  end;
-  {$ifdef mswindows}
-  filenamepart := AnsiLowerCase(filenamepart);
-  {$endif}
-  instancenamepart := RightStr(aInstancename, Length(aInstancename)-p);
-  FFormInstances.Append(Format('%s:%s', [filenamepart,instancenamepart]));
-end;
-
-procedure TXExcludes.Clear;
-begin
-  FFiles.Clear;
-  FDirectories.Clear;
-  FFormClasses.Clear;
-  FFormInstances.Clear;
-  FExcludeFormClassPropertyList.Clear;
-  FLastErrorMsg := '';
-  FBaseDirectory := '';
-end;
-
-constructor TXExcludes.Create;
-begin
-  FExcludeFormClassPropertyList := TXExcludeFormClassPropertyList.Create(TXExcludeFormClassProperties);
-  FLastErrorMsg := '';
-
-  FDirectories := TStringList.Create;
-  FDirectories.Duplicates := dupIgnore;
-  FDirectories.Sorted := True;
-  FDirectories.CaseSensitive := True;
-
-  FFiles := TStringList.Create;
-  FFiles.Duplicates := dupIgnore;
-  FFiles.Sorted := True;
-  FFiles.CaseSensitive := True;
-
-  FFormClasses := TStringList.Create;
-  FFormClasses.Sorted := True;
-  FFormClasses.Duplicates := dupIgnore;
-  FFormClasses.CaseSensitive := False;
-
-  FFormInstances := TStringList.Create;
-end;
-
-destructor TXExcludes.Destroy;
-begin
-  FreeAndNil(FExcludeFormClassPropertyList);
-  FreeAndNil(FFormInstances);
-  FreeAndNil(FFormClasses);
-  FreeAndNil(FFiles);
-  FreeAndNil(FDirectories);
-  inherited;
-end;
-
-function TXExcludes.ExcludeDirectory(aDirectory: string): Boolean;
-var
- i: Integer;
-begin
-  Result := False;
-  if (Trim(aDirectory) = '') or (FDirectories.Count = 0) then
-    Exit;
-  if RightStr(aDirectory, 1) = PathDelim then
-    aDirectory := Copy(aDirectory, 1, Length(aDirectory) -1);
-  aDirectory := WindowsPathDelim2LinuxPathDelim(aDirectory);
-  {$ifdef mswindows}
-  aDirectory := AnsiLowerCase(aDirectory);
-  {$endif}
-  for i := 0 to FDirectories.Count-1 do begin
-    // this checks for subfolders in FDirectories[i] as well:
-    if Pos(FDirectories[i], aDirectory) = 1 then begin
-      Result := True;
-      Exit;
-    end;
-  end;
-end;
-
-function TXExcludes.ExcludeFormClass(aClassname: string): Boolean;
-var
-  i:integer;
-  s:string;
-begin
-  Result := False;
-  if (aClassname = '') or (FFormClasses.Count = 0) then
-    Exit;
-  aClassname := Trim(LowerCase(aClassname));
-  for i := 0 to FFormClasses.Count-1 do begin
-    s := FFormClasses[i];
-    if RightStr(s, 1) = '*' then
-      s := LeftStr(s, Length(s)-1);
-    if s = aClassname then begin
-      Result := true;
-      exit;
-    end;
-  end;
-end;
-
-function TXExcludes.ExcludeFormClassProperty(aClassname,
-  aPropertyname: string): Boolean;
-begin
-  Result := FExcludeFormClassPropertyList.ExcludeFormClassProperty(aClassname, aPropertyname)
-end;
-
-function TXExcludes.ExcludeFormClassProperty(aClassname: string): Boolean;
-begin
-  Result := Assigned(FExcludeFormClassPropertyList.FindItem(aClassname));
-end;
-
-function TXExcludes.ExcludeFormFile(aFilename: string): Boolean;
-begin
-  Result := False;
-  if (aFilename = '') or (FFiles.Count = 0) then
-    Exit;
-  aFilename := WindowsPathDelim2LinuxPathDelim(aFilename);
-  {$ifdef mswindows}
-  aFilename := AnsiLowerCase(aFilename);
-  {$endif}
-  Result := FFiles.IndexOf(aFilename) > -1;
-end;
-
-function TXExcludes.ExcludeFormInstance(aFilename, aInstanceName: string): boolean;
-var
-  i,p: integer;
-  filenamepart,
-  instancenamepart: string;
-begin
-  Result := False;
-  aFilename := WindowsPathDelim2LinuxPathDelim(aFilename);
-  aInstanceName := Trim(aInstanceName);
-  if (aInstanceName = '') or (aFilename = '') or (FFormInstances.Count = 0) then
-    Exit;
-  aInstanceName := LowerCase(aInstanceName);
-  p := 0;
-  for i := 0 to FFormInstances.Count-1 do begin
-    if lowercase(RightStr(FFormInstances[i], Length(aInstancename))) = aInstancename then
-      p := Length(aInstancename) -1
-    else
-      continue;
-    if p > 0 then begin
-      filenamepart := LeftStr(FFormInstances[i], Length(FFormInstances[i])-p-2);
-      instancenamepart := lowercase(RightStr(FFormInstances[i], p+1));
-      {$ifdef mswindows}
-      if (AnsiLowercase(filenamepart) = AnsiLowercase(aFilename))
-      {$else}
-      if (filenamepart = aFilename)
-      {$endif}
-      and (instancenamepart = aInstanceName) then begin
-        Result := true;
-        exit;
-      end;
-    end;
-  end;
-end;
-
-function TXExcludes.FormClassHasWildcard(aClassname: string): Boolean;
-var
-  i:integer;
-begin
-  Result := False;
-  aClassname := Trim(LowerCase(aClassname));
-  for i := 0 to FFormClasses.Count-1 do begin
-    if RightStr(FFormClasses[i], 1) = '*' then begin
-      if LeftStr(FFormClasses[i], Length(FFormClasses[i])-1) = aClassname then begin
-        Result := true;
-        exit;
-      end;
-    end;
-  end;
-end;
-
-function TXExcludes.GetFullInternalPath(s:string): string;
-begin
-  Result := Trim(WindowsPathDelim2LinuxPathDelim(ExpandFilename(Basedirectory+s)));
-end;
-
-{ TXExcludeFormClassProperties }
-
-procedure TXExcludeFormClassProperties.AddFormClassProperty(aPropertyname: string);
-begin
-  FProperties.Add(Trim(Lowercase(aPropertyname)));
-end;
-
-constructor TXExcludeFormClassProperties.Create(Collection: TCollection);
-begin
-  inherited;
-  FProperties := TStringList.Create;
-  FProperties.Duplicates := dupIgnore;
-  FProperties.Sorted := True;
-  FProperties.CaseSensitive := False;
-end;
-
-destructor TXExcludeFormClassProperties.Destroy;
-begin
-  FreeAndNil(FProperties);
-  inherited;
-end;
-
-function TXExcludeFormClassProperties.ExcludeFormClassProperty(
-  aPropertyname: string): boolean;
-begin
-  Result := FProperties.IndexOf(Trim(LowerCase(aPropertyname))) > -1;
-end;
-
-procedure TXExcludeFormClassProperties.SetNameOfClass(const Value: string);
-begin
-  FNameOfClass := Trim(Lowercase(Value));
-end;
-
-{ TXExcludeFormClassPropertyList }
-
-function TXExcludeFormClassPropertyList.Add: TXExcludeFormClassProperties;
-begin
-  Result := TXExcludeFormClassProperties(inherited Add);
-end;
-
-function TXExcludeFormClassPropertyList.AddFormClass(aClassname: string): TXExcludeFormClassProperties;
-begin
-  Result := FindItem(aClassname);
-  if not assigned(Result) then begin
-    Result := Add;
-    Result.NameOfClass := aClassname;
-  end;
-end;
-
-function TXExcludeFormClassPropertyList.AddFormClassProperty(
-  aClassPropertyname: string): TXExcludeFormClassProperties;
-var
-  p: integer;
-  theclassname,
-  thepropertyname: string;
-  item: TXExcludeFormClassProperties;
-begin
-  Result := nil;
-  if aClassPropertyname = '' then
-    Exit;
-  p := Pos('.', aClassPropertyname);
-  aClassPropertyname := Trim(aClassPropertyname);
-  theclassname := Trim(LeftStr(aClassPropertyname, p-1));
-  thepropertyname := Trim(RightStr(aClassPropertyname, Length(aClassPropertyname) - p));
-  item := AddFormClass(theclassname);
-  assert(assigned(item), 'This should''t happen: item of a class was neither created nor found');
-  item.AddFormClassProperty(thepropertyname);
-end;
-
-function TXExcludeFormClassPropertyList.ExcludeFormClassProperty(
-  aClassname, aPropertyname: string): Boolean;
-var
-  item: TXExcludeFormClassProperties;
-begin
-  Result := False;
-  if Count > 0 then begin
-    item := FindItem(aClassname);
-    if assigned(item) then
-      Result := item.ExcludeFormClassProperty(aPropertyname);
-  end;
-end;
-
-function TXExcludeFormClassPropertyList.FindItem(
-  aClassname: string): TXExcludeFormClassProperties;
-var
-  i:integer;
-begin
-  Result := nil;
-  if Count > 0 then begin
-    aClassname := Trim(Lowercase(aClassname));
-    for i := 0 to Count-1 do
-      if Items[i].NameOfClass = aClassname then begin
-        Result := Items[i];
-        exit;
-      end;
-  end;
-end;
-
-function TXExcludeFormClassPropertyList.GetItems(
-  Index: integer): TXExcludeFormClassProperties;
-begin
-  Result := TXExcludeFormClassProperties(inherited Items[Index]);
-end;
-
-procedure TXExcludeFormClassPropertyList.SetItem(Index: integer;
-  const Value: TXExcludeFormClassProperties);
-begin
-  inherited SetItem(Index, Value);
-end;
-
 
 end.

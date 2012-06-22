@@ -10,12 +10,10 @@ uses
   gnugettext in '..\..\sample\gnugettext.pas',
   poparser in '..\..\dxgettext\poparser.pas',
   appconsts in '..\..\dxgettext\appconsts.pas',
-  u_dzQuicksort in '..\..\dxgettext\u_dzQuicksort.pas',
   {$else}
   gnugettext in '../../sample/gnugettext.pas',
   poparser in '../../dxgettext/poparser.pas',
   appconsts in '../../dxgettext/appconsts.pas',
-  u_dzQuicksort in '../../dxgettext/u_dzQuicksort.pas',
   {$endif}
   Math;
 
@@ -72,16 +70,16 @@ begin
           if pe=nil then
             break;
           if (pe.MsgId<>'') and (copy(pe.MsgId,length(pe.MsgId),1)=#10) then begin
-            sl1.Text:=pe.MsgId;
-            sl2.Text:=pe.MsgStr;
+            sl1.Text:=utf8encode(pe.MsgId);
+            sl2.Text:=utf8encode(pe.MsgStr);
             for i:=0 to sl1.Count-1 do begin
               pe2:=TPoEntry.Create;
               pe2.Assign(pe);
-              pe2.MsgId:=sl1.strings[i];
+              pe2.MsgId:=utf8decode(sl1.strings[i]);
               if i>=sl2.Count then
                 pe2.MsgStr:=''
               else
-                pe2.MsgStr:=sl2.strings[i];
+                pe2.MsgStr:=utf8decode(sl2.strings[i]);
               pe3:=pol.Find(pe2.MsgId);
               if pe3=nil then begin
                 if extra.Find(pe2.MsgId)=nil then begin

@@ -8,13 +8,11 @@ uses
   poparser in '..\..\dxgettext\poparser.pas',
   appconsts in '..\..\dxgettext\appconsts.pas',
   consoleoutput in '..\..\dxgettext\consoleoutput.pas',
-  u_dzQuicksort in '..\..\dxgettext\u_dzQuicksort.pas',
   {$else}
   gnugettext in '../../sample/gnugettext.pas',
   poparser in '../../dxgettext/poparser.pas',
   appconsts in '../../dxgettext/appconsts.pas',
   consoleoutput in '../../dxgettext/consoleoutput.pas',
-  u_dzQuicksort in '../../dxgettext/u_dzQuicksort.pas',
   {$endif}
   msgmergedxengine in 'msgmergedxengine.pas',
   msgmergedxconsole in 'msgmergedxconsole.pas';

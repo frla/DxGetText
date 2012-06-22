@@ -1,5 +1,4 @@
 unit assembleengine;
-// This is the unit that actually embeds translations into the exe file.
 
 interface
 
@@ -11,9 +10,7 @@ type
     class
     public
       exefilename:string;
-      detectioncode:RawByteString;
-      startheader:RawByteString;
-      endheader:RawByteString;
+      patchcode:string;
       filemask:string;
       filelist:TStringList;  // Objects are TFileInfo
       constructor Create;
@@ -25,13 +22,13 @@ type
     private
       basedirectory:string;
       procedure RecurseDirs (list:TStringList; dir:string);
-      function FindSignature(const signature: RawByteString; str: TFileStream): Boolean;
+      function FindPatchPosition(str: TFileStream): int64;
     end;
 
 implementation
 
 uses
-  SysUtils, StrUtils,
+  SysUtils,
   gnugettext;
 
 type
@@ -42,7 +39,7 @@ type
       size:int64;
     end;
 
-procedure StreamWriteRaw (s:TStream;line:RawByteString);
+procedure StreamWrite (s:TStream;line:string);
 var
   nextpos:integer;
 begin
@@ -82,8 +79,7 @@ var
   i:integer;
   nextpos:int64;
   fi:TFileInfo;
-  relativeoffsethelper,
-  tableoffset:int64;
+  patchposition,tableoffset:int64;
 begin
   if exefilename='' then
     raise Exception.Create (_('No .exe filename specified.'));
@@ -95,24 +91,12 @@ begin
     PrepareFileList;
   filelist.Sort;
 
-  if filelist.Count = 0 then begin
-    WriteLn('No .mo files found, leaving the executable unchanged.');
-    exit;
-  end;
   str:=TFileStream.Create (exefilename,fmOpenReadWrite);
   try
-    if not FindSignature(detectioncode, str) then
-      raise Exception.Create (Format(_('Signature "%s" was not found in .exe file. Please make sure the .exe file has been compiled with the correct libraries.'), [detectioncode]));
-
-    if FindSignature(startheader,str) or FindSignature(endheader,str) then
-    begin
-      raise Exception.Create (_('This file has already been modified. Please recompile this .exe file.'));
-    end;
-
-    // add new begin header to the end of the exe file
-    str.Seek(0, soFromEnd);
-    StreamWriteRaw(str, startheader);
-    relativeoffsethelper := str.Position;
+    // Find patch position
+    patchposition:=FindPatchPosition (str);
+    if patchposition=0 then
+      raise Exception.Create (Format(_('Patch code "%s" was not found in .exe file. Are you sure the .exe file has been compiled with the correct libraries?'),[patchcode]));
 
     // Add files to the end of the exe file
     str.Seek(0, soFromEnd);
@@ -130,77 +114,72 @@ begin
 
     // Write List of files
     while str.position and $ff<>0 do
-      StreamWriteRaw (str,#0);
+      StreamWrite (str,#0);
     tableoffset:=str.Position;
     nextpos:=tableoffset;
     for i:=0 to filelist.Count-1 do begin
       while str.position<>nextpos do
-        StreamWriteRaw (str,' ');
+        StreamWrite (str,' ');
       fi:=filelist.Objects[i] as TFileInfo;
       nextpos:=((str.Position+sizeof(nextpos)+sizeof(fi.offset)+sizeof(fi.size)+length(fi.filename))+256) and (not $ff);
-      StreamWriteInt64(str,nextpos-relativeoffsethelper);
-      StreamWriteInt64(str,fi.offset-relativeoffsethelper);
+      StreamWriteInt64(str,nextpos);
+      StreamWriteInt64(str,fi.offset);
       StreamWriteInt64(str,fi.size);
-      StreamWriteRaw (str,utf8encode(fi.filename));
+      StreamWrite (str,fi.filename);
     end;
     while str.position<>nextpos do
-      StreamWriteRaw (str,' ');
+      StreamWrite (str,' ');
     StreamWriteInt64(str,0);
 
-    // finalize by writing the relative table offset (8 byte) and end header
-    str.Seek(0, soFromEnd);
-    StreamWriteInt64(str, tableoffset-relativeoffsethelper);
-    StreamWriteRaw(str, endheader);
+    str.Seek(patchposition+length(patchcode),soFromBeginning);
+    StreamWriteInt64(str,TableOffset);
+
   finally
     FreeAndNil (str);
   end;
-  WriteLn('Successfully added ', Filelist.Count, ' .mo files to ', exefilename);
 end;
 
-function Tassembleengine.FindSignature(const signature: RawByteString; str: TFileStream): Boolean;
+function Tassembleengine.FindPatchPosition(str: TFileStream): int64;
 // Finds the position of patchcode in the file.
 const
   bufsize=100000;
 var
-  a:RawByteString;
-  b:RawByteString;
+  a:string;
+  b:string;
+  offset:integer;
   rd,p:Integer;
 begin
-  Result := False;
-  if signature='' then
+  if patchcode='' then
     raise Exception.Create (_('No patch code has been specified.'));
-
-  str.Seek(0, soFromBeginning);
-  
+  offset:=0;
   SetLength (a, bufsize);
   SetLength (b, bufsize);
+  str.Seek(0,soFromBeginning);
   str.Read(a[1],bufsize);
   while true do begin
     rd:=str.Read(b[1],bufsize);
-    p:=pos(signature,a+b);
-// bugfix: This did not find signatures that were located within the last part of the
-//         file at > (Filesize div bufsize) * bufsize + 100
-//         The point of the second part of the if condition is beyond me anyway because
-//         the expensive part of searching is in the pos call above and has already
-//         been executed. So what was the point of this? Some kind of optimization I don't
-//         understand? -- 2011-08-20 twm
-//    if (p<>0) and (p<bufsize+100) then begin
-    if p<>0 then begin
-      Result:=True;
+    p:=pos(patchcode,a+b);
+    if (p<>0) and (p<bufsize+100) then begin
+      Result:=offset+p-1;
+      if copy(a+b,p+length(patchcode),8)<>#0#0#0#0#0#0#0#0 then
+        raise Exception.Create (_('This file has already been modified. Please recompile this .exe file.'));
       exit;
     end;
     if rd<>bufsize then begin
       // Prematurely ended without finding anything
+      Result:=0;
       exit;
     end;
     a:=b;
+    offset:=offset+bufsize;
   end;
+  Result:=0;
 end;
 
 procedure Tassembleengine.PrepareFileList;
 begin
   if filelist.Count=0 then
-    RecurseDirs (filelist, 'locale'+PathDelim);
+    RecurseDirs (filelist,'');
 end;
 
 procedure Tassembleengine.RecurseDirs(list: TStringList; dir: string);
@@ -252,12 +231,8 @@ begin
 end;
 
 procedure Tassembleengine.SetGnuGettextPatchCode;
-const
-  AssemblePrefix: AnsiString = 'DXG'; // gnugettext checks for the prefix + signature
 begin
-  detectioncode := '2E23E563-31FA-4C24-B7B3-90BE720C6B1A';
-  startheader := AssemblePrefix + 'BD7F1BE4-9FCF-4E3A-ABA7-3443D11AB362';
-  endheader :=AssemblePrefix + '1C58841C-D8A0-4457-BF54-D8315D4CF49D';
+  patchcode:='6637DB2E-62E1-4A60-AC19-C23867046A89';
 end;
 
 procedure Tassembleengine.SkipFile(filename: string);
@@ -267,7 +242,7 @@ begin
   idx:=filelist.IndexOf(filename);
   if idx=-1 then raise Exception.Create ('Internal error. Filename not found in list: '+filename);
   filelist.Objects[idx].Free;
-  filelist.Delete(idx);
+  filelist.Delete(idx); 
 end;
 
 end.

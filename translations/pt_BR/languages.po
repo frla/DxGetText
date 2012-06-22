@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cupsdconf\n"
 "POT-Creation-Date: 2003-05-05 12:39\n"
-"PO-Revision-Date: 2006-06-13 14:47-0300\n"
-"Last-Translator: Victor Westmann <victor.westmann@gmail.com>\n"
+"PO-Revision-Date: 2003-05-19 17:34-0300\n"
+"Last-Translator: Lisiane Sztoltz <lisiane@conectiva.com.br>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@mail.kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,8 +23,9 @@ msgstr "Afrikaans"
 msgid "Albanian"
 msgstr "Albanês"
 
+#, fuzzy
 msgid "American English"
-msgstr "Inglês Americano"
+msgstr "Inglês"
 
 msgid "Arabic"
 msgstr "Arábico"
@@ -34,10 +35,10 @@ msgid "Armenian"
 msgstr "Armênio"
 
 msgid "Australian English"
-msgstr "Inglês Australiano"
+msgstr ""
 
 msgid "Austrian German"
-msgstr "Alemão Austríaco"
+msgstr ""
 
 #. Asian language from a nation of the same name
 msgid "Azerbaijani"
@@ -64,12 +65,14 @@ msgid "Breton"
 msgstr "Bretão"
 
 #. Language of Brazil
+#, fuzzy
 msgid "Brazilian Portuguese"
-msgstr "Português Brasileiro"
+msgstr "Português"
 
 #. Language of England
+#, fuzzy
 msgid "British English"
-msgstr "Inglês Bretão"
+msgstr "Inglês"
 
 #. Language of Bulgaria, Europe
 msgid "Bulgarian"
@@ -79,8 +82,9 @@ msgstr "Búlgaro"
 msgid "Burmese"
 msgstr "Burmes"
 
+#, fuzzy
 msgid "Canadian English"
-msgstr "Inglês Canadense"
+msgstr "Inglês"
 
 #. Language of Andorra, a small part of France and a small part of Spain
 msgid "Catalan"
@@ -129,8 +133,9 @@ msgid "Faroese"
 msgstr "Faroese"
 
 #. The same language as Dutch, but the version that is spoken in Belgium, Europe
+#, fuzzy
 msgid "Flemish"
-msgstr "Holandês Dialetos"
+msgstr "Peixe"
 
 #. Finland is in north Europe
 msgid "Finnish"
@@ -161,16 +166,18 @@ msgid "Greek"
 msgstr "Grego"
 
 #. Language of Greenland, the largest island in the world, located in North America but belongs to Denmark, Europe
+#, fuzzy
 msgid "Greenlandic"
-msgstr "Groenlandês"
+msgstr "Groenlândia"
 
 #. A language spoken in India
 msgid "Gujarati"
 msgstr "Gujarati"
 
 #. Language spoken on haiti and The Bahamas (amongst immigrants). Also named Creole.
+#, fuzzy
 msgid "Haitian"
-msgstr "Haitiano"
+msgstr "Haiti"
 
 #. Language of Israel
 msgid "Hebrew"
@@ -249,8 +256,9 @@ msgid "Lithuanian"
 msgstr "Lituano"
 
 #. Language of Luxembourgh, Europe
+#, fuzzy
 msgid "Luxembourgish"
-msgstr "Luxemburguês"
+msgstr "Luxemburgo"
 
 #. Language of the republic of macedonia, East of Italy, north of Greece
 msgid "Macedonian"
@@ -273,16 +281,18 @@ msgid "Maori"
 msgstr "Maori"
 
 #. Language of the country Nepal
+#, fuzzy
 msgid "Nepali"
-msgstr "Nepalês"
+msgstr "Bengalês"
 
 #. The common name of the language, which in Norway, Europe, is named "Bokmaal"
 msgid "Norwegian"
 msgstr "Norueguês"
 
 #. The language in Norway, Europe, that is very close to Danish
+#, fuzzy
 msgid "Norwegian Bokmaal"
-msgstr "Norueguês Dinamarca"
+msgstr "Norueguês"
 
 #. The language that is spoken in mostly western Norway
 #, fuzzy
@@ -343,8 +353,9 @@ msgid "Swedish"
 msgstr "Sueco"
 
 #. Most widely spoken language in Switzerland
+#, fuzzy
 msgid "Swiss German"
-msgstr "Alemão Suíço"
+msgstr "Alemão"
 
 #. Language of Tajikistan, a former soviet republic
 msgid "Tajik"
@@ -387,8 +398,9 @@ msgid "Vietnamese"
 msgstr "Vietnamês"
 
 #. The french spoken in south Belgium, Europe
+#, fuzzy
 msgid "Walloon"
-msgstr "Francês Belga"
+msgstr "Paredes ligadas:"
 
 #. The language in Wales, Great Britain, Europe
 msgid "Welsh"
@@ -404,4 +416,3 @@ msgstr "Zulu"
 #, fuzzy
 #~ msgid "Limburgish"
 #~ msgstr "Name=Luxemburgo"
-

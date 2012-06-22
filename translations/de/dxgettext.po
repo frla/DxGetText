@@ -2,18 +2,18 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: dxgettext\n"
-"POT-Creation-Date: 2005-06-18 12:24\n"
-"PO-Revision-Date: 2005-06-21 22:22+0100\n"
-"Last-Translator: Jens Berke <info@jensberke.de>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2003-08-27 17:45\n"
+"PO-Revision-Date: 2004-10-25 15:06+0100\n"
+"Last-Translator: Ralf Walhöfer <ralf@trigo.de>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
+"Language-Team: \n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -23,25 +23,25 @@ msgstr ""
 msgid "Embed translations in executable"
 msgstr "Übersetzungen in ausführbare Datei einbetten"
 
-#. Form1..LabelExplanation....Caption
-#: assemble/umain.dfm:34
+#. Form1..LabelExplanation....AutoSize
+#: assemble/umain.dfm:33
 msgid "This will append the following translations to your executable file."
-msgstr "Dies wird die folgenden Übersetzungen an ihre ausfürhbare Datei anhängen"
+msgstr "Das wird die folgenden Übersetzungen an ihre ausfürhbare Datei anhängen"
 
 #. Form1..LabelExeHeading..Caption
-#: assemble/umain.dfm:42
+#: assemble/umain.dfm:41
 msgid "Executable file:"
 msgstr "Ausführbare Datei:"
 
 #. Form1..PanelButtons..ButtonOK..Caption
-#. FormConfig..ButtonOK..Caption
-#: assemble/umain.dfm:74  uconfig.dfm:54
+#: assemble/umain.dfm:73
+#: uconfig.dfm:53
 msgid "&OK"
 msgstr "&OK"
 
 #. Form1..PanelButtons..ButtonCancel..Caption
-#. FormConfig..ButtonCancel..Caption
-#: assemble/umain.dfm:85  uconfig.dfm:66
+#: assemble/umain.dfm:84
+#: uconfig.dfm:65
 msgid "&Cancel"
 msgstr "Abbre&chen"
 
@@ -58,18 +58,17 @@ msgstr "Schritt 2"
 #. frmMain..panel2..Label3..Caption
 #: bplPoMerge/main_translation.dfm:41
 msgid "PO file to merge :"
-msgstr "Zu verbindende PO-Datei :"
+msgstr "Zu verbindende PO-Datei : "
 
 #. frmMain..panel2..btMergePO..Caption
 #: bplPoMerge/main_translation.dfm:48
 msgid "Merge PO file"
 msgstr "Verbinde PO-Datei"
 
-# Label: ignore
 #. frmMain..panel2..edPO..Text
 #: bplPoMerge/main_translation.dfm:58
 msgid "delphi7.po"
-msgstr ""
+msgstr "delphi7.po"
 
 #. frmMain..panel2..chkUTF8..Caption
 #: bplPoMerge/main_translation.dfm:72
@@ -111,6 +110,22 @@ msgstr "Zu extrahierende BPL-Dateien :"
 msgid "Extension for corresponding language dependent ressourcefiles :"
 msgstr "Datei-Erweiterung für zugehörige sprachabhängige Resourcen-Datei :"
 
+#. frmMain..panelClient..panel1..lbLoadInfo..Caption
+#: bplPoMerge/main_translation.dfm:155
+#: bplPoMerge/main_translation.dfm:162
+msgid "-"
+msgstr "-"
+
+#. frmMain..panelClient..panel1..edBPL..Text
+#: bplPoMerge/main_translation.dfm:170
+msgid "c:\\winnt\\system32\\*.bpl"
+msgstr "c:\\winnt\\system32\\*.bpl"
+
+#. frmMain..panelClient..panel1..edLang..Text
+#: bplPoMerge/main_translation.dfm:178
+msgid ".de"
+msgstr ".de"
+
 #. frmMain..panelClient..panel1..btExtract..Caption
 #: bplPoMerge/main_translation.dfm:185
 msgid "Extract ressources"
@@ -134,7 +149,7 @@ msgstr "&Ressourcen"
 #. frmMain..MainMenu1..Extractions1..Extract1..Caption
 #: bplPoMerge/main_translation.dfm:219
 msgid "&Extract"
-msgstr "&Extrahieren"
+msgstr "&Extrahiere"
 
 #. frmMain..MainMenu1..Extractions1..Load1..Caption
 #: bplPoMerge/main_translation.dfm:223
@@ -152,8 +167,8 @@ msgid "&PO files"
 msgstr "&PO Dateien"
 
 #. frmMain..MainMenu1..POfiles1..Merge1..Caption
-#. FormRun..ButtonGo..Caption
-#: bplPoMerge/main_translation.dfm:234  ggmerge/uRun.dfm:30
+#: bplPoMerge/main_translation.dfm:234
+#: ggmerge/uRun.dfm:29
 msgid "&Merge"
 msgstr "&Zusammenfügen"
 
@@ -161,6 +176,11 @@ msgstr "&Zusammenfügen"
 #: bplPoMerge/main_translation.dfm:237
 msgid "&Create"
 msgstr "&Erzeugen"
+
+#. frmMain..MainMenu1..N1..Caption
+#: bplPoMerge/main_translation.dfm:241
+msgid "&?"
+msgstr "&?"
 
 #. frmMain..MainMenu1..N1..Help1..Caption
 #: bplPoMerge/main_translation.dfm:243
@@ -178,28 +198,28 @@ msgid "Merge translation with new translation template"
 msgstr "Übersetzung und neue Übersetzungsschablone zusammenfügen"
 
 #. FormRun..EditTranslation..EditLabel.Caption
-#: ggmerge/uRun.dfm:43
+#: ggmerge/uRun.dfm:42
 msgid "Translation file:"
 msgstr "Übersetzungsdatei:"
 
 #. FormRun..EditTemplate..EditLabel.Caption
-#: ggmerge/uRun.dfm:54
+#: ggmerge/uRun.dfm:53
 msgid "Translation template:"
 msgstr "Übersetzungsschablone:"
 
 #. FormRun..CheckBoxCreateBackup..Caption
-#: ggmerge/uRun.dfm:83
+#: ggmerge/uRun.dfm:82
 msgid "Create backup file of old translation (recommended)"
 msgstr "Backup der alten Übersetzung herstellen (empfohlen)"
 
 #. FormRun..CheckBoxSaveSettings..Caption
-#. FormConfig..CheckBoxSaveSettings..Caption
-#: ggmerge/uRun.dfm:94  uconfig.dfm:89
+#: ggmerge/uRun.dfm:93
+#: uconfig.dfm:88
 msgid "Remember settings"
 msgstr "Einstellungen behalten"
 
 #. FormRun..CheckBoxNonAscii..Caption
-#: ggmerge/uRun.dfm:103
+#: ggmerge/uRun.dfm:102
 msgid "Support non-ascii msgid values (not recommended)"
 msgstr "Erlaube Nicht-ASCII msgid Werte (nicht empfohlen)"
 
@@ -207,35 +227,30 @@ msgstr "Erlaube Nicht-ASCII msgid Werte (nicht empfohlen)"
 msgid "This program needs a filename as parameter."
 msgstr "Dieses Programm braucht einen Dateinamen als Parameter"
 
-#: dxgreg/dxgreg.dpr:124
+#: dxgreg/dxgreg.dpr:122
 msgid "Could not open or create subkey %s."
 msgstr "Konnte Unterschlüssel %s nicht öffnen oder erstellen."
 
 #. Program files
-#: dxgreg/dxgreg.dpr:170
+#: dxgreg/dxgreg.dpr:168
 msgid "This Windows installation is corrupt - .exe extension is not associated with anything."
 msgstr "Diese Windows-Installation ist defekt - .exe-Erweiterung ist nicht mit einer Anwendung verknüpft"
 
 #. Dynamic Link Libraries
-#: dxgreg/dxgreg.dpr:184
+#: dxgreg/dxgreg.dpr:182
 msgid "Dynamic Link Library"
 msgstr "Dynamic Link Library"
 
-#. OCX files
-#: dxgreg/dxgreg.dpr:198
-msgid "OCX Dynamic Link Library"
-msgstr "OCX Dynamic Link Library"
-
 #. Borland Package Libraries
-#: dxgreg/dxgreg.dpr:212
+#: dxgreg/dxgreg.dpr:194
 msgid "Borland Package Library"
 msgstr "Borland Package Library"
 
-#: dxgreg/dxgreg.dpr:238
+#: dxgreg/dxgreg.dpr:218
 msgid "The applications have now been integrated into your desktop."
 msgstr "Die Anwendungen wurden jetzt in Ihrem Desktop integriert."
 
-#: dxgreg/dxgreg.dpr:239
+#: dxgreg/dxgreg.dpr:219
 msgid "GNU gettext %s"
 msgstr "GNU gettext %s"
 
@@ -249,32 +264,33 @@ msgid "Result of running %s:"
 msgstr "Resultat von Aufruf %s:"
 
 #. Third solution: source positions match
-#: msgmergePOT/msgmergePOT.dpr:118
+#: msgmergePOT/msgmergePOT.dpr:117
 msgid "No translation for %s"
 msgstr "Keine Übersetzung für %s"
 
-#: msgmergePOT/msgmergePOT.dpr:168
+#: msgmergePOT/msgmergePOT.dpr:167
 msgid "msgmergePOT usage:"
 msgstr "msgmergePOT Gebrauch:"
 
-#: msgmergePOT/msgmergePOT.dpr:169
+#: msgmergePOT/msgmergePOT.dpr:168
 msgid "  msgmergePOT english.po otherlanguage.po destination.po"
 msgstr "  msgmergePOT english.po anderesprache.po ziel.po"
 
-#: msgmergePOT/msgmergePOT.dpr:173
+#: msgmergePOT/msgmergePOT.dpr:172
 msgid ""
 "This will create a po file from two identical po extracts that\n"
 "only differ by the language, for instance the German and English\n"
 "runtime source code from Borland."
 msgstr ""
-"Dies erstellt eine po-Datei von zwei identischen po-Auszügen\n"
+"Dieses erstellt eine po-Datei von zwie identischen po-Auszügen\n"
 "die sich nur in der Sprache unterscheiden, z.B. die Deutsche und die\n"
 "Englische RTL-Quelldatei von Delphi."
 
-#: msgmergePOT/msgmergePOT.dpr:204  msgshowheader/msgshowheader.dpr:50
+#: msgmergePOT/msgmergePOT.dpr:203
+#: msgshowheader/msgshowheader.dpr:50
 #: msgsplitTStrings/msgsplitTStrings.dpr:122
 msgid "Exception occured"
-msgstr "Ausnahmefehler aufgetreten"
+msgstr "Ausnahme aufgetreten"
 
 #. Messages about how to use this program
 #: msgshowheader/msgshowheader.dpr:33
@@ -287,7 +303,7 @@ msgstr "  msgshowheader übersetzung.mo"
 
 #: msgshowheader/msgshowheader.dpr:36
 msgid "This will output the header of the translation to stdout, i.e. _('')."
-msgstr "Gibt den Kopf der Übersetzung auf stdout aus, also _('')."
+msgstr "Gibt den Kopf der Übersetzung auf stdout, also _(''), aus."
 
 #: msgsplitTStrings/msgsplitTStrings.dpr:46
 msgid "msgsplitTStrings usage:"
@@ -303,9 +319,10 @@ msgid ""
 "line translations, while still keeping the multiline translations\n"
 "around. Use msgmerge on the output file afterwards."
 msgstr ""
-"Teilt alle mehrzeiligen Übersetzungen in mehrere\n"
+"Teilt alle mehrzeiligen Übersetzungen in verschiedene\n"
 "einzeilige Übersetzungen auf, während die mehrzeiligen\n"
-"Übersetzungen intakt bleiben. Wenden Sie hinterher msmerge auf die Ausgabedatei an."
+"Übersetzungen intakt bleiben. Benutzen Sie hinterher msmerge auf die\n"
+"Ausgabedatei."
 
 #. Messages about how to use this program
 #: msgstripCR/msgstripCR.dpr:24
@@ -320,26 +337,26 @@ msgstr "  msgstripCR quelle.po ziel.po"
 msgid "This will strip all Carriage Return codes (\\r)."
 msgstr "Enfernt alle Wagenrücklauf-Codes (\\r)"
 
-#: assemble/assembleengine.pas:50  poparser.pas:139
+#: assemble/assembleengine.pas:48
+#: poparser.pas:136
 msgid "Error when writing to stream."
-msgstr "Fehler beim Schreiben in den Stream."
+msgstr "Fehler beim Schreiben zum Stream."
 
-#: assemble/assembleengine.pas:86
+#: assemble/assembleengine.pas:84
 msgid "No .exe filename specified."
 msgstr "Es wurde kein .exe Dateiname angegeben."
 
-#. Find first patch position
-#: assemble/assembleengine.pas:100
+#. Find patch position
+#: assemble/assembleengine.pas:98
 msgid "Patch code \"%s\" was not found in .exe file. Are you sure the .exe file has been compiled with the correct libraries?"
 msgstr "Patch Code \"%s\" konnte nicht in .exe-Datei gefuncden werden. Sind Sie sicher dass die .exe-Datei mit den richtigen Libraries kompiliert wurde?"
 
 #. Finds the position of patchcode in the file.
-#: assemble/assembleengine.pas:159
+#: assemble/assembleengine.pas:152
 msgid "No patch code has been specified."
 msgstr "Es wurde kein Patchcode angegeben."
 
-#. Search from the point where we left last time
-#: assemble/assembleengine.pas:170
+#: assemble/assembleengine.pas:164
 msgid "This file has already been modified. Please recompile this .exe file."
 msgstr "Diese Datei wurde bereits geändert. Bitte kompilieren Sie diese .exe-Date erneut."
 
@@ -363,15 +380,16 @@ msgid ""
 "its translations from the .exe file instead of from external files."
 msgstr ""
 "Hängt alle Dateien im Verzeichnis von anwendung.exe und in allen\n"
-"Unterverzeichnissen an anwendung.exe an. Das ermöglicht der Unit\n"
+"Unterverzeichnissen an anwendung.exe an. Das ermöglicht die Unit\n"
 "gnugettext.pas, die in anwendung.exe kompiliert wurde, die Über-\n"
 "setzungen aus der .exe-Datei zu laden, anstatt aus externen Dateien."
 
-#: assemble/umain.pas:57
+#: assemble/umain.pas:54
 msgid "No translations (.mo files) found."
 msgstr "Keine Übersetzungen (.mo-Dateien) gefunden."
 
-#: bplPoMerge/main_translation.pas:340  bplPoMerge/main_translation.pas:343
+#: bplPoMerge/main_translation.pas:340
+#: bplPoMerge/main_translation.pas:343
 msgid "Loading %s ..."
 msgstr "Lade %s ..."
 
@@ -381,7 +399,7 @@ msgstr "%d Übersetzungen verfügbar"
 
 #: bplPoMerge/main_translation.pas:351
 msgid "ready"
-msgstr "bereit"
+msgstr "Fertig"
 
 #. allready filled -> do not replace it
 #: bplPoMerge/main_translation.pas:452
@@ -392,7 +410,8 @@ msgstr "Zeile %d: %s -> %s -> %s"
 msgid "msgmergedx %s"
 msgstr "msgmergedx %s"
 
-#: ggmerge/msgmergedxconsole.pas:79  msgimport/consoleapp.pas:76
+#: ggmerge/msgmergedxconsole.pas:79
+#: msgimport/consoleapp.pas:76
 #: msgmkignore/consoleapp.pas:76
 msgid "Usage:"
 msgstr "Gebrauch:"
@@ -410,10 +429,12 @@ msgid ""
 "Several features are not implemented, including generating fuzzy\n"
 "translations."
 msgstr ""
-"Dies ist ein Ersatz für das Dienstprogramm GNU msgmerge. Es ist sehr\n"
-"einfach gehalten und erwartet, dass alle benutzten Dateien der\n"
+"Dies ist ein Ersatz für das Dienstprogramm msgmerge. Es ist sehr\n"
+"einfach gehalten und erwartet, daß alle benutzten Dateien der\n"
 " UTF8-Kodierung entsprechen. Der einzige Grund dieses Programm\n"
-"zu benutzen ist, dass es Nicht-ASCII msgid Werte erlaubt. Einige Möglichkeiten von msgmerge werden nicht unterstützt, z.B. das Erzeugen von Fuzzy-Übersetzungen."
+"zu benutzen besteht in der Möglichkeit Nicht-ASCII msgid Werte\n"
+"zu benutzen Einige Eigenschaften von msgmerge sind nicht enthalten,\n"
+"so die Fuzzy-Übersetzung."
 
 #: ggmerge/uRun.pas:73
 msgid "The specified translation file does not exist."
@@ -432,7 +453,8 @@ msgstr "Weil es unerwartete Fehler in msgmerge.exe gab, wurde nicht zusammengef�
 msgid "msgmerge.exe failed with exit code %s."
 msgstr "msgmerge.exe schlug fehl. Fehlercode %s."
 
-#: ggmerge/uRun.pas:112  ggmerge/uRun.pas:114
+#: ggmerge/uRun.pas:112
+#: ggmerge/uRun.pas:114
 msgid "Cannot rename %s to %s"
 msgstr "Kann %s nicht umbenennen in %s"
 
@@ -454,6 +476,10 @@ msgstr "Übersetzungsdateien (*.po)|*.po|Alle Dateien (*.*)|*.*"
 msgid "Template files (*.po;*.pot)|*.po;*.pot|All files (*.*)|*.*"
 msgstr "Schablonendateien (*.po;*.pot)|*.po;*.pot|Alle Dateien (*.*)|*.*"
 
+#: msgimport/consoleapp.pas:74
+msgid "msgimport %s"
+msgstr "msgimport %s"
+
 #: msgimport/consoleapp.pas:77
 msgid "  msgimport textfile.txt -o output.po"
 msgstr "  msgimport textfile.txt -o output.po"
@@ -469,16 +495,19 @@ msgid ""
 "that is capable of reading and writing several character sets."
 msgstr ""
 "Es wird eine po-Datei aus einer ASCII tabellierten Datei mit\n"
-"zwei Spalten erzeugt. Die erste Spalte wird als msgid, die\n"
-"zweite als Übersetzung interpretiert. Die Text-Datei sollte\n"
-"in UTF8 kodiert sein. Eine solche Datei sollte einfach aus\n"
-"einer Tabelle erzeugt werden können und anschließend\n"
-"mit einem entsprechenden Texteditor in UTF8 kodiert\n"
-"werden."
+"zwei Spalten erzeugt. Die erste Spalte wird als msgid, die zweite\n"
+"als Übersetzung interpretiert. Die Text-Datei sollte in UTF8 kodiert\n"
+"sein. Eine solche Datei sollte einfach aus einer Tabelle erzeugt\n"
+"werden können und anschließend mit einem entsprechenden\n"
+"Texteditor in UTF8 kodiert werden."
 
 #: msgimport/msgimportengine.pas:46
 msgid "Error: No tabulator in line"
 msgstr "Fehler: Kein Tabulator in der Zeile"
+
+#: msgmkignore/consoleapp.pas:74
+msgid "msgmkignore %s"
+msgstr "msgmkignore %s"
 
 #: msgmkignore/consoleapp.pas:77
 msgid "  msgmkignore default.po -o ignore.po"
@@ -492,17 +521,23 @@ msgstr ""
 "Extrahiert Texte aus default.po, von denen dieses Programm\n"
 "denkt, dass sie nicht von einem Übersetzer verarbeitet werden sollten."
 
-#: msgmkignore/msgmkignoreengine.pas:35  msgremove/msgremoveengine.pas:56
+#: msgmkignore/msgmkignoreengine.pas:35
+#: msgremove/msgremoveengine.pas:56
 msgid "No input filename specified."
-msgstr "Kein Eingabedatei angegeben."
+msgstr "Kein input Dateinamen angegeben."
 
-#: msgmkignore/msgmkignoreengine.pas:37  msgremove/msgremoveengine.pas:60
+#: msgmkignore/msgmkignoreengine.pas:37
+#: msgremove/msgremoveengine.pas:60
 msgid "No output filename specified."
-msgstr "Keine Ausgabedatei angegeben."
+msgstr "Es wurde keine Ausgabedatei angegeben."
 
 #: msgmkignore/msgmkignoreengine.pas:44
 msgid "Ignore list. Remove those that you do want to have translated."
 msgstr "Ignorierliste. Entfernen Sie die, die Sie übersetzt haben wollen."
+
+#: msgremove/consoleapp.pas:79
+msgid "msgremove %s"
+msgstr "msgremove %s"
 
 #: msgremove/consoleapp.pas:81
 msgid "msgremove usage:"
@@ -520,63 +555,138 @@ msgstr ""
 msgid "No filename specified for list of msgids to remove."
 msgstr "Keinen Dateinamen für Liste der zu entfernenden msgids angegeben."
 
+#. Programmer's name: BLOCK
+#: dxgreg/test.rc:14
+msgid "StringFileInfo"
+msgstr "StringFileInfo"
+
+#. Programmer's name: BLOCK
+#: dxgreg/test.rc:16
+msgid "040904B0"
+msgstr "040904B0"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:18
+msgid "CompanyName"
+msgstr "CompanyName"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:19
+msgid "FileDescription"
+msgstr "FileDescription"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:20
+msgid "FileVersion"
+msgstr "FileVersion"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:21
+msgid "InternalName"
+msgstr "InternalName"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:22
+msgid "OriginalFilename"
+msgstr "OriginalFilename"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:23
+msgid "ProductName"
+msgstr "ProductName"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:24
+msgid "ProductVersion"
+msgstr "ProductVersion"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:25
+msgid "Registered"
+msgstr "Registered"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:26
+msgid "License"
+msgstr "License"
+
+#. Programmer's name: BLOCK
+#: dxgreg/test.rc:29
+msgid "VarFileInfo"
+msgstr "VarFileInfo"
+
+#. Programmer's name: VALUE
+#: dxgreg/test.rc:31
+msgid "Translation"
+msgstr "Übersetzung"
+
+#. Programmer's name: MainIcon    ICON
+#: dxgreg/test.rc:34
+msgid ".Graphicsprofiler.ico"
+msgstr ".Graphicsprofiler.ico"
+
 #. FormConfig..Caption
 #: uconfig.dfm:6
 msgid "Configuration"
 msgstr "Anpassen"
 
 #. FormConfig..EditMask..Hint
-#: uconfig.dfm:29
+#: uconfig.dfm:28
 msgid "Here you can specify which files you want to scan."
-msgstr "Hier können Sie angeben, welche Dateien durchsucht werden sollen."
+msgstr "Hier können Sie angeben, welche Dateien  durchsucht werden sollen."
 
 #. FormConfig..EditMask..EditLabel.Caption
-#: uconfig.dfm:33
+#: uconfig.dfm:32
 msgid "Filemasks"
 msgstr "Dateimasken"
 
+#. FormConfig..EditMask..Text
+#: uconfig.dfm:36
+msgid "*.pas *.dfm *.c *.cpp *.inc *.rc *.dfm *.xfm *.dpr"
+msgstr "*.pas *.dfm *.c *.cpp *.inc *.rc *.dfm *.xfm *.dpr"
+
 #. FormConfig..CheckBoxRecurse..Caption
-#: uconfig.dfm:44
+#: uconfig.dfm:43
 msgid "Also search subdirectories"
 msgstr "Auch Unterverzeichnisse durchsuchen"
 
 #. FormConfig..EditBasepath..EditLabel.Caption
-#: uconfig.dfm:78
+#: uconfig.dfm:77
 msgid "Base directory:"
 msgstr "Basisverzeichnis:"
 
-#. FormConfig..CheckBoxSaveSettings....Hint
-#: uconfig.dfm:88
+#. FormConfig..CheckBoxSaveSettings....Height
+#: uconfig.dfm:87
 msgid "Save settings for the base directory in an ini file in this directory"
-msgstr "Sichere die Einstellung des Basisverzeichnisses in einer ini-Datei in diesem Verzeichnis."
+msgstr "Sichere die Einstellung des Basisverzeichnisses in einer ini-Datei in diesem Verzeichnis. "
 
-#. FormConfig..CBCreateIgnore....Hint
-#: uconfig.dfm:101
+#. FormConfig..CBCreateIgnore....Height
+#: uconfig.dfm:100
 msgid "Create a new ignore.po file or add likely ignores to existing ignore.po file (default domain)"
 msgstr "Erstelle eine neue ignore.po Datei oder füge wahrscheinliche Ausnahmen in eine existierende ignore.po Datei ein (Vorgabe-Wertebereich)"
 
 #. FormConfig..CBCreateIgnore..Caption
-#: uconfig.dfm:102
+#: uconfig.dfm:101
 msgid "Add likely ignores to ignore.po file"
 msgstr "Füge wahrscheinliche Ausnahmen zu ignore.po hinzu"
 
-#. FormConfig..CBRemoveIgnore....Hint
-#: uconfig.dfm:114
+#. FormConfig..CBRemoveIgnore....Height
+#: uconfig.dfm:113
 msgid "Don't store items from default domain that are present in ignore.po"
 msgstr "Keine Einträge im Vorgabe-Wertebereich speichern, die in ignore.po zu finden sind"
 
 #. FormConfig..CBRemoveIgnore..Caption
-#: uconfig.dfm:115
+#: uconfig.dfm:114
 msgid "Remove items from default domain present in ignore.po file"
 msgstr "Einträge aus dem Vorgabe-Wertebereich löschen, die in ignore.po zu finden sind"
 
-#. FormConfig..CheckBoxAllowNonAscii....Hint
-#: uconfig.dfm:127
+#. FormConfig..CheckBoxAllowNonAscii....Height
+#: uconfig.dfm:126
 msgid "Check this if you want your po file to contain msgid values that contain non-ascii characters."
 msgstr "Kreuzen Sie hier an, wenn Ihre PO-Datei Nicht-ASCII Zeichen enthalten soll."
 
 #. FormConfig..CheckBoxAllowNonAscii..Caption
-#: uconfig.dfm:128
+#: uconfig.dfm:127
 msgid "Allow non-ASCII texts"
 msgstr "Erlaube Nicht-ASCII Text"
 
@@ -586,12 +696,12 @@ msgid "Extracting text"
 msgstr "Extrahiere Text"
 
 #. FormWork..LabelProgress..Caption
-#: uWork.dfm:30
+#: uWork.dfm:29
 msgid "Initializing..."
 msgstr "Initialisiere..."
 
 #. FormWork..ButtonOK..Caption
-#: uWork.dfm:49
+#: uWork.dfm:48
 msgid "&Close"
 msgstr "&Schließen"
 
@@ -599,41 +709,41 @@ msgstr "&Schließen"
 msgid "This program needs one parameter, which must be a directory path or a file name."
 msgstr "Dieses Programm braucht einen Parameter, welcher ein Verzeichnis oder eine Datei sein muss."
 
-#: consoleapp.pas:159
+#: consoleapp.pas:148
 msgid "Warning: Remember to escape wildcards in the shell"
 msgstr "Warnung: Nicht vergessen Platzhalter im Shell zu markieren"
 
-#: consoleapp.pas:160
+#: consoleapp.pas:149
 msgid "Use --nowc option to disable this message."
 msgstr "Benutzen Sie --nowc Option um diese Nachricht zu unterdrücken."
 
-#: consoleapp.pas:194
+#: consoleapp.pas:181
 msgid "ERROR in %s: %s"
 msgstr "FEHLER in %s: %s"
 
-#: consoleapp.pas:196
+#: consoleapp.pas:183
 msgid "WARNING in %s: %s"
 msgstr "WARNUNG in %s: %s"
 
-#: consoleapp.pas:200
+#: consoleapp.pas:186
 msgid "ERROR: %s"
 msgstr "FEHLER: %s"
 
-#: consoleapp.pas:202
+#: consoleapp.pas:188
 msgid "WARNING: %s"
 msgstr "WARNUNG: %s"
 
 #. Headline for screen output when no parameter is given
-#: consoleapp.pas:212
+#: consoleapp.pas:197
 msgid "dxgettext usage:"
 msgstr "Dxgettext Gebrauch:"
 
-#: consoleapp.pas:219
+#: consoleapp.pas:204
 msgid " -b c:\\source\\myprogram --delphi"
 msgstr " -b c:\\source\\meinprogram --delphi"
 
 #. This message may not be wider than 78 characters because it must fit onto a 80x25 text mode screen.
-#: consoleapp.pas:223
+#: consoleapp.pas:208
 msgid ""
 "This will extract all texts from the specified files and save them\n"
 "in a file named default.po."
@@ -641,104 +751,88 @@ msgstr ""
 "Extrahiert alle Texte von den angegebenen Dateien und speichert sie\n"
 "in eine Datei namens default.po."
 
-#: consoleapp.pas:225
+#: consoleapp.pas:210
 msgid "Options:"
 msgstr "Optionen:"
 
-#: consoleapp.pas:226
+#: consoleapp.pas:211
 msgid "Adds the wildcards: *.pas *.inc *.rc *.dpr *.xfm *.dfm"
 msgstr "Fügt die folgenden Masken hinzu: *.pas *.inc *.rc *.dpr *.xfm *.dfm"
 
-#: consoleapp.pas:227
+#: consoleapp.pas:212
 msgid "Adds the wildcards: *.pas *.inc *.rc *.dpr *.xfm"
 msgstr "Fügt die folgenden Masken hinzu: *.pas *.inc *.rc *.dpr *.xfm"
 
-#: consoleapp.pas:228
+#: consoleapp.pas:213
 msgid "Recurse subdirectories"
 msgstr "Unterverzeichnisse einbeziehen"
 
-#: consoleapp.pas:229
+#: consoleapp.pas:214
 msgid "Use directory as base directory for filenames."
 msgstr "Benutze Verzeichnis als Basisverzeichnis für Dateinamen."
 
-#: consoleapp.pas:230
+#: consoleapp.pas:215
 msgid "You can specify several base dirs, that will all be scanned."
-msgstr "Sie können mehrere Basisverz. angeben, die alle durchsucht werden."
+msgstr "Sie können verschiedene Basisverz. angeben, die alle durchsucht werden."
 
-#: consoleapp.pas:231
+#: consoleapp.pas:216
 msgid "Order by msgid"
 msgstr "Sortiere nach msgid"
 
-#: consoleapp.pas:232
+#: consoleapp.pas:217
 msgid "Order by occurence (default)"
 msgstr "Sortiere nach Auftreten (standard)"
 
-#: consoleapp.pas:233
+#: consoleapp.pas:218
 msgid "Output directory for .po files"
 msgstr "Ausgabeverzeichnis für .po-Dateien"
 
-#: consoleapp.pas:234
+#: consoleapp.pas:219
 msgid "Outputs default domain to specified file. No other files are written."
 msgstr "Gibt den Vorgabe-Wertebereich in die angegebene Datei aus. Keine andere Datei wird erstellt."
 
-#: consoleapp.pas:235
+#: consoleapp.pas:220
 msgid "Quiet: Reduces output to absolute minimum."
-msgstr "Leise: Reduziert Ausgabe auf das absolute Minimum."
+msgstr "Leise: Reduziert Ausgabe zum absoluten Minimum."
 
-#: consoleapp.pas:236
-msgid "Use ignore.po file from the base dir"
-msgstr "ignore.po aus dem Basis-Verzeichnis benutzen"
-
-#: consoleapp.pas:237
+#: consoleapp.pas:221
 msgid "Allow non-ascii characters."
 msgstr "Nicht-ASCII Zeichen erlauben."
 
-#: consoleapp.pas:239
+#: consoleapp.pas:223
 msgid "Assume the specified codepage. Default is CP_ACP."
 msgstr "Nehme angegebene Codepage an. Standard ist CP_ACP."
 
-#: consoleapp.pas:241
+#: consoleapp.pas:225
 msgid "Assume wildcards to be part of filenames"
 msgstr "Nehme Platzhalter als Teil des Dateinamens an"
 
-#: consoleapp.pas:242
+#: consoleapp.pas:226
 msgid "Suppresses warnings about CRLF"
 msgstr "Unterdrückt Warnungen über CR-LF"
 
-#: consoleapp.pas:243
-msgid "Warnings will produce a nonzero exit code"
-msgstr "Warnungen produzieren einen Exit-Code ungleich Null"
-
-#: consoleapp.pas:246
+#: consoleapp.pas:229
 msgid ""
 "If a filename is preceded with @, it is assumed to contain a list of\n"
 "filenames or file masks."
 msgstr ""
-"Wenn einem Dateiname ein @ vorangestellt wird, wird angenommen das sie\n"
+"Wenn ein Dateiname von @ vorangegangen wird, wird angenommen das sie\n"
 "eine Liste von Dateinamen oder -masken enthält."
 
-#: poparser.pas:236
-msgid "Illegal line: %s"
-msgstr "Ungültige Zeile: %s"
+#: poparser.pas:228
+msgid "Illegal line %d: %s"
+msgstr "Ungültige Zeile %d: %s"
 
-#. Do nothing - the character was just escaped.
-#: poparser.pas:268
-msgid ""
-"Exception %s in line %d:\n"
-"%s"
-msgstr ""
-"Ausnahmefehler %s in der Zeile %d:\n"
-"%s"
-
-#: poparser.pas:452
+#: poparser.pas:435
 msgid "This list of translations cannot handle MsgId duplicates. Please remove the duplicate of \"%s\"."
 msgstr "Diese Übersetzungsliste kann keine MsgId-Duplikate verarbeiten. Bitte entfernen sie das Duplikat von \"%s\"."
 
-#: poparser.pas:545  poparser.pas:567
+#: poparser.pas:528
+#: poparser.pas:550
 msgid "Internal error in TPoEntryList data structure. Sublist for searchkey was empty."
 msgstr "Interner Fehler in TPoEntryList Datenstruktur. Unterliste für Suchschlüssel war leer."
 
-#: poparser.pas:560
+#: poparser.pas:543
 msgid "Error: Specified TPoEntry was not found in list."
 msgstr "Fehler: Angegebene TPoEntry wurde nicht in Liste gefunden."
 
@@ -749,7 +843,7 @@ msgstr "Zeile: %s"
 #. %s will be replaced with the number of C/C++ files
 #: uWork.pas:150
 msgid "Scanning %s C/C++ files"
-msgstr "Untersuche %s C/ C++-Dateien"
+msgstr "Untersuche %s C- oder C++-Dateien"
 
 #: uWork.pas:164
 msgid "No warnings or errors."
@@ -764,127 +858,93 @@ msgid "Do you want to overwrite the file named %s?"
 msgstr "Wollen Sie die Datei mit Namen %s überschreiben?"
 
 #. Removes the extracted data from source.
-#: xgettext.pas:251
+#: xgettext.pas:165
 msgid "Single quote detected - string starts but does not end"
-msgstr "Einzelnes Anführungszeichen gefunden - String hat einen Anfang aber kein Ende"
+msgstr "String wurde nicht mit einem ' beendet."
 
 #. End of text part detected
-#: xgettext.pas:284
+#: xgettext.pas:198
 msgid "CRLF substituted with #10 for %s. Consider to use sLineBreak instead."
-msgstr "CRLF ersetzt durch #10 für %s. Überlegen Sie ob Sie stattdessen sLineBreak verwenden."
+msgstr "CRLF ersetzt durch #10 für %s. Überwiegen Sie stattdessen den Gebrauch von sLineBreak."
 
 #. Don't handle consts that don't work
-#: xgettext.pas:304
+#: xgettext.pas:210
 msgid "Constant %s is not known."
 msgstr "Konstante %s ist unbekannt."
 
 #. This is a multi-line string
-#: xgettext.pas:342
+#: xgettext.pas:246
 msgid "This line is not connected with the previous line using a plus (+)."
-msgstr "Diese Zeile ist nicht mit einem Plus (+) mit der vorigen verbunden."
+msgstr "Diese Zeile ist nicht mit einem Plus (+) mit der vorigen verbunden. "
 
 #. First parameter is line number, second is the contents of the line
-#: xgettext.pas:491
+#: xgettext.pas:394
 msgid "resourcestring does not end in semicolon."
 msgstr "Resourcestring endet nicht mit einem Semikolon."
 
+#. This string may not be wider than 80 characters.
+#: xgettext.pas:452
+msgid ""
+"ngettext() encountered. This will create msgid_plural entries in the\n"
+"default.po file, which may render it uneditable by some GUI po file editors.\n"
+"Consider to use dngettext() instead, putting the msgid_plural entries into\n"
+"a separate .po file."
+msgstr ""
+"ngettext() begegnet. Dieses wird msgid_plural Einträge in die\n"
+" default.po-Datei erzeugen, welches es für einige GUI po-Dateieditoren\n"
+"unmöglich machen könnte, sie zu bearbeiten."
+
 #. First parameter is line number, second is line contents
-#. Get parameter that contains the msgid
-#: xgettext.pas:560  xgettext.pas:572
+#: xgettext.pas:464
+#: xgettext.pas:474
 msgid "Missing comma after first parameter"
 msgstr "Fehlendes Komma nach erstem Parameter"
 
-#: xgettext.pas:592
+#: xgettext.pas:492
 msgid "$gnugettext: end directive is missing !"
 msgstr "$gnugettext: end-Direktive fehlt!"
 
 #. Check for non-ascii characters
-#: xgettext.pas:875
+#: xgettext.pas:654
 msgid "msgid contains non-ascii characters: \"%s\""
 msgstr "msgid enthält nicht-ASCII Zeichen: \"%s\""
 
 #. Check for overwriting. Call custom handler if present, and abort if overwriting is not permitted.
-#: xgettext.pas:974
+#: xgettext.pas:753
 msgid "Overwrite %s aborted."
 msgstr "Überschreiben von %s abgebrochen."
 
 #. %s will be replaced by the filename
-#: xgettext.pas:981
+#: xgettext.pas:760
 msgid "Writing %s"
 msgstr "Schreibe nach %s"
 
-#: xgettext.pas:1015  xgettext.pas:1561
+#: xgettext.pas:792
 msgid "Reading %s"
 msgstr "Lese aus %s"
 
-#: xgettext.pas:1030
+#: xgettext.pas:807
 msgid "WARNING: Unknown file extension %s. Reading file as being pascal source."
 msgstr "WARNUNG: Unbekannte Dateierweiterung %s. Lese Datei als Delphi Quellcode."
 
-#: xgettext.pas:1439
+#: xgettext.pas:1191
 msgid "{gnugettext: error in the domain name definition."
 msgstr "{gnugettext: Fehler in der Domänennamendefinition"
 
-#: xgettext.pas:1445
+#: xgettext.pas:1197
 msgid "{gnugettext: reset found without scan-all."
 msgstr "{gnugettext: Reset ohne Scan-all gefunden."
 
-#: xgettext.pas:1449
+#: xgettext.pas:1201
 msgid "{gnugettext: Unknonw option."
 msgstr "{gnugettext: Unbekannte Option"
 
-#. entering new section
-#: xgettext.pas:1577
-msgid "Line %d: Unknown section"
-msgstr "Zeile %d: Unbekannter Abschnitt"
-
-#: xgettext.pas:1580
-msgid "Line %d: Looks like a section but has no closing square brackets"
-msgstr "Zeile %d: Sieht wie ein Abschnitt aus, hat aber keine schließende rechteckige Klammer"
-
-#: xgettext.pas:1594
-msgid "Line %d: %s"
-msgstr "Zeile %d: %s"
-
-#: xgettext.pas:1622
-msgid "Directory %s doesn't exist"
-msgstr "Verzeichnis %s existiert nicht"
-
-#: xgettext.pas:1635
-msgid "Wrong section: %s is a property name and not a class"
-msgstr "Falscher Abschnitt: %s ist der Name einer Eigenschaft und keine Klasse"
-
-#: xgettext.pas:1650
-msgid "Wrong section: %s seems to be a class and not a property name"
-msgstr "Falscher Abschnitt: %s scheint eine Klasse zu sein und nicht der Name einer Eigenschaft"
-
-#. if a wildcard is used, add all possible Delphi- or Kylix-files to the list
-#: xgettext.pas:1682
-msgid "No file found for \"%s.*\""
-msgstr "Keine Datei gefunden für \"%s.*\""
-
-#: xgettext.pas:1696
-msgid "File %s doesn't exist"
-msgstr "Datei %s existiert nicht"
-
-#: xgettext.pas:1726
-msgid "Wrong syntax: No \":\" found in %s"
-msgstr "Falsche Syntax: Kein \":\" in %s gefunden"
-
-#: xgettext.pas:1732
-msgid "Wrong syntax: \":\" is at the end of the line of %s"
-msgstr "Falsche Syntax: \":\" steht am Ende der Zeile %s"
-
-#: xgettext.pas:1739
-msgid "File \"%s\" doesn't exist"
-msgstr "Datei \"%s\" existiert nicht"
-
-#: xgettexttools.pas:136
+#: xgettexttools.pas:135
 msgid "Cannot convert ansistring to widestring with specified codepage."
 msgstr "Kann AnsiString nicht als WideString mit angegebenem Codepage übersetzen"
 
 #. Returns false if end of line. reads single-bytes and converts these.
-#: xgettexttools.pas:150
+#: xgettexttools.pas:149
 msgid "StreamReadln requires the stream to be not nil."
 msgstr "StreamReadln braucht einen Stream der nicht nil ist."
 

@@ -1,17 +1,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2005-04-19 10:14\n"
-"PO-Revision-Date: 2005-05-22 12:49+0100\n"
-"Last-Translator: Loïs Bégué <info@arpoon.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2005-03-21 17:11\n"
+"PO-Revision-Date: 2003-03-15 00:05+0100\n"
+"Last-Translator: Christophe Thiaux <vl70m@free.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"#-#-#-#-#  delphi2005.po  #-#-#-#-#\n"
 "License: May only be used with a purchased Borland Delphi\n"
-"#-#-#-#-#  indy10.po  #-#-#-#-#\n"
-"X-Poedit-Country: FRANCE\n"
 
 #. CustomizeFrm..Caption
 #. CustomizeFrm..Caption
@@ -120,8 +116,8 @@ msgstr "Tous"
 msgid "Actions"
 msgstr "Actions"
 
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
 #: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:145 
 #: Win32/vcl/CustomizeDlg.dfm:144
 msgid ""
@@ -153,6 +149,13 @@ msgstr "A&ctions :"
 #: Win32/vcl/CustomizeDlg.dfm:215
 msgid "Description"
 msgstr "Description"
+
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:229 
+#: Win32/vcl/CustomizeDlg.dfm:228
+msgid "HintLbl"
+msgstr ""
 
 #. CustomizeFrm..Tabs..OptionsTab..Caption
 #. CustomizeFrm..ActionList1..ResetUsageDataActn..Category
@@ -2668,13 +2671,13 @@ msgstr "Inconnu"
 msgid "FormatEdit"
 msgstr "FormatEdit"
 
-#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:203 
 msgid ""
 "Starting value for date ranges, Intial value for single valued dimensions"
 msgstr ""
 
-#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:216 
 msgid ""
 "Fieldname (for a summary, the original field used to calculate the summary)"
@@ -2756,7 +2759,7 @@ msgstr "Maximum"
 msgid "Current"
 msgstr "En cours"
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:423 
 #, fuzzy
 msgid "Limit on the number of dimensions which can be loaded at one time"
@@ -2767,7 +2770,7 @@ msgstr "Limite du nombre récapitulatifs pouvant être chargés en une seule foi
 msgid "Limit on the number of summaries which can be loaded at one time"
 msgstr "Limite du nombre récapitulatifs pouvant être chargés en une seule fois"
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:445 
 #, fuzzy
 msgid "Limit on the number of storage cells which can be loaded at one time"
@@ -3356,7 +3359,7 @@ msgstr "Fichiers index"
 msgid "&Add..."
 msgstr "Ajo&uter..."
 
-#. IndexFiles..OpenDialog....Filter
+#. IndexFiles..OpenDialog....OnClick
 #: Win32/Property_Editors/Ixedit.dfm:91 
 msgid ""
 "dBASE Multiple Index (*.MDX)|*.mdx|dBase Index (*.NDX)|*.ndx|FoxPro Index (*."
@@ -3390,8 +3393,8 @@ msgstr "C&harger..."
 msgid "&Save..."
 msgstr "Enregi&strer..."
 
-#. PictureEditorDlg..OpenDialog....Filter
-#. PictureEditorDlg..SaveDialog....Filter
+#. PictureEditorDlg..OpenDialog....OnClick
+#. PictureEditorDlg..SaveDialog....Top
 #: Win32/Property_Editors/PicEdit.dfm:103 
 #: Win32/Property_Editors/PicEdit.dfm:111
 msgid ""
@@ -3448,8 +3451,8 @@ msgstr "Editeur de &code..."
 msgid "TXT"
 msgstr ""
 
-#. StrEditDlg..OpenDialog....Filter
-#. StrEditDlg..SaveDialog....Filter
+#. StrEditDlg..OpenDialog....DefaultExt
+#. StrEditDlg..SaveDialog....HelpContext
 #: Win32/Property_Editors/StrEdit.dfm:71 
 #: Win32/Property_Editors/StrEdit.dfm:80
 msgid ""
@@ -13545,6 +13548,7 @@ msgstr "Version %s"
 #. Programmer's name for it: RSAAboutBoxCopyright
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:57 
 #: Win32/Indy9/IdResourceStrings.pas:401
+#, fuzzy
 msgid ""
 "Copyright (c) 1993 - 2003\n"
 "Kudzu (Chad Z. Hower)\n"
@@ -13554,7 +13558,7 @@ msgstr ""
 "Copyright (c) 1993 - 2002\n"
 "Kudzu (Chad Z. Hower)\n"
 "et\n"
-"les mécanos Indy"
+"Indy Pit Crew"
 
 #. Programmer's name for it: RSAAboutBoxPleaseVisit
 #. Programmer's name for it: RSAAboutBoxPleaseVisit
@@ -13565,8 +13569,9 @@ msgstr "Dernières mises à jour et informations sur notre site :"
 
 #. Programmer's name for it: RSAAboutBoxIndyWebsite
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:60 
+#, fuzzy
 msgid "http://www.indyproject.org/"
-msgstr "http://www.indyproject.org/"
+msgstr "http://www.nevrona.com/indy/"
 
 #. Programmer's name for it: RSAAboutCreditsCoordinator
 #. Programmer's name for it: RSAAboutCreditsCoordinator
@@ -13606,7 +13611,7 @@ msgstr "Anciens coordinateurs"
 #. Programmer's name for it: RSAAboutCreditsIndyCrew
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:67 
 msgid "The Indy Pit Crew"
-msgstr "L'équipe Indy"
+msgstr ""
 
 #. Programmer's name for it: RSAAboutCreditsIndyCrew
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:69 
@@ -13614,8 +13619,6 @@ msgid ""
 "present the\n"
 "Kitchen Sink"
 msgstr ""
-"présente\n"
-"son chaudron magique"
 
 #. Programmer's name for it: RSBindingFormCaption
 #. Programmer's name for it: RSBindingFormCaption
@@ -13626,6 +13629,7 @@ msgstr "Editeur de liaisons"
 
 #. Programmer's name for it: RSBindingNewCaption
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:83 
+#, fuzzy
 msgid "&New"
 msgstr "Nouveau"
 
@@ -13654,27 +13658,24 @@ msgstr "&Port"
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:90 
 #, fuzzy
 msgid "IP &Version"
-msgstr ""
-"#-#-#-#-#  delphi2005.po  #-#-#-#-#\n"
-"Version %s\n"
-"#-#-#-#-#  indy10.po  #-#-#-#-#\n"
-"Version IP %s"
+msgstr "Version %s"
 
 #. Programmer's name for it: RSBindingIPV4Item
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:91 
 msgid "IPv&4 (127.0.0.1)"
-msgstr "IPv&4 (127.0.0.1)"
+msgstr ""
 
 #. Programmer's name for it: RSBindingIPV6Item
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:92 
 msgid "IPv&6 (::1)"
-msgstr "IPv&6 (::1)"
+msgstr ""
 
 #. Programmer's name for it: RSADlgSLMoveUp
 #. Programmer's name for it: RSADlgSLMoveUp
 #. Programmer's name for it: sHintMoveUp
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:94 
 #: Indy10/Protocols/IdDsnResourceStrings.pas:30 ToolsAPI/TreeIntf.pas:3816
+#, fuzzy
 msgid "Move Up"
 msgstr "Vers le &haut"
 
@@ -13683,6 +13684,7 @@ msgstr "Vers le &haut"
 #. Programmer's name for it: sHintMoveDown
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:95 
 #: Indy10/Protocols/IdDsnResourceStrings.pas:31 ToolsAPI/TreeIntf.pas:3817
+#, fuzzy
 msgid "Move Down"
 msgstr "Vers le &bas"
 
@@ -13711,28 +13713,30 @@ msgstr "Retirer"
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:99 
 #: Indy10/Protocols/IdDsnResourceStrings.pas:35
 msgid "Editing SASL List for %s"
-msgstr "Ont participés au module %s"
+msgstr ""
 
 #. Programmer's name for it: RSADlgSLAvailable
 #. Programmer's name for it: RSADlgSLAvailable
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:100 
 #: Indy10/Protocols/IdDsnResourceStrings.pas:36
+#, fuzzy
 msgid "&Available"
-msgstr "Disponible"
+msgstr "Non disponible"
 
 #. Programmer's name for it: RSADlgSLAssigned
 #. Programmer's name for it: RSADlgSLAssigned
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:101 
 #: Indy10/Protocols/IdDsnResourceStrings.pas:37
 msgid "A&ssigned (tried in order listed)"
-msgstr "Assignement"
+msgstr ""
 
 #. Programmer's name for it: RSADlgSLEditList
 #. Programmer's name for it: RSADlgSLEditList
 #: Indy10/Core/IdDsnCoreResourceStrings.pas:103 
 #: Indy10/Protocols/IdDsnResourceStrings.pas:39
+#, fuzzy
 msgid "Edit &List"
-msgstr "Editer la &Liste"
+msgstr "&Liste"
 
 #. any port
 #. Programmer's name for it: RSBindingAny
@@ -13906,8 +13910,9 @@ msgstr "Type d'adresse non supporté."
 #. Programmer's name for it: RSFTPInvalidIP
 #: Indy10/Core/IdResourceStringsCore.pas:110 
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:353
+#, fuzzy
 msgid "Invalid IP Address"
-msgstr "Adresse IP incorrecte."
+msgstr "Réponse SOAP incorrecte"
 
 #. Programmer's name for it: RSInterceptCircularLink
 #. Programmer's name for it: RSInterceptCircularLink
@@ -13925,8 +13930,9 @@ msgstr "Pas suffisamment de données en mémoire tampon."
 
 #. Programmer's name for it: RSTooMuchDataInBuffer
 #: Indy10/Core/IdResourceStringsCore.pas:113 
+#, fuzzy
 msgid "Too much data in buffer."
-msgstr "Trop de données en mémoire tampon."
+msgstr "Pas suffisamment de données en mémoire tampon."
 
 #. Programmer's name for it: RSFileNotFound
 #. Programmer's name for it: RSFileNotFound
@@ -14049,37 +14055,41 @@ msgstr "Classe Thread non spécifiée."
 #. S.G. 6/4/2004: IdIOHandler.DoCapture
 #. Programmer's name for it: RSMaximumNumberOfCaptureLineExceeded
 #: Indy10/Core/IdResourceStringsCore.pas:130 
+#, fuzzy
 msgid "Maximum number of line allowed exceeded"
-msgstr "nombre de ligne maximum dépassé"
+msgstr "Profondeur maximum arborescence dépassée"
 
 #. Programmer's name for it: RSResolveError
 #: Indy10/Core/IdResourceStringsCore.pas:133 
+#, fuzzy
 msgid "Error resolving host %s: %s (%d)"
-msgstr "Erreur de résolution de l'hôte  %s: %s (%d)"
+msgstr "Erreur lors de la lecture de %s%s%s: %s"
 
 #. Programmer's name for it: RSReverseResolveError
 #: Indy10/Core/IdResourceStringsCore.pas:134 
+#, fuzzy
 msgid "Error resolving Address %s: %s (%d)"
-msgstr "Erreur de résolution de l'adresse  %s: %s (%d)"
+msgstr "Erreur lors de la lecture de %s%s%s: %s"
 
 #. scheduler
 #. Programmer's name for it: RSchedMaxThreadEx
 #: Indy10/Core/IdResourceStringsCore.pas:136 
+#, fuzzy
 msgid "The maximum number of threads for this scheduler is exceeded."
-msgstr ""
-"Le nombre maximum de processus légers a été dépassé pour cet ordonnanceur."
+msgstr "Le nombre maximum de %d récapitulatifs a été dépassé."
 
 #. transparent proxy
 #. Programmer's name for it: RSTransparentProxyCannotBind
 #: Indy10/Core/IdResourceStringsCore.pas:138 
 msgid "Transparent proxy cannot bind."
-msgstr "Proxy transparent non joignable"
+msgstr ""
 
 #. Fibers
 #. Programmer's name for it: RSFibersNotSupported
 #: Indy10/Core/IdResourceStringsCore.pas:140 
+#, fuzzy
 msgid "Fibers are not supported on this system."
-msgstr "Les \"Fibers\" ne sont pas supportés sous ce système."
+msgstr "Les attributs ne sont pas supportés sur ce type de noeud"
 
 #. Log strings
 #. Programmer's name for it: RSLogConnected
@@ -14160,65 +14170,72 @@ msgstr "Stat "
 #. Programmer's name for it: RSLogFileAlreadyOpen
 #: Indy10/Core/IdResourceStringsCore.pas:152 
 msgid "Unable to set Filename while log file is open."
-msgstr "Le nom de fichier ne peut être modifié si le fichier est ouvert."
+msgstr ""
 
 #. Programmer's name for it: RSBufferMissingTerminator
 #: Indy10/Core/IdResourceStringsCore.pas:154 
+#, fuzzy
 msgid "Buffer terminator must be specified."
-msgstr "Une terminaison de tampon doit être spécifiée."
+msgstr "TransformationFile doit être spécifié"
 
 #. Programmer's name for it: RSBufferInvalidStartPos
 #: Indy10/Core/IdResourceStringsCore.pas:155 
+#, fuzzy
 msgid "Buffer start position is invalid."
-msgstr "La position du début de tampon est invalide."
+msgstr "Partie Décalage horaire incorrecte"
 
 #. Programmer's name for it: RSIOHandlerCannotChange
 #: Indy10/Core/IdResourceStringsCore.pas:157 
+#, fuzzy
 msgid "Cannot change a connected IOHandler."
-msgstr "Impossible de modifier un IOHandler actif."
+msgstr "Impossible de modifier la connexion sur Active Monitor"
 
 #. Programmer's name for it: RSIOHandlerTypeNotInstalled
 #: Indy10/Core/IdResourceStringsCore.pas:158 
+#, fuzzy
 msgid "No IOHandler of type %s is installed."
-msgstr "Il n'y a aucun IOHandler de type %s installé."
+msgstr "Valeur IOHandler incorrecte"
 
 #. Programmer's name for it: RSReplyInvalidCode
 #: Indy10/Core/IdResourceStringsCore.pas:160 
+#, fuzzy
 msgid "Reply Code is not valid: %s"
-msgstr "Le code de réponse est incorrect."
+msgstr "MetaFichier incorrect"
 
 #. Programmer's name for it: RSThreadSchedulerThreadRequired
 #: Indy10/Core/IdResourceStringsCore.pas:162 
 msgid "Thread must be specified for the scheduler."
-msgstr "Spécifiez un thread pour le scheduler."
+msgstr ""
 
 #. Programmer's name for it: RSThreadComponentLoopAlreadyRunning
 #: Indy10/Core/IdResourceStringsCore.pas:164 
+#, fuzzy
 msgid "Cannot set Loop property when the Thread is already running."
 msgstr ""
-"Impossible de définir la propriété Loop lorsque le processus est déjà "
-"démarré."
+"Impossible de définir la propriété Clipped pendant une opération de peinture"
 
 #. Programmer's name for it: RSThreadComponentThreadNameAlreadyRunning
 #: Indy10/Core/IdResourceStringsCore.pas:165 
+#, fuzzy
 msgid "Cannot set ThreadName when the Thread is already running."
-msgstr ""
-"Impossible de définir ThreadName lorsque le processus est déjà démarré."
+msgstr "Socket déjà connecté."
 
 #. Programmer's name for it: RSStreamProxyNoStack
 #: Indy10/Core/IdResourceStringsCore.pas:167 
 msgid "A Stack has not been created for converting the data type."
-msgstr "La pile de convertion des types de données n'a pas été créée."
+msgstr ""
 
 #. Programmer's name for it: RSTransparentProxyCyclic
 #: Indy10/Core/IdResourceStringsCore.pas:169 
+#, fuzzy
 msgid "Transparent Proxy Cyclic error."
-msgstr "Erreur de récursion dans le proxy transparent."
+msgstr "Couleur &transparente :"
 
 #. Programmer's name for it: RSTCPServerSchedulerAlreadyActive
 #: Indy10/Core/IdResourceStringsCore.pas:171 
+#, fuzzy
 msgid "Cannot change the scheduler while the server is Active."
-msgstr "Impossible de changer l'ordonnanceur tant que le serveur est actif."
+msgstr "Impossible de changer l'état de session tant que le serveur est actif."
 
 #. Programmer's name for it: RSQueryMustProvideSOARecord
 #: Indy10/Protocols/IdDNSCommon.pas:132 
@@ -14226,26 +14243,22 @@ msgid ""
 "You have to provide a TIdRR_SOA object with Serial number and Name to "
 "progress IXFR. %d"
 msgstr ""
-"Vous devez fournir un objet TIdRR_SOA avec un numéro de série et un nom pour "
-"pouvoir effectuer IXFR. %d"
 
 #. Programmer's name for it: RSFTPFSysErrMsg
 #: Indy10/Protocols/IdFTPBaseFileSystem.pas:125 
 msgid "Permission Denied"
-msgstr "Permission refusée."
+msgstr ""
 
 #. Programmer's name for it: KdeVersionMark
 #: Indy10/Protocols/IdHL7.pas:414 
 msgid "!-!IdHL7.pas,0.00-011,08 Mar 02 17:59,12259"
-msgstr "!-!IdHL7.pas,0.00-011,08 Mar 02 17:59,12259"
+msgstr ""
 
 #. Programmer's name for it: RSNNTPSvrImplicitTLSRequiresSSL
 #: Indy10/Protocols/IdNNTPServer.pas:370 
 msgid ""
 "Implicit NNTP requires that IOHandler be set to a TIdSSLIOHandlerSocketBase."
 msgstr ""
-"L'utilisation d'un NNTP implicite nécessite de relier IOHandler à un "
-"TIdSSLIOHandlerSocketBase."
 
 #. General
 #. Programmer's name for it: RSFailedTimeZoneInfo
@@ -14275,17 +14288,17 @@ msgstr "Aucune liaison n'a été spécifiée."
 #. Programmer's name for it: RSASLNotSupported
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:190 
 msgid "Doesn't support AUTH or the SASL handlers you specified!!"
-msgstr "AUTH ou bien les gestionnaires SASLspécifiés ne sont pas supportés!"
+msgstr ""
 
 #. Programmer's name for it: RSASLRequired
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:191 
 msgid "Need SASL mechanisms to login with it!!"
-msgstr "Un mechanisme SASL est requis pour pouvoir se connecter ainsi!"
+msgstr ""
 
 #. Programmer's name for it: RSASLNotValidForProt
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:192 
 msgid "Authentication Type not valid for this protocol."
-msgstr "Type d'authentification incompatible avec ce protocole."
+msgstr ""
 
 #. TIdEMailAddress
 #. Programmer's name for it: RSEMailSymbolOutsideAddress
@@ -14353,13 +14366,14 @@ msgstr "Extension déjà existante"
 #. Programmer's name for it: RSRegSASL
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:206 
 msgid "Indy SASL"
-msgstr "Indy SASL"
+msgstr ""
 
 #. Message Strings
 #. Programmer's name for it: RSIdMessageCannotLoad
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:210 
+#, fuzzy
 msgid "Cannot load message from file %s"
-msgstr "Impossible de créer le message à partir du fichier %s"
+msgstr "Impossible de créer le fichier %s"
 
 #. MessageClient Strings
 #. Programmer's name for it: RSMsgClientEncodingText
@@ -14386,10 +14400,10 @@ msgstr "Type de partie de message inconnu."
 
 #. Programmer's name for it: RSMsgClientInvalidEncoding
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:216 
+#, fuzzy
 msgid "Invalid Encoding. UU only allows Body and Attachments."
 msgstr ""
-"Encodage incorrect. UU permet traite uniquement les éléments Body et "
-"Attachments."
+"Encodage incorrect. UU permet uniquement les éléments Body et Attachments"
 
 #. Programmer's name for it: RSMsgClientInvalidForTransferEncoding
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:217 
@@ -14397,8 +14411,6 @@ msgid ""
 "Message parts cannot be used in a message which has a "
 "ContentTransferEncoding value."
 msgstr ""
-"Un message possédant un ContentTransferEncoding ne peut être constitué de "
-"plusieurs parties."
 
 #. NNTP Exceptions
 #. Programmer's name for it: RSNNTPConnectionRefused
@@ -14439,13 +14451,15 @@ msgstr "Aucun événement OnNewNewsList n'a été défini."
 
 #. Programmer's name for it: RSNNTPNoOnXHDREntry
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:225 
+#, fuzzy
 msgid "No OnXHDREntry event has been defined."
-msgstr "Aucun événement OnXHDREntry n'a été défini."
+msgstr "Aucun événement OnNewNewsList n'a été défini."
 
 #. Programmer's name for it: RSNNTPNoOnXOVER
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:226 
+#, fuzzy
 msgid "No OnXOVER event has been defined."
-msgstr "Aucun événement OnXOVER n'a été défini."
+msgstr "Aucun événement OnNewNewsList n'a été défini."
 
 #. HTTP Status
 #. Programmer's name for it: RSHTTPChunkStarted
@@ -14705,7 +14719,7 @@ msgstr "Code de réponse inconnu"
 #. Programmer's name for it: RSHTTPMethodRequiresVersion
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:266 
 msgid "Request method requires HTTP version 1.1"
-msgstr "La méthode d'appel requiert HTTP 1.1"
+msgstr ""
 
 #. Programmer's name for it: RSHTTPHeaderAlreadyWritten
 #. HTTP Other
@@ -15182,27 +15196,30 @@ msgstr "Transfert abandonné"
 #. Programmer's name for it: RSFTPProtocolMismatch
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:349 
 msgid "Network protocol mismatch, use"
-msgstr "Ce protocole réseau est non disponible. Utilisez "
+msgstr ""
 
 #. Programmer's name for it: RSFTPParamError
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:350 
+#, fuzzy
 msgid "Error in parameters to %s"
-msgstr "Erreur dans les paramètres de %s"
+msgstr "Trop de paramètres dans la méthode %s"
 
 #. Programmer's name for it: RSFTPParamNotImp
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:351 
+#, fuzzy
 msgid "Parameter %s Not Implemented"
-msgstr "Paramètre %s non implémenté."
+msgstr "Non implémenté"
 
 #. Programmer's name for it: RSFTPInvalidPort
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:352 
+#, fuzzy
 msgid "Invalid port number"
-msgstr "Numéro de port invalide"
+msgstr "Propriétaire incorrect"
 
 #. Programmer's name for it: RSFTPOnCustomFTPProxyReq
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:354 
 msgid "OnCustomFTPProxy required but not assigned"
-msgstr "OnCustomFTPProxy est requis mais n'a pas d'attribution."
+msgstr ""
 
 #. Programmer's name for it: RSFTPDataConnAssuranceFailure
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:357 
@@ -15211,38 +15228,32 @@ msgid ""
 "Server reported IP: %s  Port: %d\n"
 "Our socket IP: %s  Port: %d"
 msgstr ""
-"La validation assurant la connexion a échoué.\n"
-"Serveur accessible à l'adresse IP:%s Port:%d\n"
-"Configuration du Socket actuelle IP:%s Port:%d"
 
 #. Programmer's name for it: RSFTPProtocolNotSupported
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:358 
+#, fuzzy
 msgid "Protocol not supported, use"
-msgstr "Protocole non supporté. Utilisez"
+msgstr "Protocole non supporté."
 
 #. Programmer's name for it: RSFTPMustUseExtWithIPv6
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:359 
 msgid "UseExtensionDataPort must be true for IPv6 connections."
 msgstr ""
-"UseExtensionDataPort doit être True pour permettre une connexion de type "
-"IPV6."
 
 #. Programmer's name for it: RSFTPMustUseExtWithNATFastTrack
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:360 
 msgid "UseExtensionDataPort must be true for NAT fasttracking."
 msgstr ""
-"UseExtensionDataPort doit être True pour permettre le NAT en mode fasttrack."
 
 #. Programmer's name for it: RSFTPFTPPassiveMustBeTrueWithNATFT
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:361 
 msgid "Can not use active transfers with NAT fastracking."
 msgstr ""
-"Le mode de transfert rapide est incompatible avec un mode fasttracking."
 
 #. Programmer's name for it: RSFTPServerSentInvalidPort
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:362 
 msgid "Server sent invalid port number (%s)"
-msgstr "Le serveur a envoyé un numéro de port incorrect (%s)."
+msgstr ""
 
 #. Programmer's name for it: RSInvalidFTPListingFormat
 #. Programmer's name for it: RSInvalidFTPListingFormat
@@ -15256,55 +15267,55 @@ msgstr "Format d'écoute FTP inconnu"
 msgid ""
 "No Site to Site transfers are permitted with a FTP NAT fastracked connection."
 msgstr ""
-"Le transfer de site à site n'est pas possible lors d'une connexion de type "
-"FTP NAT en mode fasttrack."
 
 #. Programmer's name for it: RSFTPSToSNoDataProtection
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:365 
 msgid "Can't use dataprotection on site to site transfer."
 msgstr ""
-"Le mode Dataprotection n'est pas applicable à un transfert de site à site."
 
 #. Programmer's name for it: RSFTPSToSProtosMustBeSame
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:366 
 msgid "Transport protocols must be the same."
-msgstr "Les protocoles de transport doivent être identiques."
+msgstr ""
 
 #. Programmer's name for it: RSFTPSToSSSCNNotSupported
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:367 
+#, fuzzy
 msgid "SSCN is not supported on both servers."
-msgstr "SSCN non supportés par les 2 serveurs."
+msgstr "Procédures stockées non supportées par le serveur '%s'"
 
 #. Programmer's name for it: RSFTPNoDataPortProtectionAfterCCC
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:368 
+#, fuzzy
 msgid "Can not set DataPortProtection after CCC issued."
-msgstr "Impossible de modifier DataPortProtection après que CCC soit apparu."
+msgstr "Envoi ou réception impossible après la fermeture du socket."
 
 #. Programmer's name for it: RSFTPNoDataPortProtectionWOEncryption
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:369 
 msgid "Can not set DataPortProtection with unencrypted connections."
 msgstr ""
-"DataPortProtection ne peut être utilisé lors d'une connexion non cryptée."
 
 #. Programmer's name for it: RSFTPNoCCCWOEncryption
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:370 
+#, fuzzy
 msgid "Can not set CCC without encyption."
-msgstr "Impossible de modifier CCC sans encodage."
+msgstr "Impossible de définir la transaction"
 
 #. Programmer's name for it: RSFTPNoAUTHWOSSL
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:371 
 msgid "Can not set AUTH without SSL."
-msgstr "AUTH ne peut être effectué sans SSL."
+msgstr ""
 
 #. Programmer's name for it: RSFTPNoAUTHCon
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:372 
 msgid "Can not set AUTH while connected."
-msgstr "AUTH ne peut être défini pendant que la connection est établie."
+msgstr ""
 
 #. Programmer's name for it: RSFTPSToSTransferModesMusbtSame
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:373 
+#, fuzzy
 msgid "Transfer modes must be the same."
-msgstr "Les modes de transfer doivent être identiques."
+msgstr "TransformationFile doit être spécifié"
 
 #. Programmer's name for it: RSCMDNotRecognized
 #. Programmer's name for it: RSCMDNotRecognized
@@ -15448,8 +15459,9 @@ msgstr "Le paquet reçu est trop petit. %d"
 
 #. Programmer's name for it: RSQueryInvalidIpV6
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:402 
+#, fuzzy
 msgid "Invalid IP V6 Address. %s"
-msgstr "Adresse IP V6 invalide: %s"
+msgstr "MDIParent incorrect pour la classe %s"
 
 #. Programmer's name for it: RSLPDDataFileSaved
 #. Programmer's name for it: RSLPDDataFileSaved
@@ -15610,7 +15622,7 @@ msgstr "Erreur lors de la sauvegarde du fichier joint."
 #. Programmer's name for it: RSTIdMessageErrorAttachmentBlocked
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:434 
 msgid "Attachment %s is blocked."
-msgstr "L'annexe %s est bloquée."
+msgstr ""
 
 #. Programmer's name for it: RSPOP3FieldNotSpecified
 #. Programmer's name for it: RSPOP3FieldNotSpecified
@@ -15665,8 +15677,6 @@ msgid ""
 "Number parameter (relative message number or UID) is invalid; Must be 1 or "
 "greater."
 msgstr ""
-"Le paramètre numérique (numéro relatif de message ou UID) est erroné: il "
-"doit être égal ou supérieur à 1."
 
 #. Programmer's name for it: RSIMAP4NumberInvalidString
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:446 
@@ -15674,8 +15684,6 @@ msgid ""
 "Number parameter (relative message number or UID) is invalid; Cannot contain "
 "an empty string."
 msgstr ""
-"Le paramètre numérique (numéro relatif de message ou UID) est erroné: la "
-"chaine ne peut rester vide."
 
 #. Programmer's name for it: RSIMAP4NumberInvalidDigits
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:447 
@@ -15683,8 +15691,6 @@ msgid ""
 "Number parameter (relative message number or UID) is invalid; Cannot contain "
 "non-digit characters."
 msgstr ""
-"Le paramètre numérique (numéro relatif de message ou UID) est erroné: il ne "
-"peut contenir de charactères non numériques."
 
 #. Programmer's name for it: RSIMAP4DisconnectedProbablyIdledOut
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:448 
@@ -15692,8 +15698,6 @@ msgid ""
 "Server has gracefully disconnected you, possibly because the connection was "
 "idle for too long."
 msgstr ""
-"Le serveur a interrompu la connection proprement, peut-être à cause d'une "
-"inactivité trop prolongée."
 
 #. Programmer's name for it: RSIMAP4ConnectionStateNonAuthenticated
 #. Programmer's name for it: RSIMAP4ConnectionStateNonAuthenticated
@@ -16194,14 +16198,16 @@ msgstr "Erreur d'adresse %s"
 
 #. Programmer's name for it: RSSMTPSvrNotPermitted
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:549 
+#, fuzzy
 msgid "%s Sender Not Permitted"
-msgstr "émetteur %s non permis"
+msgstr "Non permis"
 
 #. waiting to be abused by some spammer.
 #. Programmer's name for it: RSSMTPSvrNoRelay
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:552 
+#, fuzzy
 msgid "We do not relay %s"
-msgstr "%s ne peut être relayer."
+msgstr "Impossible d'analyser %s"
 
 #. Programmer's name for it: RSSMTPSvrWelcome
 #. Programmer's name for it: RSSMTPSvrWelcome
@@ -16254,143 +16260,150 @@ msgstr "Echec d'authenfication"
 
 #. Programmer's name for it: RSSMTPSvrAddressWillForward
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:560 
+#, fuzzy
 msgid "%s User not local, Will forward"
-msgstr "Utilisateur non local: message à faire suivre"
+msgstr "Utilisateur non local, faire suivre"
 
 #. Programmer's name for it: RSSMTPSvrReqSTARTTLS
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:561 
 msgid "Must issue a STARTTLS command first"
-msgstr "La commande STARTTLS doit être exécutée au préalable.."
+msgstr ""
 
 #. Programmer's name for it: RSSMTPSvrParmErrMailFrom
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:562 
 msgid "Parameter error! Example: mail from:<user@domain.com>"
-msgstr "Erreur de paramètre! Exemple: mail from: <user@domain.com>"
+msgstr ""
 
 #. Programmer's name for it: RSSMTPSvrParmErrRcptTo
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:563 
 msgid "Command parameter error! Example: rcpt to:<a@b.c>"
-msgstr "Erreur de paramètre de commande! Exemple: rcpt to: <a@b.c>"
+msgstr ""
 
 #. Programmer's name for it: RSSMTPSvrParmErr
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:564 
+#, fuzzy
 msgid "Syntax error in parameters or arguments"
-msgstr "Erreur de syntaxe dans les arguments ou les paramètres."
+msgstr "Trop de paramètres pour la méthode %s"
 
 #. Programmer's name for it: RSSMTPSvrParmErrNoneAllowed
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:565 
 msgid "Syntax error (no parameters allowed)"
-msgstr "Erreur de syntaxe (aucun paramètre admis)"
+msgstr ""
 
 #. Programmer's name for it: RSSMTPSvrReadyForTLS
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:566 
 msgid "Ready to start TLS"
-msgstr "Prêt à démarrer TLS"
+msgstr ""
 
 #. errorcode 554
 #. Programmer's name for it: RSSMTPSvrCmdErrSecurity
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:567 
 msgid "Command refused due to lack of security"
-msgstr "Commande refusée à cause de la sécurité insuffisante."
+msgstr ""
 
 #. Programmer's name for it: RSSMTPSvrImplicitTLSRequiresSSL
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:568 
 msgid ""
 "Implicit SMTP TLS requires that IOHandler be set to a TIdServerIOHandlerSSL."
 msgstr ""
-"L'utilisation implicite de SMTP TLS nécessite de relier IOHandler à un "
-"TIdServerIOHandlerSSL."
 
 #. Programmer's name for it: RSSMTPSvrBadSequence
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:569 
 msgid "Bad sequence of commands"
-msgstr "Mauvaise séquence de commandes."
+msgstr ""
 
 #. Programmer's name for it: RSSMTPNotLoggedIn
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:570 
+#, fuzzy
 msgid "Not logged in"
-msgstr "Non accrédité."
+msgstr "Non connecté."
 
 #. Programmer's name for it: RSSMTPMailboxUnavailable
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:571 
+#, fuzzy
 msgid "Requested action not taken: mailbox unavailable"
-msgstr "Action requise non exécutée: boite au lettre inaccessible."
+msgstr "Action requise non prise en charge."
 
 #. Programmer's name for it: RSSMTPUserNotLocal
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:572 
 msgid "User %s not local; please try <%s>"
-msgstr "Utilisateur %s non local; Veuillez essayer <%s>"
+msgstr ""
 
 #. Programmer's name for it: RSSMTPUserNotLocalNoAddr
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:573 
+#, fuzzy
 msgid "User %s not local; no forwarding address"
-msgstr ""
-"Utilisateur non local: aucune adresse existante pour pouvoir faire suivre."
+msgstr "Utilisateur non local, faire suivre"
 
 #. Programmer's name for it: RSSMTPTooManyRecipients
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:574 
+#, fuzzy
 msgid "Too Many recipients."
-msgstr "Trop de receveurs déclarés."
+msgstr "Trop de processus."
 
 #. Programmer's name for it: RSSMTPAccountDisabled
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:575 
+#, fuzzy
 msgid "%s Account Disabled"
-msgstr "Le compte %s est désactivé."
+msgstr "%s n'a pas pu être chargé."
 
 #. Programmer's name for it: RSSMTPLocalProcessingError
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:577 
+#, fuzzy
 msgid "Local Processing Error"
-msgstr "Erreur (locale) à l'exécution."
+msgstr "Erreur de compression"
 
 #. Programmer's name for it: RSSMTPNoOnRcptTo
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:578 
 msgid "No OnRcptTo event"
-msgstr "Pas d'évènement OnRcptTo"
+msgstr ""
 
 #. data command error replies
 #. Programmer's name for it: RSSMTPSvrExceededStorageAlloc
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:580 
+#, fuzzy
 msgid "Requested mail action aborted: exceeded storage allocation"
-msgstr "L'action requise a été abandonnée : il n'y a plus de place libre."
+msgstr "L'action demandée a été abandonnée : type de page inconnu."
 
 #. Programmer's name for it: RSSMTPSvrMailBoxNameNotAllowed
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:581 
+#, fuzzy
 msgid "Requested action not taken: mailbox name not allowed"
-msgstr "Action requise non exécutée: nom de mailbox non accepté."
+msgstr "Action requise non prise en charge."
 
 #. Programmer's name for it: RSSMTPSvrTransactionFailed
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:582 
+#, fuzzy
 msgid " Transaction failed"
-msgstr "La transaction n'a pas réussie."
+msgstr "La transaction est active."
 
 #. Programmer's name for it: RSSMTPSvrLocalError
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:583 
+#, fuzzy
 msgid "Requested action aborted: local error in processing"
 msgstr "L'action requise a été annulée : erreur locale lors du traitement."
 
 #. Programmer's name for it: RSSMTPSvrInsufficientSysStorage
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:584 
+#, fuzzy
 msgid "Requested action not taken: insufficient system storage "
-msgstr ""
-"Action requise non prise accomplie: pas assez de place dans le système."
+msgstr "Action requise non prise en charge."
 
 #. Programmer's name for it: RSSMTPMsgLenLimit
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:585 
 msgid "Message length exceeds administrative limit"
-msgstr "La longueur du message dépasse la limite."
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrImplicitTLSRequiresSSL
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:587 
 msgid ""
 "Implicit POP3 requires that IOHandler be set to a TIdServerIOHandlerSSL."
 msgstr ""
-"L'utilisation implicite de POP3 nécessite de relier IOHandler à un "
-"TIdServerIOHandlerSSL."
 
 #. Programmer's name for it: RSPOP3SvrMustUseSTLS
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:588 
 msgid "Must use STLS"
-msgstr "STLS doit être utilisé."
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrNotHandled
 #. Programmer's name for it: RSPOP3SvrNotHandled
@@ -16403,63 +16416,70 @@ msgstr "Commande non prise en charge : %s"
 #. Programmer's name for it: RSIMAP4SvrNotPermittedWithTLS
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:590 
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:870
+#, fuzzy
 msgid "Command not permitted when TLS active"
-msgstr "Commande non autorisée lorsque TLS est actif."
+msgstr "Méthode non autorisée dans TSoapDataList"
 
 #. Programmer's name for it: RSPOP3SvrNotInThisState
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:591 
+#, fuzzy
 msgid "Command not permitted in this state"
-msgstr "Comande non autorisée dans cette situation."
+msgstr "Méthode non autorisée dans TSoapDataList"
 
 #. Programmer's name for it: RSPOP3SvrBeginTLSNegotiation
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:592 
 msgid "Begin TLS negotiation"
-msgstr "Début de la négociation TLS"
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrLoginFirst
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:593 
 msgid "Please login first"
-msgstr "Veuillez tout d'abord vous identifier"
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrInvalidSyntax
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:594 
+#, fuzzy
 msgid "Invalid Syntax"
 msgstr "Syntaxe incorrecte"
 
 #. Programmer's name for it: RSPOP3SvrClosingConnection
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:595 
+#, fuzzy
 msgid "Closing Connection Channel."
-msgstr "Fermeture du canal de connexion."
+msgstr "fermeture de la connexion"
 
 #. Programmer's name for it: RSPOP3SvrPasswordRequired
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:596 
+#, fuzzy
 msgid "Password required"
-msgstr "Mot de passe requis"
+msgstr "Mot de passe : "
 
 #. Programmer's name for it: RSPOP3SvrLoginFailed
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:597 
+#, fuzzy
 msgid "Login failed"
-msgstr "Accréditation refusée."
+msgstr "Echec de l'assertion"
 
 #. Programmer's name for it: RSPOP3SvrLoginOk
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:598 
 msgid "Login OK"
-msgstr "Accréditation Ok"
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrWrongState
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:599 
 msgid "Wrong State"
-msgstr "état incorrect."
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrInvalidMsgNo
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:600 
+#, fuzzy
 msgid "Invalid Message Number"
-msgstr "Numéro de message invalide"
+msgstr "Argument incorrect"
 
 #. Programmer's name for it: RSPOP3SvrNoOp
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:601 
 msgid "NOOP"
-msgstr "Pas d'opération (NOOP)"
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrReset
 #. Programmer's name for it: sResetQuery
@@ -16471,30 +16491,35 @@ msgstr "Réinitialiser"
 #. Programmer's name for it: RSPOP3SvrCapaList
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:603 
 msgid "Capability list follows"
-msgstr "La liste des capacités suit."
+msgstr ""
 
 #. Programmer's name for it: RSPOP3SvrWelcome
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:604 
+#, fuzzy
 msgid "Welcome to Indy POP3 Server"
-msgstr "Bienvenue sur le serveur INDY POP3 "
+msgstr "Bienvenue dans le serveur SMTP INDY"
 
 #. Programmer's name for it: RSPOP3SvrUnknownCmd
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:605 
+#, fuzzy
 msgid "Sorry, Unknown Command"
-msgstr "Désolé, commande inconnue"
+msgstr "Mode inconnu"
 
 #. Programmer's name for it: RSPOP3SvrInternalError
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:606 
+#, fuzzy
 msgid "Unknown Internal Error"
-msgstr "Erreur interne inconnue"
+msgstr "Erreur inconnue"
 
 #. Programmer's name for it: RSPOP3SvrHelpFollows
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:607 
+#, fuzzy
 msgid "Help follows"
-msgstr "L'aide en ligne suit..."
+msgstr "Bonjour %s"
 
 #. Programmer's name for it: RSPOP3SvrTooManyCons
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:608 
+#, fuzzy
 msgid "Too many connections. Try again later."
 msgstr ""
 "Le nombre de connexion maximum a été dépassé. Essayez à nouveau "
@@ -16518,8 +16543,9 @@ msgstr "Taille irrégulière dans Encode."
 
 #. Programmer's name for it: RSIllegalCharInInputString
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:613 
+#, fuzzy
 msgid "Illegal character in input string."
-msgstr "Caractère incorrecte dans la chaine entrée."
+msgstr "Caractère incorrecte dans le nom"
 
 #. TIdMessageCoder
 #. Programmer's name for it: RSMessageDecoderNotFound
@@ -16577,8 +16603,9 @@ msgstr "Cette fonction n'est pas supportée sur Win32."
 
 #. Programmer's name for it: RSIPMCastReceiveError0
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:628 
+#, fuzzy
 msgid "IP Broadcast Receive Error = 0."
-msgstr "Erreur de Broadcast IP en réception: Error= 0."
+msgstr "Erreur de réception ICMP = 0."
 
 #. Programmer's name for it: RSFTPDefaultGreeting
 #. Programmer's name for it: RSFTPDefaultGreeting
@@ -16604,17 +16631,17 @@ msgstr "Etat du fichier OK ; prêt à ouvrir la connexion de données."
 #. Programmer's name for it: RSFTPDataConnList
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:634 
 msgid "Opening ASCII mode data connection for /bin/ls."
-msgstr "Ouverture du mode de connexion ASCII pour /bin/ls."
+msgstr ""
 
 #. Programmer's name for it: RSFTPDataConnNList
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:635 
 msgid "Opening ASCII mode data connection for file list."
-msgstr "Ouverture du mode de connexion ASCII pour le listage des fichiers."
+msgstr ""
 
 #. Programmer's name for it: RSFTPDataConnMLst
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:636 
 msgid "Opening ASCII data connection for directory listing"
-msgstr "Ouverture du mode de connexion ASCII pour le listage des répertoires."
+msgstr ""
 
 #. Programmer's name for it: RSFTPCmdSuccessful
 #. Programmer's name for it: RSFTPCmdSuccessful
@@ -16654,7 +16681,7 @@ msgstr "Fermeture de la connexion de données."
 #. Programmer's name for it: RSFTPDataConnEPLFClosed
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:642 
 msgid "Success."
-msgstr "Succès."
+msgstr ""
 
 #. Programmer's name for it: RSFTPDataConnClosedAbnormally
 #. Programmer's name for it: RSFTPDataConnClosedAbnormally
@@ -16761,20 +16788,19 @@ msgstr "L'action requise a été annulée : erreur locale lors du traitement."
 
 #. Programmer's name for it: RSFTPEnteringEPSV
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:657 
+#, fuzzy
 msgid "Entering Extended Passive Mode (%s)"
-msgstr "Début du mode passif étendu (%s)."
+msgstr "Commencement du mode passif (%s)."
 
 #. Programmer's name for it: RSFTPPORTDisabled
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:659 
 msgid "PORT/EPRT Command disabled."
-msgstr "Commande PORT/EPRT non active."
+msgstr ""
 
 #. Programmer's name for it: RSFTPPORTRange
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:660 
 msgid "PORT/EPRT Command disabled for reserved port range (1-1024)."
 msgstr ""
-"Commande PORT/EPRT non active pour les ports réservés (compris entre 1 et "
-"1024)."
 
 #. Programmer's name for it: RSFTPSameIPAddress
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:661 
@@ -16782,60 +16808,61 @@ msgid ""
 "Data port can only be used by the same IP address used by the control "
 "connection."
 msgstr ""
-"Le port des données ne peut être utilisé que par l'adresse IP dont se sert "
-"le contrôle de connexion."
 
 #. Programmer's name for it: RSFTPEPSVAllEntered
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:663 
 msgid " EPSV ALL sent, now only accepting EPSV connections"
 msgstr ""
-"Commande EPSV ALL envoyée. Seule une connexion de type EPSV est maintenant "
-"réalisable."
 
 #. Programmer's name for it: RSFTPNetProtNotSup
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:664 
+#, fuzzy
 msgid "Network protocol not supported, use %s"
-msgstr "Protocole non supporté. Utilisez %s"
+msgstr "Protocole non supporté."
 
 #. Programmer's name for it: RSFTPFileOpSuccess
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:665 
 msgid "File Operation Successful"
-msgstr "Opération sur fichier réussie."
+msgstr ""
 
 #. Programmer's name for it: RSFTPInvalidOps
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:666 
+#, fuzzy
 msgid "Invalid %s options"
-msgstr "Options %s invalides"
+msgstr "Réponse incorrecte"
 
 #. Programmer's name for it: RSFTPOptNotRecog
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:667 
+#, fuzzy
 msgid "Option not recognized."
-msgstr "Option non reconnue."
+msgstr "Commande non reconnue"
 
 #. Programmer's name for it: RSFTPPropNotNeg
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:668 
 msgid "Property can not be a negative number."
-msgstr "Cette propriété n'accepte pas de valeur négative."
+msgstr ""
 
 #. Programmer's name for it: RSFTPClntNoted
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:669 
+#, fuzzy
 msgid "Noted."
-msgstr "Enregistré."
+msgstr "Connecté."
 
 #. Programmer's name for it: RSFTPQuitGoodby
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:670 
+#, fuzzy
 msgid "Goodbye."
-msgstr "Au revoir."
+msgstr "Au revoir"
 
 #. Programmer's name for it: RSFTPPASVBoundPortMaxMustBeGreater
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:671 
 msgid "PASVBoundPortMax must be greater than PASVBoundPortMax."
-msgstr "PASVBoundPortMax doit être plus grand que PASVBoundPortMax."
+msgstr ""
 
 #. Programmer's name for it: RSFTPPASVBoundPortMinMustBeLess
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:672 
 msgid "PASVBoundPortMin must be less than PASVBoundPortMax."
-msgstr "PASVBoundPortMin doit être plus petit que PASVBoundPortMax."
+msgstr ""
 
 #. Programmer's name for it: RSFTPRequestedActionNotTaken
 #. Programmer's name for it: RSFTPActionNotTaken
@@ -16853,6 +16880,7 @@ msgstr "Action requise non prise en charge."
 
 #. Programmer's name for it: RSFTPCmdNotRecognized
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:674 
+#, fuzzy
 msgid "'%s': command not understood."
 msgstr "Erreur de syntaxe - Commande non comprise : %s"
 
@@ -16865,8 +16893,9 @@ msgstr "Commande \"%s\" non implémentée."
 
 #. Programmer's name for it: RSFTPCmdHelpNotKnown
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:676 
+#, fuzzy
 msgid "Unknown command %s."
-msgstr "Commande inconnue: %s"
+msgstr "Mode inconnu"
 
 #. Programmer's name for it: RSFTPUserNotLoggedIn
 #. Programmer's name for it: RSFTPUserNotLoggedIn
@@ -16900,8 +16929,9 @@ msgstr ""
 
 #. Programmer's name for it: RSFTPDataConnToOpenStou
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:683 
+#, fuzzy
 msgid "About to open data connection for %s"
-msgstr "La connection (%s) va être établie."
+msgstr "Impossible d'ouvrir la connexion de données."
 
 #. Programmer's name for it: RSFTPNeedAccountForLogin
 #. Programmer's name for it: RSFTPNeedAccountForLogin
@@ -16913,77 +16943,84 @@ msgstr "Compte nécessaire pour la connexion."
 #. Programmer's name for it: RSFTPAuthSSL
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:685 
 msgid "AUTH Command OK. Initializing SSL"
-msgstr "Commande AUTH OK. Le mde SSL va être initialisé."
+msgstr ""
 
 #. Programmer's name for it: RSFTPDataProtBuffer0
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:686 
 msgid "PBSZ Command OK. Protection buffer size set to 0."
-msgstr "Commande PBSZ OK. Taille du tampon de protection mise à 0."
+msgstr ""
 
 #. Programmer's name for it: RSFTPInvalidProtTypeForMechanism
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:688 
 msgid "Requested PROT level not supported by mechanism."
-msgstr "Le niveau de PROT requis n'est pas disponible dans ce contexte."
+msgstr ""
 
 #. Programmer's name for it: RSFTPProtTypeClear
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:689 
+#, fuzzy
 msgid "PROT Command OK. Using Clear data connection"
-msgstr "Commande PROT OK. type de connexion Clear."
+msgstr "Fermeture de la connexion de données."
 
 #. Programmer's name for it: RSFTPProtTypePrivate
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:690 
+#, fuzzy
 msgid "PROT Command OK. Using Private data connection"
-msgstr "Commande PROT OK. Mode de connexion Private."
+msgstr "Fermeture de la connexion de données."
 
 #. Programmer's name for it: RSFTPClearCommandConnection
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:691 
 msgid "Command channel switched to clear-text."
-msgstr "Le canal des commandes est maintenant en mode Clear."
+msgstr ""
 
 #. Programmer's name for it: RSFTPClearCommandNotPermitted
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:692 
+#, fuzzy
 msgid "Clear command channel is not permitted."
-msgstr "Canal en mode Clear n'est pas autorisé pour les commandes."
+msgstr "La modification de données n'est pas autorisée."
 
 #. Programmer's name for it: RSFTPPBSZAuthDataRequired
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:693 
+#, fuzzy
 msgid "AUTH Data required."
-msgstr "Données AUTH requises."
+msgstr "URL requis"
 
 #. Programmer's name for it: RSFTPPBSZNotAfterCCC
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:694 
+#, fuzzy
 msgid "Not permitted after CCC"
-msgstr "Non permis après un CCC."
+msgstr "Non permis"
 
 #. Programmer's name for it: RSFTPPROTProtBufRequired
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:695 
 msgid "PBSZ Data Buffer Size required."
-msgstr "La taille du tampon de données PBSZ est requise."
+msgstr ""
 
 #. Programmer's name for it: RSFTPInvalidForParam
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:696 
+#, fuzzy
 msgid "Command not implemented for that parameter."
-msgstr "Commande %s non implémentée pour ce paramètre."
+msgstr "Commande \"%s\" non implémentée."
 
 #. Programmer's name for it: RSFTPNotAllowedAfterEPSVAll
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:697 
 msgid "%s not allowed after EPSV ALL"
-msgstr "%s n'est pas possible après un EPSV ALL."
+msgstr ""
 
 #. Programmer's name for it: RSFTPOTPMethod
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:699 
+#, fuzzy
 msgid "Unknown OTP method"
-msgstr "Méthode OTP inconnue."
+msgstr "Mode inconnu"
 
 #. Programmer's name for it: RSFTPIOHandlerWrong
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:700 
 msgid "IOHandler is of wrong type."
-msgstr "Le type d'IOHandler est erroné."
+msgstr ""
 
 #. Programmer's name for it: RSFTPFileNameCanNotBeEmpty
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:701 
 msgid "The destination filename can not be empty"
-msgstr "Le nom du fichier but ne peut rester vide."
+msgstr ""
 
 #. part of any phrase otherwise, a FTP client might get confused.
 #. Programmer's name for it: RSFTPCurrentDirectoryIs
@@ -16991,6 +17028,7 @@ msgstr "Le nom du fichier but ne peut rester vide."
 #. Programmer's name for it: RSFTPCurrentDirectoryIs
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:705 
 #: Win32/Indy9/IdResourceStrings.pas:575
+#, fuzzy
 msgid "\"%s\" is working directory."
 msgstr "\"%s\" est le répertoire de travail."
 
@@ -17011,7 +17049,7 @@ msgstr "Mode défini à %s."
 #. Programmer's name for it: RSFTPMODENotSupported
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:708 
 msgid "Unimplemented mode."
-msgstr "Mode non implémenté."
+msgstr ""
 
 #. Programmer's name for it: RSFTPSTRUChanged
 #. Programmer's name for it: RSFTPSTRUChanged
@@ -17023,7 +17061,7 @@ msgstr "Structure définie à %s."
 #. Programmer's name for it: RSFTPSITECmdsSupported
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:710 
 msgid "The following SITE commands are supported:"
-msgstr "Les commandes SITE suivantes sont supportées:"
+msgstr ""
 
 #. Programmer's name for it: RSFTPDirectorySTRU
 #. Programmer's name for it: RSFTPDirectorySTRU
@@ -17041,13 +17079,15 @@ msgstr "Fin de l'état"
 
 #. Programmer's name for it: RSFTPCmdExtsSupportedStart
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:713 
+#, fuzzy
 msgid "Extensions supported:"
-msgstr "Extensions supportées:"
+msgstr "Execute non supporté : %s"
 
 #. Programmer's name for it: RSFTPCmdExtsSupportedEnd
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:714 
+#, fuzzy
 msgid "End of extentions."
-msgstr "Fin des extensions."
+msgstr "Fin de l'état"
 
 #. Programmer's name for it: RSFTPNoOnDirEvent
 #. Programmer's name for it: RSFTPNoOnDirEvent
@@ -17060,53 +17100,53 @@ msgstr "Aucun événement OnListDirectory n'a été trouvé !"
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:718 
 msgid "Implicit FTP requires that IOHandler be set to a TIdServerIOHandlerSSL."
 msgstr ""
-"L'utilisation implicite de FTP nécessite de relier IOHandler à un "
-"TIdServerIOHandlerSSL."
 
 #. %s is the umask number
 #. Programmer's name for it: RSFTPUMaskIs
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:721 
 msgid "Current UMASK is %.3d"
-msgstr "UMASK actuel: %.3d"
+msgstr ""
 
 #. first %d is the new value, second one is the old value
 #. Programmer's name for it: RSFTPUMaskSet
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:723 
 msgid "UMASK set to %.3d (was %.3d)"
-msgstr "UMASK a été mis à %.3d (%.3d au préalable)"
+msgstr ""
 
 #. Programmer's name for it: RSFTPPermissionDenied
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:724 
+#, fuzzy
 msgid "Permission denied."
-msgstr "Permission refusée."
+msgstr "Accès refusé."
 
 #. Programmer's name for it: RSFTPCHMODSuccessful
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:725 
+#, fuzzy
 msgid "CHMOD command successful."
-msgstr "Commande CHMOD effectuée avec succès."
+msgstr "Commande %s effectuée avec succès."
 
 #. Programmer's name for it: RSFTPHelpBegining
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:726 
 msgid ""
 "The following commands are recognized (* => unimplemented, + => extension)."
 msgstr ""
-"Les commandes suivantes sont admises (* => non implémentée, + => extension)."
 
 #. toggles for DIRSTYLE SITE command in IIS
 #. Programmer's name for it: RSFTPOn
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:728 
+#, fuzzy
 msgid "on"
-msgstr "on"
+msgstr "Lun"
 
 #. Programmer's name for it: RSFTPOff
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:729 
 msgid "off"
-msgstr "off"
+msgstr ""
 
 #. Programmer's name for it: RSFTPDirStyle
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:730 
 msgid "MSDOS-like directory output is %s"
-msgstr "Le répertoire (format MSDOS) de sortie est %s"
+msgstr ""
 
 #. facility
 #. Programmer's name for it: STR_SYSLOG_FACILITY_KERNEL
@@ -17402,7 +17442,7 @@ msgstr "Autre surnom"
 #. Programmer's name for it: RSIRCUserName
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:782 
 msgid "ircuser"
-msgstr "utilisateur IRC"
+msgstr ""
 
 #. Programmer's name for it: RSIRCRealName
 #. Programmer's name for it: RSIRCRealName
@@ -17573,12 +17613,13 @@ msgstr "Impossible d'envoyer un message tant que vous attendez une réponse"
 
 #. Programmer's name for it: RSMFDIvalidObjectType
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:810 
+#, fuzzy
 msgid ""
 "Unsupported object type. You can assign only one of the following types or "
 "their descendants: TStrings, TStream."
 msgstr ""
-"Type d'objet non supporté. Vous pouvez affecter un des types suivants (ou un "
-"de leurs descendants): TStrings, TStream."
+"Type d'objet non supporté. Vous pouvez affecter un seul type de l'un des "
+"types suivants ou de leurs descendants : TStrings, TStream."
 
 #. Programmer's name for it: RSURINoProto
 #. Programmer's name for it: RSURINoProto
@@ -17615,122 +17656,135 @@ msgstr ""
 #. Programmer's name for it: RSUnassignedUserPassProv
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:823 
 msgid "Unassigned UserPassProvider!"
-msgstr "UserPassProvider n'a pas été renseigné!"
+msgstr ""
 
 #. Programmer's name for it: RSDirSMTPInvalidEMailAddress
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:826 
+#, fuzzy
 msgid "Invalid Email Address %s"
-msgstr "Adresse %s incorrecte."
+msgstr "Nom d'alias %s incorrect"
 
 #. Programmer's name for it: RSDirSMTPNoMXRecordsForDomain
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:827 
 msgid "No MX records for the domain %s"
-msgstr "Pas d'enregistrement de serveur MX pour le domaine %s"
+msgstr ""
 
 #. Programmer's name for it: RSDirSMTPCantConnectToSMTPSvr
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:828 
+#, fuzzy
 msgid "Can not connect to MX servers for address %s"
-msgstr "Impossible de se connecter au serveur MX correspondant à l'adresse %s"
+msgstr "Impossible de se connecter au serveur maître"
 
 #. Programmer's name for it: RSDirSMTPCantAssignHost
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:829 
 msgid ""
 "Can not assign Host property, it is resolved by IdDirectSMTP on the fly."
 msgstr ""
-"La propriété Host n'est pas modifiable: IdDirectSMNTP la renseigne "
-"automatiquement."
 
 #. Programmer's name for it: RSYencFileCorrupted
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:832 
+#, fuzzy
 msgid "File corrupted."
-msgstr "Fichié défectueux."
+msgstr "%s est altéré."
 
 #. Programmer's name for it: RSYencInvalidSize
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:833 
+#, fuzzy
 msgid "Invalid Size"
-msgstr "Taille incorrecte."
+msgstr "Index incorrect"
 
 #. Programmer's name for it: RSYencInvalidCRC
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:834 
+#, fuzzy
 msgid "Invalid CRC"
-msgstr "Somme de contrôle CRC incorrecte."
+msgstr "Etat incorrect"
 
 #. Programmer's name for it: RSSocksSvrInvalidLogin
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:838 
+#, fuzzy
 msgid "Invalid Login"
-msgstr "Accréditation incorrecte."
+msgstr "Nom de connexion incorrect."
 
 #. Programmer's name for it: RSSocksSvrWrongATYP
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:839 
 msgid "Wrong SOCKS5-ATYP"
-msgstr "Mauvais SOCKS5-ATYP."
+msgstr ""
 
 #. Programmer's name for it: RSSocksSvrWrongSocksVersion
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:840 
 msgid "Wrong SOCKS-version"
-msgstr "Mauvaise version de SOCKS."
+msgstr ""
 
 #. Programmer's name for it: RSSocksSvrWrongSocksCommand
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:841 
 msgid "Wrong SOCKS-Command"
-msgstr "Commande de SOCKS erronée"
+msgstr ""
 
 #. Programmer's name for it: RSSocksSvrAccessDenied
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:842 
+#, fuzzy
 msgid "Access Denied"
 msgstr "Accès refusé."
 
 #. Programmer's name for it: RSSocksSvrUnexpectedClose
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:843 
+#, fuzzy
 msgid "Unexpected Close."
-msgstr "Fermeture inatendue."
+msgstr "Erreur de script inattendue"
 
 #. Programmer's name for it: RSTLSSSLIOHandlerRequired
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:846 
+#, fuzzy
 msgid "SSL IOHandler is required for this setting"
-msgstr "Un SSL IOHandler est requis pour ce paramètrage."
+msgstr "Propriété SQLConnection requise pour cette opération"
 
 #. Programmer's name for it: RSTLSSSLCanNotSetWhileActive
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:847 
+#, fuzzy
 msgid "This value can not be set while the server is active."
-msgstr "Impossible de changer cette valuer tant que le serveur est actif."
+msgstr "Impossible de changer l'état de session tant que le serveur est actif."
 
 #. Programmer's name for it: RSTLSSLCanNotSetWhileConnected
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:848 
 msgid "This value can not be set while the client is connected."
-msgstr "Vous ne pouvez changer cette valeur tant que le Client est connecté."
+msgstr ""
 
 #. Programmer's name for it: RSTLSSLSSLNotAvailable
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:849 
+#, fuzzy
 msgid "SSL is not available on this server."
-msgstr "SSL n'est pas mis en oeuvre par ce serveur."
+msgstr "%s n'est pas un service correct."
 
 #. Programmer's name for it: RSTLSSLSSLCmdFailed
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:850 
 msgid "Start SSL negotiation command failed."
-msgstr "La command d'initialisation de la négotiation SSL a échoué."
+msgstr ""
 
 #. user's provided reply will follow this string
 #. Programmer's name for it: RSPOP3ReplyInvalidEnhancedCode
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:854 
+#, fuzzy
 msgid "Invalid Enhanced Code: "
-msgstr "Code étendu invalide."
+msgstr "Type de noeud incorrect"
 
 #. IdSMTPReply
 #. Programmer's name for it: RSSMTPReplyInvalidReplyStr
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:857 
+#, fuzzy
 msgid "Invalid Reply String."
-msgstr "Chaine de réponse incorrecte."
+msgstr "Sélection incorrecte"
 
 #. Programmer's name for it: RSSMTPReplyInvalidClass
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:858 
+#, fuzzy
 msgid "Invalid Reply Class."
-msgstr "Classe de réponse incorrecte."
+msgstr "Mot de passe non valide"
 
 #. Programmer's name for it: RSUnsupportedOperation
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:860 
+#, fuzzy
 msgid "Unsupported operation."
-msgstr "Opération non supportée."
+msgstr "Fonctionnalité non supportée."
 
 #. Mapped port components
 #. Programmer's name for it: RSEmptyHost
@@ -17765,32 +17819,31 @@ msgstr "Terminaison en cours du proxy POP3"
 #. Programmer's name for it: RSIMAP4SvrBeginTLSNegotiation
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:869 
 msgid "Begin TLS negotiation now"
-msgstr "Début de la négotiation TLS."
+msgstr ""
 
 #. Programmer's name for it: RSIMAP4SvrImplicitTLSRequiresSSL
 #: Indy10/Protocols/IdResourceStringsProtocols.pas:871 
 msgid ""
 "Implicit IMAP4 requires that IOHandler be set to a TIdServerIOHandlerSSLBase."
 msgstr ""
-"L'utilisation d'un IMAP4 implicite nécessite de relier IOHandler à un "
-"TIdServerIOHandlerSSLBase."
 
 #. Programmer's name for it: RSOTP_Challenge
 #: Indy10/Protocols/IdUserAccountsOTP.pas:133 
 msgid "Response to %s required for OTP."
-msgstr "Une réponse à %s est nécessaire pour un OTP."
+msgstr ""
 
 #. Programmer's name for it: RSOTP_SeedBadFormat
 #: Indy10/Protocols/IdUserAccountsOTP.pas:134 
 msgid ""
 "The seed must be alphanumeric and it must at least 1 character but no more "
 "than 16 characters."
-msgstr "La racine doit être alphanumérique et avoir entre 1 et 16 charactères."
+msgstr ""
 
 #. Programmer's name for it: RSOTP_InvalidCount
 #: Indy10/Protocols/IdUserAccountsOTP.pas:135 
+#, fuzzy
 msgid "The count must be greater than 1."
-msgstr "Le nombre doit être supérieur à 1."
+msgstr "TIdText doit être supérieur à 1"
 
 #. Programmer's name for it: RSOTP_InvalidPassword
 #: Indy10/Protocols/IdUserAccountsOTP.pas:136 
@@ -17798,13 +17851,12 @@ msgid ""
 "The password must be longer than 10 characters but no more than 63 "
 "characters."
 msgstr ""
-"Le mot de passe doit avoir exactement entre 10 et 63 charactères de longueur."
 
 #. This must be longer than 9 characters but no more than 63 characters in length
 #. Programmer's name for it: RSOTP_DefaultPassword
 #: Indy10/Protocols/IdUserAccountsOTP.pas:138 
 msgid "PleaseChangeMeNow"
-msgstr "PleaseChangeMeNow"
+msgstr ""
 
 #. Winsock
 #. Programmer's name for it: RSWinsockCallError
@@ -17895,8 +17947,9 @@ msgstr "Accès refusé."
 
 #. Programmer's name for it: RSStackEFAULT
 #: Indy10/System/IdResourceStrings.pas:44 
+#, fuzzy
 msgid "Buffer fault."
-msgstr "Erreur de tampon."
+msgstr "Default"
 
 #. Programmer's name for it: RSStackEINVAL
 #. Programmer's name for it: RSStackEINVAL
@@ -17914,6 +17967,7 @@ msgstr "Trop de fichiers ouverts."
 
 #. Programmer's name for it: RSStackEWOULDBLOCK
 #: Indy10/System/IdResourceStrings.pas:47 
+#, fuzzy
 msgid "Operation would block."
 msgstr "L'opération risquerait de bloquer. "
 
@@ -18159,18 +18213,20 @@ msgstr ""
 
 #. Programmer's name for it: RSStackNotSupportedOnLinux
 #: Indy10/System/IdResourceStrings.pas:83 
+#, fuzzy
 msgid "Non-blocking not supported on Linux"
-msgstr "Le mode non bloquant n'est pas mis en oeuvre sous Linux."
+msgstr "goColMoving n'est pas une option prise en charge."
 
 #. Programmer's name for it: RSStackClassUndefined
 #: Indy10/System/IdResourceStrings.pas:84 
 msgid "Stack Class is undefined."
-msgstr "La class de stack n'a pas été définie."
+msgstr ""
 
 #. Programmer's name for it: RSStackAlreadyCreated
 #: Indy10/System/IdResourceStrings.pas:85 
+#, fuzzy
 msgid "Stack already created."
-msgstr "La pile existe déjà."
+msgstr "Socket déjà connecté."
 
 #. Other
 #. Programmer's name for it: RSAntiFreezeOnlyOne
@@ -18182,8 +18238,9 @@ msgstr "Un seul TIdAntiFreeze peut exister par application."
 
 #. Programmer's name for it: RSCannotSetIPVersionWhenConnected
 #: Indy10/System/IdResourceStrings.pas:88 
+#, fuzzy
 msgid "Cannot change IPVersion when connected"
-msgstr "Impossible de modifier IPVersion lorsqu'une connexion est établie."
+msgstr "Impossible de modifier la taille d'une icône"
 
 #. Programmer's name for it: RSCannotBindRange
 #. Programmer's name for it: RSCanNotBindRange
@@ -18232,13 +18289,15 @@ msgstr "%s n'est pas un service correct."
 
 #. Programmer's name for it: RSIPv6Unavailable
 #: Indy10/System/IdResourceStrings.pas:95 
+#, fuzzy
 msgid "IPv6 unavailable"
-msgstr "IPV6 non disponible"
+msgstr "Service non disponible"
 
 #. Programmer's name for it: RSIPVersionUnsupported
 #: Indy10/System/IdResourceStrings.pas:96 
+#, fuzzy
 msgid "The requested IPVersion / Address family is not supported."
-msgstr "La version IP/ la famille d'adresse requise n'est pas supportée."
+msgstr "La fonction requise n'est pas supportée"
 
 #. Programmer's name for it: RSNotAllBytesSent
 #. Programmer's name for it: RSNotAllBytesSent
@@ -18263,13 +18322,14 @@ msgstr "Taille d'ensemble dépassée."
 
 #. Programmer's name for it: RSStreamNotEnoughBytes
 #: Indy10/System/IdResourceStrings.pas:100 
+#, fuzzy
 msgid "Not enough bytes read from stream."
-msgstr "Pas suffisamment d'octets reçus."
+msgstr "Pas suffisamment d'octets reçus"
 
 #. Programmer's name for it: RSEndOfStream
 #: Indy10/System/IdResourceStrings.pas:101 
 msgid "End of stream: Class %s at %d"
-msgstr "Fin du stream: Classe %s à %s"
+msgstr ""
 
 #. Programmer's name for it: PermissionDenied
 #: IntraWeb/IWResourceStrings.pas:229 
@@ -18495,10 +18555,9 @@ msgstr ""
 #: IntraWeb/IWResourceStrings.pas:276 
 msgid ""
 "You have attempted to post or refresh data from a page that  depends on "
-"information that is no longer available to the server application.\n"
-"\n"
-"Your attempted changes will be ignored. You will now be resynced to the "
-"current place in the application."
+"information that is no longer available to the server application.Your "
+"attempted changes will be ignored. You will now be resynced to the current "
+"place in the application."
 msgstr ""
 
 #. Programmer's name for it: ResourceNotFound
@@ -18533,8 +18592,8 @@ msgstr ""
 #. Programmer's name for it: InvalidBrowser
 #: IntraWeb/IWResourceStrings.pas:282 
 msgid ""
-"Your browser was detected as %s, identifying itself as %s.\n"
-"One of the following browsers is required:\n"
+"Your browser was detected as %s, identifying itself as %s.One of the "
+"following browsers is required:"
 msgstr ""
 
 #. Programmer's name for it: MessageDialog
@@ -18935,8 +18994,8 @@ msgstr "Format movie non reconnu"
 #. Programmer's name for it: LayoutMgrNeeded32
 #: IntraWeb/IWResourceStrings.pas:372 
 msgid ""
-"For HTML 3.2 a layout manager is required. Make sure that you have one\n"
-" associated to the form and this it's Able property is set to True"
+"For HTML 3.2 a layout manager is required. Make sure that you have one "
+"associated to the form and this it's Able property is set to True"
 msgstr ""
 
 #. Log Messages
@@ -19212,9 +19271,7 @@ msgstr "P&récédent"
 #. TimeEdit
 #. Programmer's name for it: InvalidTimeEditFormat
 #: IntraWeb/IWResourceStrings.pas:442 
-msgid ""
-"The value of %s is in an incorrect format.\n"
-"Please correct the value."
+msgid "The value of %s is in an incorrect format.Please correct the value."
 msgstr ""
 
 #. Programmer's name for it: MissingContainerOnFrame
@@ -21227,12 +21284,14 @@ msgstr "Impossible de convertir le variant de type (%s) en type (%s)"
 msgid "Overflow while converting variant of type (%s) into type (%s)"
 msgstr "Débordement lors de la conversion du variant de type (%s) en type (%s)"
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10911 
 msgid ""
 "This module was compiled with a trial version of Kylix.\n"
 "The trial period has expired.\n"
 msgstr ""
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10916 
 msgid ""
 "This module was compiled with a trial version of Delphi.\n"

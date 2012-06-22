@@ -6,10 +6,9 @@ uses
   appconsts in '..\..\dxgettext\appconsts.pas',
   Forms,
   uRun in 'uRun.pas' {FormRun},
+  ConsoleApp in 'ConsoleApp.pas',
   msgmergedxengine in 'msgmergedxengine.pas',
-  consoleoutput in '..\..\dxgettext\consoleoutput.pas',
-  u_dzQuicksort in '..\..\dxgettext\u_dzQuicksort.pas',
-  ConsoleAppHandler in '..\..\dxgettext\ConsoleAppHandler.pas';
+  consoleoutput in '..\..\dxgettext\consoleoutput.pas';
 
 {$R *.res}
 

@@ -12,7 +12,6 @@ type
       inputfilename:string;
       removelistfilename:string;
       outputfilename:string;
-      MaxWidth: integer;
       constructor Create;
       destructor Destroy; override;
       procedure Execute;
@@ -37,8 +36,6 @@ end;
 
 constructor Tmsgmkignoreengine.Create;
 begin
-  inherited Create;
-  MaxWidth := 70;
   removelist:=TPoEntryList.Create;
 end;
 
@@ -99,10 +96,8 @@ end;
 
 procedure Tmsgmkignoreengine.HandleEntry(outfile: TStream; po: TPoEntry);
 begin
-  if po.MsgId='' then
-    po.WriteToStream(outfile, 70)
-  else if removelist.Find(po.MsgId)=nil then
-    po.WriteToStream(outfile, MaxWidth);
+  if (po.MsgId='') or (removelist.Find(po.MsgId)=nil) then
+    po.WriteToStream(outfile);
 end;
 
 end.

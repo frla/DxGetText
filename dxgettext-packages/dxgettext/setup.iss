@@ -4,7 +4,7 @@
 
 [Setup]
 AppName=GNU Gettext for Delphi and C++ Builder
-AppVerName=GNU Gettext for Delphi and C++ Builder 1.3.0
+AppVerName=GNU Gettext for Delphi and C++ Builder 1.2
 AppPublisherURL=http://dybdahl.dk/dxgettext/
 AppSupportURL=http://dybdahl.dk/dxgettext/
 AppUpdatesURL=http://dybdahl.dk/dxgettext/
@@ -57,7 +57,6 @@ Name: {group}\Documentation\Manual (html); Filename: {app}\docs\html\index.html
 Name: {group}\Documentation\Manual (pdf); Filename: {app}\docs\manual.pdf
 Name: {group}\Documentation\Release notes; Filename: {app}\RELEASENOTES.txt
 Name: {group}\GnuGettext.pas; Filename: {app}\gnugettext.pas
-Name: {group}\Gorm; Filename: {app}\gorm.exe
 Name: {group}\Ports\Delphi 5 files; Filename: {app}\delphi5\
 Name: {group}\Ports\FreePascal files; Filename: {app}\freepascal\
 Name: {group}\LanguageCodes\LanguageCodes.txt; Filename: {app}\LanguageCodes.txt
@@ -79,12 +78,12 @@ Name: SetPath; Description: Modify path (required to make it work!); Flags: rest
 Name: DesktopIcons; Description: Create icon on desktop
 
 [Code]
-procedure CurStepChanged(CurStep: TSetupStep);
+procedure CurStepChanged(CurStep: Integer);
 var
   group:string;
 begin
   case CurStep of
-    ssPostInstall:
+    csFinished:
       begin
         group:=ExpandConstant('{group}\');
         DeleteFile (group+'Languagecodes.txt');
@@ -101,7 +100,7 @@ begin
         DeleteFile (group+'C++ Builder notes.lnk');
         DeleteFile (group+'Changelog.lnk');
         DeleteFile (group+'Register shell extensions.lnk');
-        if IsTaskSelected('SetPath') then begin
+        if ShouldProcessEntry('','SetPath')=srYes then begin
           case ModifyPath('{app}', pmAddToBeginning + pmAddOnlyIfDirExists, psAllUsers) of
             mpMissingRights:      MsgBox('User has insufficent rights to modify path environment variable in registry.' + #13#10 + #13#10 +
                                   'Please log on as adminstrator and re-run this installation wizard', mbError, MB_OK);

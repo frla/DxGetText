@@ -15,8 +15,8 @@ interface
 // This writes to standard console output.
 // On Linux, and if no language is set, system.write() will be used.
 // Otherwise, the Windows API will be used, with Unicode if possible
-procedure Write (const ws:string);
-procedure Writeln (const ws:string='');
+procedure Write (ws:widestring);
+procedure Writeln (ws:widestring='');
 
 
 
@@ -29,17 +29,17 @@ uses
 {$endif}
 
 {$ifdef MSWINDOWS}
-function ConWriteW(con:THandle;const outstr:String):Boolean;
+function ConWriteW(con:THandle;outstr:WideString):Boolean;
 var
   len,written:Cardinal;
 begin
   len:=length(outstr);
   if len>0 then
-    WriteConsoleW(con, PWideChar(@outstr[1]), len, written, nil);
+  WriteConsoleW(con, PWideChar(@outstr[1]), len, written, nil);
   result:=written=len;
 end;
 
-function ConWriteA(con:THandle;const outstr:Ansistring):Boolean;
+function ConWriteA(con:THandle;outstr:Ansistring):Boolean;
 var
   len,written:Cardinal;
 begin
@@ -49,58 +49,52 @@ begin
   result:=written=len;
 end;
 
+procedure Write (ws:widestring);
 var
-  output: THandle;  //cache handle
-
-procedure Write(const ws:string);
-var
+  output: THandle;
   lang:string;
   success:boolean;
 begin
   lang:=lowercase(GetCurrentLanguage);
   if (lang='') or (lang='c') or (lang='en') then begin
     system.write (ws);
-  end
-  else if (output = 0) then
-  begin
+  end else begin
     success:=false;
     // First, try Unicode output to screen
     output := CreateFileW('CONOUT$', GENERIC_READ or GENERIC_WRITE, FILE_SHARE_WRITE, nil, OPEN_EXISTING, 0, 0);
-    if output = INVALID_HANDLE_VALUE then CloseHandle(output);
     if output <> INVALID_HANDLE_VALUE then
-    //try
+    try
       success:=ConWriteW(output, ws);
-    //finally
-      //CloseHandle(output);
-    //end;
+    finally
+      CloseHandle(output);
+    end;
     if not success then begin
       output := CreateFile('CONOUT$', GENERIC_READ or GENERIC_WRITE, FILE_SHARE_WRITE, nil, OPEN_EXISTING, 0, 0);
       if output <> INVALID_HANDLE_VALUE then
-      if output = INVALID_HANDLE_VALUE then CloseHandle(output);
-      //try
-        success:=ConWriteW(output, ws);
-      //finally
-        //CloseHandle(output);
-      //end;
+      try
+        success:=ConWriteA(output, ws);
+      finally
+        CloseHandle(output);
+      end;
     end;
     if not success then begin
       // Output failed or not implemented - using writeln() instead
       system.write (ws);
     end;
-  end
-  else
-  begin
-    success:=ConWriteW(output, ws);
-    if not success then
-      // Output failed or not implemented - using writeln() instead
-      system.write (ws);
   end;
 end;
 {$endif}
 
-procedure Writeln (const ws:string='');
+{$ifdef LINUX}
+procedure Write (ws: widestring);
 begin
-  Write(ws+sLinebreak);
+  system.write (ws);
+end;
+{$endif}
+
+procedure Writeln (ws:widestring='');
+begin
+  Write (ws+sLinebreak);
 end;
 
 end.

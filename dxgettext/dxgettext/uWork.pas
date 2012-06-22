@@ -1,4 +1,4 @@
-﻿unit uWork;
+unit uWork;
 (**************************************************************)
 (*                                                            *)
 (*  (C) Copyright by Lars B. Dybdahl                          *)
@@ -29,12 +29,9 @@ type
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
-    procedure Progress(const CurrentTask, CurrentFileName: string;
-                       const LineNumber: Integer);
-    procedure Warning (WarningType: TWarningType;
-                       const Msg, Line, Filename: string;
-                       LineNumber: Integer);
-    procedure OverwriteQuestion (sender: TObject; const aFileName: String; var Overwrite: boolean);
+    procedure Progress (CurrentTask:widestring;CurrentFileName:widestring;LineNumber:Integer);
+    procedure Warning (WarningType:TWarningType;Msg,Line:widestring;Filename:widestring;LineNumber:Integer);
+    procedure OverwriteQuestion (sender: TObject; const aFileName: wideString; var Overwrite: boolean);
   public
     { Public declarations }
   end;
@@ -75,8 +72,8 @@ begin
   ButtonOK.Left:=(Width-ButtonOK.Width) div 2;
 end;
 
-procedure TFormWork.Progress(const CurrentTask, CurrentFileName: string;
-                             const LineNumber: Integer);
+procedure TFormWork.Progress(CurrentTask, CurrentFileName: widestring;
+  LineNumber: Integer);
 begin
   LabelProgress.Caption:=CurrentTask;
   LabelProgress.Update;
@@ -86,9 +83,8 @@ begin
   end;
 end;
 
-procedure TFormWork.Warning(WarningType: TWarningType;
-                            const Msg, Line, Filename: string;
-                            LineNumber: Integer);
+procedure TFormWork.Warning(WarningType: TWarningType; Msg, Line,
+  Filename: widestring; LineNumber: Integer);
 begin
   MemoProgress.Lines.Add(Msg);
   MemoProgress.Lines.Add(Format(_('Line: %s'),[Line]));
@@ -138,7 +134,6 @@ begin
       xgt.UpdateIgnore:=f.CBCreateIgnore.Checked;
       xgt.UseIgnoreFile:=f.CBRemoveIgnore.Checked;
       xgt.AddBaseDirectory(IncludeTrailingPathDelimiter(f.EditBasepath.Text));
-      xgt.DestinationPath := IncludeTrailingPathDelimiter(f.EditBasepath.Text);
       xgt.AllowNonAscii:=f.CheckBoxAllowNonAscii.Checked;
       Explode(f.EditMask.Text,xgt.filemasks);
     finally
@@ -178,7 +173,7 @@ begin
 end;
 
 procedure TFormWork.OverwriteQuestion(sender: TObject;
-  const aFileName: String; var Overwrite: boolean);
+  const aFileName: wideString; var Overwrite: boolean);
 begin
   Overwrite:=MessageDlg(Format(_('Do you want to overwrite the file named %s?'),[aFilename]),mtConfirmation,[mbYes,mbNo],0)=mrYes;
 end;

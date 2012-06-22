@@ -1,9 +1,6 @@
 unit gnugettextD5;
-// Information about this file:
-// $LastChangedDate: 2005-04-04 19:40:57 +0200 (ma, 04 apr 2005) $
-// $LastChangedRevision: 60 $
-// $HeadURL: http://svn.berlios.de/svnroot/repos/dxgettext/trunk/dxgettext/sample/gnugettextD5.pas $
-
+(*  File version: $Date: 2004/10/08 07:40:56 $ *)
+(*  Revision: $Revision: 1.5.2.1 $ *)
 // Delphi 5 optimized interface for gnugettext.pas
 // This unit must only be used on Delphi 5. When you upgrade to Delphi 6 or
 // later, you should remove this unit and replace all reference to gnugettextD5
@@ -249,12 +246,12 @@ end;
 
 function gettext(const szMsgId: string): string;
 begin
-  Result:=string(DefaultInstance.gettext(DefaultInstance.ansi2wideDTCP(szMsgId)));
+  Result:=string(DefaultInstance.gettext(DefaultInstance.ansi2wide(szMsgId)));
 end;
 
 function dgettext(const szDomain: string; const szMsgId: string): string;
 begin
-  Result:=string(DefaultInstance.dgettext(szDomain,DefaultInstance.ansi2wideDTCP(szMsgId)));
+  Result:=string(DefaultInstance.dgettext(szDomain,DefaultInstance.ansi2wide(szMsgId)));
 end;
 
 procedure TranslateComponent(AnObject: TComponent);

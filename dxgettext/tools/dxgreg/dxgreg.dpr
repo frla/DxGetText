@@ -236,7 +236,7 @@ begin
     if (ParamCount<>1) or (paramstr(1)<>'--uninstall') then begin
       Install;
       MessageBoxW(0,PWideChar(_('The applications have now been integrated into your desktop.')),
-                    PWideChar(Format(_('GNU gettext %s'),[version])),MB_OK);
+                    PWideChar(widestring(Format(_('GNU gettext %s'),[version]))),MB_OK);
     end;
   end;
 end.

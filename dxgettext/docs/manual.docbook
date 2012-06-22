@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+<!doctype book PUBLIC "-//OASIS//DTD DocBook V3.1//EN" >
 <book lang="en" id="index">
-<title>GNU gettext for Delphi, C++ Builder and Kylix 1.2.1 beta</title>
+<title>GNU gettext for Delphi, C++ Builder and Kylix 1.2 beta</title>
 <titleabbrev>dxgettext</titleabbrev>
 <bookinfo id="bookinfo">
 <authorgroup id="authorgroup">
@@ -9,11 +8,10 @@
 <author><firstname>Peter</firstname><surname>Thornqvist</surname></author>
 <author><firstname>Jacquez Garcia</firstname><surname>Vasquez</surname></author>
 <author><firstname>Sandro</firstname><surname>Wendt</surname></author>
-<author><firstname>Jens</firstname><surname>Berke</surname></author>
 </authorgroup>
-<edition>Version 1.2.1</edition>
-<pubdate>2005</pubdate>
-<copyright><year>2005</year>
+<edition>Version 1.2</edition>
+<pubdate>2003</pubdate>
+<copyright><year>2003</year>
 <holder>Lars B. Dybdahl, Free Software Foundation and others</holder>
 </copyright>
 <legalnotice id="legalnotice">
@@ -27,7 +25,6 @@ Free Software Foundation has the Copyright for the manpages for their tools and 
 Peter Thornqvist wrote about ITE->dxgettext conversion. 
 Jacquez Garcia Vazqes wrote about Directives. 
 Sando Wendt wrote about TAdvStringGrid.
-Jens Berke wrote about ggexclude.cfg
 Lars B. Dybdahl wrote the rest.
 -->
 </legalnotice>
@@ -776,149 +773,6 @@ C:\translations\da&gt;</screen>
 and only take the first translation from each po file.</para>
 
 </sect1>
-
-<sect1 id="ggexclude">
-<title>Preventing string extraction</title>
-
-<note><title>Working directory</title>
-<para>The <emphasis>working directory</emphasis> mentioned here means: the directory where you start "extract translations to template" in the context menu of the Windows-Explorer. In the dxgettext command-line it's the current working directory or the directory specified in the "-b"-option.</para></note>
-
-<para>There can be situations in which you need certain files, whole classes, objects on certain forms or even whole directories to be excluded from string extraction. For example, if you have a lot of test-forms in your project directories and you know that they shall never be localized. Since dxgettext usually scans all files and all subdirectories in the working directory, you could end up with lots of strings in your po-file you don't need. Instead of maintaining these strings in an ignore.po file you can tell dxgettext to completely exclude some stuff from extraction. The thing is: the parser of dxgettext doesn't know anything about classes, their inheritance and properties, and therefore it can't know about the classes and properties you invented. But usually <emphasis>you</emphasis> as the developer knows about that, and there's a way to tell dxgettext:</para>
-
-<para>You can create a config file with information about what to exclude. It always has to be called "ggexclude.cfg", is a plain text file, and must be loacted in the working directory. If it doesn't exist or if it is located in a subdirectory of the working directory, dxgettext works as usual.</para>
-<para>If the file is there, dxgettext recognizes different kinds of information about things that shall be excluded:</para>
-<itemizedlist>
-<listitem><para>whole directories</para></listitem>
-<listitem><para>files</para></listitem>
-<listitem><para>whole classes</para></listitem>
-<listitem><para>properties of classes</para></listitem>
-<listitem><para>certain instances (=objects) of a class in certain files</para></listitem>
-</itemizedlist>
-
-<para>You have to be aware that the information you provide in this file has to be accurate, and, again, that the parser of dxgettext doesn't know about classes and inheritance. That means that if you have a class, say, "TMyEdit" and derived from that, "TMyDerivedEdit", and you want their "Text" property to be excluded, you need to mention <emphasis>both</emphasis> classes in the config file. Leaving "TMyDerivedEdit" out would mean that its "Text" property would still be extracted. How you do that will be shown in the following chapter.</para>
-
-<sect2 id="ggexcludecfg">
-<title>Syntax of ggexclude.cfg</title>
-<para>"ggexclude.cfg" is a plain text file, consisting of four different kinds of lines:</para>
-<itemizedlist>
-<listitem><para>empty lines</para></listitem>
-<listitem><para>comments</para></listitem>
-<listitem><para>sections</para></listitem>
-<listitem><para>values</para></listitem>
-</itemizedlist>
-<sect3 id="ggexcludecomments">
-<title>Comments</title>
-<para>A comment starts with the #-char and always covers a whole line. You're not allowed mix comments with sections or values in the same line.</para>
-<programlisting># This is a comment, starting with a # at the beginning of each line
-  # Leading spaces may be added, but no other leading characters</programlisting>
-</sect3>
-<sect3 id="ggexcludesections">
-<title>Sections and values</title>
-<para>A line with text in square brackets is called a <emphasis>section</emphasis> and mustn't contain any other information. Each section is optional and can contain zero to many lines. Each line in a section represents exactly one <emphasis>value</emphasis> of that section. All lines below a section are scanned for values and belong to that section until the next section starts. You can use the same section serveral times. It will all be added up.</para>
-
-<para>All values are case-insensitive, except for filenames and directorynames on Linux. You don't have to worry about the path delimiters in filenames, both "/" and "\"
-can be used. They are converted to "/" internally.</para>
-<para>These are the sections recognized by dxgettext:</para>
-
-<sect4 id="ggexcludedir"><title>[exclude-dir]</title>
-<para>This section prevents whole directories and all their subdirectories from being scanned. Each value represents exactly one directory. On Linux, it's case-sensitive. You can use relative or absolute paths. If you use relative paths, they must be relative to the working directory. No wildcards allowed. Examples:</para>
-<programlisting>[exclude-dir]
-TestFolder
-anotherfolder\TestFolder
-D:\yet\another\folder
-/home/zaphod/projects/subfolder/</programlisting>
-</sect4>
-
-<sect4 id="ggexcludefile"><title>[exclude-file]</title>
-<para>This section prevents a whole file from being scanned. Each value is exactly one file. On Linux, it's case-sensitive. You can use relative or absolute paths. If you use relative paths, they must be relative to the working directory. Using the wildcard ".*" as the file extension means that the following matching Delphi-files will be excluded: dfm, xfm, pas, inc, rc, dpr. If a file listed here is already excluded by section [exclude-dir], because it is located in one of the folders specified there, listing it here again has not further effect. Examples:</para>
-<programlisting>[exclude-file]
-MyUnit.*
-subfolder\MyUnit.dfm
-D:\test\Unit.pas
-/home/zaphod/projects/MainForm.*</programlisting>
-</sect4>
-
-<sect4 id="ggexcludeformclass"><title>[exclude-form-class]</title>
-<para>This section prevents all string- and TStrings-properties of a whole class from being extracted. It applies to all forms in or below the working directory. The format for a value is just "Classname". It's not case-sensitive. 
-The following would exclude the properties of TPanel itself, but not the controls contained in the panels:</para>
-<programlisting>[exclude-form-class]
-TPanel</programlisting>
-<para>If you want to exclude the strings of all components contained in TPanel as well, use the wildcard "*" at the end, like this:
-</para>
-<programlisting>[exclude-form-class]
-TPanel*</programlisting>
-<para>A special case are collections, see the following section [exclude-form-class-property] for that.</para>
-</sect4>
-
-<sect4 id="ggexcludeformclassproperty"><title>[exclude-form-class-property]</title>
-<para>This section prevents a certain string- or TStrings-property of a class from being scanned. It applies to all forms in or below the working directory. The format for a value is:</para>
-<programlisting>classname.propertyname</programlisting>
-<para>It's not case-sensitive. No wildcards allowed. "Classname" is obvious, the "propertyname" has to be written the way it is written in the form file. If you're in doubt about how a certain property has to be stored here, just copy and paste the line from the form file here and put the classname before that. For simple strings the property name is one word, for example:</para>
-<programlisting>TLabel.Caption</programlisting>
-<para>For TStrings it looks like this:</para>
-<programlisting>TListbox.Items.Strings
-TMemo.Lines.Strings
-TQuery.SQL.Strings
-</programlisting>
-<para>
-If you have specified a whole class in [exclude-form-class] already and put a certain property of that class here, it has no further effect and the whole class will still be excluded.
-</para>
-<para>A special case are collections in forms (like TDBGridColumns in a TDBGrid, TParams in a TQuery or TActionManager.ActionBars). You can exclude only the whole collection, but not certain properties of a collection. This means as well that in the case of nested collections (see TActionManager.ActionBars for example), everything that appears below
-the collection with the highest level will be ignored.</para>
-<para>Note that some collections are saved with another name than their propertyname. For example: "TQuery.Params" will be saved as "ParamData" in the form file. These are valid examples for collections:</para>
-<programlisting>TQuery.ParamData
-TDBGrid.Columns
-TActionManager.ActionBars</programlisting>
-<para>And these lines won't work:</para>
-<programlisting>TDBGrid.Columns.Title.Caption
-TActionManager.ActionBars.ContextItems</programlisting>
-</sect4>
-
-<sect4 id="ggexcludeforminstance"><title>[exclude-form-instance]</title>
-<para>This section prevents a certain instance (=object) of a class in a certain form file from being scanned. Each value is exactly one file with one instance. The format is:</para>
-<programlisting>filename:instancename</programlisting>
-<para>On Linux, the "filename" part is case-sensitive. You can use relative or absolute paths. If you use relative paths, they must be relative to the working directory. If the instance is something like a container or menu, everything belonging to that will be excluded. Note that a frame on a form might contain a component with the same name as a component on the form. They would both be excluded. Examples:</para>
-<programlisting>[exclude-form-instance]
-Unit1.dfm:Popupmenu
-subfolder/Unit1.dfm:Label5</programlisting>
-</sect4>
-
-<sect4 id="ggexcludesamplefile"><title>A sample file</title>
-<programlisting>[exclude-dir]
-Tests
-PackageA/Tests
-PackageB/Tests
-
-[exclude-file]
-TestUnit.dfm
-Unit1.*
-PackageC\debug\Unit3.dfm
-
-[exclude-form-class-property]
-TLabel.Caption
-TListbox.Items.Strings
-TMemo.Lines.Strings
-TQuery.SQL.Strings
-
-# Collections to exclude:
-TQuery.ParamData
-TDBGrid.Columns
-TActionManager.ActionBars
-
-[exclude-form-class]
-TEdit
-TPanel
-TMyDebugScrollbox*
-
-[exclude-form-instance]
-MainForm.dfm:DebugPopupmenu
-PackageA/InfoFrame.dfm:InternalLabel
-</programlisting>
-</sect4>
-</sect3>
-</sect2>
-</sect1>
-
 </chapter>
 
 
@@ -1211,7 +1065,7 @@ disable it only for the next call to <literal>TranslateComponent()</literal> usi
 very much like the compiler directives. Currently, the directives only support extraction
 of string constants defined using the <literal>const</literal> keyword, into a specified text domain:</para>
 
-<screen>{gnugettext: scan-all [text-domain='domain name'] }
+<screen>{gnugetext: scan-all [text-domain='domain name'] }
 .
 . in this section the string constants will be extracted
 .
@@ -1409,7 +1263,7 @@ extraction etc.</para>
 	</itemizedlist>
     <para>The subfolder structure on my machine looked like this after I've added the
     Swedish and Danish folders:</para>
-    <mediaobject><imageobject><imagedata fileref="MigrateFolderStructure.jpg" scale="100" format="JPG" /></imageobject></mediaobject>
+    <mediaobject><imageobject><imagedata fileref="MigrateFolderStructure.jpg" scale="100" format="JPG"></imageobject></mediaobject>
     <para>Each of the translated default.po files are located in
       the language specific LC_MESSAGES folder. As you can see, the folder structure
       is somewhat convoluted and uses some predefined language identifiers (these 
@@ -5755,11 +5609,11 @@ doesn't need to be specified.</para>
 <sect1 id="ignore-vcl">
 <title>VCL, important ones</title>
 
-<programlisting>
+<ProgramListing>
 TP_GlobalIgnoreClassProperty(TAction,'Category'); 
 TP_GlobalIgnoreClassProperty(TControl,'HelpKeyword');
 TP_GlobalIgnoreClassProperty(TNotebook,'Pages');
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-vcl-2">
@@ -5767,10 +5621,10 @@ TP_GlobalIgnoreClassProperty(TNotebook,'Pages');
 
 <para>These are normally not needed.</para>
 
-<programlisting>
+<ProgramListing>
 TP_GlobalIgnoreClassProperty(TControl,'ImeName');
 TP_GlobalIgnoreClass(TFont);
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-db">
@@ -5779,7 +5633,7 @@ TP_GlobalIgnoreClass(TFont);
 <para>Field names and table names often tend to have names that are also used for other purposes
 elsewhere in the program. Therefore, it is very wise to add this somewhere in your program if
 you are using databases.</para>
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClassProperty(TField,'DefaultExpression');
   TP_GlobalIgnoreClassProperty(TField,'FieldName');
   TP_GlobalIgnoreClassProperty(TField,'KeyFields');
@@ -5789,13 +5643,13 @@ you are using databases.</para>
   TP_GlobalIgnoreClassProperty(TField,'Origin');
   TP_GlobalIgnoreClass(TParam);
   TP_GlobalIgnoreClassProperty(TFieldDef,'Name');
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-midas">
 <title>MIDAS/Datasnap</title>
 
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClassProperty(TClientDataset,'CommandText');
   TP_GlobalIgnoreClassProperty(TClientDataset,'Filename');
   TP_GlobalIgnoreClassProperty(TClientDataset,'Filter');
@@ -5804,13 +5658,13 @@ you are using databases.</para>
   TP_GlobalIgnoreClassProperty(TClientDataset,'MasterFields');
   TP_GlobalIgnoreClassProperty(TClientDataset,'Params');
   TP_GlobalIgnoreClassProperty(TClientDataset,'ProviderName');
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-dbctrls">
 <title>Database controls</title>
 
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClassProperty(TDBComboBox,'DataField');
   TP_GlobalIgnoreClassProperty(TDBCheckBox,'DataField');
   TP_GlobalIgnoreClassProperty(TDBEdit,'DataField');
@@ -5823,33 +5677,33 @@ you are using databases.</para>
   TP_GlobalIgnoreClassProperty(TDBRadioGroup,'DataField');
   TP_GlobalIgnoreClassProperty(TDBRichEdit,'DataField');
   TP_GlobalIgnoreClassProperty(TDBText,'DataField');
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-ibx">
 <title>Interbase Express (IBX)</title>
 
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClass(TIBDatabase);
   TP_GlobalIgnoreClass(TIBDatabase);
   TP_GlobalIgnoreClass(TIBTransaction);
   TP_GlobalIgnoreClassProperty(TIBSQL,'UniqueRelationName');
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-bde">
 <title>Borland Database Engine (BDE)</title>
 
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClass(TSession);
   TP_GlobalIgnoreClass(TDatabase);
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-ado">
 <title>ADO components</title>
 
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClass (TADOConnection);
   TP_GlobalIgnoreClassProperty(TADOQuery,'CommandText');
   TP_GlobalIgnoreClassProperty(TADOQuery,'ConnectionString');
@@ -5869,15 +5723,15 @@ you are using databases.</para>
   TP_GlobalIgnoreClassProperty(TADODataset,'IndexFieldNames');
   TP_GlobalIgnoreClassProperty(TADODataset,'IndexName');
   TP_GlobalIgnoreClassProperty(TADODataset,'MasterFields');
-</programlisting>
+</ProgramListing>
 </sect1>
 
 <sect1 id="ignore-activex">
 <title>ActiveX stuff</title>
 
-<programlisting>
+<ProgramListing>
   TP_GlobalIgnoreClass (TWebBrowser);
-</programlisting>
+</ProgramListing>
 </sect1>
 
 
@@ -5905,9 +5759,9 @@ you are using databases.</para>
 
 <para>The TAdvStringGrid is not compatible with TranslateComponent(). You should therefore put it on ignore:</para>
 
-<programlisting>
+<ProgramListing>
 TP_GlobalIgnoreClass (TAdvStringGrid);
-</programlisting>
+</ProgramListing>
 
 <para>But there is a solution to get it translated. The following text was provided by
 Sandro Wendt:</para>
@@ -6009,7 +5863,7 @@ from Delphi source code, so that tool was named dxgettext.</para></answer></qand
 a product to the market. If the authors of this translation system would try 
 to earn money on it, there would a lot of work involved:</para>
  
-<itemizedlist>
+<ItemizedList> 
 <listitem><para>Raising money to pay us. At least one guy needs to be fulltime on a commercial project</para></listitem> 
 <listitem><para>Marketing - this costs money when doing it commercially. Nobody wants to pay for software they 
 weren't told about.</para></listitem> 
@@ -6026,11 +5880,11 @@ and the GUIs need to use the latest GUI features from Microsoft. Sometimes a gra
 designer is needed to make things look expensive.</para></listitem> 
 <listitem><para>Administration - all the above has to be administrated. When money is involved, somebody has to 
 be in charge etc.</para></listitem> 
-</itemizedlist>
+</ItemizedList>
  
 <para>What we do now is much easier:</para>
  
-<itemizedlist>
+<ItemizedList> 
 <listitem><para>No money needed. We use our spare time to do it. If we don't have spare time, 
 nothing is being done on the project.</para></listitem> 
 <listitem><para>Marketing. When things are free, people talk about it. SourceForge tells about it. 
@@ -6051,7 +5905,7 @@ organization, because if somebody gets angry at the project he can just take all
 the source-code and start another project as a branch of this project. 
 Of course we hope that this never happens, but this mechanism means that people actually 
 cooperate.</para></listitem> 
-</itemizedlist>
+</ItemizedList> 
  
 <para>If you want to know more about why Open Source software works, Eric S. Raymond 
 has written a free book about it: <ulink url="http://www.firstmonday.dk/issues/issue3_3/raymond/">The 
@@ -6081,12 +5935,12 @@ dxgettext@yahoogroups.com</para>
 
 <answer><para>Very easy, you do this:</para>
 
-<orderedlist>
+<OrderedList>
 <listitem><para>Extract all strings from your program as it is now.</para></listitem>
 <listitem><para>Translate your program to English.</para></listitem>
 <listitem><para>Extract all strings from your program afterwards.</para></listitem>
 <listitem><para>Use the msgmergePOT tool to create an English->YourLanguage translation file.</para></listitem>
-</orderedlist>
+</OrderedList>
 
 <para>Now you have an English language program with a translation to the language that your
 program used before.</para></answer></qandaentry>
@@ -6114,7 +5968,7 @@ you can create an all-through Unicode program.</para></answer></qandaentry>
 convert the strings to the local 8-bit character set when you use gettext() where
 you don't use widestrings otherwise. For instance, if you assign:</para>
 
-<programlisting> MyButton.Caption:=gettext('New caption');</programlisting>
+<ProgramListing> MyButton.Caption:=gettext('New caption');</ProgramListing>
 
 <para>Then gettext will return a widestring and Delphi will convert that to
 the local 8-bit character set before it is assigned to the caption.</para></answer></qandaentry>
@@ -6165,7 +6019,7 @@ several languages, but you can also do it yourself, if you have the source code.
 <para>If you get a delphi.mo file with the translations for the Delphi runtime library 
 and the VCL, put it together with your own translation and call:</para>
  
-<programlisting>AddDomainForResourceString ('delphi');</programlisting> 
+<ProgramListing>AddDomainForResourceString ('delphi');</ProgramListing> 
  
 <para>Somewhere in your program before you start translating forms etc.</para>
  
@@ -6211,7 +6065,7 @@ make the life for the translators much easier. But even though it extracts a lot
 of texts, not all text may be translated once you run the program. You can solve 
 this by assigning the text in the Form's OnCreate event like this:</para>
  
-<programlisting>component.property:=gettext('This text wasn''t translated in the first place');</programlisting>
+<ProgramListing>component.property:=gettext('This text wasn''t translated in the first place');</ProgramListing>
 </answer></qandaentry> 
 </qandadiv>
 
@@ -6281,7 +6135,7 @@ will translate it all as one big message, and at runtime it will be assigned as 
 
 <answer><para>Insert this line as the first in your .dpr main program block:</para>
 
-<programlisting>UseLanguage ('fr');</programlisting>
+<ProgramListing>UseLanguage ('fr');</ProgramListing>
 
 <para>Here, 'fr' means french. Please note that you can not just switch to
 a language that uses characters that isn't supported in your Windows.
@@ -6319,7 +6173,7 @@ They are free and do Unicode on Windows NT/2000/XP.</para></answer></qandaentry>
  <answer><para>In CLX, each form has a gettext() function that will 
 be chosen instead of gnugettext.gettext(). Use _() instead:</para>
  
-<programlisting>a:=_('Test');</programlisting></answer></qandaentry>
+<ProgramListing>a:=_('Test');</ProgramListing></answer></qandaentry>
 
 <qandaentry><question><para>I got an Access Violation. Why?</para></question>
 <answer><para>One of the forms that you translate using TranslateComponent() probably has a

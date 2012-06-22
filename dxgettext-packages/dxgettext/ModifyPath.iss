@@ -142,7 +142,7 @@ var
   FirstPathLineNo: Integer;
   OldPath, ResultPath: String;
   LineNo, CharNo, Index: integer;
-  TempString: AnsiString;
+  TempString: String;
 begin
   // Expect everything to be OK
   result := mpOK;

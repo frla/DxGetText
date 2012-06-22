@@ -10,12 +10,18 @@ uses
   Windows,
   SysUtils,
   Classes,
+  {$ifdef MSWINDOWS}
   gnugettext in '..\..\sample\gnugettext.pas',
   poparser in '..\..\dxgettext\poparser.pas',
   appconsts in '..\..\dxgettext\appconsts.pas',
   consoleoutput in '..\..\dxgettext\consoleoutput.pas',
-  Math,
-  u_dzQuicksort in '..\..\dxgettext\u_dzQuicksort.pas';
+  {$else}
+  gnugettext in '../../sample/gnugettext.pas',
+  poparser in '../../dxgettext/poparser.pas',
+  appconsts in '../../dxgettext/appconsts.pas',
+  consoleoutput in '../../dxgettext/consoleoutput.pas',
+  {$endif}
+  Math;
 
 function StringProximity (s1,s2:string):integer;
 var

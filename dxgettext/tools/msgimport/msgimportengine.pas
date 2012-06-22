@@ -22,8 +22,7 @@ procedure TMsgImportEngine.Execute;
 var
   polist:TPoEntryList;
   tf:TextFile;
-  aline:RawByteString;
-  line:string;
+  line:utf8string;
   pe:TPoEntry;
   p:integer;
   row:integer;
@@ -35,20 +34,21 @@ begin
     try
       row:=0;
       while not eof(tf) do begin
-        readln (tf,aline);
-        line:=UTF8ToUnicodeString(aline);
+        readln (tf,line);
         inc (row);
         line:=trim(line);
         if line<>'' then begin
           // Check for utf-8 validity
+          utf8decode(line);
+
           p:=pos(#9,line);
           if p<=1 then begin
             Writeln (_('Error: No tabulator in line'));
-            writeln (line);
+            writeln (utf8decode(line));
           end else begin
             pe:=TPoEntry.Create;
-            pe.MsgId:=copy(line,1,p-1);
-            pe.MsgStr:=copy(line,p+1,maxint);
+            pe.MsgId:=utf8decode(copy(line,1,p-1));
+            pe.MsgStr:=utf8decode(copy(line,p+1,maxint));
             pe.AutoCommentList.Add('#. Row '+IntToStr(row));
             polist.Add(pe);
           end;

@@ -1,7 +1,6 @@
 # Borland Kylix 3 Enterprise.
 # Extracted by Lars B. Dybdahl <Lars@dybdahl.dk>, 2003.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Borland Kylix 3 Enterprise\n"

@@ -9,7 +9,7 @@ type
   TConsoleApp=
     class
     private
-      engine: Tmsgmergedxengine;
+      engine:Tmsgmergedxengine;
     public
       constructor Create;
       destructor Destroy; override;
@@ -32,33 +32,20 @@ uses
 procedure TConsoleApp.AnalyzeCommandline;
 var
   i:integer;
-  param, uparam: string;
+  param,uparam:string;
 begin
   i:=1;
-  while i <= paramcount do
-  begin
+  while i<=paramcount do begin
     param:=paramstr(i);
     uparam:=uppercase(param);
-
-    if uparam='-O' then
-    begin
+    if uparam='-O' then begin
       inc (i);
-      engine.outputfilename := ExpandFileName(paramstr(i));
-    end
-    else if (uparam = '--PRESERVESTATEFUZZY') then
-    begin
-      engine.PreserveStateFuzzy := True;
-    end
-    else
-    begin
-      if engine.translationfilename = '' then
-      begin
-        engine.translationfilename := ExpandFileName(param);
-      end
+      engine.outputfilename:=ExpandFileName(paramstr(i));
+    end else begin
+      if engine.translationfilename='' then
+        engine.translationfilename:=ExpandFileName(param)
       else
-      begin
-        engine.templatefilename := ExpandFileName(param);
-      end;
+        engine.templatefilename:=ExpandFileName(param);
     end;
     inc (i);
   end;
@@ -93,15 +80,11 @@ begin
   writeln (_('  msgmergedx -o output.po oldtranslations.po newtemplate.po'));
   writeln;
   // Do not make this more than 70 characters wide, please.
-  writeln (_('This is a replacement for the GNU msgmerge utility. It requires' + sLineBreak +
-             'all files to use utf-8 encoding and is extremely simple. The only' + sLineBreak +
-             'reason to use this tool is because it allows non-ascii msgid values.' + sLineBreak +
-             'Several features are not implemented, including generating fuzzy' + sLineBreak +
+  writeln (_('This is a replacement for the GNU msgmerge utility. It requires'+sLineBreak+
+             'all files to use utf-8 encoding and is extremely simple. The only'+sLineBreak+
+             'reason to use this tool is because it allows non-ascii msgid values.'+sLineBreak+
+             'Several features are not implemented, including generating fuzzy'+sLineBreak+
              'translations.'));
-  writeln ('');
-  writeln (_('Options:'));
-  writeln ('  --preserveStateFuzzy   ' + _('preserve "fuzzy" state in the translated file'));
-
 end;
 
 end.

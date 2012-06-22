@@ -8,7 +8,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: German\n"
 
 #. Programmer's name for it: SInvalidCreateWidget
 #: Clx/QConsts.pas:22
@@ -26,9 +25,10 @@ msgid "Backspace"
 msgstr "Rück"
 
 #. Programmer's name for it: SmkcTab
-#. StandardActions..ActionList1..PreviousTab1..Category
 #. StandardActions..ActionList1..NextTab1..Category
-#: Clx/QConsts.pas:26  Vcl/Consts.pas:137 Vcl/ActnRes.dfm:244
+#: Clx/QConsts.pas:26
+#: Vcl/Consts.pas:137
+#: Vcl/ActnRes.dfm:244
 #: Vcl/ActnRes.dfm:249
 msgid "Tab"
 msgstr "Tab"
@@ -39,7 +39,8 @@ msgid "BackTab"
 msgstr "RückTab"
 
 #. Programmer's name for it: SmkcEsc
-#: Clx/QConsts.pas:28  Vcl/Consts.pas:138
+#: Clx/QConsts.pas:28
+#: Vcl/Consts.pas:138
 msgid "Esc"
 msgstr "Esc"
 
@@ -49,247 +50,285 @@ msgid "Return"
 msgstr "Eingabe"
 
 #. Programmer's name for it: SmkcEnter
-#: Clx/QConsts.pas:30  Vcl/Consts.pas:139
+#: Clx/QConsts.pas:30
+#: Vcl/Consts.pas:139
 msgid "Enter"
 msgstr "Eingabe"
 
 #. Programmer's name for it: SmkcSpace
-#: Clx/QConsts.pas:31  Vcl/Consts.pas:140
+#: Clx/QConsts.pas:31
+#: Vcl/Consts.pas:140
 msgid "Space"
 msgstr "Leertaste"
 
 #. Programmer's name for it: SmkcPgUp
-#: Clx/QConsts.pas:32  Vcl/Consts.pas:141
+#: Clx/QConsts.pas:32
+#: Vcl/Consts.pas:141
 msgid "PgUp"
 msgstr "BildAuf"
 
 #. Programmer's name for it: SmkcPgDn
-#: Clx/QConsts.pas:33  Vcl/Consts.pas:142
+#: Clx/QConsts.pas:33
+#: Vcl/Consts.pas:142
 msgid "PgDn"
 msgstr "BildAb"
 
 #. Programmer's name for it: SmkcEnd
-#: Clx/QConsts.pas:34  Vcl/Consts.pas:143
+#: Clx/QConsts.pas:34
+#: Vcl/Consts.pas:143
 msgid "End"
 msgstr "Ende"
 
 #. Programmer's name for it: SmkcHome
-#. WebAppDbgMainForm..Home..Caption
-#: Clx/QConsts.pas:35  Vcl/Consts.pas:144 Internet/SvrMainForm.dfm:38
+#: Clx/QConsts.pas:35
+#: Vcl/Consts.pas:144
+#: Internet/SvrMainForm.dfm:38
 msgid "Home"
 msgstr "Pos1"
 
 #. Programmer's name for it: SmkcLeft
-#: Clx/QConsts.pas:36  Vcl/Consts.pas:145
+#: Clx/QConsts.pas:36
+#: Vcl/Consts.pas:145
 msgid "Left"
-msgstr "Links"
+msgstr "Left"
 
 #. Programmer's name for it: SmkcUp
-#: Clx/QConsts.pas:37  Vcl/Consts.pas:146
+#: Clx/QConsts.pas:37
+#: Vcl/Consts.pas:146
 msgid "Up"
 msgstr "Nach oben"
 
 #. Programmer's name for it: SmkcRight
-#: Clx/QConsts.pas:38  Vcl/Consts.pas:147
+#: Clx/QConsts.pas:38
+#: Vcl/Consts.pas:147
 msgid "Right"
 msgstr "Rechts"
 
 #. Programmer's name for it: SmkcDown
-#: Clx/QConsts.pas:39  Vcl/Consts.pas:148
+#: Clx/QConsts.pas:39
+#: Vcl/Consts.pas:148
 msgid "Down"
 msgstr "Nach unten"
 
 #. Programmer's name for it: SmkcIns
-#: Clx/QConsts.pas:40  Vcl/Consts.pas:149
+#: Clx/QConsts.pas:40
+#: Vcl/Consts.pas:149
 msgid "Ins"
 msgstr "Einfg"
 
 #. Programmer's name for it: SmkcDel
-#: Clx/QConsts.pas:41  Vcl/Consts.pas:150
+#: Clx/QConsts.pas:41
+#: Vcl/Consts.pas:150
 msgid "Del"
 msgstr "Entf"
 
 #. Programmer's name for it: SmkcShift
-#: Clx/QConsts.pas:42  Vcl/Consts.pas:151
+#: Clx/QConsts.pas:42
+#: Vcl/Consts.pas:151
 msgid "Shift+"
 msgstr "Umsch+"
 
 #. Programmer's name for it: SmkcCtrl
-#: Clx/QConsts.pas:43  Vcl/Consts.pas:152
+#: Clx/QConsts.pas:43
+#: Vcl/Consts.pas:152
 msgid "Ctrl+"
 msgstr "Strg+"
 
-# Label: ignore
 #. Programmer's name for it: SmkcAlt
-#: Clx/QConsts.pas:44  Vcl/Consts.pas:153
+#: Clx/QConsts.pas:44
+#: Vcl/Consts.pas:153
 msgid "Alt+"
-msgstr ""
+msgstr "Alt+"
 
 #. Programmer's name for it: SOpenFileTitle
-#. Programmer's name for it: SOpen
-#. Programmer's name for it: SOpenFileTitle
-#. ClxTreeViewItems..OpenDialog1..Title
 #. Title
-#. IndexFiles..OpenDialog..Title
-#: Clx/QConsts.pas:46  Clx/QConsts.pas:276 Vcl/Consts.pas:15 Property
-#: Editors/ClxNodeEdit.xfm:278 Editors/ClxPicEdit.xfm:111
+#: Clx/QConsts.pas:46
+#: Clx/QConsts.pas:276
+#: Vcl/Consts.pas:15
+#: Property
+#: Editors/ClxNodeEdit.xfm:278
+#: Editors/ClxPicEdit.xfm:111
 #: Editors/Ixedit.dfm:92
 msgid "Open"
 msgstr "Öffnen"
 
 #. Programmer's name for it: SAssignError
-#: Clx/QConsts.pas:47  Rtl/Common/RTLConsts.pas:15
+#: Clx/QConsts.pas:47
+#: Rtl/Common/RTLConsts.pas:15
 msgid "Cannot assign a %s to a %s"
 msgstr "%s kann nicht zu %s zugewiesen werden"
 
 #. Programmer's name for it: SFCreateError
-#. Programmer's name for it: SCannotCreateFile
-#. Programmer's name for it: SFCreateError
-#: Clx/QConsts.pas:48  Vcl/SqlConst.pas:121 Rtl/Common/RTLConsts.pas:27
+#: Clx/QConsts.pas:48
+#: Vcl/SqlConst.pas:121
+#: Rtl/Common/RTLConsts.pas:27
 msgid "Cannot create file %s"
 msgstr "Datei %s kann nicht erstellt werden"
 
 #. Programmer's name for it: SFOpenError
-#: Clx/QConsts.pas:49  Rtl/Common/RTLConsts.pas:30
+#: Clx/QConsts.pas:49
+#: Rtl/Common/RTLConsts.pas:30
 msgid "Cannot open file %s"
 msgstr "Datei %s kann nicht geöffnet werden"
 
 #. Programmer's name for it: SReadError
-#: Clx/QConsts.pas:50  Rtl/Common/RTLConsts.pas:71
+#: Clx/QConsts.pas:50
+#: Rtl/Common/RTLConsts.pas:71
 msgid "Stream read error"
 msgstr "Stream-Lesefehler"
 
 #. Programmer's name for it: SWriteError
-#: Clx/QConsts.pas:51  Rtl/Common/RTLConsts.pas:86
+#: Clx/QConsts.pas:51
+#: Rtl/Common/RTLConsts.pas:86
 msgid "Stream write error"
 msgstr "Stream-Schreibfehler"
 
 #. Programmer's name for it: SMemoryStreamError
-#: Clx/QConsts.pas:52  Rtl/Common/RTLConsts.pas:63
+#: Clx/QConsts.pas:52
+#: Rtl/Common/RTLConsts.pas:63
 msgid "Out of memory while expanding memory stream"
 msgstr "Expandieren des Speicher-Stream wegen Speichermangel nicht möglich"
 
 #. Programmer's name for it: SCantWriteResourceStreamError
-#: Clx/QConsts.pas:53  Vcl/Consts.pas:16 Rtl/Common/RTLConsts.pas:18
+#: Clx/QConsts.pas:53
+#: Vcl/Consts.pas:16
+#: Rtl/Common/RTLConsts.pas:18
 msgid "Can't write to a read-only resource stream"
 msgstr "In einen zum Lesen geöffneten Ressourcen-Stream kann nicht geschrieben werden"
 
 #. Programmer's name for it: SDuplicateReference
-#: Clx/QConsts.pas:54  Vcl/Consts.pas:17
+#: Clx/QConsts.pas:54
+#: Vcl/Consts.pas:17
 msgid "WriteObject called twice for the same instance"
 msgstr "Zweimaliger Aufruf von WriteObject für die gleiche Instanz"
 
 #. Programmer's name for it: SClassNotFound
-#: Clx/QConsts.pas:55  Rtl/Common/RTLConsts.pas:21
+#: Clx/QConsts.pas:55
+#: Rtl/Common/RTLConsts.pas:21
 msgid "Class %s not found"
 msgstr "Klasse %s nicht gefunden"
 
 #. Programmer's name for it: SInvalidImage
-#. Programmer's name for it: SInvalidStreamFormat
-#. Programmer's name for it: SInvalidImage
-#: Clx/QConsts.pas:56  Vcl/OleConst.pas:29 Rtl/Common/RTLConsts.pas:43
+#: Clx/QConsts.pas:56
+#: Vcl/OleConst.pas:29
+#: Rtl/Common/RTLConsts.pas:43
 msgid "Invalid stream format"
 msgstr "Ungültiges Stream-Format"
 
 #. Programmer's name for it: SResNotFound
-#. Programmer's name for it: sResNotFound
-#. Programmer's name for it: SResNotFound
-#: Clx/QConsts.pas:57  Internet/WebConst.pas:33 Rtl/Common/RTLConsts.pas:77
+#: Clx/QConsts.pas:57
+#: Internet/WebConst.pas:33
+#: Rtl/Common/RTLConsts.pas:77
 msgid "Resource %s not found"
 msgstr "Ressource %s wurde nicht gefunden"
 
 #. Programmer's name for it: SClassMismatch
-#: Clx/QConsts.pas:58  Vcl/Consts.pas:18
+#: Clx/QConsts.pas:58
+#: Vcl/Consts.pas:18
 msgid "Resource %s is of incorrect class"
 msgstr "Ressource %s hat die falsche Klasse"
 
 #. Programmer's name for it: SListIndexError
-#: Clx/QConsts.pas:59  Rtl/Common/RTLConsts.pas:60
+#: Clx/QConsts.pas:59
+#: Rtl/Common/RTLConsts.pas:60
 msgid "List index out of bounds (%d)"
-msgstr "Listenindex außerhalb des zulässigen Bereichs (%d)"
+msgstr "Listenindex überschreitet das Maximum (%d)"
 
 #. Programmer's name for it: SListCapacityError
-#: Clx/QConsts.pas:60  Rtl/Common/RTLConsts.pas:58
+#: Clx/QConsts.pas:60
+#: Rtl/Common/RTLConsts.pas:58
 msgid "List capacity out of bounds (%d)"
 msgstr "Kapazität der Liste ist erschöpft (%d)"
 
 #. Programmer's name for it: SListCountError
-#: Clx/QConsts.pas:61  Rtl/Common/RTLConsts.pas:59
+#: Clx/QConsts.pas:61
+#: Rtl/Common/RTLConsts.pas:59
 msgid "List count out of bounds (%d)"
 msgstr "Zu viele Einträge in der Liste (%d)"
 
 #. Programmer's name for it: SSortedListError
 #: Clx/QConsts.pas:62
 msgid "Operation not allowed on sorted string list"
-msgstr "Operation für sortierte String-Liste nicht zulässig"
+msgstr "Diese Operation ist bei einer sortierten String-Liste nicht erlaubt."
 
 #. Programmer's name for it: SDuplicateString
-#: Clx/QConsts.pas:63  Rtl/Common/RTLConsts.pas:26
+#: Clx/QConsts.pas:63
+#: Rtl/Common/RTLConsts.pas:26
 msgid "String list does not allow duplicates"
 msgstr "In der Stringliste sind Duplikate nicht erlaubt"
 
 #. Programmer's name for it: SInvalidTabIndex
-#: Clx/QConsts.pas:64  Vcl/Consts.pas:19
+#: Clx/QConsts.pas:64
+#: Vcl/Consts.pas:19
 msgid "Tab index out of bounds"
 msgstr "Registerindex außerhalb des zulässigen Bereichs"
 
 #. Programmer's name for it: SInvalidTabPosition
-#: Clx/QConsts.pas:65  Vcl/Consts.pas:20
+#: Clx/QConsts.pas:65
+#: Vcl/Consts.pas:20
 msgid "Tab position incompatible with current tab style"
 msgstr "Die Position des Register ist nicht mit dem aktuellen Erscheinungsbild kompatibel."
 
 #. Programmer's name for it: SInvalidTabStyle
-#: Clx/QConsts.pas:66  Vcl/Consts.pas:21
+#: Clx/QConsts.pas:66
+#: Vcl/Consts.pas:21
 msgid "Tab style incompatible with current tab position"
 msgstr "Das Erscheinungsbild des Registers ist nicht mit der aktuellen Position kompatibel."
 
 #. Programmer's name for it: SDuplicateName
-#: Clx/QConsts.pas:67  Rtl/Common/RTLConsts.pas:25
+#: Clx/QConsts.pas:67
+#: Rtl/Common/RTLConsts.pas:25
 msgid "A component named %s already exists"
 msgstr "Komponente mit der Bezeichnung %s existiert bereits"
 
 #. Programmer's name for it: SInvalidName
-#: Clx/QConsts.pas:68  Rtl/Common/RTLConsts.pas:46
+#: Clx/QConsts.pas:68
+#: Rtl/Common/RTLConsts.pas:46
 msgid "''%s'' is not a valid component name"
 msgstr "''%s'' ist kein gültiger Komponentenname"
 
 #. Programmer's name for it: SDuplicateClass
-#: Clx/QConsts.pas:69  Rtl/Common/RTLConsts.pas:23
+#: Clx/QConsts.pas:69
+#: Rtl/Common/RTLConsts.pas:23
 msgid "A class named %s already exists"
 msgstr "Klasse mit der Bezeichnung %s existiert bereits"
 
 #. Programmer's name for it: SInvalidInteger
-#: Clx/QConsts.pas:70  Rtl/Common/RTLConsts.pas:44
+#: Clx/QConsts.pas:70
+#: Rtl/Common/RTLConsts.pas:44
 msgid "''%s'' is not a valid integer value"
 msgstr "''%s'' ist kein gültiger Integer-Wert"
 
 #. Programmer's name for it: SLineTooLong
-#. Programmer's name for it: SOutlineLongLine
-#. Programmer's name for it: SLineTooLong
-#: Clx/QConsts.pas:71  Vcl/Consts.pas:115 Rtl/Common/RTLConsts.pas:57
+#: Clx/QConsts.pas:71
+#: Vcl/Consts.pas:115
+#: Rtl/Common/RTLConsts.pas:57
 msgid "Line too long"
 msgstr "Zeile zu lang"
 
 #. Programmer's name for it: SInvalidPropertyValue
-#. Programmer's name for it: SInvalidProperty
-#. Programmer's name for it: SInvalidPropertyValue
-#: Clx/QConsts.pas:72  Clx/QConsts.pas:158 Rtl/Common/RTLConsts.pas:47
+#: Clx/QConsts.pas:72
+#: Clx/QConsts.pas:158
+#: Rtl/Common/RTLConsts.pas:47
 #: Rtl/Common/RTLConsts.pas:51
 msgid "Invalid property value"
 msgstr "Ungültiger Eigenschaftswert"
 
 #. Programmer's name for it: SInvalidPropertyPath
-#: Clx/QConsts.pas:73  Rtl/Common/RTLConsts.pas:49
+#: Clx/QConsts.pas:73
+#: Rtl/Common/RTLConsts.pas:49
 msgid "Invalid property path"
 msgstr "Ungültiger Pfad für Eigenschaft"
 
 #. Programmer's name for it: SInvalidPropertyType
-#: Clx/QConsts.pas:74  Rtl/Common/RTLConsts.pas:50
+#: Clx/QConsts.pas:74
+#: Rtl/Common/RTLConsts.pas:50
 msgid "Invalid property type: %s"
 msgstr "Ungültiger Eigenschaftstyp: %s"
 
 #. Programmer's name for it: SInvalidPropertyElement
-#: Clx/QConsts.pas:75  Rtl/Common/RTLConsts.pas:48
+#: Clx/QConsts.pas:75
+#: Rtl/Common/RTLConsts.pas:48
 msgid "Invalid property element: %s"
 msgstr "Ungültiges Eigenschaftselement: %s"
 
@@ -299,67 +338,80 @@ msgid "Property does not exist"
 msgstr "Eigenschaft existiert nicht"
 
 #. Programmer's name for it: SReadOnlyProperty
-#: Clx/QConsts.pas:77  Rtl/Common/RTLConsts.pas:72
+#: Clx/QConsts.pas:77
+#: Rtl/Common/RTLConsts.pas:72
 msgid "Property is read-only"
 msgstr "Eigenschaft kann nur gelesen werden"
 
 #. Programmer's name for it: SPropertyException
-#: Clx/QConsts.pas:78  Rtl/Common/RTLConsts.pas:69
+#: Clx/QConsts.pas:78
+#: Rtl/Common/RTLConsts.pas:69
 msgid "Error reading %s%s%s: %s"
 msgstr "Fehler beim Lesen von %s%s%s: %s"
 
 #. Programmer's name for it: SAncestorNotFound
-#: Clx/QConsts.pas:79  Rtl/Common/RTLConsts.pas:14
+#: Clx/QConsts.pas:79
+#: Rtl/Common/RTLConsts.pas:14
 msgid "Ancestor for '%s' not found"
 msgstr "Vorfahr für '%s' nicht gefunden"
 
 #. Programmer's name for it: SInvalidBitmap
-#: Clx/QConsts.pas:80  Vcl/Consts.pas:22
+#: Clx/QConsts.pas:80
+#: Vcl/Consts.pas:22
 msgid "Bitmap image is not valid"
 msgstr "Bitmap ist ungültig"
 
 #. Programmer's name for it: SInvalidIcon
-#: Clx/QConsts.pas:81  Vcl/Consts.pas:23
+#: Clx/QConsts.pas:81
+#: Vcl/Consts.pas:23
 msgid "Icon image is not valid"
 msgstr "Ungültiges Symbol"
 
 #. Programmer's name for it: SInvalidPixelFormat
-#: Clx/QConsts.pas:82  Vcl/Consts.pas:25
+#: Clx/QConsts.pas:82
+#: Vcl/Consts.pas:25
 msgid "Invalid pixel format"
 msgstr "Ungültiges Pixelformat"
 
 #. Programmer's name for it: SBitmapEmpty
-#: Clx/QConsts.pas:83  Vcl/Consts.pas:27
+#: Clx/QConsts.pas:83
+#: Vcl/Consts.pas:27
 msgid "Bitmap is empty"
 msgstr "Bitmap ist leer"
 
 #. Programmer's name for it: SScanLine
-#: Clx/QConsts.pas:84  Vcl/Consts.pas:28
+#: Clx/QConsts.pas:84
+#: Vcl/Consts.pas:28
 msgid "Scan line index out of range"
-msgstr "Scanzeilen-Index außerhalb des zulässigen Bereichs"
+msgstr "Bereichsüberschreitung bei Zeilenindex"
 
 #. Programmer's name for it: SChangeIconSize
-#: Clx/QConsts.pas:85  Vcl/Consts.pas:29
+#: Clx/QConsts.pas:85
+#: Vcl/Consts.pas:29
 msgid "Cannot change the size of an icon"
 msgstr "Die Größe eines Symbols kann nicht geändert werden"
 
 #. Programmer's name for it: SUnknownExtension
-#: Clx/QConsts.pas:86  Vcl/Consts.pas:31
+#: Clx/QConsts.pas:86
+#: Vcl/Consts.pas:31
 msgid "Unknown picture file extension (.%s)"
 msgstr "Unbekannte Bilddateierweiterung (.%s)"
 
 #. Programmer's name for it: SUnknownClipboardFormat
-#: Clx/QConsts.pas:87  Vcl/Consts.pas:32
+#: Clx/QConsts.pas:87
+#: Vcl/Consts.pas:32
 msgid "Unsupported clipboard format"
 msgstr "Format der Zwischenablage wird nicht unterstützt"
 
 #. Programmer's name for it: SOutOfResources
-#: Clx/QConsts.pas:88  Vcl/Consts.pas:33
+#: Clx/QConsts.pas:88
+#: Vcl/Consts.pas:33
 msgid "Out of system resources"
 msgstr "Systemressourcen erschöpft."
 
 #. Programmer's name for it: SNoCanvasHandle
-#: Clx/QConsts.pas:89  Vcl/Consts.pas:34
+#: Clx/QConsts.pas:89
+#: Vcl/Consts.pas:34
 msgid "Canvas does not allow drawing"
 msgstr "Leinwand/Bild erlaubt kein Zeichnen"
 
@@ -369,7 +421,8 @@ msgid "Invalid canvas state request"
 msgstr "Ungültige Status-Anforderung für Canvas"
 
 #. Programmer's name for it: SInvalidImageSize
-#: Clx/QConsts.pas:91  Vcl/Consts.pas:35
+#: Clx/QConsts.pas:91
+#: Vcl/Consts.pas:35
 msgid "Invalid image size"
 msgstr "Ungültige Bildgröße"
 
@@ -384,7 +437,8 @@ msgid "Color depth must be 1, 8 or 32 bpp"
 msgstr "Die Farbtiefe muss 1, 8 oder 32 bpp betragen"
 
 #. Programmer's name for it: STooManyImages
-#: Clx/QConsts.pas:94  Vcl/Consts.pas:36
+#: Clx/QConsts.pas:94
+#: Vcl/Consts.pas:36
 msgid "Too many images"
 msgstr "Zu viele Bilder"
 
@@ -396,7 +450,7 @@ msgstr "Fehler beim Erzeugen von Widget"
 #. Programmer's name for it: SCannotFocus
 #: Clx/QConsts.pas:96
 msgid "Cannot focus a disabled or invisible window (%s)"
-msgstr "Ein deaktiviertes oder unsichtbares Fenster (%s) kann nicht den Fokus erhalten"
+msgstr "Ein deaktiviertes oder unsichtbares Fenster (%s) kann den Fokus nicht erhalten"
 
 #. Programmer's name for it: SParentRequired
 #: Clx/QConsts.pas:97
@@ -404,37 +458,44 @@ msgid "Control '%s' has no parent widget"
 msgstr "Element '%s' besitzt kein übergeordnetes Widget"
 
 #. Programmer's name for it: SParentGivenNotAParent
-#: Clx/QConsts.pas:98  Vcl/Consts.pas:49
+#: Clx/QConsts.pas:98
+#: Vcl/Consts.pas:49
 msgid "Parent given is not a parent of '%s'"
 msgstr "Das angegebene übergeordnete Element ist kein übergeordnetes Element von '%s'"
 
 #. Programmer's name for it: SVisibleChanged
-#: Clx/QConsts.pas:99  Vcl/Consts.pas:51
+#: Clx/QConsts.pas:99
+#: Vcl/Consts.pas:51
 msgid "Cannot change Visible in OnShow or OnHide"
 msgstr "Eigenschaft Visible kann in OnShow oder OnHide nicht verändert werden"
 
 #. Programmer's name for it: SCannotShowModal
-#: Clx/QConsts.pas:100  Vcl/Consts.pas:52
+#: Clx/QConsts.pas:100
+#: Vcl/Consts.pas:52
 msgid "Cannot make a visible window modal"
 msgstr "Aus einem sichtbaren Fenster kann kein modales gemacht werden"
 
 #. Programmer's name for it: SScrollBarRange
-#: Clx/QConsts.pas:101  Vcl/Consts.pas:53
+#: Clx/QConsts.pas:101
+#: Vcl/Consts.pas:53
 msgid "Scrollbar property out of range"
 msgstr "Eigenschaft Scrollbar außerhalb des zulässigen Bereichs"
 
 #. Programmer's name for it: SPropertyOutOfRange
-#: Clx/QConsts.pas:102  Vcl/Consts.pas:54
+#: Clx/QConsts.pas:102
+#: Vcl/Consts.pas:54
 msgid "%s property out of range"
-msgstr "Eigenschaft %s außerhalb des zulässigen Bereichs"
+msgstr "Eigenschaft %s außerhalb des gültigen Bereichs"
 
 #. Programmer's name for it: SMenuIndexError
-#: Clx/QConsts.pas:103  Vcl/Consts.pas:55
+#: Clx/QConsts.pas:103
+#: Vcl/Consts.pas:55
 msgid "Menu index out of range"
 msgstr "Menüindex außerhalb des zulässigen Bereichs"
 
 #. Programmer's name for it: SMenuReinserted
-#: Clx/QConsts.pas:104  Vcl/Consts.pas:56
+#: Clx/QConsts.pas:104
+#: Vcl/Consts.pas:56
 msgid "Menu inserted twice"
 msgstr "Menü zweimal eingefügt"
 
@@ -444,57 +505,69 @@ msgid "Menu insertion recursion not allowed"
 msgstr "Rekursion beim Einfügen von Menüs ist nicht gestattet"
 
 #. Programmer's name for it: SMenuNotFound
-#: Clx/QConsts.pas:106  Vcl/Consts.pas:57
+#: Clx/QConsts.pas:106
+#: Vcl/Consts.pas:57
 msgid "Sub-menu is not in menu"
 msgstr "Untermenü ist nicht im Menü"
 
 #. Programmer's name for it: SMenuSetFormError
 #: Clx/QConsts.pas:107
 msgid "TMenu.SetForm: argument must be TCustomForm"
-msgstr "TMenu.SetForm: Argument muss ein TCustomForm sein"
+msgstr "Das Argument von TMenu.SetForm: muss ein TCustomForm sein"
 
 #. Programmer's name for it: SNoTimers
-#: Clx/QConsts.pas:108  Vcl/Consts.pas:58 Vcl/IBXConst.pas:187
+#: Clx/QConsts.pas:108
+#: Vcl/Consts.pas:58
+#: Vcl/IBXConst.pas:187
 msgid "Not enough timers available"
 msgstr "Nicht genügend Timer verfügbar"
 
 #. Programmer's name for it: SNotPrinting
-#: Clx/QConsts.pas:109  Vcl/Consts.pas:59 Rtl/Common/RTLConsts.pas:65
+#: Clx/QConsts.pas:109
+#: Vcl/Consts.pas:59
+#: Rtl/Common/RTLConsts.pas:65
 msgid "Printer is not currently printing"
 msgstr "Der Drucker druckt aktuell nicht"
 
 #. Programmer's name for it: SPrinting
-#: Clx/QConsts.pas:110  Vcl/Consts.pas:60 Rtl/Common/RTLConsts.pas:70
+#: Clx/QConsts.pas:110
+#: Vcl/Consts.pas:60
+#: Rtl/Common/RTLConsts.pas:70
 msgid "Printing in progress"
 msgstr "Druckvorgang läuft"
 
 #. Programmer's name for it: SNoAdapter
 #: Clx/QConsts.pas:111
 msgid "No printer adapter available for printing"
-msgstr "Zum Drucken ist kein Druckeradapter verfügbar"
+msgstr "Für das Drucken ist kein Druckeradapter verfügbar"
 
 #. Programmer's name for it: SPrinterIndexError
-#: Clx/QConsts.pas:112  Vcl/Consts.pas:61
+#: Clx/QConsts.pas:112
+#: Vcl/Consts.pas:61
 msgid "Printer index out of range"
 msgstr "Druckerindex außerhalb des zulässigen Bereichs"
 
 #. Programmer's name for it: SInvalidPrinter
-#: Clx/QConsts.pas:113  Vcl/Consts.pas:62
+#: Clx/QConsts.pas:113
+#: Vcl/Consts.pas:62
 msgid "Printer selected is not valid"
 msgstr "Ausgewählter Drucker ist ungültig"
 
 #. Programmer's name for it: SDeviceOnPort
-#: Clx/QConsts.pas:114  Vcl/Consts.pas:63
+#: Clx/QConsts.pas:114
+#: Vcl/Consts.pas:63
 msgid "%s on %s"
 msgstr "%s an %s"
 
 #. Programmer's name for it: SGroupIndexTooLow
-#: Clx/QConsts.pas:115  Vcl/Consts.pas:64
+#: Clx/QConsts.pas:115
+#: Vcl/Consts.pas:64
 msgid "GroupIndex cannot be less than a previous menu item's GroupIndex"
 msgstr "GroupIndex kann nicht kleiner sein als der GroupIndex eines vorhergehenden Menüelementes"
 
 #. Programmer's name for it: SNoMDIForm
-#: Clx/QConsts.pas:116  Vcl/Consts.pas:66
+#: Clx/QConsts.pas:116
+#: Vcl/Consts.pas:66
 msgid "Cannot create form. No MDI forms are currently active"
 msgstr "Formular kann nicht erstellt werden. Zur Zeit sind keine MDI-Formulare aktiv"
 
@@ -504,270 +577,290 @@ msgid "Invalid MDIParent for class %s"
 msgstr "Ungültiger MDIParent für Klasse %s"
 
 #. Programmer's name for it: SMDIChildNotVisible
-#: Clx/QConsts.pas:118  Vcl/Consts.pas:50
+#: Clx/QConsts.pas:118
+#: Vcl/Consts.pas:50
 msgid "Cannot hide an MDI Child Form"
 msgstr "Ein MDI-Kindformular kann nicht verborgen werden"
 
 #. Programmer's name for it: SRegisterError
-#: Clx/QConsts.pas:119  Rtl/Common/RTLConsts.pas:75
+#: Clx/QConsts.pas:119
+#: Rtl/Common/RTLConsts.pas:75
 msgid "Invalid component registration"
 msgstr "Ungültige Komponentenregistrierung"
 
 #. Programmer's name for it: SImageCanvasNeedsBitmap
-#: Clx/QConsts.pas:120  Vcl/Consts.pas:67
+#: Clx/QConsts.pas:120
+#: Vcl/Consts.pas:67
 msgid "Can only modify an image if it contains a bitmap"
 msgstr "Ein Bild kann nur geändert werden, wenn es ein Bitmap enthält"
 
 #. Programmer's name for it: SControlParentSetToSelf
-#: Clx/QConsts.pas:121  Vcl/Consts.pas:68
+#: Clx/QConsts.pas:121
+#: Vcl/Consts.pas:68
 msgid "A control cannot have itself as its parent"
 msgstr "Ein Steuerelement kann nicht sich selbst als Vorfahr haben"
 
 #. Programmer's name for it: SOKButton
-#. Programmer's name for it: SMsgDlgOK
 #. Programmer's name for it: RSHTTPOK
-#. Programmer's name for it: SOKButton
 #. Programmer's name for it: SMsgDlgOK
-#. formAbout..btnOk..Caption
 #. IdPropEdBindingEntry..btnOk..Caption
-#. ClxIconViewItemsEditor..Button4..Caption
 #. ClxImageListEditor..OK..Caption
-#. ClxListViewItems..Button4..Caption
 #. ClxTreeViewItems..Button4..Caption
-#. Caption
 #. DSSCubeEditor..OKButton..Caption
-#. DSSQueryEditor..OKButton..Caption
 #. formAbout..Panel1..btnOk..Caption
-#. IdPropEdBindingEntry..btnOk..Caption
 #. DlgProperties..OkButton..Caption
-#. AboutBox..OKButton..Caption
 #. ConnEditForm..OkButton..Caption
-#. ClientDataForm..OkBtn..Caption
 #. DBEditForm..OkButton..Caption
-#. AddFields..OkBtn..Caption
 #. AssociateAttributes..OKBtn..Caption
-#. SaveAttributesAs..OKBtn..Caption
 #. DefineField..OkBtn..Caption
-#. LinkFields..Button1..Caption
 #. IndexFiles..Ok..Caption
-#. PictureEditorDlg..OKButton..Caption
 #. SQLEditForm..ButtonPanel..OkButton..Caption
-#. frmGeneratorEditor..OKBtn..Caption
 #. frmIBRestoreEditor..Panel1..OKBtn..Caption
-#. frmIBSecurityEditor..Panel1..OKBtn..Caption
 #. frmIBServiceEditor..Panel1..OKBtn..Caption
-#: Clx/QConsts.pas:122  Clx/QConsts.pas:170 Indy/IdResourceStrings.pas:62
-#: Vcl/Consts.pas:69 Vcl/Consts.pas:124 Indy/IdAbout.xfm:3333
-#: Indy/IdDsnPropEdBinding.xfm:53 Property Editors/ClxIconEdit.xfm:122
-#: Editors/ClxImgEdit.xfm:28 Editors/ClxItemEdit.xfm:148
-#: Editors/ClxNodeEdit.xfm:158 Editors/ClxPicEdit.xfm:104 Decision
-#: Cube/MXDCUBE.DFM:470 Cube/MXDSSQRY.DFM:323 Indy/IdAbout.dfm:68
-#: Indy/IdDsnPropEdBinding.dfm:47 Internet/SvrPropDlg.dfm:26
-#: Internet/WebAppDbgAbout.dfm:55 Editors/AdoConEd.dfm:19
-#: Editors/CDSEdit.dfm:39 Editors/Dbedit.dfm:140 Editors/DSAdd.dfm:24
-#: Editors/DSAttrA.dfm:18 Editors/DSAttrS.dfm:56 Editors/DSDefine.dfm:109
-#: Editors/FldLinks.DFM:141 Editors/Ixedit.dfm:64 Editors/PicEdit.dfm:22
-#: Editors/SqlEdit.dfm:94 Vcl/IBGeneratorEditor.dfm:51
-#: Vcl/IBRestoreEditor.dfm:51 Vcl/IBSecurityEditor.dfm:99
+#: Clx/QConsts.pas:122
+#: Clx/QConsts.pas:170
+#: Indy/IdResourceStrings.pas:62
+#: Vcl/Consts.pas:69
+#: Vcl/Consts.pas:124
+#: Indy/IdAbout.xfm:3333
+#: Indy/IdDsnPropEdBinding.xfm:53
+#: Property Editors/ClxIconEdit.xfm:122
+#: Editors/ClxImgEdit.xfm:28
+#: Editors/ClxItemEdit.xfm:148
+#: Editors/ClxNodeEdit.xfm:158
+#: Editors/ClxPicEdit.xfm:104
+#: Decision
+#: Cube/MXDCUBE.DFM:470
+#: Cube/MXDSSQRY.DFM:323
+#: Indy/IdAbout.dfm:68
+#: Indy/IdDsnPropEdBinding.dfm:47
+#: Internet/SvrPropDlg.dfm:26
+#: Internet/WebAppDbgAbout.dfm:55
+#: Editors/AdoConEd.dfm:19
+#: Editors/CDSEdit.dfm:39
+#: Editors/Dbedit.dfm:140
+#: Editors/DSAdd.dfm:24
+#: Editors/DSAttrA.dfm:18
+#: Editors/DSAttrS.dfm:56
+#: Editors/DSDefine.dfm:109
+#: Editors/FldLinks.DFM:141
+#: Editors/Ixedit.dfm:64
+#: Editors/PicEdit.dfm:22
+#: Editors/SqlEdit.dfm:94
+#: Vcl/IBGeneratorEditor.dfm:51
+#: Vcl/IBRestoreEditor.dfm:51
+#: Vcl/IBSecurityEditor.dfm:99
 #: Vcl/IBServiceEditor.dfm:122
 msgid "OK"
 msgstr "OK"
 
 #. Programmer's name for it: SCancelButton
-#. Programmer's name for it: SMsgDlgCancel
 #. Programmer's name for it: SCancel
-#. Programmer's name for it: SCancelButton
 #. Programmer's name for it: SMsgDlgCancel
-#. LoginDialog..CancelButton..Caption
 #. PasswordDialog..CancelButton..Caption
-#. IdPropEdBindingEntry..btnCancel..Caption
 #. ClxIconViewItemsEditor..Cancel..Caption
-#. ClxImageListEditor..Cancel..Caption
 #. ClxListViewItems..Cancel..Caption
-#. ClxTreeViewItems..Cancel..Caption
 #. Caption
-#. ClxStrEditDlg..CancelButton..Caption
 #. DSSCubeEditor..CancelButton..Caption
-#. DSSQueryEditor..Cancel..Caption
 #. frmNewMessagePart..Panel2..btnCancel..Caption
-#. IdPropEdBindingEntry..btnCancel..Caption
 #. DlgProperties..CancelButton..Caption
-#. ConnEditForm..CancelButton..Caption
 #. ClientDataForm..CancelBtn..Caption
-#. DBEditForm..CancelButton..Caption
 #. InputReqDialog..CancelButton..Caption
-#. AddFields..CancelBtn..Caption
 #. AssociateAttributes..CancelBtn..Caption
-#. SaveAttributesAs..CancelBtn..Caption
 #. DefineField..CancelBtn..Caption
-#. LinkFields..Button2..Caption
 #. IndexFiles..Cancel..Caption
-#. PictureEditorDlg..CancelButton..Caption
 #. SQLEditForm..ButtonPanel..CancelButton..Caption
-#. StrEditDlg..CancelButton..Caption
 #. UpdateSQLEditForm..CancelButton..Caption
-#. LoginDialog..CancelButton..Caption
-#. PasswordDialog..CancelButton..Caption
-#. frmGeneratorEditor..CancelBtn..Caption
 #. frmIBRestoreEditor..Panel1..CancelBtn..Caption
-#. frmIBSecurityEditor..Panel1..CancelBtn..Caption
 #. frmIBServiceEditor..Panel1..CancelBtn..Caption
-#: Clx/QConsts.pas:123  Clx/QConsts.pas:171 Clx/QConsts.pas:282
-#: Vcl/Consts.pas:70 Vcl/Consts.pas:125 Clx/QDBLogDlg.xfm:31
-#: Clx/QDBPWDlg.xfm:33 Indy/IdDsnPropEdBinding.xfm:65 Property
-#: Editors/ClxIconEdit.xfm:133 Editors/ClxImgEdit.xfm:40
-#: Editors/ClxItemEdit.xfm:159 Editors/ClxNodeEdit.xfm:169
-#: Editors/ClxPicEdit.xfm:25 Editors/ClxStrEdit.xfm:54 Decision
-#: Cube/MXDCUBE.DFM:480 Cube/MXDSSQRY.DFM:313 Indy/IdDsnNewMessagePart.dfm:44
-#: Indy/IdDsnPropEdBinding.dfm:59 Internet/SvrPropDlg.dfm:38
-#: Editors/AdoConEd.dfm:30 Editors/CDSEdit.dfm:52 Editors/Dbedit.dfm:152
-#: Editors/dbinpreq.dfm:29 Editors/DSAdd.dfm:36 Editors/DSAttrA.dfm:30
-#: Editors/DSAttrS.dfm:67 Editors/DSDefine.dfm:121 Editors/FldLinks.DFM:153
-#: Editors/Ixedit.dfm:75 Editors/PicEdit.dfm:33 Editors/SqlEdit.dfm:106
-#: Editors/StrEdit.dfm:50 Editors/UpdSqlEd.dfm:32 Vcl/DBLOGDLG.dfm:32
-#: Vcl/DbPWDlg.dfm:31 Vcl/IBGeneratorEditor.dfm:62 Vcl/IBRestoreEditor.dfm:62
-#: Vcl/IBSecurityEditor.dfm:110 Vcl/IBServiceEditor.dfm:133
+#: Clx/QConsts.pas:123
+#: Clx/QConsts.pas:171
+#: Clx/QConsts.pas:282
+#: Vcl/Consts.pas:70
+#: Vcl/Consts.pas:125
+#: Clx/QDBLogDlg.xfm:31
+#: Clx/QDBPWDlg.xfm:33
+#: Indy/IdDsnPropEdBinding.xfm:65
+#: Property
+#: Editors/ClxIconEdit.xfm:133
+#: Editors/ClxImgEdit.xfm:40
+#: Editors/ClxItemEdit.xfm:159
+#: Editors/ClxNodeEdit.xfm:169
+#: Editors/ClxPicEdit.xfm:25
+#: Editors/ClxStrEdit.xfm:54
+#: Decision
+#: Cube/MXDCUBE.DFM:480
+#: Cube/MXDSSQRY.DFM:313
+#: Indy/IdDsnNewMessagePart.dfm:44
+#: Indy/IdDsnPropEdBinding.dfm:59
+#: Internet/SvrPropDlg.dfm:38
+#: Editors/AdoConEd.dfm:30
+#: Editors/CDSEdit.dfm:52
+#: Editors/Dbedit.dfm:152
+#: Editors/dbinpreq.dfm:29
+#: Editors/DSAdd.dfm:36
+#: Editors/DSAttrA.dfm:30
+#: Editors/DSAttrS.dfm:67
+#: Editors/DSDefine.dfm:121
+#: Editors/FldLinks.DFM:153
+#: Editors/Ixedit.dfm:75
+#: Editors/PicEdit.dfm:33
+#: Editors/SqlEdit.dfm:106
+#: Editors/StrEdit.dfm:50
+#: Editors/UpdSqlEd.dfm:32
+#: Vcl/DBLOGDLG.dfm:32
+#: Vcl/DbPWDlg.dfm:31
+#: Vcl/IBGeneratorEditor.dfm:62
+#: Vcl/IBRestoreEditor.dfm:62
+#: Vcl/IBSecurityEditor.dfm:110
+#: Vcl/IBServiceEditor.dfm:133
 msgid "Cancel"
 msgstr "Abbrechen"
 
 #. Programmer's name for it: SYesButton
-#. Programmer's name for it: SMsgDlgYes
-#. Programmer's name for it: SYesButton
-#. Programmer's name for it: SMsgDlgYes
-#: Clx/QConsts.pas:124  Clx/QConsts.pas:168 Vcl/Consts.pas:71
+#: Clx/QConsts.pas:124
+#: Clx/QConsts.pas:168
+#: Vcl/Consts.pas:71
 #: Vcl/Consts.pas:122
 msgid "&Yes"
 msgstr "&Ja"
 
 #. Programmer's name for it: SNoButton
-#. Programmer's name for it: SMsgDlgNo
-#. Programmer's name for it: SNoButton
-#. Programmer's name for it: SMsgDlgNo
-#: Clx/QConsts.pas:125  Clx/QConsts.pas:169 Vcl/Consts.pas:72
+#: Clx/QConsts.pas:125
+#: Clx/QConsts.pas:169
+#: Vcl/Consts.pas:72
 #: Vcl/Consts.pas:123
 msgid "&No"
 msgstr "&Nein"
 
 #. Programmer's name for it: SHelpButton
-#. Programmer's name for it: SMsgDlgHelp
-#. Programmer's name for it: SHelpButton
-#. Programmer's name for it: SMsgDlgHelp
 #. ClxIconViewItemsEditor..Button7..Caption
-#. ClxImageListEditor..Help..Caption
 #. ClxListViewItems..Button7..Caption
-#. ClxTreeViewItems..Help..Caption
 #. Caption
-#. ClxStrEditDlg..HelpButton..Caption
 #. DSSCubeEditor..HelpButton..Caption
-#. DSSQueryEditor..HelpButton..Caption
 #. WebAppDbgMainForm..MainMenu1..Help1..Caption
-#. DlgProperties..Button1..Caption
 #. ConnEditForm..HelpButton..Caption
-#. ClientDataForm..HelpBtn..Caption
 #. DBEditForm..HelpButton..Caption
-#. DataBindForm..HelpBtn..Caption
 #. AddFields..HelpBtn..Caption
-#. AssociateAttributes..HelpBtn..Caption
 #. SaveAttributesAs..HelpBtn..Caption
-#. DefineField..HelpBtn..Caption
 #. LinkFields..Help..Caption
-#. IndexFiles..Help..Caption
 #. PictureEditorDlg..HelpButton..Caption
-#. SQLEditForm..ButtonPanel..HelpButton..Caption
 #. StrEditDlg..HelpButton..Caption
-#. UpdateSQLEditForm..HelpButton..Caption
 #. frmIBRestoreEditor..Panel1..HelpBtn..Caption
-#. frmIBSecurityEditor..Panel1..HelpBtn..Caption
 #. frmIBServiceEditor..Panel1..HelpBtn..Caption
-#: Clx/QConsts.pas:126  Clx/QConsts.pas:172 Vcl/Consts.pas:73
-#: Vcl/Consts.pas:126 Property Editors/ClxIconEdit.xfm:153
-#: Editors/ClxImgEdit.xfm:143 Editors/ClxItemEdit.xfm:179
-#: Editors/ClxNodeEdit.xfm:189 Editors/ClxPicEdit.xfm:36
-#: Editors/ClxStrEdit.xfm:64 Decision Cube/MXDCUBE.DFM:491
-#: Cube/MXDSSQRY.DFM:333 Internet/SvrMainForm.dfm:199
-#: Internet/SvrPropDlg.dfm:207 Editors/AdoConEd.dfm:39 Editors/CDSEdit.dfm:61
-#: Editors/Dbedit.dfm:161 Editors/DbOleEdt.dfm:128 Editors/DSAdd.dfm:65
-#: Editors/DSAttrA.dfm:40 Editors/DSAttrS.dfm:77 Editors/DSDefine.dfm:130
-#: Editors/FldLinks.DFM:162 Editors/Ixedit.dfm:84 Editors/PicEdit.dfm:42
-#: Editors/SqlEdit.dfm:116 Editors/StrEdit.dfm:30 Editors/UpdSqlEd.dfm:41
-#: Vcl/IBRestoreEditor.dfm:71 Vcl/IBSecurityEditor.dfm:119
+#: Clx/QConsts.pas:126
+#: Clx/QConsts.pas:172
+#: Vcl/Consts.pas:73
+#: Vcl/Consts.pas:126
+#: Property Editors/ClxIconEdit.xfm:153
+#: Editors/ClxImgEdit.xfm:143
+#: Editors/ClxItemEdit.xfm:179
+#: Editors/ClxNodeEdit.xfm:189
+#: Editors/ClxPicEdit.xfm:36
+#: Editors/ClxStrEdit.xfm:64
+#: Decision Cube/MXDCUBE.DFM:491
+#: Cube/MXDSSQRY.DFM:333
+#: Internet/SvrMainForm.dfm:199
+#: Internet/SvrPropDlg.dfm:207
+#: Editors/AdoConEd.dfm:39
+#: Editors/CDSEdit.dfm:61
+#: Editors/Dbedit.dfm:161
+#: Editors/DbOleEdt.dfm:128
+#: Editors/DSAdd.dfm:65
+#: Editors/DSAttrA.dfm:40
+#: Editors/DSAttrS.dfm:77
+#: Editors/DSDefine.dfm:130
+#: Editors/FldLinks.DFM:162
+#: Editors/Ixedit.dfm:84
+#: Editors/PicEdit.dfm:42
+#: Editors/SqlEdit.dfm:116
+#: Editors/StrEdit.dfm:30
+#: Editors/UpdSqlEd.dfm:41
+#: Vcl/IBRestoreEditor.dfm:71
+#: Vcl/IBSecurityEditor.dfm:119
 #: Vcl/IBServiceEditor.dfm:142
 msgid "&Help"
 msgstr "&Hilfe"
 
 #. Programmer's name for it: SCloseButton
-#. LogDetail..ActionList1..CloseAction..Caption
 #. CustomizeFrm..CloseMenu..CloseItem..Caption
-#. SocketForm..PopupMenu..miClose..Caption
-#: Clx/QConsts.pas:127  Vcl/Consts.pas:74 Internet/SvrLogDetailDlg.dfm:80
-#: Vcl/CustomizeDlg.dfm:372 Vcl/ScktMain.dfm:319
+#: Clx/QConsts.pas:127
+#: Vcl/Consts.pas:74
+#: Internet/SvrLogDetailDlg.dfm:80
+#: Vcl/CustomizeDlg.dfm:372
+#: Vcl/ScktMain.dfm:319
 msgid "&Close"
 msgstr "S&chließen"
 
 #. Programmer's name for it: SIgnoreButton
-#. Programmer's name for it: SMsgDlgIgnore
-#. Programmer's name for it: SIgnoreButton
-#. Programmer's name for it: SMsgDlgIgnore
-#: Clx/QConsts.pas:128  Clx/QConsts.pas:177 Vcl/Consts.pas:75
+#: Clx/QConsts.pas:128
+#: Clx/QConsts.pas:177
+#: Vcl/Consts.pas:75
 #: Vcl/Consts.pas:131
 msgid "&Ignore"
 msgstr "&Ignorieren"
 
 #. Programmer's name for it: SRetryButton
-#. Programmer's name for it: SMsgDlgRetry
-#. Programmer's name for it: SRetryButton
-#. Programmer's name for it: SMsgDlgRetry
-#: Clx/QConsts.pas:129  Clx/QConsts.pas:176 Vcl/Consts.pas:76
+#: Clx/QConsts.pas:129
+#: Clx/QConsts.pas:176
+#: Vcl/Consts.pas:76
 #: Vcl/Consts.pas:130
 msgid "&Retry"
 msgstr "&Wiederholen"
 
 #. Programmer's name for it: SAbortButton
-#: Clx/QConsts.pas:130  Vcl/Consts.pas:77
+#: Clx/QConsts.pas:130
+#: Vcl/Consts.pas:77
 msgid "Abort"
 msgstr "Abbrechen"
 
 #. Programmer's name for it: SAllButton
-#. Programmer's name for it: SMsgDlgAll
-#. Programmer's name for it: SAllButton
-#. Programmer's name for it: SMsgDlgAll
-#: Clx/QConsts.pas:131  Clx/QConsts.pas:178 Vcl/Consts.pas:78
+#: Clx/QConsts.pas:131
+#: Clx/QConsts.pas:178
+#: Vcl/Consts.pas:78
 #: Vcl/Consts.pas:132
 msgid "&All"
 msgstr "&Alle"
 
 #. Programmer's name for it: SCannotDragForm
-#: Clx/QConsts.pas:133  Vcl/Consts.pas:80
+#: Clx/QConsts.pas:133
+#: Vcl/Consts.pas:80
 msgid "Cannot drag a form"
 msgstr "Formulare können nicht gezogen werden"
 
 #. Programmer's name for it: SPutObjectError
-#: Clx/QConsts.pas:134  Vcl/Consts.pas:81
+#: Clx/QConsts.pas:134
+#: Vcl/Consts.pas:81
 msgid "PutObject to undefined item"
 msgstr "PutObject auf undefiniertes Element"
 
 #. Programmer's name for it: SFB
-#: Clx/QConsts.pas:136  Vcl/Consts.pas:90
+#: Clx/QConsts.pas:136
+#: Vcl/Consts.pas:90
 msgid "FB"
 msgstr "VH"
 
 #. Programmer's name for it: SFG
-#: Clx/QConsts.pas:137  Vcl/Consts.pas:91
+#: Clx/QConsts.pas:137
+#: Vcl/Consts.pas:91
 msgid "FG"
 msgstr "VG"
 
 #. Programmer's name for it: SBG
-#: Clx/QConsts.pas:138  Vcl/Consts.pas:92
+#: Clx/QConsts.pas:138
+#: Vcl/Consts.pas:92
 msgid "BG"
 msgstr "HG"
 
 #. Programmer's name for it: SVIcons
-#: Clx/QConsts.pas:139  Vcl/Consts.pas:96
+#: Clx/QConsts.pas:139
+#: Vcl/Consts.pas:96
 msgid "Icons"
 msgstr "Symbole"
 
 #. Programmer's name for it: SVBitmaps
-#: Clx/QConsts.pas:140  Vcl/Consts.pas:97
+#: Clx/QConsts.pas:140
+#: Vcl/Consts.pas:97
 msgid "Bitmaps"
 msgstr "Bitmaps"
 
@@ -787,172 +880,204 @@ msgid "Drawings"
 msgstr "Zeichnungen"
 
 #. Programmer's name for it: SGridTooLarge
-#: Clx/QConsts.pas:144  Vcl/Consts.pas:98 Rtl/Common/RTLConsts.pas:31
+#: Clx/QConsts.pas:144
+#: Vcl/Consts.pas:98
+#: Rtl/Common/RTLConsts.pas:31
 msgid "Grid too large for operation"
 msgstr "Gitter zu groß für Operation"
 
 #. Programmer's name for it: STooManyDeleted
-#: Clx/QConsts.pas:145  Vcl/Consts.pas:99 Rtl/Common/RTLConsts.pas:83
+#: Clx/QConsts.pas:145
+#: Vcl/Consts.pas:99
+#: Rtl/Common/RTLConsts.pas:83
 msgid "Too many rows or columns deleted"
 msgstr "Zu viele Zeilen oder Spalten gelöscht"
 
 #. Programmer's name for it: SIndexOutOfRange
-#: Clx/QConsts.pas:146  Vcl/Consts.pas:100 Rtl/Common/RTLConsts.pas:33
+#: Clx/QConsts.pas:146
+#: Vcl/Consts.pas:100
+#: Rtl/Common/RTLConsts.pas:33
 msgid "Grid index out of range"
 msgstr "Gitterindex außerhalb des zulässigen Bereichs"
 
 #. Programmer's name for it: SFixedColTooBig
-#: Clx/QConsts.pas:147  Vcl/Consts.pas:101 Rtl/Common/RTLConsts.pas:28
+#: Clx/QConsts.pas:147
+#: Vcl/Consts.pas:101
+#: Rtl/Common/RTLConsts.pas:28
 msgid "Fixed column count must be less than column count"
 msgstr "Die Anzahl fester Spalten muss kleiner sein als die Spaltenanzahl"
 
 #. Programmer's name for it: SFixedRowTooBig
-#: Clx/QConsts.pas:148  Vcl/Consts.pas:102 Rtl/Common/RTLConsts.pas:29
+#: Clx/QConsts.pas:148
+#: Vcl/Consts.pas:102
+#: Rtl/Common/RTLConsts.pas:29
 msgid "Fixed row count must be less than row count"
 msgstr "Die Anzahl fester Zeilen muss kleiner sein als die Zeilenanzahl"
 
 #. Programmer's name for it: SInvalidStringGridOp
-#: Clx/QConsts.pas:149  Vcl/Consts.pas:103 Rtl/Common/RTLConsts.pas:54
+#: Clx/QConsts.pas:149
+#: Vcl/Consts.pas:103
+#: Rtl/Common/RTLConsts.pas:54
 msgid "Cannot insert or delete rows from grid"
 msgstr "Es können keine Zeilen des Tabellengitters gelöscht oder eingefügt werden"
 
 #. Programmer's name for it: SParseError
-#: Clx/QConsts.pas:150  Rtl/Common/RTLConsts.pas:67
+#: Clx/QConsts.pas:150
+#: Rtl/Common/RTLConsts.pas:67
 msgid "%s on line %d"
 msgstr "%s in Zeile %d"
 
 #. Programmer's name for it: SIdentifierExpected
-#: Clx/QConsts.pas:151  Rtl/Common/RTLConsts.pas:32
+#: Clx/QConsts.pas:151
+#: Rtl/Common/RTLConsts.pas:32
 msgid "Identifier expected"
 msgstr "Bezeichner erwartet"
 
 #. Programmer's name for it: SStringExpected
-#: Clx/QConsts.pas:152  Rtl/Common/RTLConsts.pas:80
+#: Clx/QConsts.pas:152
+#: Rtl/Common/RTLConsts.pas:80
 msgid "String expected"
 msgstr "String erwartet"
 
 #. Programmer's name for it: SNumberExpected
-#: Clx/QConsts.pas:153  Rtl/Common/RTLConsts.pas:66
+#: Clx/QConsts.pas:153
+#: Rtl/Common/RTLConsts.pas:66
 msgid "Number expected"
 msgstr "Zahl erwartet"
 
 #. Programmer's name for it: SCharExpected
-#: Clx/QConsts.pas:154  Rtl/Common/RTLConsts.pas:19
+#: Clx/QConsts.pas:154
+#: Rtl/Common/RTLConsts.pas:19
 msgid "''%s'' expected"
 msgstr "''%s'' erwartet"
 
 #. Programmer's name for it: SSymbolExpected
-#: Clx/QConsts.pas:155  Rtl/Common/RTLConsts.pas:81
+#: Clx/QConsts.pas:155
+#: Rtl/Common/RTLConsts.pas:81
 msgid "%s expected"
 msgstr "%s erwartet"
 
 #. Programmer's name for it: SInvalidNumber
-#: Clx/QConsts.pas:156  Vcl/Consts.pas:105
+#: Clx/QConsts.pas:156
+#: Vcl/Consts.pas:105
 msgid "Invalid numeric value"
 msgstr "Ungültiger numerischer Wert"
 
 #. Programmer's name for it: SInvalidString
-#: Clx/QConsts.pas:157  Rtl/Common/RTLConsts.pas:53
+#: Clx/QConsts.pas:157
+#: Rtl/Common/RTLConsts.pas:53
 msgid "Invalid string constant"
 msgstr "Ungültige Stringkonstante"
 
 #. Programmer's name for it: SInvalidBinary
-#: Clx/QConsts.pas:159  Rtl/Common/RTLConsts.pas:39
+#: Clx/QConsts.pas:159
+#: Rtl/Common/RTLConsts.pas:39
 msgid "Invalid binary value"
 msgstr "Ungültiger Binärwert"
 
 #. Programmer's name for it: SInvalidCurrentItem
-#: Clx/QConsts.pas:160  Vcl/Consts.pas:108
+#: Clx/QConsts.pas:160
+#: Vcl/Consts.pas:108
 msgid "Invalid value for current item"
 msgstr "Ungültiger Wert"
 
 #. Programmer's name for it: SMaskErr
-#: Clx/QConsts.pas:161  Vcl/Consts.pas:109 Rtl/Common/RTLConsts.pas:61
+#: Clx/QConsts.pas:161
+#: Vcl/Consts.pas:109
+#: Rtl/Common/RTLConsts.pas:61
 msgid "Invalid input value"
 msgstr "Ungültiger Eingabewert"
 
 #. Programmer's name for it: SMaskEditErr
-#: Clx/QConsts.pas:162  Vcl/Consts.pas:110 Rtl/Common/RTLConsts.pas:62
+#: Clx/QConsts.pas:162
+#: Vcl/Consts.pas:110
+#: Rtl/Common/RTLConsts.pas:62
 msgid "Invalid input value.  Use escape key to abandon changes"
 msgstr "Ungültiger Eingabewert. Mit der Taste ESC machen Sie die Änderungen rückgängig."
 
 #. Programmer's name for it: SMsgDlgWarning
-#: Clx/QConsts.pas:164  Vcl/Consts.pas:118
+#: Clx/QConsts.pas:164
+#: Vcl/Consts.pas:118
 msgid "Warning"
 msgstr "Warnung"
 
 #. Programmer's name for it: SMsgDlgError
-#: Clx/QConsts.pas:165  Vcl/Consts.pas:119
+#: Clx/QConsts.pas:165
+#: Vcl/Consts.pas:119
 msgid "Error"
 msgstr "Fehler"
 
 #. Programmer's name for it: SMsgDlgInformation
-#: Clx/QConsts.pas:166  Vcl/Consts.pas:120
+#: Clx/QConsts.pas:166
+#: Vcl/Consts.pas:120
 msgid "Information"
 msgstr "Information"
 
 #. Programmer's name for it: SMsgDlgConfirm
-#. Programmer's name for it: SConfirmCaption
-#. Programmer's name for it: SMsgDlgConfirm
-#. Programmer's name for it: SConfirmCaption
-#: Clx/QConsts.pas:167  Clx/QDBConsts.pas:29 Vcl/Consts.pas:121
+#: Clx/QConsts.pas:167
+#: Clx/QDBConsts.pas:29
+#: Vcl/Consts.pas:121
 #: Vcl/VDBConsts.pas:28
 msgid "Confirm"
 msgstr "Bestätigung"
 
 #. Programmer's name for it: SMsgDlgHelpNone
-#: Clx/QConsts.pas:173  Vcl/Consts.pas:127
+#: Clx/QConsts.pas:173
+#: Vcl/Consts.pas:127
 msgid "No help available"
 msgstr "Keine Hilfe verfügbar"
 
 #. Programmer's name for it: SMsgDlgHelpHelp
-#. Programmer's name for it: SHelp
-#. Programmer's name for it: SMsgDlgHelpHelp
-#. StandardActions..ActionList1..HelpContents1..Category
 #. StandardActions..ActionList1..HelpOnHelp1..Category
-#. StandardActions..ActionList1..HelpTopicSearch1..Category
 #. StandardActions..ActionList1..HelpContextAction1..Category
-#. frmGeneratorEditor..HelpBtn..Caption
-#: Clx/QConsts.pas:174  Clx/QConsts.pas:283 Vcl/Consts.pas:128
-#: Vcl/ActnRes.dfm:85 Vcl/ActnRes.dfm:91 Vcl/ActnRes.dfm:96
-#: Vcl/ActnRes.dfm:260 Vcl/IBGeneratorEditor.dfm:104
+#: Clx/QConsts.pas:174
+#: Clx/QConsts.pas:283
+#: Vcl/Consts.pas:128
+#: Vcl/ActnRes.dfm:85
+#: Vcl/ActnRes.dfm:91
+#: Vcl/ActnRes.dfm:96
+#: Vcl/ActnRes.dfm:260
+#: Vcl/IBGeneratorEditor.dfm:104
 msgid "Help"
 msgstr "Hilfe"
 
 #. Programmer's name for it: SMsgDlgAbort
-#: Clx/QConsts.pas:175  Vcl/Consts.pas:129
+#: Clx/QConsts.pas:175
+#: Vcl/Consts.pas:129
 msgid "&Abort"
 msgstr "&Abbrechen"
 
 #. Programmer's name for it: SMsgDlgNoToAll
-#: Clx/QConsts.pas:179  Vcl/Consts.pas:133
+#: Clx/QConsts.pas:179
+#: Vcl/Consts.pas:133
 msgid "N&o to All"
 msgstr "&Alle Nein"
 
 #. Programmer's name for it: SMsgDlgYesToAll
-#: Clx/QConsts.pas:180  Vcl/Consts.pas:134
+#: Clx/QConsts.pas:180
+#: Vcl/Consts.pas:134
 msgid "Yes to &All"
 msgstr "A&lle Ja"
 
 #. Programmer's name for it: srUnknown
-#. Programmer's name for it: SUnknown
-#. Programmer's name for it: srUnknown
-#. Programmer's name for it: SHostUnknown
-#: Clx/QConsts.pas:182  ToolsAPI/DesignConst.pas:31 Vcl/Consts.pas:155
+#: Clx/QConsts.pas:182
+#: ToolsAPI/DesignConst.pas:31
+#: Vcl/Consts.pas:155
 #: Vcl/ScktCnst.pas:34
 msgid "(Unknown)"
 msgstr "(Unbekannt)"
 
 #. Programmer's name for it: srNone
-#. Programmer's name for it: SNoIndexFiles
-#. Programmer's name for it: srNone
-#: Clx/QConsts.pas:183  ToolsAPI/DesignConst.pas:13 Vcl/bdeconst.pas:61
+#: Clx/QConsts.pas:183
+#: ToolsAPI/DesignConst.pas:13
+#: Vcl/bdeconst.pas:61
 #: Vcl/Consts.pas:156
 msgid "(None)"
 msgstr "(Ohne)"
 
 #. Programmer's name for it: SOutOfRange
-#: Clx/QConsts.pas:184  Vcl/Consts.pas:157
+#: Clx/QConsts.pas:184
+#: Vcl/Consts.pas:157
 msgid "Value must be between %d and %d"
 msgstr "Wert muß zwischen %d und %d liegen"
 
@@ -962,273 +1087,334 @@ msgid "Unnamed"
 msgstr "Unbenannt"
 
 #. Programmer's name for it: SDateEncodeError
-#: Clx/QConsts.pas:187  Vcl/Consts.pas:159 Rtl/Sys/SysConst.pas:26
+#: Clx/QConsts.pas:187
+#: Vcl/Consts.pas:159
+#: Rtl/Sys/SysConst.pas:26
 msgid "Invalid argument to date encode"
 msgstr "Ungültiges Argument zum Codieren des Datums"
 
 #. Programmer's name for it: STimeEncodeError
-#: Clx/QConsts.pas:188  Rtl/Common/RTLConsts.pas:82 Rtl/Sys/SysConst.pas:25
+#: Clx/QConsts.pas:188
+#: Rtl/Common/RTLConsts.pas:82
+#: Rtl/Sys/SysConst.pas:25
 msgid "Invalid argument to time encode"
 msgstr "Ungültiges Argument zur zeit-Codierung"
 
 #. Programmer's name for it: SInvalidDate
-#: Clx/QConsts.pas:189  Rtl/Common/RTLConsts.pas:40
+#: Clx/QConsts.pas:189
+#: Rtl/Common/RTLConsts.pas:40
 msgid "''%s'' is not a valid date"
 msgstr "''%s'' ist kein gültiges Datum"
 
 #. Programmer's name for it: SInvalidTime
-#: Clx/QConsts.pas:190  Rtl/Common/RTLConsts.pas:55
+#: Clx/QConsts.pas:190
+#: Rtl/Common/RTLConsts.pas:55
 msgid "''%s'' is not a valid time"
-msgstr "''%s'' ist keine gültige Uhrzeit"
+msgstr "''%s'' ist keine gültige Zeit"
 
 #. Programmer's name for it: SInvalidDateTime
-#: Clx/QConsts.pas:191  Rtl/Common/RTLConsts.pas:41
+#: Clx/QConsts.pas:191
+#: Rtl/Common/RTLConsts.pas:41
 msgid "''%s'' is not a valid date and time"
-msgstr "''%s'' ist kein gültiges Datum und Uhrzeit"
+msgstr "''%s'' ist kein gültiges Datum und Zeit"
 
 #. Programmer's name for it: SInvalidFileName
-#: Clx/QConsts.pas:192  Rtl/Common/RTLConsts.pas:42
+#: Clx/QConsts.pas:192
+#: Rtl/Common/RTLConsts.pas:42
 msgid "Invalid file name - %s"
 msgstr "Ungültiger Dateiname - %s"
 
 #. Programmer's name for it: SDefaultFilter
-#: Clx/QConsts.pas:193  Vcl/Consts.pas:160
+#: Clx/QConsts.pas:193
+#: Vcl/Consts.pas:160
 msgid "All files (*.*)|*.*"
 msgstr "Alle Dateien (*.*)|*.*"
 
 #. Programmer's name for it: SInsertLineError
-#: Clx/QConsts.pas:194  Vcl/Consts.pas:163
+#: Clx/QConsts.pas:194
+#: Vcl/Consts.pas:163
 msgid "Unable to insert a line"
 msgstr "Zeile kann nicht eingefügt werden"
 
 #. Programmer's name for it: SConfirmCreateDir
-#: Clx/QConsts.pas:196  Vcl/Consts.pas:165
+#: Clx/QConsts.pas:196
+#: Vcl/Consts.pas:165
 msgid "The specified directory does not exist. Create it?"
 msgstr "Das angegebene Verzeichnis existiert nicht. Soll es angelegt werden?"
 
 #. Programmer's name for it: SSelectDirCap
-#: Clx/QConsts.pas:197  Vcl/Consts.pas:166
+#: Clx/QConsts.pas:197
+#: Vcl/Consts.pas:166
 msgid "Select Directory"
 msgstr "Verzeichnis auswählen"
 
 #. Programmer's name for it: SCannotCreateDir
-#: Clx/QConsts.pas:198  Rtl/Sys/SysConst.pas:165
+#: Clx/QConsts.pas:198
+#: Rtl/Sys/SysConst.pas:165
 msgid "Unable to create directory"
 msgstr "Verzeichnis kann nicht erstellt werden"
 
 #. Programmer's name for it: SDirNameCap
-#: Clx/QConsts.pas:199  Vcl/Consts.pas:167
+#: Clx/QConsts.pas:199
+#: Vcl/Consts.pas:167
 msgid "Directory &Name:"
 msgstr "Verzeichnis&name:"
 
 #. Programmer's name for it: SDrivesCap
-#: Clx/QConsts.pas:200  Vcl/Consts.pas:168
+#: Clx/QConsts.pas:200
+#: Vcl/Consts.pas:168
 msgid "D&rives:"
 msgstr "&Laufwerke:"
 
 #. Programmer's name for it: SDirsCap
-#: Clx/QConsts.pas:201  Vcl/Consts.pas:169
+#: Clx/QConsts.pas:201
+#: Vcl/Consts.pas:169
 msgid "&Directories:"
 msgstr "&Verzeichnisse:"
 
 #. Programmer's name for it: SFilesCap
-#: Clx/QConsts.pas:202  Vcl/Consts.pas:170
+#: Clx/QConsts.pas:202
+#: Vcl/Consts.pas:170
 msgid "&Files: (*.*)"
 msgstr "&Dateien: (*.*)"
 
 #. Programmer's name for it: SNetworkCap
-#: Clx/QConsts.pas:203  Vcl/Consts.pas:171
+#: Clx/QConsts.pas:203
+#: Vcl/Consts.pas:171
 msgid "Ne&twork..."
 msgstr "Ne&tzwerk..."
 
 #. Programmer's name for it: SInvalidClipFmt
-#: Clx/QConsts.pas:205  Vcl/Consts.pas:176
+#: Clx/QConsts.pas:205
+#: Vcl/Consts.pas:176
 msgid "Invalid clipboard format"
 msgstr "Ungültiges Format der Zwischenablage"
 
 #. Programmer's name for it: SIconToClipboard
-#: Clx/QConsts.pas:206  Vcl/Consts.pas:177
+#: Clx/QConsts.pas:206
+#: Vcl/Consts.pas:177
 msgid "Clipboard does not support Icons"
 msgstr "Zwischenablage unterstützt keine Symbole"
 
 #. Programmer's name for it: SCannotOpenClipboard
-#: Clx/QConsts.pas:207  Vcl/Consts.pas:178
+#: Clx/QConsts.pas:207
+#: Vcl/Consts.pas:178
 msgid "Cannot open clipboard"
 msgstr "Zwischenablage kann nicht geöffnet werden"
 
 #. Programmer's name for it: SInvalidActionRegistration
-#: Clx/QConsts.pas:209  Vcl/Consts.pas:242 Rtl/Common/RTLConsts.pas:37
+#: Clx/QConsts.pas:209
+#: Vcl/Consts.pas:242
+#: Rtl/Common/RTLConsts.pas:37
 msgid "Invalid action registration"
 msgstr "Ungültige Aktionsregistrierung"
 
 #. Programmer's name for it: SInvalidActionUnregistration
-#: Clx/QConsts.pas:210  Vcl/Consts.pas:243 Rtl/Common/RTLConsts.pas:38
+#: Clx/QConsts.pas:210
+#: Vcl/Consts.pas:243
+#: Rtl/Common/RTLConsts.pas:38
 msgid "Invalid action unregistration"
 msgstr "Ungültige Aufhebung der Aktionsregistrierung"
 
 #. Programmer's name for it: SInvalidActionEnumeration
-#: Clx/QConsts.pas:211  Vcl/Consts.pas:244 Rtl/Common/RTLConsts.pas:36
+#: Clx/QConsts.pas:211
+#: Vcl/Consts.pas:244
+#: Rtl/Common/RTLConsts.pas:36
 msgid "Invalid action enumeration"
 msgstr "Ungültige Aktionsaufzählung"
 
 #. Programmer's name for it: SInvalidActionCreation
-#: Clx/QConsts.pas:212  Vcl/Consts.pas:245 Rtl/Common/RTLConsts.pas:35
+#: Clx/QConsts.pas:212
+#: Vcl/Consts.pas:245
+#: Rtl/Common/RTLConsts.pas:35
 msgid "Invalid action creation"
 msgstr "Ungültige Aktionserstellung"
 
 #. Programmer's name for it: SDefault
-#. Programmer's name for it: sHTTPItemDefault
-#. Programmer's name for it: SDefault
-#. SQLWindow..DBGrid1..TitleFont.Name
 #. DSSQueryEditor..Pager..Dimensions..AddAgg..Font.Name
-#. CustomizeFrm..Tabs..OptionsTab..MenuAnimationStyles..Text
-#: Clx/QConsts.pas:214  Internet/WebConst.pas:30 Vcl/Consts.pas:180 Decision
-#: Cube/MXDSQL.DFM:21 Cube/MXDSSQRY.DFM:195 Vcl/CustomizeDlg.dfm:357
+#: Clx/QConsts.pas:214
+#: Internet/WebConst.pas:30
+#: Vcl/Consts.pas:180
+#: Decision
+#: Cube/MXDSQL.DFM:21
+#: Cube/MXDSSQRY.DFM:195
+#: Vcl/CustomizeDlg.dfm:357
 msgid "Default"
 msgstr "Vorgabe"
 
 #. Programmer's name for it: SInvalidMemoSize
-#: Clx/QConsts.pas:216  Vcl/Consts.pas:182
+#: Clx/QConsts.pas:216
+#: Vcl/Consts.pas:182
 msgid "Text exceeds memo capacity"
 msgstr "Text überschreitet Memo-Kapazität"
 
 #. Programmer's name for it: SCustomColors
-#: Clx/QConsts.pas:217  Vcl/Consts.pas:183
+#: Clx/QConsts.pas:217
+#: Vcl/Consts.pas:183
 msgid "Custom Colors"
 msgstr "Selbstdefinierte Farben"
 
 #. Programmer's name for it: SInvalidPrinterOp
-#: Clx/QConsts.pas:218  Vcl/Consts.pas:184
+#: Clx/QConsts.pas:218
+#: Vcl/Consts.pas:184
 msgid "Operation not supported on selected printer"
 msgstr "Operation auf ausgewähltem Drucker nicht verfügbar"
 
 #. Programmer's name for it: SNoDefaultPrinter
-#: Clx/QConsts.pas:219  Vcl/Consts.pas:185
+#: Clx/QConsts.pas:219
+#: Vcl/Consts.pas:185
 msgid "There is no default printer currently selected"
 msgstr "Zur Zeit ist kein Standard-Drucker gewählt"
 
 #. Programmer's name for it: SIniFileWriteError
-#: Clx/QConsts.pas:221  Vcl/Consts.pas:187 Rtl/Common/RTLConsts.pas:34
+#: Clx/QConsts.pas:221
+#: Vcl/Consts.pas:187
+#: Rtl/Common/RTLConsts.pas:34
 msgid "Unable to write to %s"
 msgstr "In %s kann nicht geschrieben werden"
 
 #. Programmer's name for it: SBitsIndexError
-#: Clx/QConsts.pas:223  Vcl/Consts.pas:189 Rtl/Common/RTLConsts.pas:16
+#: Clx/QConsts.pas:223
+#: Vcl/Consts.pas:189
+#: Rtl/Common/RTLConsts.pas:16
 msgid "Bits index out of range"
 msgstr "Bits-Index außerhalb des zulässigen Bereichs"
 
 #. Programmer's name for it: SUntitled
-#: Clx/QConsts.pas:225  Vcl/Consts.pas:191
+#: Clx/QConsts.pas:225
+#: Vcl/Consts.pas:191
 msgid "(Untitled)"
 msgstr "(Unbenannt)"
 
 #. Programmer's name for it: SDuplicateMenus
-#: Clx/QConsts.pas:227  Vcl/Consts.pas:196
+#: Clx/QConsts.pas:227
+#: Vcl/Consts.pas:196
 msgid "Menu '%s' is already being used by another form"
 msgstr "Menü '%s' wird bereits von einem anderen Formular benutzt"
 
 #. Programmer's name for it: SPictureLabel
-#: Clx/QConsts.pas:229  Vcl/Consts.pas:198
+#: Clx/QConsts.pas:229
+#: Vcl/Consts.pas:198
 msgid "Picture:"
 msgstr "Grafik:"
 
 #. Programmer's name for it: SPictureDesc
-#: Clx/QConsts.pas:230  Vcl/Consts.pas:199
+#: Clx/QConsts.pas:230
+#: Vcl/Consts.pas:199
 msgid " (%dx%d)"
 msgstr " (%dx%d)"
 
 #. Programmer's name for it: SPreviewLabel
-#: Clx/QConsts.pas:231  Vcl/Consts.pas:200
+#: Clx/QConsts.pas:231
+#: Vcl/Consts.pas:200
 msgid "Preview"
 msgstr "Vorschau"
 
 #. Programmer's name for it: SBoldItalicFont
-#: Clx/QConsts.pas:233  Vcl/Consts.pas:221
+#: Clx/QConsts.pas:233
+#: Vcl/Consts.pas:221
 msgid "Bold Italic"
 msgstr "Fett kursiv"
 
 #. Programmer's name for it: SBoldFont
-#. StandardActions..ActionList1..RichEditBold1..Hint
-#: Clx/QConsts.pas:234  Vcl/Consts.pas:222 Vcl/ActnRes.dfm:129
+#: Clx/QConsts.pas:234
+#: Vcl/Consts.pas:222
+#: Vcl/ActnRes.dfm:129
 msgid "Bold"
 msgstr "Fett"
 
 #. Programmer's name for it: SItalicFont
-#. StandardActions..ActionList1..RichEditItalic1..Hint
-#: Clx/QConsts.pas:235  Vcl/Consts.pas:223 Vcl/ActnRes.dfm:137
+#: Clx/QConsts.pas:235
+#: Vcl/Consts.pas:223
+#: Vcl/ActnRes.dfm:137
 msgid "Italic"
 msgstr "Kursiv"
 
 #. Programmer's name for it: SRegularFont
-#: Clx/QConsts.pas:236  Vcl/Consts.pas:224
+#: Clx/QConsts.pas:236
+#: Vcl/Consts.pas:224
 msgid "Regular"
 msgstr "Normal"
 
 #. Programmer's name for it: SPropertiesVerb
-#. SocketForm..Pages..PropPage..Caption
-#: Clx/QConsts.pas:238  Vcl/Consts.pas:226 Vcl/ScktMain.dfm:31
+#: Clx/QConsts.pas:238
+#: Vcl/Consts.pas:226
+#: Vcl/ScktMain.dfm:31
 msgid "Properties"
 msgstr "Eigenschaften"
 
 #. Programmer's name for it: sAsyncSocketError
-#: Clx/QConsts.pas:240  Rtl/Common/RTLConsts.pas:113
+#: Clx/QConsts.pas:240
+#: Rtl/Common/RTLConsts.pas:113
 msgid "Asynchronous socket error %d"
 msgstr "Asynchroner Socket-Fehler %d"
 
 #. Programmer's name for it: sNoAddress
-#: Clx/QConsts.pas:241  Rtl/Common/RTLConsts.pas:114
+#: Clx/QConsts.pas:241
+#: Rtl/Common/RTLConsts.pas:114
 msgid "No address specified"
 msgstr "Keine Adresse angegeben"
 
 #. Programmer's name for it: sCannotListenOnOpen
-#: Clx/QConsts.pas:242  Rtl/Common/RTLConsts.pas:115
+#: Clx/QConsts.pas:242
+#: Rtl/Common/RTLConsts.pas:115
 msgid "Can't listen on an open socket"
 msgstr "Offener Socket kann nicht überwacht werden"
 
 #. Programmer's name for it: sCannotCreateSocket
-#: Clx/QConsts.pas:243  Rtl/Common/RTLConsts.pas:116
+#: Clx/QConsts.pas:243
+#: Rtl/Common/RTLConsts.pas:116
 msgid "Can't create new socket"
 msgstr "Es kann kein neuer Socket erzeugt werden"
 
 #. Programmer's name for it: sSocketAlreadyOpen
-#: Clx/QConsts.pas:244  Rtl/Common/RTLConsts.pas:117
+#: Clx/QConsts.pas:244
+#: Rtl/Common/RTLConsts.pas:117
 msgid "Socket already open"
 msgstr "Socket ist bereits geöffnet"
 
 #. Programmer's name for it: sCantChangeWhileActive
-#: Clx/QConsts.pas:245  Rtl/Common/RTLConsts.pas:118
+#: Clx/QConsts.pas:245
+#: Rtl/Common/RTLConsts.pas:118
 msgid "Can't change value while socket is active"
 msgstr "Wert kann nicht geändert werden, während der Socket aktiv ist"
 
 #. Programmer's name for it: sSocketMustBeBlocking
-#: Clx/QConsts.pas:246  Rtl/Common/RTLConsts.pas:119
+#: Clx/QConsts.pas:246
+#: Rtl/Common/RTLConsts.pas:119
 msgid "Socket must be in blocking mode"
 msgstr "Socket muss sich im Blocking-Modus befinden"
 
 #. Programmer's name for it: sSocketIOError
-#: Clx/QConsts.pas:247  Rtl/Common/RTLConsts.pas:120
+#: Clx/QConsts.pas:247
+#: Rtl/Common/RTLConsts.pas:120
 msgid "%s error %d, %s"
 msgstr "%s-Fehler %d, %s"
 
 #. Programmer's name for it: sSocketRead
-#. Programmer's name for it: SReadAccess
-#: Clx/QConsts.pas:248  Rtl/Common/RTLConsts.pas:121 Rtl/Sys/SysConst.pas:66
+#: Clx/QConsts.pas:248
+#: Rtl/Common/RTLConsts.pas:121
+#: Rtl/Sys/SysConst.pas:66
 msgid "Read"
 msgstr "Lesen"
 
 #. Programmer's name for it: sSocketWrite
-#. Programmer's name for it: SWriteAccess
-#: Clx/QConsts.pas:249  Rtl/Common/RTLConsts.pas:122 Rtl/Sys/SysConst.pas:67
+#: Clx/QConsts.pas:249
+#: Rtl/Common/RTLConsts.pas:122
+#: Rtl/Sys/SysConst.pas:67
 msgid "Write"
 msgstr "Schreiben"
 
 #. Programmer's name for it: SAllCommands
-#: Clx/QConsts.pas:251  Vcl/Consts.pas:252
+#: Clx/QConsts.pas:251
+#: Vcl/Consts.pas:252
 msgid "All Commands"
 msgstr "Alle Befehle"
 
 #. Programmer's name for it: SDuplicateItem
-#: Clx/QConsts.pas:253  Vcl/Consts.pas:254 Rtl/Common/RTLConsts.pas:24
+#: Clx/QConsts.pas:253
+#: Vcl/Consts.pas:254
+#: Rtl/Common/RTLConsts.pas:24
 msgid "List does not allow duplicates ($0%x)"
 msgstr "Liste gestattet keine doppelten Einträge ($0%x)"
 
@@ -1243,13 +1429,14 @@ msgid "Property category does not exist (%s)"
 msgstr "Eigenschaftskategorie existiert nicht (%s)"
 
 #. Programmer's name for it: SInvalidMask
-#: Clx/QConsts.pas:258  Rtl/Common/RTLConsts.pas:45
+#: Clx/QConsts.pas:258
+#: Rtl/Common/RTLConsts.pas:45
 msgid "'%s' is an invalid mask at (%d)"
 msgstr "'%s' ist eine ungültige Maske für (%d)"
 
 #. Programmer's name for it: SInvalidFilter
-#. Programmer's name for it: sInvalidFilter
-#: Clx/QConsts.pas:259  ToolsAPI/DesignIntf.pas:475
+#: Clx/QConsts.pas:259
+#: ToolsAPI/DesignIntf.pas:475
 msgid "Property filters may only be name, class or type based (%d:%d)"
 msgstr "Eigenschaftsfilter dürfen nur auf Name, Klasse oder Typ basieren (%d:%d)"
 
@@ -1261,20 +1448,23 @@ msgstr "Kategorien müssen ihre eigenen Namen und Beschreibung definieren"
 #. Programmer's name for it: sOperationNotAllowed
 #: Clx/QConsts.pas:262
 msgid "Operation not allowed while dispatching application events"
-msgstr "Operation nicht gestattet, wenn Anwendungsereignisse weitergeleitet werden"
+msgstr "Operation bei der Weiterleitung von Anwendungsereignissen nicht gestattet"
 
 #. Programmer's name for it: STextNotFound
-#: Clx/QConsts.pas:263  Vcl/Consts.pas:256
+#: Clx/QConsts.pas:263
+#: Vcl/Consts.pas:256
 msgid "Text not found: \"%s\""
 msgstr "Text nicht gefunden: \"%s\""
 
 #. Programmer's name for it: SImageIndexError
-#: Clx/QConsts.pas:265  Vcl/Consts.pas:40
+#: Clx/QConsts.pas:265
+#: Vcl/Consts.pas:40
 msgid "Invalid ImageList Index"
 msgstr "Ungültiger ImageList-Index"
 
 #. Programmer's name for it: SReplaceImage
-#: Clx/QConsts.pas:266  Vcl/Consts.pas:39
+#: Clx/QConsts.pas:266
+#: Vcl/Consts.pas:39
 msgid "Unable to Replace Image"
 msgstr "Bild kann nicht ersetzt werden"
 
@@ -1314,8 +1504,8 @@ msgid "Mime format not supported for TIcon"
 msgstr "Mime-Format wird für TIcon nicht unterstützt"
 
 #. Programmer's name for it: SSave
-#. Title
-#: Clx/QConsts.pas:277  Property Editors/ClxPicEdit.xfm:117
+#: Clx/QConsts.pas:277
+#: Property Editors/ClxPicEdit.xfm:117
 msgid "Save As"
 msgstr "Speichern unter"
 
@@ -1365,8 +1555,8 @@ msgid "Rep&lace with:"
 msgstr "&Ersetzen durch:"
 
 #. Programmer's name for it: SReplace
-#. StandardActions..ActionList1..SearchReplace1..Caption
-#: Clx/QConsts.pas:289  Vcl/ActnRes.dfm:165
+#: Clx/QConsts.pas:289
+#: Vcl/ActnRes.dfm:165
 msgid "&Replace"
 msgstr "Erset&zen"
 
@@ -1393,12 +1583,12 @@ msgstr "%s existiert bereits. Soll es ersetzt werden?"
 #. Programmer's name for it: SFileMustExist
 #: Clx/QConsts.pas:295
 msgid "%sFile not found.Please verify the correct filename was given."
-msgstr "%sDatei nicht gefunden.Bitte überprüfen Sie, dass der korrekte Dateiname angegeben wurde."
+msgstr "%s-Datei nicht gefunden. Überprüfen Sie, ob der korrekte Dateiname angegeben wurde."
 
 #. Programmer's name for it: SPathMustExist
 #: Clx/QConsts.pas:297
 msgid "%sPath not found.Please verify the correct path was given."
-msgstr "%sPfad nicht gefunden.Bitte überprüfen Sie, dass der korrekte Pfad angegeben wurde."
+msgstr "%s-Pfad nicht gefunden. Überprüfen Sie, ob der korrekte Pfad angegeben wurde."
 
 #. Programmer's name for it: SUnknownImageFormat
 #: Clx/QConsts.pas:299
@@ -1416,7 +1606,8 @@ msgid "Unable to write bitmap"
 msgstr "Bitmap kann nicht geschrieben werden"
 
 #. Programmer's name for it: sAllFilter
-#: Clx/QConsts.pas:302  Vcl/Consts.pas:161
+#: Clx/QConsts.pas:302
+#: Vcl/Consts.pas:161
 msgid "All"
 msgstr "Alle"
 
@@ -1431,27 +1622,32 @@ msgid "Invalid LCDNumber value"
 msgstr "Ungültiger Wert für LCDNumber"
 
 #. Programmer's name for it: sTabFailDelete
-#: Clx/QConsts.pas:308  Vcl/ComStrs.pas:16
+#: Clx/QConsts.pas:308
+#: Vcl/ComStrs.pas:16
 msgid "Failed to delete tab at index %d"
 msgstr "Registerseite mit Index %d konnte nicht gelöscht werden"
 
 #. Programmer's name for it: sPageIndexError
-#: Clx/QConsts.pas:310  Vcl/ComStrs.pas:46
+#: Clx/QConsts.pas:310
+#: Vcl/ComStrs.pas:46
 msgid "%d is an invalid PageIndex value.  PageIndex must be between 0 and %d"
 msgstr "%d ist ein ungültiger Wert für PageIndex. PageIndex muß einen Wert zwischen 0 und %d besitzen"
 
 #. Programmer's name for it: sInvalidLevel
-#: Clx/QConsts.pas:311  Vcl/ComStrs.pas:23
+#: Clx/QConsts.pas:311
+#: Vcl/ComStrs.pas:23
 msgid "Invalid item level assignment"
 msgstr "Ungültige Zuweisung von Eintragsebenen"
 
 #. Programmer's name for it: sInvalidLevelEx
-#: Clx/QConsts.pas:312  Vcl/ComStrs.pas:24
+#: Clx/QConsts.pas:312
+#: Vcl/ComStrs.pas:24
 msgid "Invalid level (%d) for item \"%s\""
 msgstr "Ungültige Ebene (%d) für Eintrag \"%s\""
 
 #. Programmer's name for it: sTabMustBeMultiLine
-#: Clx/QConsts.pas:313  Vcl/ComStrs.pas:21
+#: Clx/QConsts.pas:313
+#: Vcl/ComStrs.pas:21
 msgid "MultiLine must be True when TabPosition is tpLeft or tpRight"
 msgstr "Bei TabPosition tpLeft und tpRight muß MultiLine True sein"
 
@@ -1476,598 +1672,709 @@ msgid "Header Section owner must be a TCustomHeaderControl"
 msgstr "Der Besitzer des Header-Abschnitts muss ein TCustomHeaderControl sein"
 
 #. Programmer's name for it: SFirstRecord
-#: Clx/QDBConsts.pas:20  Vcl/VDBConsts.pas:19
+#: Clx/QDBConsts.pas:20
+#: Vcl/VDBConsts.pas:19
 msgid "First record"
 msgstr "Erster Datensatz"
 
 #. Programmer's name for it: SPriorRecord
-#: Clx/QDBConsts.pas:21  Vcl/VDBConsts.pas:20
+#: Clx/QDBConsts.pas:21
+#: Vcl/VDBConsts.pas:20
 msgid "Prior record"
 msgstr "Vorheriger Datensatz"
 
 #. Programmer's name for it: SNextRecord
-#: Clx/QDBConsts.pas:22  Vcl/VDBConsts.pas:21
+#: Clx/QDBConsts.pas:22
+#: Vcl/VDBConsts.pas:21
 msgid "Next record"
 msgstr "Nächster Datensatz"
 
 #. Programmer's name for it: SLastRecord
-#: Clx/QDBConsts.pas:23  Vcl/VDBConsts.pas:22
+#: Clx/QDBConsts.pas:23
+#: Vcl/VDBConsts.pas:22
 msgid "Last record"
 msgstr "Letzter Datensatz"
 
 #. Programmer's name for it: SInsertRecord
-#: Clx/QDBConsts.pas:24  Vcl/VDBConsts.pas:23
+#: Clx/QDBConsts.pas:24
+#: Vcl/VDBConsts.pas:23
 msgid "Insert record"
 msgstr "Datensatz einfügen"
 
 #. Programmer's name for it: SDeleteRecord
-#: Clx/QDBConsts.pas:25  Vcl/VDBConsts.pas:24
+#: Clx/QDBConsts.pas:25
+#: Vcl/VDBConsts.pas:24
 msgid "Delete record"
 msgstr "Datensatz löschen"
 
 #. Programmer's name for it: SEditRecord
-#: Clx/QDBConsts.pas:26  Vcl/VDBConsts.pas:25
+#: Clx/QDBConsts.pas:26
+#: Vcl/VDBConsts.pas:25
 msgid "Edit record"
 msgstr "Datensatz bearbeiten"
 
 #. Programmer's name for it: SPostEdit
-#: Clx/QDBConsts.pas:27  Vcl/VDBConsts.pas:26
+#: Clx/QDBConsts.pas:27
+#: Vcl/VDBConsts.pas:26
 msgid "Post edit"
 msgstr "Übernehmen"
 
 #. Programmer's name for it: SCancelEdit
-#: Clx/QDBConsts.pas:28  Vcl/VDBConsts.pas:27
+#: Clx/QDBConsts.pas:28
+#: Vcl/VDBConsts.pas:27
 msgid "Cancel edit"
 msgstr "Bearbeiten abbrechen"
 
 #. Programmer's name for it: SRefreshRecord
-#: Clx/QDBConsts.pas:30  Vcl/VDBConsts.pas:29
+#: Clx/QDBConsts.pas:30
+#: Vcl/VDBConsts.pas:29
 msgid "Refresh data"
 msgstr "Daten aktualisieren"
 
 #. Programmer's name for it: SDeleteRecordQuestion
-#: Clx/QDBConsts.pas:31  Vcl/DBConsts.pas:106 Vcl/VDBConsts.pas:30
+#: Clx/QDBConsts.pas:31
+#: Vcl/DBConsts.pas:106
+#: Vcl/VDBConsts.pas:30
 msgid "Delete record?"
 msgstr "Datensatz löschen?"
 
 #. Programmer's name for it: SDeleteMultipleRecordsQuestion
-#: Clx/QDBConsts.pas:32  Vcl/DBConsts.pas:107 Vcl/VDBConsts.pas:31
+#: Clx/QDBConsts.pas:32
+#: Vcl/DBConsts.pas:107
+#: Vcl/VDBConsts.pas:31
 msgid "Delete all selected records?"
 msgstr "Alle markierten Datensätze löschen?"
 
 #. Programmer's name for it: SDataSourceFixed
-#: Clx/QDBConsts.pas:33  Vcl/VDBConsts.pas:32
+#: Clx/QDBConsts.pas:33
+#: Vcl/VDBConsts.pas:32
 msgid "Operation not allowed in a DBCtrlGrid"
 msgstr "Operation in einem DBCtrlGrid nicht erlaubt"
 
 #. Programmer's name for it: SNotReplicatable
-#: Clx/QDBConsts.pas:34  Vcl/VDBConsts.pas:33
+#: Clx/QDBConsts.pas:34
+#: Vcl/VDBConsts.pas:33
 msgid "Control cannot be used in a DBCtrlGrid"
 msgstr "Element kann in einem DBCtrlGrid nicht verwendet werden"
 
 #. Programmer's name for it: SPropDefByLookup
-#: Clx/QDBConsts.pas:35  Vcl/VDBConsts.pas:34
+#: Clx/QDBConsts.pas:35
+#: Vcl/VDBConsts.pas:34
 msgid "Property already defined by lookup field"
 msgstr "Eigenschaft bereits durch Lookup-Feld definiert"
 
 #. Programmer's name for it: STooManyColumns
-#: Clx/QDBConsts.pas:36  Vcl/DBConsts.pas:108 Vcl/VDBConsts.pas:35
+#: Clx/QDBConsts.pas:36
+#: Vcl/DBConsts.pas:108
+#: Vcl/VDBConsts.pas:35
 msgid "Grid requested to display more than 256 columns"
 msgstr "Gitter soll mehr als 256 Spalten darstellen"
 
 #. Programmer's name for it: SRemoteLogin
-#: Clx/QDBConsts.pas:39  Vcl/VDBConsts.pas:38
+#: Clx/QDBConsts.pas:39
+#: Vcl/VDBConsts.pas:38
 msgid "Remote Login"
 msgstr "Externe Anmeldung"
 
 #. Programmer's name for it: sRowError
-#: Decision Cube/Mxconsts.pas:27  Vcl/Mxconsts.pas:27
+#: Decision Cube/Mxconsts.pas:27
+#: Vcl/Mxconsts.pas:27
 msgid "row error"
 msgstr "Zeilenfehler"
 
 #. Programmer's name for it: sAllValues
-#: Decision Cube/Mxconsts.pas:29  Vcl/Mxconsts.pas:29
+#: Decision Cube/Mxconsts.pas:29
+#: Vcl/Mxconsts.pas:29
 msgid "All Values"
 msgstr "Alle Werte"
 
 #. Programmer's name for it: sMovetoRow
-#: Decision Cube/Mxconsts.pas:30  Vcl/Mxconsts.pas:30
+#: Decision Cube/Mxconsts.pas:30
+#: Vcl/Mxconsts.pas:30
 msgid "Move to Row Area"
 msgstr "Zum Zeilenbereich"
 
 #. Programmer's name for it: sMovetoCol
-#: Decision Cube/Mxconsts.pas:31  Vcl/Mxconsts.pas:31
+#: Decision Cube/Mxconsts.pas:31
+#: Vcl/Mxconsts.pas:31
 msgid "Move to Column Area"
 msgstr "Zum Spaltenbereich"
 
 #. Programmer's name for it: sMakeDimOpen
-#: Decision Cube/Mxconsts.pas:32  Vcl/Mxconsts.pas:32
+#: Decision Cube/Mxconsts.pas:32
+#: Vcl/Mxconsts.pas:32
 msgid "Open Dimension"
 msgstr "Dimension öffnen"
 
 #. Programmer's name for it: sDrilled
-#: Decision Cube/Mxconsts.pas:33  Vcl/Mxconsts.pas:33
+#: Decision Cube/Mxconsts.pas:33
+#: Vcl/Mxconsts.pas:33
 msgid "Drilled In"
 msgstr "Untersucht"
 
 #. Programmer's name for it: sCouldNotOpen
-#: Decision Cube/Mxconsts.pas:34  Vcl/Mxconsts.pas:34
+#: Decision Cube/Mxconsts.pas:34
+#: Vcl/Mxconsts.pas:34
 msgid "The information requested could not be loaded. "
-msgstr "Die angeforderte Information konnte nicht geladen werden. "
+msgstr "Die angeforderte Information konnte nicht geladen werden."
 
 #. Programmer's name for it: sNoSumsAvailable
-#: Decision Cube/Mxconsts.pas:35  Vcl/Mxconsts.pas:35
+#: Decision Cube/Mxconsts.pas:35
+#: Vcl/Mxconsts.pas:35
 msgid "No active summaries have been defined. "
-msgstr "Es wurden keine aktiven Zusammenfassungen definiert. "
+msgstr "Es wurden keine aktiven Zusammenfassungen definiert."
 
 #. Programmer's name for it: sNoSumsCouldBeLoaded
-#: Decision Cube/Mxconsts.pas:36  Vcl/Mxconsts.pas:36
+#: Decision Cube/Mxconsts.pas:36
+#: Vcl/Mxconsts.pas:36
 msgid "Not enough room available to load a summary. "
-msgstr "Es steht nicht genügend Speicher zur Verfügung, um eine Zusammenfassung zu laden. "
+msgstr "Es steht nicht genügend Speicher zur Verfügung, um eine Zusammenfassung zu laden."
 
 #. Programmer's name for it: sNoDimsAvailable
-#: Decision Cube/Mxconsts.pas:37  Vcl/Mxconsts.pas:37
+#: Decision Cube/Mxconsts.pas:37
+#: Vcl/Mxconsts.pas:37
 msgid "No available dimensions have been defined. "
-msgstr "Es wurden keine verfügbaren Dimensionen definiert. "
+msgstr "Es wurden keine verfügbaren Dimensionen definiert."
 
 #. Programmer's name for it: sNoDimsCouldBeLoaded
-#: Decision Cube/Mxconsts.pas:38  Vcl/Mxconsts.pas:38
+#: Decision Cube/Mxconsts.pas:38
+#: Vcl/Mxconsts.pas:38
 msgid "Not enough space available to load a dimension. "
-msgstr "Es steht nicht genügend Speicher zur Verfügung, um eine Dimension zu laden. "
+msgstr "Es steht nicht genügend Speicher zur Verfügung, um eine Dimension zu laden."
 
 #. Programmer's name for it: sTemplatePrefix
-#: Decision Cube/Mxconsts.pas:40  Vcl/Mxconsts.pas:40
+#: Decision Cube/Mxconsts.pas:40
+#: Vcl/Mxconsts.pas:40
 msgid "Template: "
 msgstr "Vorlage: "
 
 #. Programmer's name for it: sGridCellError
-#: Decision Cube/Mxconsts.pas:42  Vcl/Mxconsts.pas:42
+#: Decision Cube/Mxconsts.pas:42
+#: Vcl/Mxconsts.pas:42
 msgid "[Error]"
 msgstr "[Fehler]"
 
 #. Programmer's name for it: sTotalCaption
-#: Decision Cube/Mxconsts.pas:43  Vcl/Mxconsts.pas:43
+#: Decision Cube/Mxconsts.pas:43
+#: Vcl/Mxconsts.pas:43
 msgid "Sum"
 msgstr "Summe"
 
 #. Programmer's name for it: sActivateLabel
-#: Decision Cube/Mxconsts.pas:44  Vcl/Mxconsts.pas:44
+#: Decision Cube/Mxconsts.pas:44
+#: Vcl/Mxconsts.pas:44
 msgid "Inactive Dimensions"
 msgstr "Nicht aktive Dimensionen"
 
 #. Programmer's name for it: sRowCaption
-#: Decision Cube/Mxconsts.pas:45  Vcl/Mxconsts.pas:45
+#: Decision Cube/Mxconsts.pas:45
+#: Vcl/Mxconsts.pas:45
 msgid "R"
 msgstr "R"
 
 #. Programmer's name for it: sColCaption
-#: Decision Cube/Mxconsts.pas:46  Vcl/Mxconsts.pas:46
+#: Decision Cube/Mxconsts.pas:46
+#: Vcl/Mxconsts.pas:46
 msgid "C"
 msgstr "K"
 
 #. Programmer's name for it: sCaptionMenu1
-#: Decision Cube/Mxconsts.pas:47  Vcl/Mxconsts.pas:47
+#: Decision Cube/Mxconsts.pas:47
+#: Vcl/Mxconsts.pas:47
 msgid "Display Data and Subtotals"
 msgstr "Daten und Zwischensummen anzeigen"
 
 #. Programmer's name for it: sCaptionMenu2
-#: Decision Cube/Mxconsts.pas:48  Vcl/Mxconsts.pas:48
+#: Decision Cube/Mxconsts.pas:48
+#: Vcl/Mxconsts.pas:48
 msgid "Display Data Only"
 msgstr "Nur Daten anzeigen"
 
 #. Programmer's name for it: sCaptionMenu3
-#: Decision Cube/Mxconsts.pas:49  Vcl/Mxconsts.pas:49
+#: Decision Cube/Mxconsts.pas:49
+#: Vcl/Mxconsts.pas:49
 msgid "Display Subtotals Only"
 msgstr "Nur Zwischensummen anzeigen"
 
 #. Programmer's name for it: sDrillIn
-#: Decision Cube/Mxconsts.pas:50  Vcl/Mxconsts.pas:50
+#: Decision Cube/Mxconsts.pas:50
+#: Vcl/Mxconsts.pas:50
 msgid "Drill in to this value"
 msgstr "Diesen Wert untersuchen"
 
 #. Programmer's name for it: sGridMenu1
-#: Decision Cube/Mxconsts.pas:51  Vcl/Mxconsts.pas:51
+#: Decision Cube/Mxconsts.pas:51
+#: Vcl/Mxconsts.pas:51
 msgid "Subtotals on/off"
 msgstr "Zwischensummen an/aus"
 
 #. Programmer's name for it: sGridMenu2
-#: Decision Cube/Mxconsts.pas:52  Vcl/Mxconsts.pas:52
+#: Decision Cube/Mxconsts.pas:52
+#: Vcl/Mxconsts.pas:52
 msgid "Decision Cube Editor.."
 msgstr "Editor für Entscheidungswürfel..."
 
 #. Programmer's name for it: sGridMenu3
-#: Decision Cube/Mxconsts.pas:53  Vcl/Mxconsts.pas:53
+#: Decision Cube/Mxconsts.pas:53
+#: Vcl/Mxconsts.pas:53
 msgid "Decision Query Editor.."
 msgstr "Editor für Entscheidungsabfrage..."
 
 #. Programmer's name for it: sGridMenu4
-#: Decision Cube/Mxconsts.pas:54  Vcl/Mxconsts.pas:54
+#: Decision Cube/Mxconsts.pas:54
+#: Vcl/Mxconsts.pas:54
 msgid "Show Detail Records.."
 msgstr "Detaildatensätze anzeigen..."
 
 #. Programmer's name for it: sUnsupportedDataType
-#: Decision Cube/Mxconsts.pas:57  Vcl/Mxconsts.pas:57
+#: Decision Cube/Mxconsts.pas:57
+#: Vcl/Mxconsts.pas:57
 msgid "Unsupported data type : %s"
 msgstr "Nicht unterstützter Datentyp: %s"
 
 #. Programmer's name for it: sRowOutOfRange
-#: Decision Cube/Mxconsts.pas:58  Vcl/Mxconsts.pas:58
+#: Decision Cube/Mxconsts.pas:58
+#: Vcl/Mxconsts.pas:58
 msgid "Row index out of range : %d"
-msgstr "Zeilenindex außerhalb des zulässigen Bereichs: %d"
+msgstr "Zeilenindex außerhalb des gültigen Bereichs: %d"
 
 #. Programmer's name for it: sColOutOfRange
-#: Decision Cube/Mxconsts.pas:59  Vcl/Mxconsts.pas:59
+#: Decision Cube/Mxconsts.pas:59
+#: Vcl/Mxconsts.pas:59
 msgid "Column index out of range : %d"
-msgstr "Spaltenindex außerhalb des zulässigen Bereichs: %d"
+msgstr "Spaltenindex außerhalb des gültigen Bereichs: %d"
 
 #. Programmer's name for it: sDupeItem
-#: Decision Cube/Mxconsts.pas:60  Vcl/Mxconsts.pas:60
+#: Decision Cube/Mxconsts.pas:60
+#: Vcl/Mxconsts.pas:60
 msgid "Duplicate item in array"
-msgstr "Im Array befinden sich doppelte Einträge"
+msgstr "Im Array befinden sich Doppeleinträge"
 
 #. Programmer's name for it: sArrayIndexOutOfRange
-#: Decision Cube/Mxconsts.pas:61  Vcl/Mxconsts.pas:61
+#: Decision Cube/Mxconsts.pas:61
+#: Vcl/Mxconsts.pas:61
 msgid "Array index out of range : %d"
-msgstr "Array-Index außerhalb des zulässigen Bereichs: %d"
+msgstr "Array-Index außerhalb des gültigen Bereichs: %d"
 
 #. Programmer's name for it: sLowCapacityError
-#: Decision Cube/Mxconsts.pas:62  Vcl/Mxconsts.pas:62
+#: Decision Cube/Mxconsts.pas:62
+#: Vcl/Mxconsts.pas:62
 msgid "The DecisionCube Capacity is low. Please deactivate dimensions or change the data set."
 msgstr "Die Kapazität des Entscheidungswürfels ist erschöpft. Deaktivieren Sie einige Dimensionen oder ändern Sie die Datenmenge."
 
 #. Programmer's name for it: sQryNotInitialized
-#: Decision Cube/Mxconsts.pas:63  Vcl/Mxconsts.pas:63
+#: Decision Cube/Mxconsts.pas:63
+#: Vcl/Mxconsts.pas:63
 msgid "Query could not be run. Check that the query, SQL text, and Database are correct."
 msgstr "Die Abfrage konnte nicht gestartet werden. Überprüfen Sie, ob Abfrage, SQL-Text und Datenbank korrekt sind."
 
 #. Programmer's name for it: sSortedListError
-#: Decision Cube/Mxconsts.pas:64  Vcl/Mxconsts.pas:64
+#: Decision Cube/Mxconsts.pas:64
+#: Vcl/Mxconsts.pas:64
 msgid "Operation not allowed on sorted string list."
-msgstr "Operation für sortierte String-Liste nicht zulässig."
+msgstr "Diese Operation ist bei einer sortierten String-Liste nicht erlaubt."
 
 #. Programmer's name for it: sDuplicateString
-#: Decision Cube/Mxconsts.pas:65  Vcl/Mxconsts.pas:65
+#: Decision Cube/Mxconsts.pas:65
+#: Vcl/Mxconsts.pas:65
 msgid "String list does not allow duplicates."
 msgstr "Die String-Liste lässt keine Doppeleinträge zu."
 
 #. Programmer's name for it: sMaxAllowedSums
-#: Decision Cube/Mxconsts.pas:66  Vcl/Mxconsts.pas:66
+#: Decision Cube/Mxconsts.pas:66
+#: Vcl/Mxconsts.pas:66
 msgid "The maximum allowed summaries of %d has been exceeded."
 msgstr "Das erlaubte Maximum an Zusammenfassungen (%d) wurde überschritten."
 
 #. Programmer's name for it: sGeneralArrayError
-#: Decision Cube/Mxconsts.pas:67  Vcl/Mxconsts.pas:67
+#: Decision Cube/Mxconsts.pas:67
+#: Vcl/Mxconsts.pas:67
 msgid "General array error."
 msgstr "Allgemeiner Fehler im Array."
 
 #. Programmer's name for it: sDimIndexError
-#: Decision Cube/Mxconsts.pas:70  Vcl/Mxconsts.pas:70
+#: Decision Cube/Mxconsts.pas:70
+#: Vcl/Mxconsts.pas:70
 msgid "Illegal Dimension Index"
 msgstr "Ungültiger Dimensionsindex"
 
 #. Programmer's name for it: sIllegalValueForBin
-#: Decision Cube/Mxconsts.pas:73  Vcl/Mxconsts.pas:73
+#: Decision Cube/Mxconsts.pas:73
+#: Vcl/Mxconsts.pas:73
 msgid "Initial Value is not legal for this type of Grouping"
 msgstr "Der Anfangswert ist für diesen Gruppierungstyp nicht erlaubt"
 
 #. Programmer's name for it: sIllegalDimMap
-#: Decision Cube/Mxconsts.pas:74  Vcl/Mxconsts.pas:74
+#: Decision Cube/Mxconsts.pas:74
+#: Vcl/Mxconsts.pas:74
 msgid "Dimension Map is not the correct size"
 msgstr "Die Größe der Dimensionszuweisung ist nicht korrekt"
 
 #. Programmer's name for it: sDimMapActiveError
-#: Decision Cube/Mxconsts.pas:75  Vcl/Mxconsts.pas:75
+#: Decision Cube/Mxconsts.pas:75
+#: Vcl/Mxconsts.pas:75
 msgid "Cannot perform this action on an active Dimension Map"
 msgstr "Diese Aktion kann nicht auf eine aktive Dimensionszuweisung angewendet werden"
 
 #. Programmer's name for it: sNotAvailable
-#: Decision Cube/Mxconsts.pas:76  Vcl/Mxconsts.pas:76
+#: Decision Cube/Mxconsts.pas:76
+#: Vcl/Mxconsts.pas:76
 msgid "Not Available"
 msgstr "Nicht verfügbar"
 
 #. Programmer's name for it: sGetValueCounts
-#: Decision Cube/Mxconsts.pas:77  Vcl/Mxconsts.pas:77
+#: Decision Cube/Mxconsts.pas:77
+#: Vcl/Mxconsts.pas:77
 msgid "Information required to do Maximum Cell limit is not current.  Do you want to fetch it now?"
 msgstr "Die Information für das Berechnen des Zellmaximums ist nicht mehr aktuell. Soll diese Information aktualisiert werden?"
 
 #. Programmer's name for it: sDateBinningNotAllowed
-#: Decision Cube/Mxconsts.pas:78  Vcl/Mxconsts.pas:78
+#: Decision Cube/Mxconsts.pas:78
+#: Vcl/Mxconsts.pas:78
 msgid "Date grouping is not allowed for fields of this type"
 msgstr "Die Gruppierung nach Datum ist für diesen Feldtyp nicht erlaubt"
 
 #. Programmer's name for it: sEmptyDataSet
-#: Decision Cube/Mxconsts.pas:79  Vcl/Mxconsts.pas:79
+#: Decision Cube/Mxconsts.pas:79
+#: Vcl/Mxconsts.pas:79
 msgid "Cannot build the Decision Cube with an empty data set"
 msgstr "Der Entscheidungswürfel kann nicht mit einer leeren Datenmenge erstellt werden"
 
 #. Programmer's name for it: sNoDataSet
-#: Decision Cube/Mxconsts.pas:82  Vcl/Mxconsts.pas:82
+#: Decision Cube/Mxconsts.pas:82
+#: Vcl/Mxconsts.pas:82
 msgid "Data set property is not assigned"
 msgstr "Der Eigenschaft Data Set wurde kein Wert zugewiesen"
 
 #. Programmer's name for it: sNoAggs
-#: Decision Cube/Mxconsts.pas:83  Vcl/Mxconsts.pas:83
+#: Decision Cube/Mxconsts.pas:83
+#: Vcl/Mxconsts.pas:83
 msgid "No summaries are defined. "
-msgstr "Es sind keine Zusammenfassungen definiert. "
+msgstr "Es sind keine Zusammenfassungen definiert."
 
 #. Programmer's name for it: sNoDims
-#: Decision Cube/Mxconsts.pas:84  Vcl/Mxconsts.pas:84
+#: Decision Cube/Mxconsts.pas:84
+#: Vcl/Mxconsts.pas:84
 msgid "No dimension fields are defined. "
-msgstr "Es sind keine Dimensionsfelder definiert. "
+msgstr "Es sind keine Dimensionsfelder definiert."
 
 #. Programmer's name for it: sUnknownDims
-#: Decision Cube/Mxconsts.pas:85  Vcl/Mxconsts.pas:85
+#: Decision Cube/Mxconsts.pas:85
+#: Vcl/Mxconsts.pas:85
 msgid "The dimension types for this dataset cannot be determined automatically.  You must map the fields to dimensions or summaries with the Decision Cube Editor"
 msgstr "Die Dimensionstypen für diese Datenmenge können nicht automatisch festgelegt werden. Sie müssen diese Felder mit dem Editor für Entscheidungswürfel einer Dimension oder Zusammenfassung zuweisen."
 
 #. Programmer's name for it: sGroupsMissing
-#: Decision Cube/Mxconsts.pas:86  Vcl/Mxconsts.pas:86
+#: Decision Cube/Mxconsts.pas:86
+#: Vcl/Mxconsts.pas:86
 msgid "All dimension fields must be grouped. "
-msgstr "Alle Dimensionsfelder müssen gruppiert werden. "
+msgstr "Alle Dimensionsfelder müssen gruppiert werden."
 
 #. Programmer's name for it: sDecisionQueryError
-#. Programmer's name for it: sQueryError
-#. Programmer's name for it: sDecisionQueryError
-#. Programmer's name for it: sQueryError
-#: Decision Cube/Mxconsts.pas:87  Cube/Mxconsts.pas:89 Vcl/Mxconsts.pas:87
+#: Decision Cube/Mxconsts.pas:87
+#: Cube/Mxconsts.pas:89
+#: Vcl/Mxconsts.pas:87
 #: Vcl/Mxconsts.pas:89
 msgid "The query may be incorrectly defined, or you may need to map its fields to active dimensions or summaries with the Decision Cube Editor"
 msgstr "Die Abfrage wurde inkorrekt definiert oder die Felder der Abfrage müssen mit dem Editor für Entscheidungswürfel aktiven Dimensionen oder Zusammenfassungen zugewiesen werden"
 
 #. Programmer's name for it: sDataSetError
-#: Decision Cube/Mxconsts.pas:88  Vcl/Mxconsts.pas:88
+#: Decision Cube/Mxconsts.pas:88
+#: Vcl/Mxconsts.pas:88
 msgid "The dataset may be incorrectly defined, or you may need to map its fields to active dimensions or summaries with the Decision Cube Editor"
 msgstr "Die Datenmenge wurde inkorrekt definiert oder die Felder müssen mit dem Editor für Entscheidungswürfel aktiven Dimensionen oder Zusammenfassungen zugewiesen werden"
 
-# Label: ignore
 #. Programmer's name for it: sCountStar
-#: Decision Cube/Mxconsts.pas:90  Vcl/Mxconsts.pas:90
+#: Decision Cube/Mxconsts.pas:90
+#: Vcl/Mxconsts.pas:90
 msgid "COUNTALL"
-msgstr ""
+msgstr "COUNTALL"
 
 #. Programmer's name for it: sAddAvgWarning
-#: Decision Cube/Mxconsts.pas:91  Vcl/Mxconsts.pas:91
+#: Decision Cube/Mxconsts.pas:91
+#: Vcl/Mxconsts.pas:91
 msgid "Average is calculated using sum and count summaries for each field. The necessary summaries have been added."
 msgstr "Der Mittelwert wird durch Ermittlung der Summe und der Anzahl für jedes Feld ermittelt. Die dazu notwendigen Zusammenfassungen wurden hinzugefügt."
 
 #. Programmer's name for it: sAddAvgStarWarning
-#: Decision Cube/Mxconsts.pas:92  Vcl/Mxconsts.pas:92
+#: Decision Cube/Mxconsts.pas:92
+#: Vcl/Mxconsts.pas:92
 msgid "Average is calculated using a field sum and count(*).  The necessary summaries have been added."
 msgstr "Der Mittelwert wird durch Ermittlung der Feldsumme und count(*) ermittelt. Die dazu notwendigen Zusammenfassungen wurden hinzugefügt."
 
 #. Programmer's name for it: sQueryLegal
-#: Decision Cube/Mxconsts.pas:95  Vcl/Mxconsts.pas:95
+#: Decision Cube/Mxconsts.pas:95
+#: Vcl/Mxconsts.pas:95
 msgid "Query is legal."
 msgstr "Die Abfrage ist gültig."
 
 #. Programmer's name for it: sAddFieldExists
-#: Decision Cube/Mxconsts.pas:96  Vcl/Mxconsts.pas:96
+#: Decision Cube/Mxconsts.pas:96
+#: Vcl/Mxconsts.pas:96
 msgid " is already in the query"
 msgstr " ist bereits in der Abfrage"
 
 #. Programmer's name for it: sAggTypeNotAllowed
-#: Decision Cube/Mxconsts.pas:97  Vcl/Mxconsts.pas:97
+#: Decision Cube/Mxconsts.pas:97
+#: Vcl/Mxconsts.pas:97
 msgid " is not an allowed summary type"
 msgstr " ist kein erlaubter Zusammenfassungstyp"
 
 #. Programmer's name for it: sDimTypeNotAllowed
-#: Decision Cube/Mxconsts.pas:98  Vcl/Mxconsts.pas:98
+#: Decision Cube/Mxconsts.pas:98
+#: Vcl/Mxconsts.pas:98
 msgid " is not an allowed dimension type"
 msgstr " ist kein erlaubter Dimensionstyp"
 
 #. Programmer's name for it: sAverageRequires
-#: Decision Cube/Mxconsts.pas:99  Vcl/Mxconsts.pas:99
+#: Decision Cube/Mxconsts.pas:99
+#: Vcl/Mxconsts.pas:99
 msgid "Average summaries use Sum and Count"
 msgstr "Mittelwert verwendet Summe und Anzahl"
 
 #. Programmer's name for it: sWantToExit
-#: Decision Cube/Mxconsts.pas:100  Vcl/Mxconsts.pas:100
+#: Decision Cube/Mxconsts.pas:100
+#: Vcl/Mxconsts.pas:100
 msgid "Do you still want to Exit?"
 msgstr "Wollen Sie wirklich beenden?"
 
 #. Programmer's name for it: sQueryIllegal
-#: Decision Cube/Mxconsts.pas:101  Vcl/Mxconsts.pas:101
+#: Decision Cube/Mxconsts.pas:101
+#: Vcl/Mxconsts.pas:101
 msgid "The query you have created is not legal."
 msgstr "Die von Ihnen erstellte Abfrage ist ungültig."
 
 #. Programmer's name for it: sQueryEditIllegal
-#: Decision Cube/Mxconsts.pas:102  Vcl/Mxconsts.pas:102
+#: Decision Cube/Mxconsts.pas:102
+#: Vcl/Mxconsts.pas:102
 msgid "The query you have entered is not legal.  Please correct it before continuing."
 msgstr "Die eingegebene Abfrage ist ungültig. Sie muß geändert werden, bevor Sie weitermachen."
 
 #. Programmer's name for it: sRemoveFieldError
-#: Decision Cube/Mxconsts.pas:103  Vcl/Mxconsts.pas:103
+#: Decision Cube/Mxconsts.pas:103
+#: Vcl/Mxconsts.pas:103
 msgid "Could not remove the field"
 msgstr "Das Feld konnte nicht entfernt werden"
 
 #. Programmer's name for it: sAllFields
-#: Decision Cube/Mxconsts.pas:104  Vcl/Mxconsts.pas:104
+#: Decision Cube/Mxconsts.pas:104
+#: Vcl/Mxconsts.pas:104
 msgid "All Fields"
 msgstr "&Alle Felder"
 
 #. Programmer's name for it: sQueryFields
-#: Decision Cube/Mxconsts.pas:105  Vcl/Mxconsts.pas:105
+#: Decision Cube/Mxconsts.pas:105
+#: Vcl/Mxconsts.pas:105
 msgid "Query Fields"
 msgstr "Felder abfragen"
 
 #. Programmer's name for it: sEditDone
-#: Decision Cube/Mxconsts.pas:106  Vcl/Mxconsts.pas:106
+#: Decision Cube/Mxconsts.pas:106
+#: Vcl/Mxconsts.pas:106
 msgid "&Edit Done"
 msgstr "Bearbeitung &abschließen"
 
 #. Programmer's name for it: sEditQuery
-#. DSSQueryEditor..Pager..Query..EditQry..Caption
-#: Decision Cube/Mxconsts.pas:107  Vcl/Mxconsts.pas:107
+#: Decision Cube/Mxconsts.pas:107
+#: Vcl/Mxconsts.pas:107
 #: Cube/MXDSSQRY.DFM:299
 msgid "&Edit Query"
 msgstr "Ab&frage bearbeiten"
 
 #. Programmer's name for it: sQParseRemovedField
-#: Decision Cube/Mxconsts.pas:110  Vcl/Mxconsts.pas:110
+#: Decision Cube/Mxconsts.pas:110
+#: Vcl/Mxconsts.pas:110
 msgid "One or more fields of a type which cannot be tabulated were removed from the query."
 msgstr "Ein oder mehrere Felder wurden aus der Abfrage entfernt, da sie nicht tabularisiert werden konnten."
 
 #. Programmer's name for it: sCubeLimitsExceeded
-#: Decision Cube/Mxconsts.pas:113  Vcl/Mxconsts.pas:113
+#: Decision Cube/Mxconsts.pas:113
+#: Vcl/Mxconsts.pas:113
 msgid "Decision Cube size excedes limits"
 msgstr "Der Entscheidungswürfel überschreitet seine Kapazität"
 
 #. Programmer's name for it: sMaxAllowedDims
-#: Decision Cube/Mxconsts.pas:114  Vcl/Mxconsts.pas:114
+#: Decision Cube/Mxconsts.pas:114
+#: Vcl/Mxconsts.pas:114
 msgid "The maximum allowed dimensions of %d has been exceeded."
 msgstr "Das erlaubte Maximum an Dimensionen (%d) wurde überschritten."
 
 #. Programmer's name for it: sMaxAllowedCells
-#: Decision Cube/Mxconsts.pas:115  Vcl/Mxconsts.pas:115
+#: Decision Cube/Mxconsts.pas:115
+#: Vcl/Mxconsts.pas:115
 msgid "Total cell count of %d exceeds the maximum of %d."
 msgstr "Die Gesamtanzahl an Zellen von %d überschreitet das Maximum von %d."
 
 #. Programmer's name for it: sUnsupportedFieldType
-#: Decision Cube/Mxconsts.pas:116  Vcl/Mxconsts.pas:116
+#: Decision Cube/Mxconsts.pas:116
+#: Vcl/Mxconsts.pas:116
 msgid "Field %s has an unsupported data type: %s"
 msgstr "Feld %s ist vom nicht unterstützten Datentyp %s"
 
 #. Programmer's name for it: sFetchValues
-#: Decision Cube/Mxconsts.pas:117  Vcl/Mxconsts.pas:117
+#: Decision Cube/Mxconsts.pas:117
+#: Vcl/Mxconsts.pas:117
 msgid "Scanning data set values..."
 msgstr "Datenwerte analysieren..."
 
 #. Programmer's name for it: sUserCanceled
-#: Decision Cube/Mxconsts.pas:118  Vcl/Mxconsts.pas:118
+#: Decision Cube/Mxconsts.pas:118
+#: Vcl/Mxconsts.pas:118
 msgid "User canceled DecisionCube population."
 msgstr "Das Füllen des Entscheidungswürfels wurde durch den Anwender unterbrochen."
 
 #. Programmer's name for it: sBinningValues
-#: Decision Cube/Mxconsts.pas:119  Vcl/Mxconsts.pas:119
+#: Decision Cube/Mxconsts.pas:119
+#: Vcl/Mxconsts.pas:119
 msgid "Grouping values ..."
 msgstr "Werte gruppieren..."
 
 #. Programmer's name for it: sCreatingIndexes
-#: Decision Cube/Mxconsts.pas:120  Vcl/Mxconsts.pas:120
+#: Decision Cube/Mxconsts.pas:120
+#: Vcl/Mxconsts.pas:120
 msgid "Creating Cube index for %s ..."
 msgstr "Erstellen des Würfelindex für %s..."
 
 #. Programmer's name for it: sCreateDerivedSummaryError
-#: Decision Cube/Mxconsts.pas:121  Vcl/Mxconsts.pas:121
+#: Decision Cube/Mxconsts.pas:121
+#: Vcl/Mxconsts.pas:121
 msgid "Unable to create derived summary."
 msgstr "Abgeleitete Zusammenfassung konnte nicht erzeugt werden."
 
 #. Programmer's name for it: sTrue
-#. Programmer's name for it: STextTrue
-#. Programmer's name for it: sTrue
-#: Decision Cube/Mxconsts.pas:122  Vcl/DBConsts.pas:80 Vcl/Mxconsts.pas:122
+#: Decision Cube/Mxconsts.pas:122
+#: Vcl/DBConsts.pas:80
+#: Vcl/Mxconsts.pas:122
 msgid "True"
 msgstr "Wahr"
 
 #. Programmer's name for it: sFalse
-#. Programmer's name for it: STextFalse
-#. Programmer's name for it: sFalse
-#: Decision Cube/Mxconsts.pas:123  Vcl/DBConsts.pas:79 Vcl/Mxconsts.pas:123
+#: Decision Cube/Mxconsts.pas:123
+#: Vcl/DBConsts.pas:79
+#: Vcl/Mxconsts.pas:123
 msgid "False"
 msgstr "Falsch"
 
 #. Programmer's name for it: sBinTypeMismatch
-#: Decision Cube/Mxconsts.pas:124  Vcl/Mxconsts.pas:124
+#: Decision Cube/Mxconsts.pas:124
+#: Vcl/Mxconsts.pas:124
 msgid "The bin type does not match the fieldtype."
 msgstr "Der Gruppierungstyp entspricht nicht dem Feldtyp."
 
 #. Programmer's name for it: sFatalCacheError
-#: Decision Cube/Mxconsts.pas:125  Vcl/Mxconsts.pas:125
+#: Decision Cube/Mxconsts.pas:125
+#: Vcl/Mxconsts.pas:125
 msgid "Fatal error in cache: code: %d"
 msgstr "Schwerer Fehler im Cache: Code: %d"
 
 #. Programmer's name for it: sStringTypeNoSupported
-#: Decision Cube/Mxconsts.pas:126  Vcl/Mxconsts.pas:126
+#: Decision Cube/Mxconsts.pas:126
+#: Vcl/Mxconsts.pas:126
 msgid "String Data type not supported for summaries"
 msgstr "Datentyp String wird von Zusammenfassungen nicht unterstützt"
 
 #. Programmer's name for it: sDataSetTooLarge
-#: Decision Cube/Mxconsts.pas:127  Vcl/Mxconsts.pas:127
+#: Decision Cube/Mxconsts.pas:127
+#: Vcl/Mxconsts.pas:127
 msgid "Dataset is too large"
 msgstr "Datenmenge ist zu groß"
 
 #. Programmer's name for it: sBuildingDataStore
-#: Decision Cube/Mxconsts.pas:128  Vcl/Mxconsts.pas:128
+#: Decision Cube/Mxconsts.pas:128
+#: Vcl/Mxconsts.pas:128
 msgid "Building data store..."
 msgstr "Datenspeicher aufbauen..."
 
 #. Programmer's name for it: sSumLabel
-#: Decision Cube/Mxconsts.pas:131  Vcl/Mxconsts.pas:131
+#: Decision Cube/Mxconsts.pas:131
+#: Vcl/Mxconsts.pas:131
 msgid "Sum of %s"
 msgstr "Summe von %s"
 
 #. Programmer's name for it: sCountLabel
-#: Decision Cube/Mxconsts.pas:132  Vcl/Mxconsts.pas:132
+#: Decision Cube/Mxconsts.pas:132
+#: Vcl/Mxconsts.pas:132
 msgid "Count of %s"
 msgstr "Anzahl von %s"
 
 #. Programmer's name for it: sMaxLabel
-#: Decision Cube/Mxconsts.pas:133  Vcl/Mxconsts.pas:133
+#: Decision Cube/Mxconsts.pas:133
+#: Vcl/Mxconsts.pas:133
 msgid "Maximum of %s"
 msgstr "Maximum von %s"
 
 #. Programmer's name for it: sMinLabel
-#: Decision Cube/Mxconsts.pas:134  Vcl/Mxconsts.pas:134
+#: Decision Cube/Mxconsts.pas:134
+#: Vcl/Mxconsts.pas:134
 msgid "Minimum of %s"
 msgstr "Minimum von %s"
 
 #. Programmer's name for it: sAverageLabel
-#: Decision Cube/Mxconsts.pas:135  Vcl/Mxconsts.pas:135
+#: Decision Cube/Mxconsts.pas:135
+#: Vcl/Mxconsts.pas:135
 msgid "Average of %s"
 msgstr "Mittelwert von %s"
 
 #. Programmer's name for it: sVarLabel
-#: Decision Cube/Mxconsts.pas:136  Vcl/Mxconsts.pas:136
+#: Decision Cube/Mxconsts.pas:136
+#: Vcl/Mxconsts.pas:136
 msgid "Variance of %s"
 msgstr "Varianz von %s"
 
 #. Programmer's name for it: sSDLabel
-#: Decision Cube/Mxconsts.pas:137  Vcl/Mxconsts.pas:137
+#: Decision Cube/Mxconsts.pas:137
+#: Vcl/Mxconsts.pas:137
 msgid "Standard Deviation of %s"
 msgstr "Standardabweichung von %s"
 
 #. Programmer's name for it: sAggLabel
-#: Decision Cube/Mxconsts.pas:138  Vcl/Mxconsts.pas:138
+#: Decision Cube/Mxconsts.pas:138
+#: Vcl/Mxconsts.pas:138
 msgid "Summary of %s"
 msgstr "Zusammenfassung von: %s"
 
 #. Programmer's name for it: sUnsupportedVarType
-#: Decision Cube/Mxconsts.pas:139  Vcl/Mxconsts.pas:139
+#: Decision Cube/Mxconsts.pas:139
+#: Vcl/Mxconsts.pas:139
 msgid "Unsupported Data Type %d"
 msgstr "Nicht unterstützter Datentyp: %d"
 
 #. Programmer's name for it: sOtherValues
-#: Decision Cube/Mxconsts.pas:140  Vcl/Mxconsts.pas:140
+#: Decision Cube/Mxconsts.pas:140
+#: Vcl/Mxconsts.pas:140
 msgid "Other Values"
 msgstr "Andere Werte"
 
 #. Programmer's name for it: sSelectFromError
-#: Decision Cube/Mxconsts.pas:142  Vcl/Mxconsts.pas:142
+#: Decision Cube/Mxconsts.pas:142
+#: Vcl/Mxconsts.pas:142
 msgid "Query lacks a Select/From clause."
 msgstr "Der Abfrage fehlt eine Select/From-Klausel."
 
 #. Programmer's name for it: sArgumentExpected
-#: Decision Cube/Mxconsts.pas:143  Vcl/Mxconsts.pas:143
+#: Decision Cube/Mxconsts.pas:143
+#: Vcl/Mxconsts.pas:143
 msgid "No argument provided for an operator or summary"
 msgstr "Für einen Operator oder eine Zusammenfassung fehlt ein Argument"
 
 #. Programmer's name for it: sGroupOnExpressionError
-#: Decision Cube/Mxconsts.pas:144  Vcl/Mxconsts.pas:144
+#: Decision Cube/Mxconsts.pas:144
+#: Vcl/Mxconsts.pas:144
 msgid "An expression cannot be used for a grouping field"
 msgstr "Ein Ausdruck kann nicht zum Gruppieren eines Feldes verwendet werden"
 
 #. Programmer's name for it: SOutofBounds
-#: Decision Cube/Mxconsts.pas:146  Vcl/Mxconsts.pas:146
+#: Decision Cube/Mxconsts.pas:146
+#: Vcl/Mxconsts.pas:146
 msgid "Out of Bounds"
-msgstr "Außerhalb des zulässigen Bereichs"
+msgstr "Außerhalb des Bereichs"
 
-# Label: ignore
 #. Programmer's name for it: sIDAPILangID
-#. Programmer's name for it: SIDAPILangID
-#. Programmer's name for it: sIDAPILangID
-#: Decision Cube/Mxconsts.pas:147  Vcl/bdeconst.pas:47 Vcl/Mxconsts.pas:147
+#: Decision Cube/Mxconsts.pas:147
+#: Vcl/bdeconst.pas:47
+#: Vcl/Mxconsts.pas:147
 msgid "0009"
-msgstr ""
+msgstr "0009"
 
 #. Programmer's name for it: sComponentTabName
 #: Decision Cube/MXDCONST.PAS:14
@@ -2132,7 +2439,7 @@ msgstr "Verbindung besteht bereits."
 #. Programmer's name for it: RSByteIndexOutOfBounds
 #: Indy/IdResourceStrings.pas:8
 msgid "Byte index out of range."
-msgstr "Byte-Index außerhalb des zulässigen Bereichs."
+msgstr "Byte-Index außerhalb des gültigen Bereichs."
 
 #. Programmer's name for it: RSCannotAllocateSocket
 #: Indy/IdResourceStrings.pas:9
@@ -2192,7 +2499,7 @@ msgstr "Raw Receive-Fehler = 0."
 #. Programmer's name for it: RSICMPReceiveError0
 #: Indy/IdResourceStrings.pas:21
 msgid "ICMP Receive Error = 0."
-msgstr "ICMP Empfangsfehler = 0."
+msgstr "ICMP Receive Error = 0."
 
 #. Programmer's name for it: RSWinsockInitializationError
 #: Indy/IdResourceStrings.pas:22
@@ -2264,8 +2571,8 @@ msgid "Connecting to %s."
 msgstr "Verbinden mit %s."
 
 #. Programmer's name for it: RSStatusConnected
-#. Programmer's name for it: RSLogConnected
-#: Indy/IdResourceStrings.pas:39  Indy/IdResourceStrings.pas:327
+#: Indy/IdResourceStrings.pas:39
+#: Indy/IdResourceStrings.pas:327
 msgid "Connected."
 msgstr "Verbunden."
 
@@ -2279,11 +2586,10 @@ msgstr "Verbindung mit %s wird getrennt."
 msgid "Not connected."
 msgstr "Nicht verbunden."
 
-# Label: ignore
 #. Programmer's name for it: RSStatusText
 #: Indy/IdResourceStrings.pas:42
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. IdRegister
 #: Indy/IdResourceStrings.pas:44
@@ -2541,8 +2847,8 @@ msgid "Cannot change session state when the server is active."
 msgstr "Sitzungsstatus kann nicht geändert werden, während der Server aktiv ist.."
 
 #. FTP
-#. Programmer's name for it: SUnknown
-#: Indy/IdResourceStrings.pas:104  Internet/XMLDoc.pas:512
+#: Indy/IdResourceStrings.pas:104
+#: Internet/XMLDoc.pas:512
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -2583,7 +2889,7 @@ msgstr "Zugriff verweigert."
 #. Programmer's name for it: RSStackEFAULT
 #: Indy/IdResourceStrings.pas:113
 msgid "Bad address."
-msgstr "Fehlerhafte Adresse."
+msgstr "Falsche Adresse."
 
 #. Programmer's name for it: RSStackEINVAL
 #: Indy/IdResourceStrings.pas:114
@@ -2726,8 +3032,8 @@ msgid "Connection timed out."
 msgstr "Zeitüberschreitung bei Verbindung."
 
 #. Programmer's name for it: RSStackECONNREFUSED
-#. Programmer's name for it: RSSocksServerConnectionRefusedError
-#: Indy/IdResourceStrings.pas:142  Indy/IdResourceStrings.pas:284
+#: Indy/IdResourceStrings.pas:142
+#: Indy/IdResourceStrings.pas:284
 msgid "Connection refused."
 msgstr "Verbindung abgelehnt."
 
@@ -2789,7 +3095,7 @@ msgstr "Das Netzwerk-Subsystem ist nicht verfügbar."
 #. Programmer's name for it: RSStackVERNOTSUPPORTED
 #: Indy/IdResourceStrings.pas:154
 msgid "WINSOCK DLL Version out of range."
-msgstr "Version der WINSOCK-DLL ist außerhalb des zulässigen Bereichs."
+msgstr "Version der WINSOCK-DLL ist außerhalb des gültigen Bereichs."
 
 #. Programmer's name for it: RSStackNOTINITIALISED
 #: Indy/IdResourceStrings.pas:155
@@ -2977,8 +3283,8 @@ msgid "Error: no queues defined"
 msgstr "Fehler: Keine Warteschlange definiert"
 
 #. Programmer's name for it: RSTimeOut
-#. SocketForm..Pages..PropPage..TimeoutGroup..Caption
-#: Indy/IdResourceStrings.pas:204  Vcl/ScktMain.dfm:180
+#: Indy/IdResourceStrings.pas:204
+#: Vcl/ScktMain.dfm:180
 msgid "Timeout"
 msgstr "Zeitüberschreitung"
 
@@ -3112,11 +3418,10 @@ msgstr "Version %s"
 msgid "For the latest updates and information please visit:"
 msgstr "Die neuesten Aktualisierungen und Informationen finden Sie unter:"
 
-# Label: ignore
 #. Programmer's name for it: RSAAboutBoxIndyWebsite
 #: Indy/IdResourceStrings.pas:251
 msgid "http://www.nevrona.com/indy/"
-msgstr ""
+msgstr "http://www.nevrona.com/indy/"
 
 #. Programmer's name for it: RSAAboutCreditsCoordinator
 #: Indy/IdResourceStrings.pas:252
@@ -3326,17 +3631,17 @@ msgstr "Editor für Textkörper"
 #. Programmer's name for it: RSICMPNotEnoughtBytes
 #: Indy/IdResourceStrings.pas:307
 msgid "Not enough bytes received"
-msgstr "Nicht genügend Bytes erhalten"
+msgstr "Es wurden nicht genügend Bytes empfangen"
 
 #. Programmer's name for it: RSICMPNonEchoResponse
 #: Indy/IdResourceStrings.pas:308
 msgid "Non-echo type response received"
-msgstr "Nicht-Echo Antwort erhalten"
+msgstr "Nicht-Echo-Antwort empfangen"
 
 #. Programmer's name for it: RSICMPWrongDestination
 #: Indy/IdResourceStrings.pas:309
 msgid "Received someone else's packet"
-msgstr "Paket für anderen Empfänger erhalten"
+msgstr "Es ist ein Paket für einen anderen Empfänger angekommen"
 
 #. Programmer's name for it: RSNNTPServerNotRecognized
 #: Indy/IdResourceStrings.pas:311
@@ -3391,7 +3696,7 @@ msgstr "Winsock-Stack"
 #. Programmer's name for it: RSLogRecV
 #: Indy/IdResourceStrings.pas:328
 msgid "Recv: "
-msgstr "Empf: "
+msgstr "Recv: "
 
 #. Programmer's name for it: RSLogSent
 #: Indy/IdResourceStrings.pas:329
@@ -3403,11 +3708,10 @@ msgstr "Gesendet: "
 msgid "Disconnected."
 msgstr "Verbindung aufgehoben."
 
-# Label: ignore
 #. Programmer's name for it: RSLogEOL
 #: Indy/IdResourceStrings.pas:331
 msgid "<EOL>"
-msgstr ""
+msgstr "<EOL>"
 
 #. Programmer's name for it: sActionDoesNotProvideResponse
 #: Internet/AdaptReq.pas:459
@@ -3458,7 +3762,7 @@ msgid ""
 "Message: %s<br></html>\n"
 msgstr ""
 "<html><title>Interner Server-Fehler 500</title>\n"
-"<h1>Interner Server-Fehler 500</h1><hr>\n"
+"<h1>Interner Server-Fehlerr 500</h1><hr>\n"
 "Exception: %s<br>\n"
 "Meldung: %s<br></html>\n"
 
@@ -3472,7 +3776,7 @@ msgid ""
 msgstr ""
 "<html><title>Dokument wurde verschoben 302</title>\n"
 "<body><h1>Objekt wurde verschoben</h1><hr>\n"
-"Das Objekt k&ouml;nnte <a HREF=\"%s\">hier</a> gefunden werden.<br>\n"
+"Das Objekt könnte <a HREF=\"%s\">hier</a> gefunden werden.<br>\n"
 "<br></body></html>\n"
 
 #. Programmer's name for it: SDescription
@@ -3641,21 +3945,22 @@ msgid "Could not create XMLDocument"
 msgstr "XML-Dokument konnte nicht erzeugt werden"
 
 #. Add Adapter Fields Editor
-#. Programmer's name for it: sAddFieldItems
-#: Internet/SiteConst.pas:46  Internet/SiteConst.pas:59
+#: Internet/SiteConst.pas:46
+#: Internet/SiteConst.pas:59
 msgid "Add Fields..."
 msgstr "Felder hinzufügen..."
 
 #. Programmer's name for it: sAddAllAdapterData
-#. Programmer's name for it: sAddAllFieldItems
-#: Internet/SiteConst.pas:47  Internet/SiteConst.pas:60
+#: Internet/SiteConst.pas:47
+#: Internet/SiteConst.pas:60
 msgid "Add All Fields"
 msgstr "Alle Felder hinzufügen"
 
 #. Programmer's name for it: sAddAdapterDataDlgCaption
-#. Programmer's name for it: sAddFieldItemsDlgCaption
 #. AddFields..Caption
-#: Internet/SiteConst.pas:48  Internet/SiteConst.pas:61 Property
+#: Internet/SiteConst.pas:48
+#: Internet/SiteConst.pas:61
+#: Property
 #: Editors/DSAdd.dfm:6
 msgid "Add Fields"
 msgstr "Felder hinzufügen"
@@ -3676,8 +3981,8 @@ msgid "Add Actions"
 msgstr "Aktionen hinzufügen"
 
 #. Do not location
-#. Programmer's name for it: sActionCategoryName
-#: Internet/SiteConst.pas:52  ToolsAPI/DesignIntf.pas:428
+#: Internet/SiteConst.pas:52
+#: ToolsAPI/DesignIntf.pas:428
 msgid "Action"
 msgstr "Aktion"
 
@@ -3802,8 +4107,9 @@ msgid "UserName"
 msgstr "Benutzername"
 
 #. Programmer's name for it: sWebUserPassword
-#. PasswordDialog..GroupBox1..Caption
-#: Internet/SiteConst.pas:95  Clx/QDBPWDlg.xfm:42 Vcl/DbPWDlg.dfm:40
+#: Internet/SiteConst.pas:95
+#: Clx/QDBPWDlg.xfm:42
+#: Vcl/DbPWDlg.dfm:40
 msgid "Password"
 msgstr "Passwort"
 
@@ -3842,7 +4148,6 @@ msgstr "Benutzername fehlt"
 msgid "Cannot create script engine: %s.  Error: %x"
 msgstr "Script-Engine kann nicht erzeugt werden: %s.  Fehler: %x"
 
-# Label: ignore
 #. 4 - source line text
 #: Internet/SiteConst.pas:144
 msgid ""
@@ -3868,6 +4173,27 @@ msgid ""
 "</tr>\n"
 "</table>\n"
 msgstr ""
+"<table width=\"95%%\" border=\"1\" cellspacing=\"0\" bordercolor=\"#C0C0C0\">\n"
+"<tr>\n"
+"<td colspan=2>\n"
+"<font color=\"#727272\"><b>Fehler[%0:d]:</b> \n"
+"%1:s\n"
+"</font>\n"
+"</td>\n"
+"</tr>\n"
+"<tr>\n"
+"<td>\n"
+"<font color=\"#727272\"><b>Zeile:</b> \n"
+"%2:d\n"
+"</font>\n"
+"</td>\n"
+"<td>\n"
+"<font color=\"#727272\"><b>Position:</b> \n"
+"%3:d\n"
+"</font>\n"
+"</td>\n"
+"</tr>\n"
+"</table>\n"
 
 #. Programmer's name for it: sMaximumSessionsExceeded
 #: Internet/SiteConst.pas:146
@@ -3910,32 +4236,32 @@ msgid "Unable to not open registry key: %s"
 msgstr "Der Registrierungsschlüssel %s kann nicht geöffnet werden"
 
 #. Programmer's name for it: sUnauthorizedString
-#. Programmer's name for it: UnauthorizedString
-#: Internet/SvrConst.pas:23  Internet/SvrConst.pas:66
+#: Internet/SvrConst.pas:23
+#: Internet/SvrConst.pas:66
 msgid "<HTML><HEAD><TITLE>Unauthorized</TITLE></HEAD><BODY><H1>Unauthorized</H1>Proper authorization is required for this area. Either your browser does not perform authorization, or your authorization has failed.</BODY></HTML>\n"
-msgstr "<HTML><HEAD><TITLE>Nicht autorisiert</TITLE></HEAD><BODY><H1>Nicht autorisiert</H1>F&ujml;r diesen Bereich ist eine Anmeldung erforderlich. Entweder hat Ihr Browser keine Anmeldung durchgef&uuml;hrt oder Ihre Anmeldung ist misslungen.</BODY></HTML>\n"
+msgstr "<HTML><HEAD><TITLE>Nicht autorisiert</TITLE></HEAD><BODY><H1>Nicht autorisiert</H1>Für diesen Bereich ist eine Anmeldung erforderlich. Entweder hat Ihr Browser keine Anmeldung durchgeführt oder Ihre Anmeldung ist mißlungen.</BODY></HTML>\n"
 
 #. Programmer's name for it: sForbiddenString
-#. Programmer's name for it: ForbiddenString
-#: Internet/SvrConst.pas:24  Internet/SvrConst.pas:67
+#: Internet/SvrConst.pas:24
+#: Internet/SvrConst.pas:67
 msgid "<HTML><TITLE>The requested URL is forbidden</TITLE><BODY><H1>The requested URL is forbidden</H1><P>HTTP status code: 403</BODY></HTML>\n"
 msgstr "<HTML><TITLE>Der Zugriff auf die angeforderte URL ist nicht gestattet</TITLE><BODY><H1>Der Zugriff auf die angeforderte URL ist nicht gestattet</H1><P>HTTP-Statuscode: 403</BODY></HTML>\n"
 
 #. Programmer's name for it: sNoDirBrowseString
-#. Programmer's name for it: NoDirBrowseString
-#: Internet/SvrConst.pas:25  Internet/SvrConst.pas:68
+#: Internet/SvrConst.pas:25
+#: Internet/SvrConst.pas:68
 msgid "<HTML><TITLE>Directory browsing is forbidden</TITLE><BODY><H1>The requested URL is forbidden</H1><P>HTTP status code: 403</BODY></HTML>\n"
 msgstr "<HTML><TITLE>Das Durchsuchen von Verzeichnissen ist nicht gestattet</TITLE><BODY><H1>Der Zugriff auf die angeforderte URL ist nicht gestattet</H1><P>HTTP-Statuscode: 403</BODY></HTML>\n"
 
 #. Programmer's name for it: sBadRequest
-#. Programmer's name for it: BadRequest
-#: Internet/SvrConst.pas:26  Internet/SvrConst.pas:69
+#: Internet/SvrConst.pas:26
+#: Internet/SvrConst.pas:69
 msgid "<HTML><TITLE>Invalid HTTP request: Method not allowed for HTTP/1.0</TITLE><BODY><H1>Invalid HTTP request: Method not allowed for HTTP/1.0</H1><P>HTTP status code: 400</BODY></HTML>\n"
-msgstr "<HTML><TITLE>Ung&uuml;ltige HTTP-Anforderung: Methode f&uuml;r HTTP/1.0 nicht zul&auml;ssig</TITLE><BODY><H1>Ung&uuml;ltige HTTP-Anforderung: Methode f&uuml;r HTTP/1.0 nicht zul&auml;ssig</H1><P>HTTP-Statuscode: 400</BODY></HTML>"
+msgstr "<HTML><TITLE>Ungültige HTTP-Anforderung: Methode für HTTP/1.0 nicht zulässig</TITLE><BODY><H1>Ungültige HTTP-Anforderung: Methode für HTTP/1.0 nicht zulässig</H1><P>HTTP-Statuscode: 400</BODY></HTML>\n"
 
 #. Programmer's name for it: sBadRequest
-#. Programmer's name for it: BadRequest
-#: Internet/SvrConst.pas:32  Internet/SvrConst.pas:75
+#: Internet/SvrConst.pas:32
+#: Internet/SvrConst.pas:75
 msgid "<TITLE>The requested URL was not found</TITLE><BODY><H1>The requested URL was not found</H1><P>HTTP status code: 404</BODY>"
 msgstr "<TITLE>Die angeforderte URL wurde nicht gefunden</TITLE><BODY><H1>Die angeforderte URL wurde nicht gefunden</H1><P>HTTP-Statuscode: 404</BODY>"
 
@@ -3945,7 +4271,8 @@ msgid "<TITLE>Internal Server Error</TITLE><BODY><H1>Internal Server Error</H1><
 msgstr "<TITLE>Interner Server-Fehler</TITLE><BODY><H1>Interner Server-Fehler</H1><P>HTTP-Statuscode: 500<P>HTTP-Fehlermeldung: %s</BODY>"
 
 #. Programmer's name for it: sInvalidActionRegistration
-#: Internet/SvrConst.pas:41  Internet/WebConst.pas:22
+#: Internet/SvrConst.pas:41
+#: Internet/WebConst.pas:22
 msgid "Invalid Action registration"
 msgstr "Ungültige Aktionsregistrierung"
 
@@ -3965,8 +4292,8 @@ msgid "Event"
 msgstr "Ereignis"
 
 #. Programmer's name for it: sTime
-#. Programmer's name for it: STimeDescription
-#: Internet/SvrConst.pas:45  Rtl/Common/StdConvs.pas:452
+#: Internet/SvrConst.pas:45
+#: Rtl/Common/StdConvs.pas:452
 msgid "Time"
 msgstr "Uhrzeit"
 
@@ -4051,7 +4378,7 @@ msgid ""
 "Up to <A HREF=\"%s\">%0:s</A>\n"
 "<UL>"
 msgstr ""
-"Aufwärts nach <A HREF=\"%s\">%0:s</A>\n"
+"Bis zu <A HREF=\"%s\">%0:s</A>\n"
 "<UL>"
 
 #. Programmer's name for it: sDirRoot
@@ -4060,31 +4387,28 @@ msgid ""
 "Up to <A HREF=\"%s\">root directory</A>\n"
 "<UL>"
 msgstr ""
-"Aufwärts ins <A HREF=\"%s\">Stammverzeichnis</A>\n"
+"Bis zu <A HREF=\"%s\">Stammverzeichnis</A>\n"
 "<UL>"
 
-# Label: ignore
 #. Programmer's name for it: sDirEntry
 #: Internet/SvrConst.pas:82
 msgid "<LI>[ <A HREF=\"%s\">%s</A> ]\n"
-msgstr ""
+msgstr "<LI>[ <A HREF=\"%s\">%s</A> ]\n"
 
 #. Programmer's name for it: sFileEntry
 #: Internet/SvrConst.pas:83
 msgid "<LI><A HREF=\"%s\">%s</A> (%d bytes)\n"
 msgstr "<LI><A HREF=\"%s\">%s</A> (%d Bytes)\n"
 
-# Label: ignore
 #. Programmer's name for it: sListStart
 #: Internet/SvrConst.pas:84
 msgid "<UL>\n"
-msgstr ""
+msgstr "<UL>\n"
 
-# Label: ignore
 #. Programmer's name for it: sDirFooter
 #: Internet/SvrConst.pas:85
 msgid "</UL></BODY></HTML>\n"
-msgstr ""
+msgstr "</UL></BODY></HTML>\n"
 
 #. Programmer's name for it: sFileStatus
 #: Internet/SvrInfoConst.pas:13
@@ -4187,7 +4511,8 @@ msgid "%s_Disp"
 msgstr "%s_Disp"
 
 #. Programmer's name for it: sInvalidParent
-#: Internet/WbmConst.pas:30  Internet/WebConst.pas:46
+#: Internet/WbmConst.pas:30
+#: Internet/WebConst.pas:46
 msgid "Invalid parent"
 msgstr "Ungültiges übergeordnetes Element"
 
@@ -4201,57 +4526,49 @@ msgstr "Ungültige übergeordnete Klasse: %s"
 msgid "Field %s ignored, only one status field allowed"
 msgstr "Feld %s wird ignoriert, es ist nur ein Statusfeld gestattet"
 
-# Label: ignore
 #. Programmer's name for it: sFirstButton
 #: Internet/WbmConst.pas:33
 msgid "|<"
-msgstr ""
+msgstr "|<"
 
-# Label: ignore
 #. Programmer's name for it: sLastButton
 #: Internet/WbmConst.pas:34
 msgid ">|"
-msgstr ""
+msgstr ">|"
 
-# Label: ignore
 #. Programmer's name for it: sPriorButton
 #: Internet/WbmConst.pas:35
 msgid "<"
-msgstr ""
+msgstr "<"
 
-# Label: ignore
 #. Programmer's name for it: sNextButton
 #: Internet/WbmConst.pas:36
 msgid ">"
-msgstr ""
+msgstr ">"
 
-# Label: ignore
 #. Programmer's name for it: sPriorPageButton
 #: Internet/WbmConst.pas:37
 msgid "<<"
-msgstr ""
+msgstr "<<"
 
-# Label: ignore
 #. Programmer's name for it: sNextPageButton
 #: Internet/WbmConst.pas:38
 msgid ">>"
-msgstr ""
+msgstr ">>"
 
-# Label: ignore
 #. Programmer's name for it: sDeleteButton
 #: Internet/WbmConst.pas:39
 msgid " - "
-msgstr ""
+msgstr " - "
 
-# Label: ignore
 #. Programmer's name for it: sInsertButton
 #: Internet/WbmConst.pas:40
 msgid " + "
-msgstr ""
+msgstr " + "
 
 #. Programmer's name for it: sUndoButton
-#. Programmer's name for it: sUndoComponent
-#: Internet/WbmConst.pas:41  ToolsAPI/DesignEditors.pas:2767
+#: Internet/WbmConst.pas:41
+#: ToolsAPI/DesignEditors.pas:2767
 msgid "Undo"
 msgstr "Rückgängig"
 
@@ -4298,7 +4615,7 @@ msgstr "%s_RS"
 #. Programmer's name for it: sApplyUpdatesError
 #: Internet/WbmConst.pas:52
 msgid "ApplyUpdates error.  Error count: %d."
-msgstr "Fehler bei ApplyUpdates.  Anzahl Fehler: %d."
+msgstr "DataSet: %s ist nicht aktiv"
 
 #. Programmer's name for it: sDeltaNotFound
 #: Internet/WbmConst.pas:53
@@ -4318,7 +4635,7 @@ msgstr "DataSet: %s ist nicht aktiv"
 #. Programmer's name for it: sMemKB
 #: Internet/WebAppDbgAbout.pas:35
 msgid "#,###,###\" KB\""
-msgstr "#,###,###\" KiB\""
+msgstr "#.###.###\" KB\""
 
 #. Programmer's name for it: sErrorDecodingURLText
 #: Internet/WebConst.pas:20
@@ -4393,14 +4710,13 @@ msgstr "Ungültige Registrierung der Web-Komponente"
 #. Programmer's name for it: sInvalidWebComponentsEnumeration
 #: Internet/WebConst.pas:40
 msgid "Invalid Web component enumeration"
-msgstr "Ungültige Aufzählung von Web-Komponente"
+msgstr "Ungültige Enumeration von Web-Komponente"
 
 #. Programmer's name for it: sVariableIsNotAContainer
 #: Internet/WebConst.pas:42
 msgid "Variable %s is not a container"
 msgstr "Variable %s ist kein Container"
 
-# Label: ignore
 #. Programmer's name for it: sInternalApplicationError
 #: Internet/WebConst.pas:45
 msgid ""
@@ -4408,11 +4724,14 @@ msgid ""
 "<p>%0:s\n"
 "<p><hr width=\"100%%\"><i>%1:s</i>"
 msgstr ""
+"<h1>Interner Anwendungsfehler</h1>\n"
+"<p>%0:s\n"
+"<p><hr width=\"100%%\"><i>%1:s</i>"
 
 #. Programmer's name for it: SWideStringOutOfBounds
 #: Internet/WSDLIntf.pas:126
 msgid "WideString Index outof bounds"
-msgstr "WideString-Index außerhalb des zulässigen Bereichs"
+msgstr "WideString-Index außerhalb des gültigen Bereichs"
 
 #. Programmer's name for it: sWebServiceListing
 #: Internet/WSDLPub.pas:80
@@ -4469,17 +4788,15 @@ msgstr "WSDL-Ports für PortType"
 msgid "WSDL for "
 msgstr "WSDL für "
 
-# Label: ignore
 #. Programmer's name for it: SPropertyAccessors
 #: Internet/XMLBindGen.pas:67
 msgid "  { Property Accessors }"
-msgstr ""
+msgstr "  { Property Accessors }"
 
-# Label: ignore
 #. Programmer's name for it: SMethodsAndProps
 #: Internet/XMLBindGen.pas:68
 msgid "  { Methods & Properties }"
-msgstr ""
+msgstr "  { Methods & Properties }"
 
 #. Programmer's name for it: SForwardDecl
 #: Internet/XMLBindGen.pas:69
@@ -4659,7 +4976,7 @@ msgstr "ContentModel nicht gesetzt"
 #. Programmer's name for it: SNoFacetsAllowed
 #: Internet/XMLSchemaTags.pas:188
 msgid "Facets and Enumeration not allowed on this kind of datatype \"%s\""
-msgstr "Facetten und Aufzählungen für diesen Datentyp \"%s\" nicht zulässig"
+msgstr "Facetten und Enumeration für diesen Datentyp \"%s\" nicht zulässig"
 
 #. Programmer's name for it: SNotBuiltInType
 #: Internet/XMLSchemaTags.pas:189
@@ -4719,7 +5036,7 @@ msgstr "Grund: %s\n"
 #. Programmer's name for it: sParseError
 #: Internet/xmlutil.pas:56
 msgid "XML Parse Error:\n"
-msgstr "XML Auswertefehler:\n"
+msgstr "XML-Auswertungsfehler:\n"
 
 #. Programmer's name for it: SIconViewEditor
 #: Property Editors/ClxIconEdit.pas:321
@@ -4924,7 +5241,7 @@ msgstr "Multiref-Output für Objekte muss aktviert werden bei der Serialisierung
 #. Programmer's name for it: SUnsuportedClassType
 #: Soap/SoapConst.pas:100
 msgid "Conversion from Class %s to SOAP is not supported"
-msgstr "Konvertierung der Klasse %s zu SOAP wird nicht unterstützt"
+msgstr "Die Konvertierung von Klasse %s zu SOAP wird nicht unterstützt - SOAP-Klassen müssen von TRemotable abgeleitet sein"
 
 #. Programmer's name for it: SUnexpectedDataType
 #: Soap/SoapConst.pas:101
@@ -5022,14 +5339,14 @@ msgid "varDate type not supported"
 msgstr "Typ varDate wird nicht unterstützt"
 
 #. Programmer's name for it: SVarDispatchNotSupported
-#. Programmer's name for it: SNoVarDispatch
-#: Soap/SoapConst.pas:124  Soap/SoapConst.pas:142
+#: Soap/SoapConst.pas:124
+#: Soap/SoapConst.pas:142
 msgid "varDispatch type not supported"
 msgstr "Typ varDispatch wird nicht unterstützt"
 
 #. Programmer's name for it: SVarErrorNotSupported
-#. Programmer's name for it: SNoErrorDispatch
-#: Soap/SoapConst.pas:125  Soap/SoapConst.pas:143
+#: Soap/SoapConst.pas:125
+#: Soap/SoapConst.pas:143
 msgid "varError type not supported"
 msgstr "Typ varError wird nicht unterstützt"
 
@@ -5284,22 +5601,23 @@ msgid "(Not available)"
 msgstr "(Nicht verfügbar)"
 
 #. Programmer's name for it: sEditSubmenu
-#. LogDetailFrame..ActionList1..EditCut1..Category
 #. LogDetailFrame..ActionList1..EditCopy1..Category
-#. LogDetailFrame..ActionList1..EditPaste1..Category
 #. LogDetailFrame..ActionList1..EditSelectAll1..Category
-#. LogDetailFrame..ActionList1..EditUndo1..Category
 #. StandardActions..ActionList1..EditCut1..Category
-#. StandardActions..ActionList1..EditCopy1..Category
 #. StandardActions..ActionList1..EditPaste1..Category
-#. StandardActions..ActionList1..EditDelete1..Category
 #. StandardActions..ActionList1..EditSelectAll1..Category
-#. StandardActions..ActionList1..EditUndo1..Category
-#: ToolsAPI/DesignEditors.pas:2766  Internet/SvrLogDetailFrame.dfm:62
-#: Internet/SvrLogDetailFrame.dfm:69 Internet/SvrLogDetailFrame.dfm:76
-#: Internet/SvrLogDetailFrame.dfm:83 Internet/SvrLogDetailFrame.dfm:89
-#: Vcl/ActnRes.dfm:12 Vcl/ActnRes.dfm:19 Vcl/ActnRes.dfm:26 Vcl/ActnRes.dfm:65
-#: Vcl/ActnRes.dfm:72 Vcl/ActnRes.dfm:78
+#: ToolsAPI/DesignEditors.pas:2766
+#: Internet/SvrLogDetailFrame.dfm:62
+#: Internet/SvrLogDetailFrame.dfm:69
+#: Internet/SvrLogDetailFrame.dfm:76
+#: Internet/SvrLogDetailFrame.dfm:83
+#: Internet/SvrLogDetailFrame.dfm:89
+#: Vcl/ActnRes.dfm:12
+#: Vcl/ActnRes.dfm:19
+#: Vcl/ActnRes.dfm:26
+#: Vcl/ActnRes.dfm:65
+#: Vcl/ActnRes.dfm:72
+#: Vcl/ActnRes.dfm:78
 msgid "Edit"
 msgstr "Bearbeiten"
 
@@ -5319,14 +5637,14 @@ msgid "Paste"
 msgstr "Einfügen"
 
 #. Programmer's name for it: sDeleteComponent
-#. ClxTreeViewItems..gbSubItems..btnDelSub..Caption
-#: ToolsAPI/DesignEditors.pas:2771  Property Editors/ClxNodeEdit.xfm:226
+#: ToolsAPI/DesignEditors.pas:2771
+#: Property Editors/ClxNodeEdit.xfm:226
 msgid "Delete"
 msgstr "Löschen"
 
 #. Programmer's name for it: sSelectAllComponent
-#. StandardActions..ActionList1..ListControlSelectAll1..Hint
-#: ToolsAPI/DesignEditors.pas:2772  Vcl/ActnRes.dfm:277
+#: ToolsAPI/DesignEditors.pas:2772
+#: Vcl/ActnRes.dfm:277
 msgid "Select All"
 msgstr "Alles markieren"
 
@@ -5421,9 +5739,10 @@ msgid "<Components[%d]>"
 msgstr "<Komponenten[%d]>"
 
 #. Programmer's name for it: SInvalidEnumValue
-#: Vcl/ADOConst.pas:15  Vcl/Consts.pas:104
+#: Vcl/ADOConst.pas:15
+#: Vcl/Consts.pas:104
 msgid "Invalid Enum Value"
-msgstr "Ungültiger Aufzählungs-Wert"
+msgstr "Ungültiger Enum-Wert"
 
 #. Programmer's name for it: SMissingConnection
 #: Vcl/ADOConst.pas:16
@@ -5591,22 +5910,26 @@ msgid "Invalid batch move parameters"
 msgstr "Ungültige Batch-Move-Parameter"
 
 #. Programmer's name for it: SEmptySQLStatement
-#: Vcl/bdeconst.pas:35  Vcl/SqlConst.pas:63
+#: Vcl/bdeconst.pas:35
+#: Vcl/SqlConst.pas:63
 msgid "No SQL statement available"
 msgstr "Keine SQL-Anweisung verfügbar"
 
 #. Programmer's name for it: SNoParameterValue
-#: Vcl/bdeconst.pas:36  Vcl/SqlConst.pas:64
+#: Vcl/bdeconst.pas:36
+#: Vcl/SqlConst.pas:64
 msgid "No value for parameter '%s'"
 msgstr "Fehlender Wert für Parameter '%s'"
 
 #. Programmer's name for it: SNoParameterType
-#: Vcl/bdeconst.pas:37  Vcl/SqlConst.pas:65
+#: Vcl/bdeconst.pas:37
+#: Vcl/SqlConst.pas:65
 msgid "No parameter type for parameter '%s'"
 msgstr "Kein Parametertyp für Parameter '%s'"
 
 #. Programmer's name for it: SLoginError
-#: Vcl/bdeconst.pas:38  Vcl/SqlConst.pas:56
+#: Vcl/bdeconst.pas:38
+#: Vcl/SqlConst.pas:56
 msgid "Cannot connect to database '%s'"
 msgstr "Verbindung zu Datenbank '%s' nicht möglich"
 
@@ -5616,8 +5939,8 @@ msgid "An error occurred while attempting to initialize the Borland Database Eng
 msgstr "Bei der Initialisierung der Borland Database Engine ist ein Fehler aufgetreten (Fehler $%.4x)"
 
 #. Programmer's name for it: SDatabaseEditor
-#. Programmer's name for it: SIBDatabaseEditor
-#: Vcl/bdeconst.pas:40  Vcl/IBXConst.pas:40
+#: Vcl/bdeconst.pas:40
+#: Vcl/IBXConst.pas:40
 msgid "Da&tabase Editor..."
 msgstr "&Datenbank-Editor..."
 
@@ -5652,7 +5975,8 @@ msgid "Define &Parameters..."
 msgstr "&Parameter definieren..."
 
 #. Programmer's name for it: SDisconnectDatabase
-#: Vcl/bdeconst.pas:48  Vcl/IBXConst.pas:43
+#: Vcl/bdeconst.pas:48
+#: Vcl/IBXConst.pas:43
 msgid "Database is currently connected. Disconnect and continue?"
 msgstr "Die Datenbank ist verbunden. Verbindung beenden und weitermachen?"
 
@@ -5676,11 +6000,11 @@ msgstr "LookupSource muss mit TTable-Komponente verbunden werden"
 msgid "%s must be the lookup table's active index"
 msgstr "%s muss der aktive Index der Nachschlagetabelle sein."
 
-# Label: ignore
 #. Programmer's name for it: SParameterTypes
-#: Vcl/bdeconst.pas:53  Vcl/SqlConst.pas:66
+#: Vcl/bdeconst.pas:53
+#: Vcl/SqlConst.pas:66
 msgid ";Input;Output;Input/Output;Result"
-msgstr ""
+msgstr ";Eingabe;Ausgabe;Eingabe/Ausgabe;Ergebnis"
 
 #. Programmer's name for it: SInvalidParamFieldType
 #: Vcl/bdeconst.pas:54
@@ -5692,14 +6016,15 @@ msgstr "Sie müssen einen gültigen Feldtypen auswählen"
 msgid "Parameter '%s' truncated on output"
 msgstr "Parameter '%s' wurde bei Ausgabe abgeschnitten"
 
-# Label: ignore
 #. Programmer's name for it: SDataTypes
-#: Vcl/bdeconst.pas:56  Vcl/SqlConst.pas:67
+#: Vcl/bdeconst.pas:56
+#: Vcl/SqlConst.pas:67
 msgid ";String;SmallInt;Integer;Word;Boolean;Float;Currency;BCD;Date;Time;DateTime;;;;Blob;Memo;Graphic;;;;;Cursor;"
-msgstr ""
+msgstr ";String;SmallInt;Integer;Word;Boolean;Float;Currency;BCD;Date;Time;DateTime;;;;Blob;Memo;Graphic;;;;;Cursor;"
 
 #. Programmer's name for it: SResultName
-#: Vcl/bdeconst.pas:57  Vcl/SqlConst.pas:68
+#: Vcl/bdeconst.pas:57
+#: Vcl/SqlConst.pas:68
 msgid "Result"
 msgstr "Ergebnis"
 
@@ -5724,23 +6049,26 @@ msgid "Index does not exist. Index: %s"
 msgstr "Index existiert nicht. Index: %s"
 
 #. Programmer's name for it: SNoTableName
-#: Vcl/bdeconst.pas:63  Vcl/SqlConst.pas:69
+#: Vcl/bdeconst.pas:63
+#: Vcl/SqlConst.pas:69
 msgid "Missing TableName property"
 msgstr "Eigenschaft TableName fehlt"
 
 #. Programmer's name for it: SNoDataSetField
-#: Vcl/bdeconst.pas:64  Vcl/SqlConst.pas:71
+#: Vcl/bdeconst.pas:64
+#: Vcl/SqlConst.pas:71
 msgid "Missing DataSetField property"
 msgstr "Eigenschaft DataSetField fehlt"
 
 #. Programmer's name for it: SBatchExecute
-#. Programmer's name for it: SExecute
-#: Vcl/bdeconst.pas:65  Vcl/IBXConst.pas:45
+#: Vcl/bdeconst.pas:65
+#: Vcl/IBXConst.pas:45
 msgid "E&xecute"
 msgstr "&Ausführen"
 
 #. Programmer's name for it: SNoCachedUpdates
-#: Vcl/bdeconst.pas:66  Vcl/SqlConst.pas:72
+#: Vcl/bdeconst.pas:66
+#: Vcl/SqlConst.pas:72
 msgid "Not in cached update mode"
 msgstr "Nicht im Cached-Update-Modus"
 
@@ -5755,13 +6083,14 @@ msgid "Cannot access field '%s' in a filter"
 msgstr "Auf Feld '%s' kann in einem Filter nicht zugegriffen werden"
 
 #. Programmer's name for it: SUpdateSQLEditor
-#. Programmer's name for it: SIBUpdateSQLEditor
-#: Vcl/bdeconst.pas:69  Vcl/IBXConst.pas:49
+#: Vcl/bdeconst.pas:69
+#: Vcl/IBXConst.pas:49
 msgid "&UpdateSQL Editor..."
 msgstr "UpdateS&QL-Editor..."
 
 #. Programmer's name for it: SNoDataSet
-#: Vcl/bdeconst.pas:70  Vcl/IBXConst.pas:46
+#: Vcl/bdeconst.pas:70
+#: Vcl/IBXConst.pas:46
 msgid "No dataset association"
 msgstr "Keine Datenmengenverknüpfung"
 
@@ -5781,17 +6110,21 @@ msgid "Update failed"
 msgstr "Aktualisierung misslungen"
 
 #. Programmer's name for it: SSQLGenSelect
-#: Vcl/bdeconst.pas:74  Vcl/IBXConst.pas:47
+#: Vcl/bdeconst.pas:74
+#: Vcl/IBXConst.pas:47
 msgid "Must select at least one key field and one update field"
 msgstr "Sie müssen mindestens ein Schlüsselfeld und ein Updatefeld auswählen"
 
 #. Programmer's name for it: SSQLNotGenerated
-#: Vcl/bdeconst.pas:75  Vcl/IBXConst.pas:48
+#: Vcl/bdeconst.pas:75
+#: Vcl/IBXConst.pas:48
 msgid "Update SQL statements not generated, exit anyway?"
 msgstr "Aktualisierungs-SQL-Anweisungen nicht generiert; trotzdem beenden"
 
 #. Programmer's name for it: SSQLDataSetOpen
-#: Vcl/bdeconst.pas:76  Vcl/IBXConst.pas:51 Vcl/SqlConst.pas:78
+#: Vcl/bdeconst.pas:76
+#: Vcl/IBXConst.pas:51
+#: Vcl/SqlConst.pas:78
 msgid "Unable to determine field names for %s"
 msgstr "Die Feldnamen für %s konnten nicht erkannt werden"
 
@@ -5801,7 +6134,9 @@ msgid "The transaction isolation level must be dirty read for local databases"
 msgstr "Die Isolationsebene für Transaktionen muss für lokale Datenbanken Dirty-Read sein."
 
 #. Programmer's name for it: SMissingDataSet
-#: Vcl/bdeconst.pas:78  Vcl/MidConst.pas:67 Vcl/SqlConst.pas:74
+#: Vcl/bdeconst.pas:78
+#: Vcl/MidConst.pas:67
+#: Vcl/SqlConst.pas:74
 msgid "Missing DataSet property"
 msgstr "Eigenschaft DataSet fehlt"
 
@@ -5943,7 +6278,7 @@ msgstr "Der max. Auswahlbereich konnte nicht gesetzt werden"
 #. Programmer's name for it: sFailSetCalMinMaxRange
 #: Vcl/ComStrs.pas:55
 msgid "Failed to set calendar min/max range"
-msgstr "Der max./min. Bereich des Kalenders konnte nicht gesetzt werden"
+msgstr "Der max./min.  Bereich des Kalenders konnte nicht gesetzt werden"
 
 #. Programmer's name for it: sCalRangeNeedsMultiSelect
 #: Vcl/ComStrs.pas:56
@@ -6120,14 +6455,14 @@ msgstr ": [ - Ohne Namen - ]"
 msgid "Color"
 msgstr "Farben"
 
-# Label: ignore
 #. !! obsolete - delete in 5.0
 #: Vcl/Consts.pas:174
 msgid "ABCDEFGHIJKLMNOP"
-msgstr ""
+msgstr "ABCDEFGHIJKLMNOP"
 
 #. Programmer's name for it: SInvalidRegType
-#: Vcl/Consts.pas:193  Rtl/Common/RTLConsts.pas:52
+#: Vcl/Consts.pas:193
+#: Rtl/Common/RTLConsts.pas:52
 msgid "Invalid data type for '%s'"
 msgstr "Ungültiger Datentyp für '%s'"
 
@@ -6177,8 +6512,8 @@ msgid "MMMovie"
 msgstr "MMMovie"
 
 #. Programmer's name for it: SMCIOther
-#. CustomizeFrm..Tabs..OptionsTab..OtherLbl..Caption
-#: Vcl/Consts.pas:212  Vcl/CustomizeDlg.dfm:297
+#: Vcl/Consts.pas:212
+#: Vcl/CustomizeDlg.dfm:297
 msgid "Other"
 msgstr "Andere"
 
@@ -6195,7 +6530,7 @@ msgstr "Scanner"
 #. Programmer's name for it: SMCISequencer
 #: Vcl/Consts.pas:215
 msgid "Sequencer"
-msgstr "Sequenzer"
+msgstr "Sequencer"
 
 #. Programmer's name for it: SMCIVCR
 #: Vcl/Consts.pas:216
@@ -6408,8 +6743,8 @@ msgid "Reset all usage data?"
 msgstr "Alle verwendeten Daten zurücksetzen"
 
 #. Programmer's name for it: SFileRunDialogTitle
-#. StandardActions..ActionList1..FileRun1..BrowseDlg.Title
-#: Vcl/Consts.pas:282  Vcl/ActnRes.dfm:237
+#: Vcl/Consts.pas:282
+#: Vcl/ActnRes.dfm:237
 msgid "Run"
 msgstr "Start"
 
@@ -6441,7 +6776,7 @@ msgstr "A&npassen"
 #. Programmer's name for it: SSeparator
 #: Vcl/Consts.pas:288
 msgid "Separator"
-msgstr "Trenner"
+msgstr "Separator"
 
 #. Programmer's name for it: SCirularReferencesNotAllowed
 #: Vcl/Consts.pas:289
@@ -6586,7 +6921,7 @@ msgstr "Feld '%s' kann nicht verändert werden"
 #. Programmer's name for it: SFieldIndexError
 #: Vcl/DBConsts.pas:38
 msgid "Field index out of range"
-msgstr "Feldindex außerhalb des zulässigen Bereichs"
+msgstr "Feldindex außerhalb des gültigen Bereichs"
 
 #. Programmer's name for it: SNoFieldIndexes
 #: Vcl/DBConsts.pas:39
@@ -6821,7 +7156,7 @@ msgstr "SQL nicht unterstützt: %s"
 #. Programmer's name for it: SProviderExecuteNotSupported
 #: Vcl/DBConsts.pas:87
 msgid "Execute not supported: %s"
-msgstr "Ausführen nicht unterstützt: %s"
+msgstr "Ausführung nicht unterstützt: %s"
 
 #. Programmer's name for it: SExprNoAggOnCalcs
 #: Vcl/DBConsts.pas:88
@@ -6844,7 +7179,8 @@ msgid "Unassigned variant value"
 msgstr "Nicht zugewiesener Variant-Wert"
 
 #. Programmer's name for it: SRecordNotFound
-#: Vcl/DBConsts.pas:92  Vcl/MidConst.pas:62
+#: Vcl/DBConsts.pas:92
+#: Vcl/MidConst.pas:62
 msgid "Record not found"
 msgstr "Datensatz nicht gefunden"
 
@@ -6931,7 +7267,7 @@ msgstr "%s, Standard"
 #. Programmer's name for it: SUnknownError
 #: Vcl/IBXConst.pas:55
 msgid "Unknown error"
-msgstr "Unbekannter Fehler"
+msgstr "Unbekannter Fehler."
 
 #. Programmer's name for it: SInterBaseMissing
 #: Vcl/IBXConst.pas:57
@@ -6951,7 +7287,7 @@ msgstr "Die InterBase-Installations-DLL ibinstall.dll wurde im Pfad nicht gefund
 #. Programmer's name for it: SIB60feature
 #: Vcl/IBXConst.pas:63
 msgid "%s is an InterBase 6 function. Please upgrade to InterBase 6 to use this functonality"
-msgstr "%s ist eine Funktion von InterBase 6. Um diese Funktionalität zu nutzen, müssen Sie auf IB 6 updaten"
+msgstr "%s ist eine Funktion von InterBase 6. Um diese Funktionalität zu nutzen, müssen Sie auf IB6 updaten"
 
 #. Programmer's name for it: SNotSupported
 #: Vcl/IBXConst.pas:64
@@ -7066,7 +7402,7 @@ msgstr "Transaktion ist nicht zugewiesen."
 #. Programmer's name for it: SXSQLDAIndexOutOfRange
 #: Vcl/IBXConst.pas:86
 msgid "XSQLDA index out of range"
-msgstr "XSQLDA-Index außerhalb des zulässigen Bereichs."
+msgstr "XSQLDA-Index außerhalb des gültigen Bereichs."
 
 #. Programmer's name for it: SXSQLDANameDoesNotExist
 #: Vcl/IBXConst.pas:87
@@ -7116,12 +7452,12 @@ msgstr "Unbekannter SQL-Datentyp (%d)."
 #. Programmer's name for it: SInvalidColumnIndex
 #: Vcl/IBXConst.pas:96
 msgid "Invalid column index (index exceeds permitted range)"
-msgstr "Ungültiger Spaltenindex (Der Index überschreitet den zulässigen Bereich)"
+msgstr "Ungültiger Spaltenindex (Der Index überschreitet den erlaubten Bereich)."
 
 #. Programmer's name for it: SInvalidParamColumnIndex
 #: Vcl/IBXConst.pas:97
 msgid "Invalid parameter index (index exceeds permitted range)"
-msgstr "Ungültiger Parameterindex (Der Index überschreitet den zulässigen Bereich)."
+msgstr "Ungültiger Parameterindex (Der Index überschreitet den erlaubten Bereich)."
 
 #. Programmer's name for it: SInvalidDataConversion
 #: Vcl/IBXConst.pas:98
@@ -7215,7 +7551,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"SQL Auswertefehler:\n"
+"Fehler bei der SQL-Auswertung:\n"
 "\n"
 "%s"
 
@@ -7702,7 +8038,7 @@ msgstr "Datensatz nicht gefunden; es wurde kein Schlüssel angegeben"
 #. Programmer's name for it: SFieldNameTooLong
 #: Vcl/MidConst.pas:73
 msgid "Field name cannot be longer then %d characters.  Try setting ObjectView to True on the dataset"
-msgstr "Der Feldname darf nicht länger als %d  Zeichen sein. Versuchen Sie für die Datenmenge ObjectView auf True zu setzen"
+msgstr "Der Feldname darf nicht länger als %d  Zeichen sein. Sie sollten für die Datenmenge ObjectView auf True setzen"
 
 #. Programmer's name for it: SNoDataSets
 #: Vcl/MidConst.pas:74
@@ -7780,7 +8116,8 @@ msgid "Expected return value not received"
 msgstr "Der erwartete Rückgabewert wurde nicht empfangen"
 
 #. Programmer's name for it: SNoWinSock2
-#: Vcl/MidConst.pas:96  Vcl/ScktCnst.pas:36
+#: Vcl/MidConst.pas:96
+#: Vcl/ScktCnst.pas:36
 msgid "WinSock 2 must be installed to use the socket connection"
 msgstr "Um Socket-Verbindungen verwenden zu können, muss WinSock2 installiert sein"
 
@@ -7789,11 +8126,10 @@ msgstr "Um Socket-Verbindungen verwenden zu können, muss WinSock2 installiert s
 msgid "URL required"
 msgstr "Es wird eine URL benötigt"
 
-# Label: ignore
 #. Programmer's name for it: SDefaultURL
 #: Vcl/MidConst.pas:100
 msgid "http://server.company.com/scripts/httpsrvr.dll"
-msgstr ""
+msgstr "http://server.company.com/scripts/httpsrvr.dll"
 
 #. Programmer's name for it: SInvalidURL
 #: Vcl/MidConst.pas:101
@@ -7831,20 +8167,21 @@ msgid "Could not obtain OLE control window handle"
 msgstr "Das Fenster-Handle des OLE-Elements nicht verfügbar"
 
 #. Programmer's name for it: SOleError
-#: Vcl/OleConst.pas:18  Rtl/Common/ComConst.pas:15
+#: Vcl/OleConst.pas:18
+#: Rtl/Common/ComConst.pas:15
 msgid "OLE error %.8x"
 msgstr "OLE-Fehler %.8x"
 
 #. Programmer's name for it: SVarNotObject
 #: Vcl/OleConst.pas:19
 msgid "Variant does not reference an OLE object"
-msgstr "Variant referenziert kein OLE-Objekt"
+msgstr "Variante referenziert kein OLE-Objekt"
 
 #. Programmer's name for it: SVarNotAutoObject
-#. Programmer's name for it: SVarNotObject
-#: Vcl/OleConst.pas:20  Rtl/Common/ComConst.pas:21
+#: Vcl/OleConst.pas:20
+#: Rtl/Common/ComConst.pas:21
 msgid "Variant does not reference an automation object"
-msgstr "Variant referenziert kein Automatisierungsobjekt"
+msgstr "Variante referenziert kein Automatisierungsobjekt"
 
 #. Programmer's name for it: SNoMethod
 #: Vcl/OleConst.pas:21
@@ -8072,9 +8409,10 @@ msgid "DBX Error: No Mapping for Error Code Found"
 msgstr "DBX-Fehler: Keine Zuordnung des Fehlercodes gefunden"
 
 #. Programmer's name for it: SDBXNOCONNECTION
-#. Programmer's name for it: SDBXNOCOMMAND
 #. Programmer's name for it: SDBXNOCURSOR
-#: Vcl/SqlConst.pas:93  Vcl/SqlConst.pas:95 Vcl/SqlConst.pas:96
+#: Vcl/SqlConst.pas:93
+#: Vcl/SqlConst.pas:95
+#: Vcl/SqlConst.pas:96
 msgid "DBX Error: Connection not found, error message cannot be retrieved"
 msgstr "DBX-Fehler: Verbindung nicht gefunden, Fehlermeldung kann nicht abgerufen werden"
 
@@ -8121,7 +8459,7 @@ msgstr "DBX-Fehler: Ungültiger Parameter"
 #. Programmer's name for it: SOUTOFRANGE
 #: Vcl/SqlConst.pas:104
 msgid "DBX Error: Argument out of Range"
-msgstr "DBX-Fehler: Parameter/Spalte außerhalb des zulässigen Bereichs"
+msgstr "DBX-Fehler: Parameter/Spalte außerhalb des gültigen Bereichs"
 
 #. Programmer's name for it: SSQLPARAMNOTSET
 #: Vcl/SqlConst.pas:105
@@ -8372,7 +8710,7 @@ msgstr "Eigenschaft %s existiert nicht."
 #. Programmer's name for it: SStreamSetSize
 #: Rtl/Common/RTLConsts.pas:87
 msgid "Stream.SetSize failure"
-msgstr "Stream.SetSize fehlgeschlagen"
+msgstr "Fehler beim Setzen der Größe des Stream"
 
 #. Programmer's name for it: SThreadCreateError
 #: Rtl/Common/RTLConsts.pas:88
@@ -8409,29 +8747,32 @@ msgstr "(%d, %d, %d, %d) ist kein gültiger Wert für dieTages- und Monatsangabe
 msgid "%f Julian cannot be represented as a DateTime"
 msgstr "%f Julianischer Wert kann nicht als Datum/Uhrzeitwert dargestellt werden"
 
-# Label: ignore
 #. Programmer's name for it: SMissingDateTimeField
 #: Rtl/Common/RTLConsts.pas:96
 msgid "?"
-msgstr ""
+msgstr "?"
 
 #. Programmer's name for it: SConvIncompatibleTypes2
-#: Rtl/Common/RTLConsts.pas:98  Rtl/Sys/SysConst.pas:107
+#: Rtl/Common/RTLConsts.pas:98
+#: Rtl/Sys/SysConst.pas:107
 msgid "Incompatible conversion types [%s, %s]"
 msgstr "Inkompatible Konvertierungstypen [%s, %s]"
 
 #. Programmer's name for it: SConvIncompatibleTypes3
-#: Rtl/Common/RTLConsts.pas:99  Rtl/Sys/SysConst.pas:108
+#: Rtl/Common/RTLConsts.pas:99
+#: Rtl/Sys/SysConst.pas:108
 msgid "Incompatible conversion types [%s, %s, %s]"
 msgstr "Inkompatible Konvertierungstypen [%s, %s, %s]"
 
 #. Programmer's name for it: SConvIncompatibleTypes4
-#: Rtl/Common/RTLConsts.pas:100  Rtl/Sys/SysConst.pas:109
+#: Rtl/Common/RTLConsts.pas:100
+#: Rtl/Sys/SysConst.pas:109
 msgid "Incompatible conversion types [%s - %s, %s - %s]"
 msgstr "Inkompatible Konvertierungstypen [%s - %s, %s - %s]"
 
 #. Programmer's name for it: SConvUnknownType
-#: Rtl/Common/RTLConsts.pas:101  Rtl/Sys/SysConst.pas:110
+#: Rtl/Common/RTLConsts.pas:101
+#: Rtl/Sys/SysConst.pas:110
 msgid "Unknown conversion type %s"
 msgstr "Unkannter Konvertierungstyp %s"
 
@@ -8441,33 +8782,38 @@ msgid "Conversion type (%s) already registered in %s"
 msgstr "Konvertierungstyp (%s) bereits registriert in %s"
 
 #. Programmer's name for it: SConvUnknownFamily
-#: Rtl/Common/RTLConsts.pas:103  Rtl/Sys/SysConst.pas:112
+#: Rtl/Common/RTLConsts.pas:103
+#: Rtl/Sys/SysConst.pas:112
 msgid "Unknown conversion family %s"
 msgstr "Unbekannte Konvertierungsfamilie %s"
 
 #. Programmer's name for it: SConvDuplicateFamily
-#: Rtl/Common/RTLConsts.pas:104  Rtl/Sys/SysConst.pas:113
+#: Rtl/Common/RTLConsts.pas:104
+#: Rtl/Sys/SysConst.pas:113
 msgid "Conversion family (%s) already registered"
 msgstr "Konvertierungsfamilie (%s) bereits registriert"
 
-# Label: ignore
 #. Programmer's name for it: SConvUnknownDescription
-#: Rtl/Common/RTLConsts.pas:105  Rtl/Sys/SysConst.pas:114
+#: Rtl/Common/RTLConsts.pas:105
+#: Rtl/Sys/SysConst.pas:114
 msgid "[%.8x]"
-msgstr ""
+msgstr "[%.8x]"
 
 #. Programmer's name for it: SConvIllegalType
-#: Rtl/Common/RTLConsts.pas:106  Rtl/Sys/SysConst.pas:115
+#: Rtl/Common/RTLConsts.pas:106
+#: Rtl/Sys/SysConst.pas:115
 msgid "Illegal type"
 msgstr "Ungültiger Typ"
 
 #. Programmer's name for it: SConvIllegalFamily
-#: Rtl/Common/RTLConsts.pas:107  Rtl/Sys/SysConst.pas:116
+#: Rtl/Common/RTLConsts.pas:107
+#: Rtl/Sys/SysConst.pas:116
 msgid "Illegal family"
 msgstr "Ungültige Familie"
 
 #. Programmer's name for it: SConvFactorZero
-#: Rtl/Common/RTLConsts.pas:108  Rtl/Sys/SysConst.pas:117
+#: Rtl/Common/RTLConsts.pas:108
+#: Rtl/Sys/SysConst.pas:117
 msgid "%s has a factor of zero"
 msgstr "%s hat den Faktor Null"
 
@@ -8924,7 +9270,7 @@ msgstr "Viertelscheffel (Trockenmaß)"
 #. Programmer's name for it: SDryBucketsDescription
 #: Rtl/Common/StdConvs.pas:403
 msgid "DryBuckets"
-msgstr ""
+msgstr "DryBuckets"
 
 #. Programmer's name for it: SDryBushelsDescription
 #: Rtl/Common/StdConvs.pas:404
@@ -9191,86 +9537,100 @@ msgstr "Realer Anteil konnte nicht analysiert werden"
 msgid "Unexpected end of string [%s]"
 msgstr "Unerwartetes Ende des Strings [%s]"
 
-# Label: ignore
 #. Programmer's name for it: SErrorSuffix
 #: Rtl/Common/VarCmplx.pas:260
 msgid "%s [%s<?>%s]"
-msgstr ""
+msgstr "%s [%s<?>%s]"
 
 #. Programmer's name for it: SCorbaDllNotLoaded
-#: Rtl/Corba/CorbCnst.pas:14  Rtl/Corba40/CorbCnst.pas:14
+#: Rtl/Corba/CorbCnst.pas:14
+#: Rtl/Corba40/CorbCnst.pas:14
 msgid "Unable to load CORBA libraries"
 msgstr "CORBA Bibliotheken können nicht geladen werden"
 
 #. Programmer's name for it: SCorbaNotInitialized
-#: Rtl/Corba/CorbCnst.pas:15  Rtl/Corba40/CorbCnst.pas:15
+#: Rtl/Corba/CorbCnst.pas:15
+#: Rtl/Corba40/CorbCnst.pas:15
 msgid "CORBA libraries are unavailable or not initialized"
 msgstr "CORBA Bibliotheken nicht verfügbar oder nicht initialisiert"
 
 #. Programmer's name for it: SCorbaSkeletonNotRegistered
-#: Rtl/Corba/CorbCnst.pas:16  Rtl/Corba40/CorbCnst.pas:16
+#: Rtl/Corba/CorbCnst.pas:16
+#: Rtl/Corba40/CorbCnst.pas:16
 msgid "CORBA server skeleton not registered for object %s"
 msgstr "CORBA server skeleton ist nicht für Objekt %s registriert"
 
 #. Programmer's name for it: SCorbaStubNotRegistered
-#: Rtl/Corba/CorbCnst.pas:17  Rtl/Corba40/CorbCnst.pas:17
+#: Rtl/Corba/CorbCnst.pas:17
+#: Rtl/Corba40/CorbCnst.pas:17
 msgid "CORBA client stub not registered"
-msgstr "CORBA-Client-Stub nicht registriert"
+msgstr "CORBA client stub nicht registriert"
 
 #. Programmer's name for it: SCorbaInterfaceIDNotRegister
-#: Rtl/Corba/CorbCnst.pas:18  Rtl/Corba40/CorbCnst.pas:18
+#: Rtl/Corba/CorbCnst.pas:18
+#: Rtl/Corba40/CorbCnst.pas:18
 msgid "CORBA interface not registered"
 msgstr "CORBA Interface nicht registriert"
 
 #. Programmer's name for it: SCorbaRepositoryIDNotRegistered
-#: Rtl/Corba/CorbCnst.pas:19  Rtl/Corba40/CorbCnst.pas:19
+#: Rtl/Corba/CorbCnst.pas:19
+#: Rtl/Corba40/CorbCnst.pas:19
 msgid "CORBA Repository ID \"%s\" not registered"
 msgstr "CORBA Repository ID \"%s\" ist nicht registriert"
 
 #. Programmer's name for it: SCorbaIncompleteFactory
-#: Rtl/Corba/CorbCnst.pas:20  Rtl/Corba40/CorbCnst.pas:20
+#: Rtl/Corba/CorbCnst.pas:20
+#: Rtl/Corba40/CorbCnst.pas:20
 msgid "CORBA Factory did not implement CreateInterface"
 msgstr "CORBA Factory implementiert nicht CreateInterface"
 
 #. Programmer's name for it: sInvalidTypeCast
-#: Rtl/Corba/CorbCnst.pas:23  Rtl/Corba40/CorbCnst.pas:23
+#: Rtl/Corba/CorbCnst.pas:23
+#: Rtl/Corba40/CorbCnst.pas:23
 msgid "Variant cannot be converted to a CORBA Any"
 msgstr "Variant kann nicht zu einem CORBA Any konvertiert werden"
 
 #. Programmer's name for it: sNotCorbaObject
-#: Rtl/Corba/CorbCnst.pas:24  Rtl/Corba40/CorbCnst.pas:24
+#: Rtl/Corba/CorbCnst.pas:24
+#: Rtl/Corba40/CorbCnst.pas:24
 msgid "Variant/Any not a CORBA object"
 msgstr "Variant/Any ist kein CORBA-Objekt"
 
 #. Programmer's name for it: sParamTypeCast
-#: Rtl/Corba/CorbCnst.pas:25  Rtl/Corba40/CorbCnst.pas:25
+#: Rtl/Corba/CorbCnst.pas:25
+#: Rtl/Corba40/CorbCnst.pas:25
 msgid "Parameter (%d) of method %s not of the correct type"
 msgstr "Parameter (%d) der Methode %s ist nicht vom erwarteten Typ"
 
 #. Programmer's name for it: sParamOut
-#: Rtl/Corba/CorbCnst.pas:26  Rtl/Corba40/CorbCnst.pas:26
+#: Rtl/Corba/CorbCnst.pas:26
+#: Rtl/Corba40/CorbCnst.pas:26
 msgid "Parameter (%d) of method %s is an out or in/out parameter and requires a variable reference"
 msgstr "Parameter (%d) der Methode %s ist ein Ausgabe- oder Ein/Ausgabe-Parameter und erfordert eine Variablen-Referenz"
 
 #. Programmer's name for it: sNoRepository
-#: Rtl/Corba/CorbCnst.pas:27  Rtl/Corba40/CorbCnst.pas:27
+#: Rtl/Corba/CorbCnst.pas:27
+#: Rtl/Corba40/CorbCnst.pas:27
 msgid "Could not perform CORBA Dispatch, no interface repository found"
 msgstr "CORBA Dispatch konnte nicht ausgeführt werden, es wurde kein interface repository gefunden"
 
 #. Programmer's name for it: sInvalidParameterCount
-#: Rtl/Corba/CorbCnst.pas:28  Rtl/Corba40/CorbCnst.pas:28
+#: Rtl/Corba/CorbCnst.pas:28
+#: Rtl/Corba40/CorbCnst.pas:28
 msgid "Incorrect number of parameters to method %s"
 msgstr "Ungültige Anzahl Parameter für Methode %s"
 
 #. Programmer's name for it: sMethodNotFound
-#: Rtl/Corba/CorbCnst.pas:29  Rtl/Corba40/CorbCnst.pas:29
+#: Rtl/Corba/CorbCnst.pas:29
+#: Rtl/Corba40/CorbCnst.pas:29
 msgid "Method %s not found"
 msgstr "Methode %s nicht gefunden"
 
 #. Programmer's name for it: sConnecting
-#: Rtl/Corba/CorbCnst.pas:30  Rtl/Corba40/CorbCnst.pas:30
+#: Rtl/Corba/CorbCnst.pas:30
+#: Rtl/Corba40/CorbCnst.pas:30
 msgid "Connecting to CORBA server..."
-msgstr "Verbinde mit CORBA-Server..."
+msgstr "Verbinden mit CORBA server..."
 
 #. Programmer's name for it: SUnknown
 #: Rtl/Sys/SysConst.pas:14
@@ -9425,7 +9785,7 @@ msgstr "Zugriffsverletzung bei Adresse %p. %s von Adresse %p"
 #. Programmer's name for it: SAccessViolation
 #: Rtl/Sys/SysConst.pas:49
 msgid "Access violation at address %p, accessing address %p"
-msgstr "Zugriffsverletzung bei Adresse %p beim Zugriff auf Adresse %p"
+msgstr "Access violation at address %p, accessing address %p"
 
 #. Programmer's name for it: SStackOverflow
 #: Rtl/Sys/SysConst.pas:51
@@ -9469,7 +9829,7 @@ msgstr "Anwendungsfehler"
 #. Programmer's name for it: SSigactionFailed
 #: Rtl/Sys/SysConst.pas:59
 msgid "sigaction call failed"
-msgstr "sigaction-Aufruf fehlgeschlagen"
+msgstr "sigaction call failed"
 
 #. Programmer's name for it: SInvalidFormat
 #: Rtl/Sys/SysConst.pas:61
@@ -9519,7 +9879,7 @@ msgstr "Variant ist kein Array"
 #. Programmer's name for it: SVarArrayBounds
 #: Rtl/Sys/SysConst.pas:72
 msgid "Variant array index out of bounds"
-msgstr "Index des Variant-Arrays außerhalb des zulässigen Bereichs"
+msgstr "Index des Variant-Arrays außerhalb des Bereichs"
 
 #. Programmer's name for it: SVarTypeUnknown
 #: Rtl/Sys/SysConst.pas:73
@@ -9529,7 +9889,7 @@ msgstr "Unbekannter selbstdefinierter Variant-Typ (%.4x)"
 #. Programmer's name for it: SVarTypeOutOfRange
 #: Rtl/Sys/SysConst.pas:74
 msgid "Custom variant type ($.4x) is out of range"
-msgstr "Selbstdefinierter Variant-Typ (%.4x) ist nicht im zulässigen Bereich"
+msgstr "Selbstdefinierter Variant-Typ (%.4x) ist nicht im gültigen Bereich"
 
 #. Programmer's name for it: SVarTypeAlreadyUsed
 #: Rtl/Sys/SysConst.pas:75
@@ -9574,7 +9934,7 @@ msgstr "Rekursion beim Durchführen eines VarDataCastTo"
 #. Programmer's name for it: SVarIsEmpty
 #: Rtl/Sys/SysConst.pas:83
 msgid "Variant is empty"
-msgstr "Variant ist leer"
+msgstr "Die Variante ist leer"
 
 #. Programmer's name for it: sUnknownFromType
 #: Rtl/Sys/SysConst.pas:84
@@ -9648,7 +10008,7 @@ msgstr "Ungültiges Package-Handle"
 #. Programmer's name for it: SDuplicatePackageUnit
 #: Rtl/Sys/SysConst.pas:98
 msgid "Cannot load package '%s.'  It contains unit '%s,'which is also contained in package '%s'"
-msgstr "Package '%s kann nicht geladen werden.'  Es enthält die Unit '%s,'die auch im Package '%s' enthalten ist"
+msgstr "Package '%s kann nicht geladen werden.'\t Es enthält die Unit '%s,'die auch im Package '%s' enthalten ist"
 
 #. Programmer's name for it: SOSError
 #: Rtl/Sys/SysConst.pas:99
@@ -9670,13 +10030,13 @@ msgid ""
 "Win32 Error.  Code: %d.\n"
 "%s"
 msgstr ""
-"Win32 Fehler.  Code: %d.\n"
+"Win32 Fehler.\tCode: %d.\n"
 "%s"
 
 #. use SUnkOSError
 #: Rtl/Sys/SysConst.pas:103
 msgid "A Win32 API function failed"
-msgstr "Eine Win32 API-Funktion ist fehlgeschlagen"
+msgstr "Fehler bei einer Win32 API-Funktion"
 
 #. Programmer's name for it: SNL
 #: Rtl/Sys/SysConst.pas:105
@@ -9686,7 +10046,7 @@ msgstr "Die Anwendung ist für diese Funktion nicht lizenziert."
 #. Programmer's name for it: SConvDuplicateType
 #: Rtl/Sys/SysConst.pas:111
 msgid "Conversion type (%s) already registered"
-msgstr "Konvertierungstyp (%s) bereits registriert"
+msgstr "Konvertierungstyp (%s) bereits registriert in %s"
 
 #. Programmer's name for it: SShortMonthNameJan
 #: Rtl/Sys/SysConst.pas:119
@@ -9709,8 +10069,8 @@ msgid "Apr"
 msgstr "Apr"
 
 #. Programmer's name for it: SShortMonthNameMay
-#. Programmer's name for it: SLongMonthNameMay
-#: Rtl/Sys/SysConst.pas:123  Rtl/Sys/SysConst.pas:136
+#: Rtl/Sys/SysConst.pas:123
+#: Rtl/Sys/SysConst.pas:136
 msgid "May"
 msgstr "Mai"
 
@@ -9874,116 +10234,125 @@ msgstr "Freitag"
 msgid "Saturday"
 msgstr "Samstag"
 
-# Label: ignore
 #. Programmer's name: FONT 8
-#. formAbout..Font.Name
 #. formAbout..lblCopyright..Font.Name
-#. formAbout..lblPleaseVisitUs..Font.Name
 #. formAbout..lblURL..Font.Name
-#. IdPropEdBindingEntry..Font.Name
 #. formAbout..Font.Name
-#. formAbout..Panel1..lblPleaseVisitUs..Font.Name
 #. formAbout..Panel1..lblURL..Font.Name
-#. formAbout..Panel2..lblCopyright..Font.Name
 #. frmNewMessagePart..Font.Name
-#. IdPropEdBindingEntry..Font.Name
 #. Form1..Font.Name
-#. LogDetailFrame..ActionList1..FontEdit1..Dialog.Font.Name
 #. AboutBox..DetailsPanel..Copyright..Font.Name
-#. AboutBox..DetailsPanel..Version..Font.Name
 #. AboutBox..DetailsPanel..SKUName..Font.Name
-#. AboutBox..DetailsPanel..CompanyName..Font.Name
 #. StandardActions..ActionList1..FontEdit1..Dialog.Font.Name
-#. frmGeneratorEditor..Font.Name
 #. frmIBRestoreEditor..Font.Name
-#. frmIBSecurityEditor..Font.Name
 #. frmIBServiceEditor..Font.Name
-#: Vcl/ExtDlgs.rc:14  Indy/IdAbout.xfm:20 Indy/IdAbout.xfm:2805
-#: Indy/IdAbout.xfm:2844 Indy/IdAbout.xfm:2864 Indy/IdDsnPropEdBinding.xfm:15
-#: Indy/IdAbout.dfm:13 Indy/IdAbout.dfm:38 Indy/IdAbout.dfm:55
-#: Indy/IdAbout.dfm:100 Indy/IdDsnNewMessagePart.dfm:12
-#: Indy/IdDsnPropEdBinding.dfm:14 Internet/SvrInfoConsole.dfm:11
-#: Internet/SvrLogDetailFrame.dfm:54 Internet/WebAppDbgAbout.dfm:84
-#: Internet/WebAppDbgAbout.dfm:98 Internet/WebAppDbgAbout.dfm:112
-#: Internet/WebAppDbgAbout.dfm:301 Vcl/ActnRes.dfm:216
-#: Vcl/IBGeneratorEditor.dfm:12 Vcl/IBRestoreEditor.dfm:12
-#: Vcl/IBSecurityEditor.dfm:11 Vcl/IBServiceEditor.dfm:11
+#: Vcl/ExtDlgs.rc:14
+#: Indy/IdAbout.xfm:20
+#: Indy/IdAbout.xfm:2805
+#: Indy/IdAbout.xfm:2844
+#: Indy/IdAbout.xfm:2864
+#: Indy/IdDsnPropEdBinding.xfm:15
+#: Indy/IdAbout.dfm:13
+#: Indy/IdAbout.dfm:38
+#: Indy/IdAbout.dfm:55
+#: Indy/IdAbout.dfm:100
+#: Indy/IdDsnNewMessagePart.dfm:12
+#: Indy/IdDsnPropEdBinding.dfm:14
+#: Internet/SvrInfoConsole.dfm:11
+#: Internet/SvrLogDetailFrame.dfm:54
+#: Internet/WebAppDbgAbout.dfm:84
+#: Internet/WebAppDbgAbout.dfm:98
+#: Internet/WebAppDbgAbout.dfm:112
+#: Internet/WebAppDbgAbout.dfm:301
+#: Vcl/ActnRes.dfm:216
+#: Vcl/IBGeneratorEditor.dfm:12
+#: Vcl/IBRestoreEditor.dfm:12
+#: Vcl/IBSecurityEditor.dfm:11
+#: Vcl/IBServiceEditor.dfm:11
 msgid "MS Sans Serif"
-msgstr ""
+msgstr "MS Sans Serif"
 
 #. LoginDialog..Caption
-#: Clx/QDBLogDlg.xfm:7  Vcl/DBLOGDLG.dfm:6
+#: Clx/QDBLogDlg.xfm:7
+#: Vcl/DBLOGDLG.dfm:6
 msgid "Database Login"
 msgstr "Datenbank-Login"
 
 #. LoginDialog..OKButton..Caption
-#. PasswordDialog..OKButton..Caption
 #. ClxStrEditDlg..OKButton..Caption
-#. InputReqDialog..OKButton..Caption
 #. DataBindForm..OkBtn..Caption
-#. StrEditDlg..OKButton..Caption
 #. UpdateSQLEditForm..OkButton..Caption
-#. LoginDialog..OKButton..Caption
 #. PasswordDialog..OKButton..Caption
-#: Clx/QDBLogDlg.xfm:20  Clx/QDBPWDlg.xfm:20 Property
-#: Editors/ClxStrEdit.xfm:42 Editors/dbinpreq.dfm:18 Editors/DbOleEdt.dfm:109
-#: Editors/StrEdit.dfm:39 Editors/UpdSqlEd.dfm:20 Vcl/DBLOGDLG.dfm:21
+#: Clx/QDBLogDlg.xfm:20
+#: Clx/QDBPWDlg.xfm:20
+#: Property Editors/ClxStrEdit.xfm:42
+#: Editors/dbinpreq.dfm:18
+#: Editors/DbOleEdt.dfm:109
+#: Editors/StrEdit.dfm:39
+#: Editors/UpdSqlEd.dfm:20
+#: Vcl/DBLOGDLG.dfm:21
 #: Vcl/DbPWDlg.dfm:18
 msgid "&OK"
 msgstr "&OK"
 
 #. LoginDialog..Panel..Label3..Caption
-#: Clx/QDBLogDlg.xfm:56  Vcl/DBLOGDLG.dfm:49
+#: Clx/QDBLogDlg.xfm:56
+#: Vcl/DBLOGDLG.dfm:49
 msgid "Database:"
 msgstr "Datenbank:"
 
 #. LoginDialog..Panel..Panel1..Label1..Caption
-#. frmIBSecurityEditor..GroupBox1..Label2..Caption
 #. frmIBServiceEditor..GroupBox1..Label2..Caption
-#: Clx/QDBLogDlg.xfm:81  Vcl/DBLOGDLG.dfm:77 Vcl/IBSecurityEditor.dfm:136
+#: Clx/QDBLogDlg.xfm:81
+#: Vcl/DBLOGDLG.dfm:77
+#: Vcl/IBSecurityEditor.dfm:136
 #: Vcl/IBServiceEditor.dfm:159
 msgid "&User Name:"
 msgstr "&Benutzername:"
 
 #. LoginDialog..Panel..Panel1..Label2..Caption
-#: Clx/QDBLogDlg.xfm:91  Vcl/DBLOGDLG.dfm:85
+#: Clx/QDBLogDlg.xfm:91
+#: Vcl/DBLOGDLG.dfm:85
 msgid "&Password:"
 msgstr "&Passwort:"
 
 #. PasswordDialog..Caption
-#: Clx/QDBPWDlg.xfm:7  Vcl/DbPWDlg.dfm:6
+#: Clx/QDBPWDlg.xfm:7
+#: Vcl/DbPWDlg.dfm:6
 msgid "Enter password"
 msgstr "Passwort eingeben"
 
 #. PasswordDialog..GroupBox1..AddButton..Caption
-#. IdPropEdBindingEntry..btnAdd..Caption
 #. IdPropEdBindingEntry..actBndEditor..actAdd..Caption
-#. DSSQueryEditor..Pager..Dimensions..Label7..Caption
-#. IdPropEdBindingEntry..actBndEditor..actAdd..Caption
-#. CollectionEditor..ActionList1..AddCmd..Caption
 #. LinkFields..AddButton..Caption
-#. PasswordDialog..GroupBox1..AddButton..Caption
 #. SocketForm..MainMenu1..miPorts..miAdd..Caption
-#: Clx/QDBPWDlg.xfm:57  Indy/IdDsnPropEdBinding.xfm:87
-#: Indy/IdDsnPropEdBinding.xfm:123 Decision Cube/MXDSSQRY.DFM:78
-#: Indy/IdDsnPropEdBinding.dfm:113 Property Editors/ColnEdit.dfm:189
-#: Editors/FldLinks.DFM:114 Vcl/DbPWDlg.dfm:56 Vcl/ScktMain.dfm:344
+#: Clx/QDBPWDlg.xfm:57
+#: Indy/IdDsnPropEdBinding.xfm:87
+#: Indy/IdDsnPropEdBinding.xfm:123
+#: Decision Cube/MXDSSQRY.DFM:78
+#: Indy/IdDsnPropEdBinding.dfm:113
+#: Property Editors/ColnEdit.dfm:189
+#: Editors/FldLinks.DFM:114
+#: Vcl/DbPWDlg.dfm:56
+#: Vcl/ScktMain.dfm:344
 msgid "&Add"
 msgstr "Hinzu&fügen"
 
 #. PasswordDialog..GroupBox1..RemoveButton..Caption
-#. IdPropEdBindingEntry..btnRemove..Caption
 #. IdPropEdBindingEntry..actBndEditor..actRemove..Caption
-#. PasswordDialog..GroupBox1..RemoveButton..Caption
 #. SocketForm..ActionList1..RemovePortAction..Caption
-#: Clx/QDBPWDlg.xfm:67  Indy/IdDsnPropEdBinding.xfm:96
-#: Indy/IdDsnPropEdBinding.xfm:128 Indy/IdDsnPropEdBinding.dfm:118
-#: Vcl/DbPWDlg.dfm:66 Vcl/ScktMain.dfm:396
+#: Clx/QDBPWDlg.xfm:67
+#: Indy/IdDsnPropEdBinding.xfm:96
+#: Indy/IdDsnPropEdBinding.xfm:128
+#: Indy/IdDsnPropEdBinding.dfm:118
+#: Vcl/DbPWDlg.dfm:66
+#: Vcl/ScktMain.dfm:396
 msgid "&Remove"
 msgstr "Ent&fernen"
 
 #. PasswordDialog..GroupBox1..RemoveAllButton..Caption
-#: Clx/QDBPWDlg.xfm:77  Vcl/DbPWDlg.dfm:76
+#: Clx/QDBPWDlg.xfm:77
+#: Vcl/DbPWDlg.dfm:76
 msgid "Re&move all"
 msgstr "&Alle entfernen"
 
@@ -9992,182 +10361,171 @@ msgstr "&Alle entfernen"
 msgid "About Indy"
 msgstr "Über Indy"
 
-# Label: ignore
 #. formAbout..lblName..Font.Name
-#. formAbout..lblVersion..Font.Name
 #. formAbout..Panel2..lblVersion..Font.Name
-#. formAbout..Panel2..lblName..Font.Name
-#: Indy/IdAbout.xfm:2786  Indy/IdAbout.xfm:2825 Indy/IdAbout.dfm:117
+#: Indy/IdAbout.xfm:2786
+#: Indy/IdAbout.xfm:2825
+#: Indy/IdAbout.dfm:117
 #: Indy/IdAbout.dfm:133
 msgid "Times New Roman"
-msgstr ""
+msgstr "Times New Roman"
 
-# Label: ignore
 #. formAbout..lblURL..Caption
 #: Indy/IdAbout.xfm:2860
 msgid "http://www.nevrona.com/indy"
-msgstr ""
+msgstr "http://www.nevrona.com/indy"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblJimGunkel..Caption
 #: Indy/IdAbout.xfm:2894
 msgid "Jim Gunkel"
-msgstr ""
+msgstr "Jim Gunkel"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblJimGunkel..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblNevronaDesignsFour..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblKudzu..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblNevronaOne..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblHadi..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblNevronaTwo..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblAndrewPeeMee..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblCharlesStack..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblGregorIbic..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblIntelicomdoo..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblJPeterMugaas..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblNevronaThree..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblMarkHolmes..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblRuneMoberg..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblStephaneGrobety..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblDonSIders..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblAllenOneil..Font.Name
-#: Indy/IdAbout.xfm:2898  Indy/IdAbout.xfm:2918 Indy/IdAbout.xfm:2957
-#: Indy/IdAbout.xfm:2977 Indy/IdAbout.xfm:3016 Indy/IdAbout.xfm:3036
-#: Indy/IdAbout.xfm:3076 Indy/IdAbout.xfm:3096 Indy/IdAbout.xfm:3116
-#: Indy/IdAbout.xfm:3136 Indy/IdAbout.xfm:3156 Indy/IdAbout.xfm:3176
-#: Indy/IdAbout.xfm:3196 Indy/IdAbout.xfm:3216 Indy/IdAbout.xfm:3236
-#: Indy/IdAbout.xfm:3276 Indy/IdAbout.xfm:3316
+#: Indy/IdAbout.xfm:2898
+#: Indy/IdAbout.xfm:2918
+#: Indy/IdAbout.xfm:2957
+#: Indy/IdAbout.xfm:2977
+#: Indy/IdAbout.xfm:3016
+#: Indy/IdAbout.xfm:3036
+#: Indy/IdAbout.xfm:3076
+#: Indy/IdAbout.xfm:3096
+#: Indy/IdAbout.xfm:3116
+#: Indy/IdAbout.xfm:3136
+#: Indy/IdAbout.xfm:3156
+#: Indy/IdAbout.xfm:3176
+#: Indy/IdAbout.xfm:3196
+#: Indy/IdAbout.xfm:3216
+#: Indy/IdAbout.xfm:3236
+#: Indy/IdAbout.xfm:3276
+#: Indy/IdAbout.xfm:3316
 msgid "Courier New"
-msgstr ""
+msgstr "Courier New"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblNevronaDesignsFour..Caption
-#. formAbout..scbxCredits..panlScroll..lblNevronaOne..Caption
 #. formAbout..scbxCredits..panlScroll..lblNevronaTwo..Caption
-#. formAbout..scbxCredits..panlScroll..lblNevronaThree..Caption
-#: Indy/IdAbout.xfm:2914  Indy/IdAbout.xfm:2973 Indy/IdAbout.xfm:3032
+#: Indy/IdAbout.xfm:2914
+#: Indy/IdAbout.xfm:2973
+#: Indy/IdAbout.xfm:3032
 #: Indy/IdAbout.xfm:3172
 msgid "Nevrona Designs"
-msgstr ""
+msgstr "Nevrona Designs"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lbCoordinator..Font.Name
-#. formAbout..scbxCredits..panlScroll..lbCoCordinator..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblIndyPitCrew..Font.Name
-#. formAbout..scbxCredits..panlScroll..lblDocumentCoordinator..Font.Name
 #. formAbout..scbxCredits..panlScroll..lblProgramsCoordinator..Font.Name
-#: Indy/IdAbout.xfm:2937  Indy/IdAbout.xfm:2996 Indy/IdAbout.xfm:3056
-#: Indy/IdAbout.xfm:3256 Indy/IdAbout.xfm:3296
+#: Indy/IdAbout.xfm:2937
+#: Indy/IdAbout.xfm:2996
+#: Indy/IdAbout.xfm:3056
+#: Indy/IdAbout.xfm:3256
+#: Indy/IdAbout.xfm:3296
 msgid "Arial"
-msgstr ""
+msgstr "Arial"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblKudzu..Caption
 #: Indy/IdAbout.xfm:2953
 msgid "Kudzu (Chad Z. Hower)"
-msgstr ""
+msgstr "Kudzu (Chad Z. Hower)"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblHadi..Caption
 #: Indy/IdAbout.xfm:3012
 msgid "Hadi Hariri"
-msgstr ""
+msgstr "Hadi Hariri"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblIndyPitCrew..Caption
 #: Indy/IdAbout.xfm:3052
 msgid "The Indy Crew"
-msgstr ""
+msgstr "The Indy Crew"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblAndrewPeeMee..Caption
 #: Indy/IdAbout.xfm:3072
 msgid "Andrew Peter Mee"
-msgstr ""
+msgstr "Andrew Peter Mee"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblCharlesStack..Caption
 #: Indy/IdAbout.xfm:3092
 msgid "Charles Stack"
-msgstr ""
+msgstr "Charles Stack"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblGregorIbic..Caption
 #: Indy/IdAbout.xfm:3112
 msgid "Gregor Ibic"
-msgstr ""
+msgstr "Gregor Ibic"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblIntelicomdoo..Caption
 #: Indy/IdAbout.xfm:3132
 msgid "Intelicom d.o.o."
-msgstr ""
+msgstr "Intelicom d.o.o."
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblJPeterMugaas..Caption
 #: Indy/IdAbout.xfm:3152
 msgid "J. Peter Mugaas"
-msgstr ""
+msgstr "J. Peter Mugaas"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblMarkHolmes..Caption
 #: Indy/IdAbout.xfm:3192
 msgid "Mark Holmes"
-msgstr ""
+msgstr "Mark Holmes"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblRuneMoberg..Caption
 #: Indy/IdAbout.xfm:3212
 msgid "Rune Moberg"
-msgstr ""
+msgstr "Rune Moberg"
 
 #. formAbout..scbxCredits..panlScroll..lblDocumentCoordinator..Caption
 #: Indy/IdAbout.xfm:3252
 msgid "Documentation Coordinator"
 msgstr "Dokumentationskoordinator"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblDonSIders..Caption
 #: Indy/IdAbout.xfm:3272
 msgid "Don Siders"
-msgstr ""
+msgstr "Don Siders"
 
 #. formAbout..scbxCredits..panlScroll..lblProgramsCoordinator..Caption
 #: Indy/IdAbout.xfm:3292
 msgid "Demo  Programs Coordinator"
 msgstr "Demos-Koordinator"
 
-# Label: ignore
 #. formAbout..scbxCredits..panlScroll..lblAllenOneil..Caption
 #: Indy/IdAbout.xfm:3312
 msgid "Allen O'Neill"
-msgstr ""
+msgstr "Allen O'Neill"
 
 #. IdPropEdBindingEntry..Caption
-#: Indy/IdDsnPropEdBinding.xfm:6  Indy/IdDsnPropEdBinding.dfm:5
+#: Indy/IdDsnPropEdBinding.xfm:6
+#: Indy/IdDsnPropEdBinding.dfm:5
 msgid "Binding Editor"
 msgstr "Editor für Bindungen"
 
 #. IdPropEdBindingEntry..Label1..Caption
-#: Indy/IdDsnPropEdBinding.xfm:28  Indy/IdDsnPropEdBinding.dfm:25
+#: Indy/IdDsnPropEdBinding.xfm:28
+#: Indy/IdDsnPropEdBinding.dfm:25
 msgid "Bindings"
 msgstr "Bindungen"
 
 #. IdPropEdBindingEntry..Label2..Caption
-#. SocketForm..Pages..StatPage..ConnectionList......Caption
-#: Indy/IdDsnPropEdBinding.xfm:36  Indy/IdDsnPropEdBinding.dfm:32
+#: Indy/IdDsnPropEdBinding.xfm:36
+#: Indy/IdDsnPropEdBinding.dfm:32
 #: Vcl/ScktMain.dfm:252
 msgid "IP Address"
 msgstr "IP-Adresse"
 
 #. IdPropEdBindingEntry..Label3..Caption
-#. WebAppDbgMainForm..Port..Caption
 #. SocketForm..Pages..PropPage..PortGroup..Caption
-#. SocketForm..Pages..StatPage..ConnectionList......Caption
 #. SocketForm..Panel1..HeaderControl1......Text
-#: Indy/IdDsnPropEdBinding.xfm:44  Indy/IdDsnPropEdBinding.dfm:39
-#: Internet/SvrMainForm.dfm:57 Vcl/ScktMain.dfm:38 Vcl/ScktMain.dfm:248
+#: Indy/IdDsnPropEdBinding.xfm:44
+#: Indy/IdDsnPropEdBinding.dfm:39
+#: Internet/SvrMainForm.dfm:57
+#: Vcl/ScktMain.dfm:38
+#: Vcl/ScktMain.dfm:248
 #: Vcl/ScktMain.dfm:310
 msgid "Port"
 msgstr "Port"
@@ -10178,86 +10536,87 @@ msgid "IconView Items Editor"
 msgstr "IconView-Eintragseditor"
 
 #. ClxIconViewItemsEditor..GroupBox1..Caption
-#. ClxListViewItems..GroupBox1..Caption
 #. ClxTreeViewItems..GroupBox1..Caption
-#: Property Editors/ClxIconEdit.xfm:22  Editors/ClxItemEdit.xfm:22
+#: Property Editors/ClxIconEdit.xfm:22
+#: Editors/ClxItemEdit.xfm:22
 #: Editors/ClxNodeEdit.xfm:22
 msgid "&Items"
 msgstr "&Einträge"
 
 #. ClxIconViewItemsEditor..GroupBox1..New..Caption
-#. ClxListViewItems..GroupBox1..New..Caption
-#: Property Editors/ClxIconEdit.xfm:30  Editors/ClxItemEdit.xfm:30
+#: Property Editors/ClxIconEdit.xfm:30
+#: Editors/ClxItemEdit.xfm:30
 msgid "&New Item"
 msgstr "&Neuer Eintrag"
 
 #. ClxIconViewItemsEditor..GroupBox1..Delete..Caption
-#. ClxImageListEditor..GroupBox1..Delete..Caption
 #. ClxListViewItems..GroupBox1..Delete..Caption
-#. ClxTreeViewItems..GroupBox1..Delete..Caption
 #. CollectionEditor..ActionList1..DeleteCmd..Caption
-#. DataBindForm..Panel1..DeleteBtn..Caption
 #. FieldsEditor..LocalMenu..DeleteItem..Caption
-#. LinkFields..DeleteButton..Caption
 #. IndexFiles..GroupBox1..Delete..Caption
-#. StandardActions..ActionList1..EditDelete1..Caption
-#: Property Editors/ClxIconEdit.xfm:41  Editors/ClxImgEdit.xfm:184
-#: Editors/ClxItemEdit.xfm:41 Editors/ClxNodeEdit.xfm:41
-#: Editors/ColnEdit.dfm:196 Editors/DbOleEdt.dfm:90 Editors/DSDesign.dfm:159
-#: Editors/FldLinks.DFM:123 Editors/Ixedit.dfm:43 Vcl/ActnRes.dfm:66
+#: Property Editors/ClxIconEdit.xfm:41
+#: Editors/ClxImgEdit.xfm:184
+#: Editors/ClxItemEdit.xfm:41
+#: Editors/ClxNodeEdit.xfm:41
+#: Editors/ColnEdit.dfm:196
+#: Editors/DbOleEdt.dfm:90
+#: Editors/DSDesign.dfm:159
+#: Editors/FldLinks.DFM:123
+#: Editors/Ixedit.dfm:43
+#: Vcl/ActnRes.dfm:66
 msgid "&Delete"
 msgstr "&Löschen"
 
 #. ClxIconViewItemsEditor..PropGroupBox..Caption
-#. ClxListViewItems..PropGroupBox..Caption
 #. ClxTreeViewItems..PropGroupBox..Caption
-#: Property Editors/ClxIconEdit.xfm:69  Editors/ClxItemEdit.xfm:79
+#: Property Editors/ClxIconEdit.xfm:69
+#: Editors/ClxItemEdit.xfm:79
 #: Editors/ClxNodeEdit.xfm:89
 msgid "Item Properties"
-msgstr "Eigenschaften des Eintrags"
+msgstr "Eigens&chaften des Eintrags"
 
 #. ClxIconViewItemsEditor..PropGroupBox..Label1..Caption
-#. ClxListViewItems..PropGroupBox..Label1..Caption
-#: Property Editors/ClxIconEdit.xfm:77  Editors/ClxItemEdit.xfm:87
+#: Property Editors/ClxIconEdit.xfm:77
+#: Editors/ClxItemEdit.xfm:87
 msgid "&Caption:"
 msgstr "&Titel:"
 
 #. ClxIconViewItemsEditor..PropGroupBox..Label2..Caption
-#. ClxListViewItems..PropGroupBox..Label2..Caption
 #. ClxTreeViewItems..PropGroupBox..Label2..Caption
-#: Property Editors/ClxIconEdit.xfm:87  Editors/ClxItemEdit.xfm:96
+#: Property Editors/ClxIconEdit.xfm:87
+#: Editors/ClxItemEdit.xfm:96
 #: Editors/ClxNodeEdit.xfm:105
 msgid "I&mage Index:"
 msgstr "Bild-Inde&x:"
 
 #. ClxIconViewItemsEditor..Apply..Caption
-#. ClxListViewItems..Apply..Caption
 #. ClxTreeViewItems..Apply..Caption
-#. SocketForm..ActionList1..ApplyAction..Caption
-#: Property Editors/ClxIconEdit.xfm:143  Editors/ClxItemEdit.xfm:169
-#: Editors/ClxNodeEdit.xfm:179 Vcl/ScktMain.dfm:381
+#: Property Editors/ClxIconEdit.xfm:143
+#: Editors/ClxItemEdit.xfm:169
+#: Editors/ClxNodeEdit.xfm:179
+#: Vcl/ScktMain.dfm:381
 msgid "&Apply"
 msgstr "Ü&bernehmen"
 
 #. ClxImageListEditor..Caption
 #: Property Editors/ClxImgEdit.xfm:10
 msgid "ImageList Editor"
-msgstr "Bilderlisten-Editor"
+msgstr "Bilderlisteneditor"
 
 #. ClxImageListEditor..ImageGroup..Caption
 #: Property Editors/ClxImgEdit.xfm:50
 msgid " &Selected Image "
-msgstr " Ausge&wähltes Bild "
+msgstr " Ausge&wählte Grafik "
 
 #. ClxImageListEditor..ImageGroup..TransparentLabel..Caption
 #: Property Editors/ClxImgEdit.xfm:58
 msgid "&Transparent Color:"
-msgstr "&Transparente Farbe:"
+msgstr "&Transparent:"
 
 #. ClxImageListEditor..ImageGroup..FillLabel..Caption
 #: Property Editors/ClxImgEdit.xfm:67
 msgid "&Fill Color:"
-msgstr "&Füllfarbe:"
+msgstr "Füllf&arbe:"
 
 #. ClxImageListEditor..ImageGroup..OptionsGroup....Items.Strings
 #: Property Editors/ClxImgEdit.xfm:79
@@ -10266,13 +10625,13 @@ msgid ""
 "St&retch\n"
 "C&enter\n"
 msgstr ""
-"Abschneiden\n"
-"Dehnen\n"
-"Zentrieren\n"
+"Cr&op\n"
+"St&retch\n"
+"C&enter\n"
 
 #. ClxImageListEditor..ImageGroup..OptionsGroup..Caption
-#. DBEditForm..GroupBox3..Caption
-#: Property Editors/ClxImgEdit.xfm:80  Editors/Dbedit.dfm:116
+#: Property Editors/ClxImgEdit.xfm:80
+#: Editors/Dbedit.dfm:116
 msgid " Options "
 msgstr " Optionen "
 
@@ -10287,24 +10646,25 @@ msgid " &Images "
 msgstr " B&ilder "
 
 #. ClxImageListEditor..GroupBox1..Add..Caption
-#. IndexFiles..GroupBox1..Add..Caption
-#: Property Editors/ClxImgEdit.xfm:174  Editors/Ixedit.dfm:34
+#: Property Editors/ClxImgEdit.xfm:174
+#: Editors/Ixedit.dfm:34
 msgid "&Add..."
 msgstr "Hin&zufügen..."
 
 #. ClxImageListEditor..GroupBox1..Clear..Caption
-#. Caption
 #. ClxStrEditDlg..PopupMenu1..Clear1..Caption
-#. LogFrame..ActionList1..ClearAction..Caption
 #. WebAppDbgMainForm..ActionList1..ClearAction..Caption
-#. DBEditForm..GroupBox1..ClearButton..Caption
 #. LinkFields..ClearButton..Caption
-#. IndexFiles..GroupBox1..Clear..Caption
 #. PictureEditorDlg..GroupBox1..Clear..Caption
-#: Property Editors/ClxImgEdit.xfm:195  Editors/ClxPicEdit.xfm:93
-#: Editors/ClxStrEdit.xfm:115 Internet/SvrLogFrame.dfm:40
-#: Internet/SvrMainForm.dfm:166 Editors/Dbedit.dfm:99 Editors/FldLinks.DFM:132
-#: Editors/Ixedit.dfm:53 Editors/PicEdit.dfm:94
+#: Property Editors/ClxImgEdit.xfm:195
+#: Editors/ClxPicEdit.xfm:93
+#: Editors/ClxStrEdit.xfm:115
+#: Internet/SvrLogFrame.dfm:40
+#: Internet/SvrMainForm.dfm:166
+#: Editors/Dbedit.dfm:99
+#: Editors/FldLinks.DFM:132
+#: Editors/Ixedit.dfm:53
+#: Editors/PicEdit.dfm:94
 msgid "&Clear"
 msgstr "Ent&fernen"
 
@@ -10314,8 +10674,8 @@ msgid "E&xport..."
 msgstr "E&xportieren..."
 
 #. ClxImageListEditor..OpenDialog..DefaultExt
-#. ClxImageListEditor..SaveDialog..DefaultExt
-#: Property Editors/ClxImgEdit.xfm:215  Editors/ClxImgEdit.xfm:227
+#: Property Editors/ClxImgEdit.xfm:215
+#: Editors/ClxImgEdit.xfm:227
 msgid "bmp"
 msgstr "bmp"
 
@@ -10372,7 +10732,7 @@ msgstr "Neuer Unter&knoten"
 #. ClxTreeViewItems..GroupBox1..Load..Caption
 #: Property Editors/ClxNodeEdit.xfm:61
 msgid "&Load"
-msgstr "L&aden"
+msgstr "&Laden"
 
 #. ClxTreeViewItems..PropGroupBox..Label1..Caption
 #: Property Editors/ClxNodeEdit.xfm:96
@@ -10392,7 +10752,7 @@ msgstr "Untereinträge"
 #. ClxTreeViewItems..gbSubItems..btnAddSub..Caption
 #: Property Editors/ClxNodeEdit.xfm:216
 msgid "Add SubItem"
-msgstr "Untereintrag hinzufügen"
+msgstr "Eintrag hinzufügen"
 
 #. ClxTreeViewItems..gbSubItemProps..Caption
 #: Property Editors/ClxNodeEdit.xfm:237
@@ -10415,26 +10775,26 @@ msgid "All Files(*)"
 msgstr "Alle Dateien (*)"
 
 #. ClxPictureEditorDlg..Caption
-#. PictureEditorDlg..Caption
-#: Property Editors/ClxPicEdit.xfm:9  Editors/PicEdit.dfm:6
+#: Property Editors/ClxPicEdit.xfm:9
+#: Editors/PicEdit.dfm:6
 msgid "Picture Editor"
 msgstr "Bild-Editor"
 
 #. Caption
-#. ClxStrEditDlg..PopupMenu1..Load1..Caption
 #. PictureEditorDlg..GroupBox1..Load..Caption
-#. StrEditDlg..StringEditorMenu..LoadItem..Caption
-#: Property Editors/ClxPicEdit.xfm:73  Editors/ClxStrEdit.xfm:105
-#: Editors/PicEdit.dfm:76 Editors/StrEdit.dfm:76
+#: Property Editors/ClxPicEdit.xfm:73
+#: Editors/ClxStrEdit.xfm:105
+#: Editors/PicEdit.dfm:76
+#: Editors/StrEdit.dfm:76
 msgid "&Load..."
 msgstr "&Laden..."
 
 #. Caption
-#. ClxStrEditDlg..PopupMenu1..Save1..Caption
 #. PictureEditorDlg..GroupBox1..Save..Caption
-#. StrEditDlg..StringEditorMenu..SaveItem..Caption
-#: Property Editors/ClxPicEdit.xfm:83  Editors/ClxStrEdit.xfm:110
-#: Editors/PicEdit.dfm:85 Editors/StrEdit.dfm:80
+#: Property Editors/ClxPicEdit.xfm:83
+#: Editors/ClxStrEdit.xfm:110
+#: Editors/PicEdit.dfm:85
+#: Editors/StrEdit.dfm:80
 msgid "&Save..."
 msgstr "&Speichern..."
 
@@ -10444,32 +10804,31 @@ msgid "String list editor"
 msgstr "String-Listen-Editor"
 
 #. ClxStrEditDlg..LineCount..Caption
-#. StringsEditDlg..LineCount..Caption
-#: Property Editors/ClxStrEdit.xfm:33  Editors/StringsEdit.dfm:13
+#: Property Editors/ClxStrEdit.xfm:33
+#: Editors/StringsEdit.dfm:13
 msgid "0 lines"
-msgstr "0 Zeilen"
+msgstr "0 Linien"
 
 #. ClxStrEditDlg..OpenDialog....HelpContext
-#. ClxStrEditDlg..SaveDialog....DefaultExt
-#: Property Editors/ClxStrEdit.xfm:85  Editors/ClxStrEdit.xfm:96
+#: Property Editors/ClxStrEdit.xfm:85
+#: Editors/ClxStrEdit.xfm:96
 msgid "Text files (*.txt)|Config files (*.conf)|Shell scripts (*.sh)|All files (*)\n"
 msgstr "Textdateien (*.txt)|Konfigurationsdateien (*.conf)|Shellskripte (*.sh)|Alle Dateien (*)\n"
 
 #. ClxStrEditDlg..OpenDialog..Title
-#. StrEditDlg..OpenDialog..Title
-#: Property Editors/ClxStrEdit.xfm:85  Editors/StrEdit.dfm:61
+#: Property Editors/ClxStrEdit.xfm:85
+#: Editors/StrEdit.dfm:61
 msgid "Load string list"
 msgstr "String-Liste laden"
 
-# Label: ignore
 #. ClxStrEditDlg..SaveDialog..DefaultExt
 #: Property Editors/ClxStrEdit.xfm:92
 msgid "txt"
-msgstr ""
+msgstr "txt"
 
 #. ClxStrEditDlg..SaveDialog..Title
-#. StrEditDlg..SaveDialog..Title
-#: Property Editors/ClxStrEdit.xfm:97  Editors/StrEdit.dfm:70
+#: Property Editors/ClxStrEdit.xfm:97
+#: Editors/StrEdit.dfm:70
 msgid "Save string list"
 msgstr "String-Liste speichern"
 
@@ -10523,22 +10882,20 @@ msgstr "For&mat"
 msgid "&Base Field"
 msgstr "&Basisfeld"
 
-# Label: ignore
 #. DSSCubeEditor..Pager..DimensionInfo..CaptionEdit..Text
 #: Decision Cube/MXDCUBE.DFM:125
 msgid "CaptionEdit"
-msgstr ""
+msgstr "CaptionEdit"
 
 #. DSSCubeEditor..Pager..DimensionInfo..ActiveEdit..Hint
 #: Decision Cube/MXDCUBE.DFM:133
 msgid "Control of when the information for this field is loaded"
 msgstr "Steuerung wenn die Information für dieses Feld geladen ist"
 
-# Label: ignore
 #. DSSCubeEditor..Pager..DimensionInfo..ActiveEdit..Text
 #: Decision Cube/MXDCUBE.DFM:138
 msgid "ActiveEdit"
-msgstr ""
+msgstr "ActiveEdit"
 
 #. DSSCubeEditor..Pager..DimensionInfo..ActiveEdit....Items.Strings
 #: Decision Cube/MXDCUBE.DFM:144
@@ -10548,7 +10905,7 @@ msgid ""
 "Inactive\n"
 msgstr ""
 "Aktiv\n"
-"Bei Bedarf\n"
+"Nach Vorgabe\n"
 "Inaktiv\n"
 
 #. DSSCubeEditor..Pager..DimensionInfo..BinEdit..Hint
@@ -10556,11 +10913,10 @@ msgstr ""
 msgid "Group values for this field into ranges"
 msgstr "Gruppiere Werte dieses Feldes in Bereiche"
 
-# Label: ignore
 #. DSSCubeEditor..Pager..DimensionInfo..BinEdit..Text
 #: Decision Cube/MXDCUBE.DFM:155
 msgid "BinEdit"
-msgstr ""
+msgstr "BinEdit"
 
 #. DSSCubeEditor..Pager..DimensionInfo..BinEdit....Items.Strings
 #: Decision Cube/MXDCUBE.DFM:163
@@ -10577,11 +10933,10 @@ msgstr ""
 "Monat\n"
 "Einzelner Wert\n"
 
-# Label: ignore
 #. DSSCubeEditor..Pager..DimensionInfo..TypeEdit..Text
 #: Decision Cube/MXDCUBE.DFM:173
 msgid "TypeEdit"
-msgstr ""
+msgstr "TypeEdit"
 
 #. DSSCubeEditor..Pager..DimensionInfo..TypeEdit....Items.Strings
 #: Decision Cube/MXDCUBE.DFM:184
@@ -10604,11 +10959,10 @@ msgstr ""
 "GenericAgg\n"
 "Unknown\n"
 
-# Label: ignore
 #. DSSCubeEditor..Pager..DimensionInfo..FormatEdit..Text
 #: Decision Cube/MXDCUBE.DFM:193
 msgid "FormatEdit"
-msgstr ""
+msgstr "FormatEdit"
 
 #. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Height
 #: Decision Cube/MXDCUBE.DFM:204
@@ -10620,11 +10974,10 @@ msgstr "Startwert für Datumsbereich, Startwert für eindimensionale Einheiten\n
 msgid "Fieldname (for a summary, the original field used to calculate the summary)\n"
 msgstr "Feldname (für die Zusammanfassung, das ursprüngliche Feld wird für die Kalkulation der Summe benutzt)\n"
 
-# Label: ignore
 #. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit..Text
 #: Decision Cube/MXDCUBE.DFM:220
 msgid "BaseNameEdit"
-msgstr ""
+msgstr "BaseNameEdit"
 
 #. DSSCubeEditor..Pager..MemoryControl..Caption
 #: Decision Cube/MXDCUBE.DFM:226
@@ -10726,26 +11079,24 @@ msgstr "Abfrage zum Einholen von notwendigen Informationen starten, um den Zelle
 msgid "&Get Cell Counts"
 msgstr "&Ermittle Zellenanzahl"
 
-# Label: ignore
 #. DimEditor..Caption
-#. FieldsEditor..Caption
-#: Decision Cube/MXDESIGN.DFM:6  Cube/MXDIMEDT.DFM:7 Property
+#: Decision Cube/MXDESIGN.DFM:6
+#: Cube/MXDIMEDT.DFM:7
+#: Property
 #: Editors/DSDesign.dfm:8
 msgid "Form1.Table1"
-msgstr ""
+msgstr "Form1.Table1"
 
-# Label: ignore
 #. SQLWindow..Caption
 #: Decision Cube/MXDSQL.DFM:6
 msgid "Form2"
-msgstr ""
+msgstr "Form2"
 
-# Label: ignore
 #. SQLWindow..Memo1....Lines.Strings
-#. LogDetailFrame..Memo1....Lines.Strings
-#: Decision Cube/MXDSQL.DFM:32  Internet/SvrLogDetailFrame.dfm:18
+#: Decision Cube/MXDSQL.DFM:32
+#: Internet/SvrLogDetailFrame.dfm:18
 msgid "Memo1\n"
-msgstr ""
+msgstr "Memo1\n"
 
 #. DSSQueryEditor..Caption
 #: Decision Cube/MXDSSQRY.DFM:6
@@ -10858,22 +11209,20 @@ msgid "ProgressDialog"
 msgstr "Fortschrittsanzeige"
 
 #. ProgressDialog..CancelButton..Caption
-#. DataBindForm..CancelBtn..Caption
-#: Decision Cube/MXPBAR.DFM:29  Property Editors/DbOleEdt.dfm:119
+#: Decision Cube/MXPBAR.DFM:29
+#: Property Editors/DbOleEdt.dfm:119
 msgid "&Cancel"
 msgstr "&Abbrechen"
 
-# Label: ignore
 #. ProgressDialog..StatusText..Caption
 #: Decision Cube/MXPBAR.DFM:40
 msgid "StatusText"
-msgstr ""
+msgstr "StatusText"
 
-# Label: ignore
 #. formAbout..Caption
 #: Indy/IdAbout.dfm:6
 msgid "formAbout"
-msgstr ""
+msgstr "formAbout"
 
 #. frmNewMessagePart..Caption
 #: Indy/IdDsnNewMessagePart.dfm:5
@@ -10894,12 +11243,11 @@ msgstr ""
 "Anhang\n"
 "Text\n"
 
-# Label: ignore
 #. StubActionModule......Name
-#. WebModule2......Name
-#: Internet/StubAction.dfm:6  Internet/SvrInfoModule.dfm:6
+#: Internet/StubAction.dfm:6
+#: Internet/SvrInfoModule.dfm:6
 msgid "WebActionItem1"
-msgstr ""
+msgstr "WebActionItem1"
 
 #. Form1..Caption
 #: Internet/SvrInfoConsole.dfm:6
@@ -10911,73 +11259,65 @@ msgstr "ServerInfo"
 msgid "/List"
 msgstr "/List"
 
-# Label: ignore
 #. WebModule2......Name
 #: Internet/SvrInfoModule.dfm:11
 msgid "WebActionItem2"
-msgstr ""
+msgstr "WebActionItem2"
 
 #. WebModule2......PathInfo
 #: Internet/SvrInfoModule.dfm:12
 msgid "/Clean"
 msgstr "/Clean"
 
-# Label: ignore
 #. WebModule2......Name
 #: Internet/SvrInfoModule.dfm:16
 msgid "WebActionItem3"
-msgstr ""
+msgstr "WebActionItem3"
 
 #. WebModule2......PathInfo
 #: Internet/SvrInfoModule.dfm:17
 msgid "/Details"
 msgstr "/Details"
 
-# Label: ignore
 #. WebModule2..PageProducerSelect......HTMLDoc.Strings
 #: Internet/SvrInfoModule.dfm:71
 msgid "<a>View List</a>&nbsp;|&nbsp;<a HREF=\"<#PATH>Details\">View Details</a>\n"
-msgstr ""
+msgstr "<a>Zeige Liste</a>&nbsp;|&nbsp;<a HREF=\"<#PATH>Details\">Zeige Details</a>\n"
 
-# Label: ignore
 #. WebModule2..PageProducerSelect....HTMLDoc.Strings
 #: Internet/SvrInfoModule.dfm:71
 msgid "<#LIST>"
-msgstr ""
+msgstr "<#LIST>"
 
-# Label: ignore
 #. WebModule2..PageProducerSelect....HTMLDoc.Strings
-#. WebModule2..PageProducerDetails....HTMLDoc.Strings
-#: Internet/SvrInfoModule.dfm:72  Internet/SvrInfoModule.dfm:92
+#: Internet/SvrInfoModule.dfm:72
+#: Internet/SvrInfoModule.dfm:92
 msgid "</BODY>"
-msgstr ""
+msgstr "</BODY>"
 
-# Label: ignore
 #. WebModule2..PageProducerSelect....HTMLDoc.Strings
-#. WebModule2..PageProducerDetails....HTMLDoc.Strings
-#: Internet/SvrInfoModule.dfm:73  Internet/SvrInfoModule.dfm:93
+#: Internet/SvrInfoModule.dfm:73
+#: Internet/SvrInfoModule.dfm:93
 msgid "</HTML>"
-msgstr ""
+msgstr "</HTML>"
 
-# Label: ignore
 #. WebModule2..PageProducerSelect....HTMLDoc.Strings
-#. WebModule2..PageProducerDetails....HTMLDoc.Strings
-#: Internet/SvrInfoModule.dfm:74  Internet/SvrInfoModule.dfm:75
-#: Internet/SvrInfoModule.dfm:76 Internet/SvrInfoModule.dfm:94
+#: Internet/SvrInfoModule.dfm:74
+#: Internet/SvrInfoModule.dfm:75
+#: Internet/SvrInfoModule.dfm:76
+#: Internet/SvrInfoModule.dfm:94
 msgid " "
-msgstr ""
+msgstr " "
 
-# Label: ignore
 #. WebModule2..PageProducerDetails......HTMLDoc.Strings
 #: Internet/SvrInfoModule.dfm:91
 msgid "<a HREF=<#PATH>List>View List</a>&nbsp;|&nbsp;<a>View Details</a>\n"
-msgstr ""
+msgstr "<a HREF=<#PATH>List>Zeige Lise</a>&nbsp;|&nbsp;<a>Zeige Details</a>\n"
 
-# Label: ignore
 #. WebModule2..PageProducerDetails....HTMLDoc.Strings
 #: Internet/SvrInfoModule.dfm:91
 msgid "<#DETAILS>"
-msgstr ""
+msgstr "<#DETAILS>"
 
 #. LogDetail..Caption
 #: Internet/SvrLogDetailDlg.dfm:8
@@ -10990,14 +11330,14 @@ msgid "&Translate Post"
 msgstr "&POST übersetzen"
 
 #. LogDetail..ActionList1..PrevAction..Caption
-#. StandardActions..ActionList1..PreviousTab1..Caption
-#: Internet/SvrLogDetailDlg.dfm:70  Vcl/ActnRes.dfm:245
+#: Internet/SvrLogDetailDlg.dfm:70
+#: Vcl/ActnRes.dfm:245
 msgid "&Previous"
 msgstr "&Zurück"
 
 #. LogDetail..ActionList1..NextAction..Caption
-#. StandardActions..ActionList1..NextTab1..Caption
-#: Internet/SvrLogDetailDlg.dfm:75  Vcl/ActnRes.dfm:251
+#: Internet/SvrLogDetailDlg.dfm:75
+#: Vcl/ActnRes.dfm:251
 msgid "&Next"
 msgstr "Tab"
 
@@ -11012,124 +11352,125 @@ msgid "&Wrap Text"
 msgstr "Text &umbrechen"
 
 #. LogDetailFrame..ActionList1..FontEdit1..Category
-#. StandardActions..ActionList1..ColorSelect1..Category
 #. StandardActions..ActionList1..FontEdit1..Category
-#. StandardActions..ActionList1..OpenPicture1..Category
 #. StandardActions..ActionList1..SavePicture1..Category
-#. StandardActions..ActionList1..PrintDlg1..Category
 #. CustomizeFrm..ActionList1..CloseActn..Category
-#: Internet/SvrLogDetailFrame.dfm:49  Vcl/ActnRes.dfm:205 Vcl/ActnRes.dfm:211
-#: Vcl/ActnRes.dfm:223 Vcl/ActnRes.dfm:229 Vcl/ActnRes.dfm:305
+#: Internet/SvrLogDetailFrame.dfm:49
+#: Vcl/ActnRes.dfm:205
+#: Vcl/ActnRes.dfm:211
+#: Vcl/ActnRes.dfm:223
+#: Vcl/ActnRes.dfm:229
+#: Vcl/ActnRes.dfm:305
 #: Vcl/CustomizeDlg.dfm:392
 msgid "Dialog"
 msgstr "Dialog"
 
 #. LogDetailFrame..ActionList1..FontEdit1..Caption
-#. StandardActions..ActionList1..FontEdit1..Caption
-#: Internet/SvrLogDetailFrame.dfm:50  Vcl/ActnRes.dfm:212
+#: Internet/SvrLogDetailFrame.dfm:50
+#: Vcl/ActnRes.dfm:212
 msgid "Select &Font..."
 msgstr "&Schriftart wählen..."
 
 #. LogDetailFrame..ActionList1..FontEdit1..Hint
-#. StandardActions..ActionList1..FontEdit1..Hint
-#: Internet/SvrLogDetailFrame.dfm:58  Vcl/ActnRes.dfm:220
+#: Internet/SvrLogDetailFrame.dfm:58
+#: Vcl/ActnRes.dfm:220
 msgid "Font Select"
-msgstr "Schriftart wählen"
+msgstr "MS Sans Serif"
 
 #. LogDetailFrame..ActionList1..EditCut1..Caption
-#. FieldsEditor..LocalMenu..CutItem..Caption
 #. StandardActions..ActionList1..EditCut1..Caption
-#: Internet/SvrLogDetailFrame.dfm:63  Property Editors/DSDesign.dfm:141
+#: Internet/SvrLogDetailFrame.dfm:63
+#: Property Editors/DSDesign.dfm:141
 #: Vcl/ActnRes.dfm:13
 msgid "Cu&t"
 msgstr "&Ausschneiden"
 
 #. LogDetailFrame..ActionList1..EditCut1..Hint
-#. StandardActions..ActionList1..EditCut1..Hint
-#: Internet/SvrLogDetailFrame.dfm:64  Vcl/ActnRes.dfm:14
+#: Internet/SvrLogDetailFrame.dfm:64
+#: Vcl/ActnRes.dfm:14
 msgid "Cut|Cuts the selection and puts it on the Clipboard"
 msgstr "Ausschneiden|Markiertes Objekt in die Zwischenablage verschieben"
 
 #. LogDetailFrame..ActionList1..EditCopy1..Caption
-#. FieldsEditor..LocalMenu..CopyItem..Caption
 #. StandardActions..ActionList1..EditCopy1..Caption
-#: Internet/SvrLogDetailFrame.dfm:70  Property Editors/DSDesign.dfm:147
+#: Internet/SvrLogDetailFrame.dfm:70
+#: Property Editors/DSDesign.dfm:147
 #: Vcl/ActnRes.dfm:20
 msgid "&Copy"
 msgstr "&Kopieren"
 
 #. LogDetailFrame..ActionList1..EditCopy1..Hint
-#. StandardActions..ActionList1..EditCopy1..Hint
-#: Internet/SvrLogDetailFrame.dfm:71  Vcl/ActnRes.dfm:21
+#: Internet/SvrLogDetailFrame.dfm:71
+#: Vcl/ActnRes.dfm:21
 msgid "Copy|Copies the selection and puts it on the Clipboard"
 msgstr "Kopieren|Markiertes Objekt in die Zwischenablage kopieren"
 
 #. LogDetailFrame..ActionList1..EditPaste1..Caption
-#. FieldsEditor..LocalMenu..PasteItem..Caption
 #. StandardActions..ActionList1..EditPaste1..Caption
-#: Internet/SvrLogDetailFrame.dfm:77  Property Editors/DSDesign.dfm:153
+#: Internet/SvrLogDetailFrame.dfm:77
+#: Property Editors/DSDesign.dfm:153
 #: Vcl/ActnRes.dfm:27
 msgid "&Paste"
 msgstr "&Einfügen"
 
 #. LogDetailFrame..ActionList1..EditPaste1..Hint
-#. StandardActions..ActionList1..EditPaste1..Hint
-#: Internet/SvrLogDetailFrame.dfm:78  Vcl/ActnRes.dfm:28
+#: Internet/SvrLogDetailFrame.dfm:78
+#: Vcl/ActnRes.dfm:28
 msgid "Paste|Inserts Clipboard contents"
 msgstr "Einfügen|Inhalt der Zwischenablage einfügen"
 
 #. LogDetailFrame..ActionList1..EditSelectAll1..Caption
-#. StandardActions..ActionList1..EditSelectAll1..Caption
-#: Internet/SvrLogDetailFrame.dfm:84  Vcl/ActnRes.dfm:73
+#: Internet/SvrLogDetailFrame.dfm:84
+#: Vcl/ActnRes.dfm:73
 msgid "Select &All"
 msgstr "Alles &markieren"
 
 #. LogDetailFrame..ActionList1..EditSelectAll1..Hint
-#. StandardActions..ActionList1..EditSelectAll1..Hint
-#: Internet/SvrLogDetailFrame.dfm:85  Vcl/ActnRes.dfm:74
+#: Internet/SvrLogDetailFrame.dfm:85
+#: Vcl/ActnRes.dfm:74
 msgid "Select All|Selects the entire document"
 msgstr "Alles markieren|Markiert das gesamte Dokument"
 
 #. LogDetailFrame..ActionList1..EditUndo1..Caption
-#. StandardActions..ActionList1..EditUndo1..Caption
-#: Internet/SvrLogDetailFrame.dfm:90  Vcl/ActnRes.dfm:79
+#: Internet/SvrLogDetailFrame.dfm:90
+#: Vcl/ActnRes.dfm:79
 msgid "&Undo"
 msgstr "&Rückgängig"
 
 #. LogDetailFrame..ActionList1..EditUndo1..Hint
-#. StandardActions..ActionList1..EditUndo1..Hint
-#: Internet/SvrLogDetailFrame.dfm:91  Vcl/ActnRes.dfm:80
+#: Internet/SvrLogDetailFrame.dfm:91
+#: Vcl/ActnRes.dfm:80
 msgid "Undo|Reverts the last action"
 msgstr "Rückgängig|Letzte Aktuion rückgängig machen"
 
-# Label: ignore
 #. LogDetailFrame..PopupMenu1..N1..Caption
-#. LogDetailFrame..PopupMenu1..N2..Caption
 #. WebAppDbgMainForm..MainMenu1..PropertiesItem..N2..Caption
-#. WebAppDbgMainForm..MainMenu1..PropertiesItem..N1..Caption
 #. CollectionEditor..PopupMenu1..N2..Caption
-#. FieldsEditor..LocalMenu..N1..Caption
 #. SocketForm..PopupMenu..N1..Caption
-#. SocketForm..MainMenu1..miPorts..N3..Caption
 #. SocketForm..MainMenu1..Connections1..N2..Caption
-#: Internet/SvrLogDetailFrame.dfm:319  Internet/SvrLogDetailFrame.dfm:334
-#: Internet/SvrMainForm.dfm:186 Internet/SvrMainForm.dfm:192 Property
-#: Editors/ColnEdit.dfm:183 Editors/DSDesign.dfm:138 Vcl/ScktMain.dfm:323
-#: Vcl/ScktMain.dfm:351 Vcl/ScktMain.dfm:370
+#: Internet/SvrLogDetailFrame.dfm:319
+#: Internet/SvrLogDetailFrame.dfm:334
+#: Internet/SvrMainForm.dfm:186
+#: Internet/SvrMainForm.dfm:192
+#: Property
+#: Editors/ColnEdit.dfm:183
+#: Editors/DSDesign.dfm:138
+#: Vcl/ScktMain.dfm:323
+#: Vcl/ScktMain.dfm:351
+#: Vcl/ScktMain.dfm:370
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #. LogFrame..ActionList1..DetailAction..Caption
 #: Internet/SvrLogFrame.dfm:45
 msgid "&Details..."
 msgstr "&Details..."
 
-# Label: ignore
 #. WebAppDbgMainForm..Caption
-#. WebAppDbgMainForm..ActionList1..MainUpdateAction..Caption
-#: Internet/SvrMainForm.dfm:7  Internet/SvrMainForm.dfm:161
+#: Internet/SvrMainForm.dfm:7
+#: Internet/SvrMainForm.dfm:161
 msgid "MainUpdateAction"
-msgstr ""
+msgstr "MainUpdateAction"
 
 #. WebAppDbgMainForm..Label2..Caption
 #: Internet/SvrMainForm.dfm:29
@@ -11147,8 +11488,8 @@ msgid "Statistics"
 msgstr "Statistik"
 
 #. WebAppDbgMainForm..PageControl1..TabSheet1..Caption
-#. DlgProperties..PageControl1..TabLog..Caption
-#: Internet/SvrMainForm.dfm:89  Internet/SvrPropDlg.dfm:124
+#: Internet/SvrMainForm.dfm:89
+#: Internet/SvrPropDlg.dfm:124
 msgid "Log"
 msgstr "Protokoll"
 
@@ -11163,8 +11504,8 @@ msgid "Toggle"
 msgstr "Umschalten"
 
 #. WebAppDbgMainForm..ActionList1..ExitAction..Caption
-#. StandardActions..ActionList1..FileExit1..Caption
-#: Internet/SvrMainForm.dfm:136  Vcl/ActnRes.dfm:103
+#: Internet/SvrMainForm.dfm:136
+#: Vcl/ActnRes.dfm:103
 msgid "E&xit"
 msgstr "&Beenden"
 
@@ -11188,11 +11529,10 @@ msgstr "&Info..."
 msgid "&Options..."
 msgstr "&Optionen..."
 
-# Label: ignore
 #. WebAppDbgMainForm..ActionList1..BrowseAction..Caption
 #: Internet/SvrMainForm.dfm:158
 msgid "BrowseAction"
-msgstr ""
+msgstr "BrowseAction"
 
 #. WebAppDbgMainForm..ActionList1..ToggleLogAction..Caption
 #: Internet/SvrMainForm.dfm:169
@@ -11205,25 +11545,26 @@ msgid "&Server"
 msgstr "&Server:"
 
 #. DlgProperties..Caption
-#. UpdateSQLEditForm..PageControl..FieldsPage..Caption
 #. CustomizeFrm..Tabs..OptionsTab..Caption
-#. CustomizeFrm..ActionList1..ResetUsageDataActn..Category
 #. CustomizeFrm..ActionList1..RecentlyUsedActn..Category
-#. CustomizeFrm..ActionList1..FullMenusActn..Category
 #. CustomizeFrm..ActionList1..ShowHintsActn..Category
-#. CustomizeFrm..ActionList1..ShowShortCutsInTipsActn..Category
 #. CustomizeFrm..ActionList1..LargeIconsActn..Category
-#: Internet/SvrPropDlg.dfm:6  Property Editors/UpdSqlEd.dfm:54
-#: Vcl/CustomizeDlg.dfm:260 Vcl/CustomizeDlg.dfm:396 Vcl/CustomizeDlg.dfm:401
-#: Vcl/CustomizeDlg.dfm:407 Vcl/CustomizeDlg.dfm:413 Vcl/CustomizeDlg.dfm:420
+#: Internet/SvrPropDlg.dfm:6
+#: Property Editors/UpdSqlEd.dfm:54
+#: Vcl/CustomizeDlg.dfm:260
+#: Vcl/CustomizeDlg.dfm:396
+#: Vcl/CustomizeDlg.dfm:401
+#: Vcl/CustomizeDlg.dfm:407
+#: Vcl/CustomizeDlg.dfm:413
+#: Vcl/CustomizeDlg.dfm:420
 #: Vcl/CustomizeDlg.dfm:432
 msgid "Options"
 msgstr "Optionen"
 
 #. DlgProperties..PageControl1..TabConnection..Caption
-#. frmIBSecurityEditor..GroupBox2..Caption
 #. frmIBServiceEditor..GroupBox2..Caption
-#: Internet/SvrPropDlg.dfm:52  Vcl/IBSecurityEditor.dfm:23
+#: Internet/SvrPropDlg.dfm:52
+#: Vcl/IBSecurityEditor.dfm:23
 #: Vcl/IBServiceEditor.dfm:23
 msgid "Connection"
 msgstr "Verbindung"
@@ -11243,22 +11584,20 @@ msgstr "&Suchpfad:"
 msgid "&Default URL:"
 msgstr "Standard-&URL:"
 
-# Label: ignore
 #. DlgProperties..PageControl1..TabConnection..GroupBox1..cbPort..Text
 #: Internet/SvrPropDlg.dfm:94
 msgid "cbPort"
-msgstr ""
+msgstr "cbPort"
 
 #. DlgProperties..PageControl1..TabConnection..GroupBox1..cbActiveAtStartup..Caption
 #: Internet/SvrPropDlg.dfm:102
 msgid "&Activate at Startup"
 msgstr "Bei Start &aktivieren"
 
-# Label: ignore
 #. DlgProperties..PageControl1..TabConnection..GroupBox1..edDefault..Text
 #: Internet/SvrPropDlg.dfm:111
 msgid "edDefault"
-msgstr ""
+msgstr "edDefault"
 
 #. DlgProperties..PageControl1..TabConnection..GroupBox1..edPath..Text
 #: Internet/SvrPropDlg.dfm:119
@@ -11285,11 +11624,10 @@ msgstr "Max. Ereignisse:"
 msgid "Delete when max exceeded:"
 msgstr "Bei Überschreiten des Maximums löschen:"
 
-# Label: ignore
 #. DlgProperties..PageControl1..TabLog..GroupBox6..edLogMax..Text
 #: Internet/SvrPropDlg.dfm:187
 msgid "edLogMax"
-msgstr ""
+msgstr "edLogMax"
 
 #. StatsFrame..GroupBox1..Label3..Caption
 #: Internet/SvrStatsFrame.dfm:46
@@ -11391,17 +11729,15 @@ msgstr "Daten der Client-Datenmenge"
 msgid " Assign Data From "
 msgstr " Daten zuweisen von "
 
-# Label: ignore
 #. CollectionEditor..Caption
 #: Property Editors/ColnEdit.dfm:10
 msgid "CollectionEditor"
-msgstr ""
+msgstr "CollectionEditor"
 
-# Label: ignore
 #. CollectionEditor..ToolBar1..ToolButton3..Caption
 #: Property Editors/ColnEdit.dfm:41
 msgid "ToolButton3"
-msgstr ""
+msgstr "ToolButton3"
 
 #. CollectionEditor..ActionList1..AddCmd..Hint
 #: Property Editors/ColnEdit.dfm:190
@@ -11434,9 +11770,9 @@ msgid "Move Selected Down"
 msgstr "Auswahl nach unten verschieben"
 
 #. CollectionEditor..ActionList1..SelectAllCmd..Caption
-#. UpdateSQLEditForm..FieldListPopup..miSelectAll..Caption
 #. StandardActions..ActionList1..ListControlSelectAll1..Caption
-#: Property Editors/ColnEdit.dfm:223  Editors/UpdSqlEd.dfm:210
+#: Property Editors/ColnEdit.dfm:223
+#: Editors/UpdSqlEd.dfm:210
 #: Vcl/ActnRes.dfm:276
 msgid "&Select All"
 msgstr "Alles &markieren"
@@ -11462,8 +11798,8 @@ msgid "&Parameter overrides:"
 msgstr "&Parameter überschreibt:"
 
 #. DBEditForm..GroupBox1..Label4..Caption
-#. DefineField..FieldGroup..FieldNameLabel..Caption
-#: Property Editors/Dbedit.dfm:49  Editors/DSDefine.dfm:154
+#: Property Editors/Dbedit.dfm:49
+#: Editors/DSDefine.dfm:154
 msgid "&Name:"
 msgstr "&Name:"
 
@@ -11485,12 +11821,12 @@ msgstr "&Inaktive Verbindung halten"
 #. InputReqDialog..Caption
 #: Property Editors/dbinpreq.dfm:6
 msgid "Input Requested"
-msgstr "Eingabe erforderlich"
+msgstr "Eingabeaufforderung"
 
 #. InputReqDialog..NoPromptAgain..Caption
 #: Property Editors/dbinpreq.dfm:48
 msgid "Don't Prompt Again"
-msgstr "Nicht mehr nachfragen"
+msgstr "Meldung nicht mehr anzeigen"
 
 #. DataBindForm..Caption
 #: Property Editors/DbOleEdt.dfm:6
@@ -11568,8 +11904,8 @@ msgid "D&ataset:"
 msgstr "Daten&menge:"
 
 #. DefineField..LookupGroup..KeyFieldsLabel..Caption
-#. UpdateSQLEditForm..PageControl..FieldsPage..GroupBox1..Label3..Caption
-#: Property Editors/DSDefine.dfm:36  Editors/UpdSqlEd.dfm:75
+#: Property Editors/DSDefine.dfm:36
+#: Editors/UpdSqlEd.dfm:75
 msgid "&Key Fields:"
 msgstr "&Schlüsselfelder:"
 
@@ -11675,8 +12011,8 @@ msgid "&Joined Fields"
 msgstr "Ver&knüpfte Felder"
 
 #. IndexFiles..Caption
-#. IndexFiles..GroupBox1..Caption
-#: Property Editors/Ixedit.dfm:5  Editors/Ixedit.dfm:17
+#: Property Editors/Ixedit.dfm:5
+#: Editors/Ixedit.dfm:17
 msgid "Index Files"
 msgstr "Indexdateien"
 
@@ -11686,8 +12022,8 @@ msgid "dBASE Multiple Index (*.MDX)|*.mdx|dBase Index (*.NDX)|*.ndx|FoxPro Index
 msgstr "dBASE Mehrfachindex (*.MDX)|*.mdx|dBase Index (*.NDX)|*.ndx|FoxPro Index (*.CDX)|*.cdx\n"
 
 #. PictureEditorDlg..OpenDialog....OnClick
-#. PictureEditorDlg..SaveDialog....Top
-#: Property Editors/PicEdit.dfm:104  Editors/PicEdit.dfm:112
+#: Property Editors/PicEdit.dfm:104
+#: Editors/PicEdit.dfm:112
 msgid "All (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf|Metafiles (*.wmf)|*.wmf\n"
 msgstr "Alle (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Erweiterte Metadateien (*.emf)|*.emf|Metadateien (*.wmf)|*.wmf\n"
 
@@ -11727,8 +12063,8 @@ msgid "String List Editor"
 msgstr "String-Listen-Editor"
 
 #. StrEditDlg..CodeWndBtn..Caption
-#. StrEditDlg..StringEditorMenu..CodeEditorItem..Caption
-#: Property Editors/StrEdit.dfm:20  Editors/StrEdit.dfm:84
+#: Property Editors/StrEdit.dfm:20
+#: Editors/StrEdit.dfm:84
 msgid "&Code Editor..."
 msgstr "&Quelltext-Editor..."
 
@@ -11738,15 +12074,15 @@ msgid "TXT"
 msgstr "TXT"
 
 #. StrEditDlg..OpenDialog....DefaultExt
-#. StrEditDlg..SaveDialog....HelpContext
-#: Property Editors/StrEdit.dfm:60  Editors/StrEdit.dfm:69
+#: Property Editors/StrEdit.dfm:60
+#: Editors/StrEdit.dfm:69
 msgid "Text files (*.TXT)|*.TXT|Config files (*.SYS;*.INI)|*.SYS;*.INI|Batch files (*.BAT)|*.BAT|All files (*.*)|*.*\n"
 msgstr "Textdateien (*.TXT)|*.TXT|Konfigurationsdateien (*.SYS;*.INI)|*.SYS;*.INI|Batchdateien (*.BAT)|*.BAT|Alle Dateien (*.*)|*.*\n"
 
 #. UpdateSQLEditForm..PageControl..FieldsPage..GroupBox1..Caption
 #: Property Editors/UpdSqlEd.dfm:60
 msgid " SQL Generation "
-msgstr " SQL Generierung "
+msgstr " SQL Erzeugung "
 
 #. UpdateSQLEditForm..PageControl..FieldsPage..GroupBox1..Label1..Caption
 #: Property Editors/UpdSqlEd.dfm:67
@@ -11761,7 +12097,7 @@ msgstr "&Felder aktualisieren:"
 #. UpdateSQLEditForm..PageControl..FieldsPage..GroupBox1..GenerateButton..Caption
 #: Property Editors/UpdSqlEd.dfm:123
 msgid "&Generate SQL"
-msgstr "SQL &generieren"
+msgstr "&Erzeuge SQL"
 
 #. UpdateSQLEditForm..PageControl..FieldsPage..GroupBox1..PrimaryKeyButton..Caption
 #: Property Editors/UpdSqlEd.dfm:132
@@ -11781,7 +12117,7 @@ msgstr "&Feldname in Anführungszeichen"
 #. UpdateSQLEditForm..PageControl..FieldsPage..GroupBox1..GetTableFieldsButton..Caption
 #: Property Editors/UpdSqlEd.dfm:160
 msgid "Get &Table Fields"
-msgstr "&Tabellenfelder ermitteln"
+msgstr "Hole &Tabellenfelder"
 
 #. UpdateSQLEditForm..PageControl..SQLPage..Caption
 #: Property Editors/UpdSqlEd.dfm:167
@@ -11812,7 +12148,7 @@ msgstr ""
 #. UpdateSQLEditForm..FieldListPopup..miClearAll..Caption
 #: Property Editors/UpdSqlEd.dfm:214
 msgid "&Clear All"
-msgstr "Alles Entfernen"
+msgstr "Alle &Löschen"
 
 #. ValueEditDlg..Caption
 #: Property Editors/ValueEdit.dfm:4
@@ -11820,13 +12156,14 @@ msgid "Value List editor"
 msgstr "Wertlisten-Editor"
 
 #. StandardActions..ActionList1..WindowArrange1..Category
-#. StandardActions..ActionList1..WindowCascade1..Category
 #. StandardActions..ActionList1..WindowClose1..Category
-#. StandardActions..ActionList1..WindowMinimizeAll1..Category
 #. StandardActions..ActionList1..WindowTileHorizontal1..Category
-#. StandardActions..ActionList1..WindowTileVertical1..Category
-#: Vcl/ActnRes.dfm:33  Vcl/ActnRes.dfm:37 Vcl/ActnRes.dfm:43
-#: Vcl/ActnRes.dfm:48 Vcl/ActnRes.dfm:53 Vcl/ActnRes.dfm:59
+#: Vcl/ActnRes.dfm:33
+#: Vcl/ActnRes.dfm:37
+#: Vcl/ActnRes.dfm:43
+#: Vcl/ActnRes.dfm:48
+#: Vcl/ActnRes.dfm:53
+#: Vcl/ActnRes.dfm:59
 msgid "Window"
 msgstr "Fenster"
 
@@ -11851,9 +12188,10 @@ msgid "C&lose"
 msgstr "S&chließen"
 
 #. StandardActions..ActionList1..WindowClose1..Hint
-#. CustomizeFrm..CloseBtn..Caption
 #. CustomizeFrm..ActionList1..CloseActn..Caption
-#: Vcl/ActnRes.dfm:45  Vcl/CustomizeDlg.dfm:35 Vcl/CustomizeDlg.dfm:393
+#: Vcl/ActnRes.dfm:45
+#: Vcl/CustomizeDlg.dfm:35
+#: Vcl/CustomizeDlg.dfm:393
 msgid "Close"
 msgstr "Schließen"
 
@@ -11923,12 +12261,13 @@ msgid "Topic Search"
 msgstr "Suche über Schlüsselwort"
 
 #. StandardActions..ActionList1..FileExit1..Category
-#. StandardActions..ActionList1..FileOpen1..Category
 #. StandardActions..ActionList1..FilePrintSetup1..Category
-#. StandardActions..ActionList1..FileSaveAs1..Category
 #. StandardActions..ActionList1..FileRun1..Category
-#: Vcl/ActnRes.dfm:102  Vcl/ActnRes.dfm:108 Vcl/ActnRes.dfm:115
-#: Vcl/ActnRes.dfm:120 Vcl/ActnRes.dfm:235
+#: Vcl/ActnRes.dfm:102
+#: Vcl/ActnRes.dfm:108
+#: Vcl/ActnRes.dfm:115
+#: Vcl/ActnRes.dfm:120
+#: Vcl/ActnRes.dfm:235
 msgid "File"
 msgstr "Datei"
 
@@ -11968,16 +12307,17 @@ msgid "Save As|Saves the active file with a new name"
 msgstr "Speichern unter|Aktive Datei unter einem neuen Namen speichern"
 
 #. StandardActions..ActionList1..RichEditBold1..Category
-#. StandardActions..ActionList1..RichEditItalic1..Category
 #. StandardActions..ActionList1..RichEditUnderline1..Category
-#. StandardActions..ActionList1..RichEditAlignCenter1..Category
 #. StandardActions..ActionList1..RichEditAlignLeft1..Category
-#. StandardActions..ActionList1..RichEditAlignRight1..Category
 #. StandardActions..ActionList1..RichEditBullets1..Category
-#. StandardActions..ActionList1..RichEditStrikeOut1..Category
-#: Vcl/ActnRes.dfm:126  Vcl/ActnRes.dfm:134 Vcl/ActnRes.dfm:142
-#: Vcl/ActnRes.dfm:170 Vcl/ActnRes.dfm:177 Vcl/ActnRes.dfm:184
-#: Vcl/ActnRes.dfm:191 Vcl/ActnRes.dfm:198
+#: Vcl/ActnRes.dfm:126
+#: Vcl/ActnRes.dfm:134
+#: Vcl/ActnRes.dfm:142
+#: Vcl/ActnRes.dfm:170
+#: Vcl/ActnRes.dfm:177
+#: Vcl/ActnRes.dfm:184
+#: Vcl/ActnRes.dfm:191
+#: Vcl/ActnRes.dfm:198
 msgid "Format"
 msgstr "Format"
 
@@ -12002,10 +12342,10 @@ msgid "Underline"
 msgstr "Unterstrichen"
 
 #. StandardActions..ActionList1..SearchFind1..Category
-#. StandardActions..ActionList1..SearchFindNext1..Category
 #. StandardActions..ActionList1..SearchReplace1..Category
-#. StandardActions..ActionList1..SearchFindFirst1..Category
-#: Vcl/ActnRes.dfm:150  Vcl/ActnRes.dfm:157 Vcl/ActnRes.dfm:164
+#: Vcl/ActnRes.dfm:150
+#: Vcl/ActnRes.dfm:157
+#: Vcl/ActnRes.dfm:164
 #: Vcl/ActnRes.dfm:255
 msgid "Search"
 msgstr "Suchen"
@@ -12078,7 +12418,7 @@ msgstr "Aufzählungszeichen|In die aktuielle Zeile ein Aufzählungszeichen einf�
 #. StandardActions..ActionList1..RichEditStrikeOut1..Caption
 #: Vcl/ActnRes.dfm:200
 msgid "&Strikeout"
-msgstr "&Durchgestrichen"
+msgstr "Format"
 
 #. StandardActions..ActionList1..RichEditStrikeOut1..Hint
 #: Vcl/ActnRes.dfm:201
@@ -12128,7 +12468,7 @@ msgstr "Start"
 #. StandardActions..ActionList1..FileRun1..Operation
 #: Vcl/ActnRes.dfm:240
 msgid "open"
-msgstr "Öffnen"
+msgstr "&Ausführen..."
 
 #. StandardActions..ActionList1..PreviousTab1..Hint
 #: Vcl/ActnRes.dfm:246
@@ -12155,19 +12495,19 @@ msgstr "&Ersten suchen"
 msgid "Find First|Finds the first occurance of specified text"
 msgstr "Suchen"
 
-# Label: ignore
 #. StandardActions..ActionList1..HelpContextAction1..Caption
 #: Vcl/ActnRes.dfm:261
 msgid "HelpContextAction1"
-msgstr ""
+msgstr "HelpContextAction1"
 
 #. StandardActions..ActionList1..ListControlCopySelection1..Category
-#. StandardActions..ActionList1..ListControlDeleteSelection1..Category
 #. StandardActions..ActionList1..ListControlSelectAll1..Category
-#. StandardActions..ActionList1..ListControlClearSelection1..Category
 #. StandardActions..ActionList1..ListControlMoveSelection1..Category
-#: Vcl/ActnRes.dfm:265  Vcl/ActnRes.dfm:270 Vcl/ActnRes.dfm:275
-#: Vcl/ActnRes.dfm:280 Vcl/ActnRes.dfm:285
+#: Vcl/ActnRes.dfm:265
+#: Vcl/ActnRes.dfm:270
+#: Vcl/ActnRes.dfm:275
+#: Vcl/ActnRes.dfm:280
+#: Vcl/ActnRes.dfm:285
 msgid "List"
 msgstr "Liste"
 
@@ -12192,10 +12532,10 @@ msgid "Delete Selection"
 msgstr "Liste"
 
 #. StandardActions..ActionList1..ListControlClearSelection1..Caption
-#. StandardActions..ActionList1..ListControlClearSelection1..Hint
-#: Vcl/ActnRes.dfm:281  Vcl/ActnRes.dfm:282
+#: Vcl/ActnRes.dfm:281
+#: Vcl/ActnRes.dfm:282
 msgid "Clear Selection"
-msgstr "Auswahl aufheben"
+msgstr "Liste"
 
 #. StandardActions..ActionList1..ListControlMoveSelection1..Caption
 #: Vcl/ActnRes.dfm:286
@@ -12208,9 +12548,10 @@ msgid "Move Selection"
 msgstr "Liste"
 
 #. StandardActions..ActionList1..BrowseURL1..Category
-#. StandardActions..ActionList1..DownLoadURL1..Category
 #. StandardActions..ActionList1..SendMail1..Category
-#: Vcl/ActnRes.dfm:290  Vcl/ActnRes.dfm:295 Vcl/ActnRes.dfm:300
+#: Vcl/ActnRes.dfm:290
+#: Vcl/ActnRes.dfm:295
+#: Vcl/ActnRes.dfm:300
 msgid "Internet"
 msgstr "Internet"
 
@@ -12254,16 +12595,16 @@ msgstr "D&rucken..."
 msgid "Customize"
 msgstr "Anpassen"
 
-# Label: ignore
 #. CustomizeFrm..Font.Name
 #: Vcl/CustomizeDlg.dfm:15
 msgid "Tahoma"
-msgstr ""
+msgstr "Tahoma"
 
 #. CustomizeFrm..Tabs..ToolbarsTab..Caption
-#. CustomizeFrm..ActionList1..ResetActn..Category
 #. CustomizeFrm..ActionList1..ApplyToAllActn..Category
-#: Vcl/CustomizeDlg.dfm:52  Vcl/CustomizeDlg.dfm:386 Vcl/CustomizeDlg.dfm:426
+#: Vcl/CustomizeDlg.dfm:52
+#: Vcl/CustomizeDlg.dfm:386
+#: Vcl/CustomizeDlg.dfm:426
 msgid "Toolbars"
 msgstr "Symbolleisten"
 
@@ -12290,7 +12631,7 @@ msgstr "Ü&berschriftoptionen"
 #. CustomizeFrm..Tabs..ToolbarsTab..CaptionOptionsGrp..ApplyToAllChk..Caption
 #: Vcl/CustomizeDlg.dfm:116
 msgid "Apply caption options &to all toolbars"
-msgstr "Beschriftungs-Optionen für alle Symbolleisten verwenden"
+msgstr "Optionen für alle Symbolleisten verwenden"
 
 #. CustomizeFrm..Tabs..ToolbarsTab..CaptionOptionsGrp..CaptionOptionsCombo....Items.Strings
 #: Vcl/CustomizeDlg.dfm:132
@@ -12328,11 +12669,10 @@ msgstr "&Aktionen:"
 msgid "Description"
 msgstr "Beschreibung"
 
-# Label: ignore
 #. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
 #: Vcl/CustomizeDlg.dfm:235
 msgid "HintLbl"
-msgstr ""
+msgstr "HintLbl"
 
 #. CustomizeFrm..Tabs..OptionsTab..PersonalizeLbl..Caption
 #: Vcl/CustomizeDlg.dfm:271
@@ -12367,7 +12707,7 @@ msgstr "Symbolleisten"
 #. CustomizeFrm..ActionList1..ResetUsageDataActn..Caption
 #: Vcl/CustomizeDlg.dfm:397
 msgid "Reset Usage Data"
-msgstr "Benutzungszähler zurücksetzen"
+msgstr "Optionen"
 
 #. CustomizeFrm..ActionList1..RecentlyUsedActn..Caption
 #: Vcl/CustomizeDlg.dfm:402
@@ -12399,23 +12739,21 @@ msgstr "&Für alle Symbolleisten verwenden"
 msgid "&Large icons"
 msgstr "&Große Symbole"
 
-# Label: ignore
 #. LoginDialog..Panel..Panel1..Password..PasswordChar
-#. PasswordDialog..GroupBox1..Edit..PasswordChar
-#: Vcl/DBLOGDLG.dfm:102  Vcl/DbPWDlg.dfm:47
+#: Vcl/DBLOGDLG.dfm:102
+#: Vcl/DbPWDlg.dfm:47
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #. HTTPServer......Name
 #: Vcl/HTTPIntr.dfm:6
 msgid "Interpreter"
 msgstr "Interpreter"
 
-# Label: ignore
 #. frmGeneratorEditor..Caption
 #: Vcl/IBGeneratorEditor.dfm:5
 msgid "frmGeneratorEditor"
-msgstr ""
+msgstr "frmGeneratorEditor"
 
 #. frmGeneratorEditor..Label1..Caption
 #: Vcl/IBGeneratorEditor.dfm:25
@@ -12464,38 +12802,38 @@ msgid "Restore Database Files"
 msgstr "Datenbankdateien wiederherstellen"
 
 #. frmIBSecurityEditor..Caption
-#. frmIBServiceEditor..Caption
-#: Vcl/IBSecurityEditor.dfm:6  Vcl/IBServiceEditor.dfm:6
+#: Vcl/IBSecurityEditor.dfm:6
+#: Vcl/IBServiceEditor.dfm:6
 msgid "Service Editor"
 msgstr "Service-Editor"
 
 #. frmIBSecurityEditor..GroupBox2..Label7..Caption
-#. frmIBServiceEditor..GroupBox2..Label7..Caption
-#: Vcl/IBSecurityEditor.dfm:30  Vcl/IBServiceEditor.dfm:38
+#: Vcl/IBSecurityEditor.dfm:30
+#: Vcl/IBServiceEditor.dfm:38
 msgid "&Server:"
 msgstr "&Server:"
 
 #. frmIBSecurityEditor..GroupBox2..Label8..Caption
-#. frmIBServiceEditor..GroupBox2..Label8..Caption
-#: Vcl/IBSecurityEditor.dfm:39  Vcl/IBServiceEditor.dfm:47
+#: Vcl/IBSecurityEditor.dfm:39
+#: Vcl/IBServiceEditor.dfm:47
 msgid "&Protocol:"
 msgstr "&Protokoll:"
 
 #. frmIBSecurityEditor..GroupBox2..LocalRbtn..Caption
-#. frmIBServiceEditor..GroupBox2..LocalRbtn..Caption
-#: Vcl/IBSecurityEditor.dfm:48  Vcl/IBServiceEditor.dfm:63
+#: Vcl/IBSecurityEditor.dfm:48
+#: Vcl/IBServiceEditor.dfm:63
 msgid "&Local"
 msgstr "&Lokal"
 
 #. frmIBSecurityEditor..GroupBox2..RemoteRbtn..Caption
-#. frmIBServiceEditor..GroupBox2..RemoteRbtn..Caption
-#: Vcl/IBSecurityEditor.dfm:59  Vcl/IBServiceEditor.dfm:74
+#: Vcl/IBSecurityEditor.dfm:59
+#: Vcl/IBServiceEditor.dfm:74
 msgid "&Remote"
 msgstr "E&xtern"
 
 #. frmIBSecurityEditor..GroupBox2..Protocol....Items.Strings
-#. frmIBServiceEditor..GroupBox2..Protocol....Items.Strings
-#: Vcl/IBSecurityEditor.dfm:84  Vcl/IBServiceEditor.dfm:107
+#: Vcl/IBSecurityEditor.dfm:84
+#: Vcl/IBServiceEditor.dfm:107
 msgid ""
 "TCP\n"
 "NamedPipe\n"
@@ -12506,32 +12844,32 @@ msgstr ""
 "SPX\n"
 
 #. frmIBSecurityEditor..GroupBox1..Caption
-#. frmIBServiceEditor..GroupBox1..Caption
-#: Vcl/IBSecurityEditor.dfm:129  Vcl/IBServiceEditor.dfm:152
+#: Vcl/IBSecurityEditor.dfm:129
+#: Vcl/IBServiceEditor.dfm:152
 msgid "Database Parameters"
 msgstr "Datenbank-Parameter"
 
 #. frmIBSecurityEditor..GroupBox1..Label3..Caption
-#. frmIBServiceEditor..GroupBox1..Label3..Caption
-#: Vcl/IBSecurityEditor.dfm:144  Vcl/IBServiceEditor.dfm:167
+#: Vcl/IBSecurityEditor.dfm:144
+#: Vcl/IBServiceEditor.dfm:167
 msgid "Pass&word:"
 msgstr "Pass&wort:"
 
 #. frmIBSecurityEditor..GroupBox1..Label5..Caption
-#. frmIBServiceEditor..GroupBox1..Label5..Caption
-#: Vcl/IBSecurityEditor.dfm:152  Vcl/IBServiceEditor.dfm:175
+#: Vcl/IBSecurityEditor.dfm:152
+#: Vcl/IBServiceEditor.dfm:175
 msgid "Se&ttings:"
 msgstr "Eins&tellungen:"
 
 #. frmIBSecurityEditor..GroupBox1..LoginPrompt..Caption
-#. frmIBServiceEditor..GroupBox1..LoginPrompt..Caption
-#: Vcl/IBSecurityEditor.dfm:185  Vcl/IBServiceEditor.dfm:208
+#: Vcl/IBSecurityEditor.dfm:185
+#: Vcl/IBServiceEditor.dfm:208
 msgid "Lo&gin Prompt"
 msgstr "A&nmeldeaufforderung"
 
 #. frmIBSecurityEditor..GroupBox1..chkActive..Caption
-#. frmIBServiceEditor..GroupBox1..chkActive..Caption
-#: Vcl/IBSecurityEditor.dfm:193  Vcl/IBServiceEditor.dfm:216
+#: Vcl/IBSecurityEditor.dfm:193
+#: Vcl/IBServiceEditor.dfm:216
 msgid "&Active"
 msgstr "&Aktiv"
 

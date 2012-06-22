@@ -99,8 +99,6 @@ begin
   AppOutput:=TStringList.Create;
   try
     cmdline:='xgettext --keyword=_ -n --files-from="'+shellescape(filelistname)+'" -j -p "'+shellescape(OutputDir)+'" -d default 2>&1';
-    // Use this command line in later versions, when xgettext.exe has been replaced with a version that understands --from-code
-    // cmdline:='xgettext --keyword=_ --from-code=UTF-8 -n --files-from="'+shellescape(filelistname)+'" -j -p "'+shellescape(OutputDir)+'" -d default 2>&1';
     cmdline:='-c "'+shellescape(cmdline)+'"';
     ExecConsoleApp ('bash.exe',cmdline,AppOutput,nil);
     appout:=trim(AppOutput.text);

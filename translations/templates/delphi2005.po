@@ -1,16 +1,15 @@
 # BORLAND DELPHI 2005 RUNTIME
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: DELPHI2005 \n"
-"POT-Creation-Date: 2005-04-19 10:14\n"
-"PO-Revision-Date: 2005-04-19 10:14\n"
+"POT-Creation-Date: 2005-03-21 17:11\n"
+"PO-Revision-Date: 2005-03-21 17:11\n"
 "Last-Translator: Somebody <your.email@address.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: dxgettext 1.2.1 beta 1\n"
+"X-Generator: dxgettext 1.2 RC 1\n"
 
 #. CustomizeFrm..Caption
 #: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:6
@@ -130,9 +129,9 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
 #: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:145
-#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....Caption
+#. CustomizeFrm..Tabs..ActionsTab..InfoLbl....AutoSize
 #: Win32/vcl/CustomizeDlg.dfm:144
 msgid "To add actions to your application simply drag and drop from either "
 "Categories or Actions onto an existing "
@@ -162,6 +161,13 @@ msgstr ""
 #. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..Caption
 #: Win32/vcl/CustomizeDlg.dfm:215
 msgid "Description"
+msgstr ""
+
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#: dotNet/vcl/Borland.Vcl.CustomizeDlg.dfm:229
+#. CustomizeFrm..Tabs..ActionsTab..DescGroupBox..HintLbl..Caption
+#: Win32/vcl/CustomizeDlg.dfm:228
+msgid "HintLbl"
 msgstr ""
 
 #. CustomizeFrm..Tabs..OptionsTab..Caption
@@ -2735,13 +2741,13 @@ msgstr ""
 msgid "FormatEdit"
 msgstr ""
 
-#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..StartEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:203
 msgid "Starting value for date ranges, Intial value for single valued "
 "dimensions"
 msgstr ""
 
-#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Hint
+#. DSSCubeEditor..Pager..DimensionInfo..BaseNameEdit....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:216
 msgid "Fieldname (for a summary, the original field used to calculate the "
 "summary)"
@@ -2823,7 +2829,7 @@ msgstr ""
 msgid "Current"
 msgstr ""
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxDims....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:423
 msgid "Limit on the number of dimensions which can be loaded at one "
 "time"
@@ -2835,7 +2841,7 @@ msgid "Limit on the number of summaries which can be loaded at one "
 "time"
 msgstr ""
 
-#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Hint
+#. DSSCubeEditor..Pager..MemoryControl..CubeLimits..MaxCells....Height
 #: Win32/Decision_Cube/MXDCUBE.DFM:445
 msgid "Limit on the number of storage cells which can be loaded at one "
 "time"
@@ -3430,7 +3436,7 @@ msgstr ""
 msgid "&Add..."
 msgstr ""
 
-#. IndexFiles..OpenDialog....Filter
+#. IndexFiles..OpenDialog....OnClick
 #: Win32/Property_Editors/Ixedit.dfm:91
 msgid "dBASE Multiple Index (*.MDX)|*.mdx|dBase Index (*.NDX)|*.ndx|FoxPro "
 "Index (*.CDX)|*.cdx"
@@ -3464,9 +3470,9 @@ msgstr ""
 msgid "&Save..."
 msgstr ""
 
-#. PictureEditorDlg..OpenDialog....Filter
+#. PictureEditorDlg..OpenDialog....OnClick
 #: Win32/Property_Editors/PicEdit.dfm:103
-#. PictureEditorDlg..SaveDialog....Filter
+#. PictureEditorDlg..SaveDialog....Top
 #: Win32/Property_Editors/PicEdit.dfm:111
 msgid "All (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps "
 "(*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles "
@@ -3522,9 +3528,9 @@ msgstr ""
 msgid "TXT"
 msgstr ""
 
-#. StrEditDlg..OpenDialog....Filter
+#. StrEditDlg..OpenDialog....DefaultExt
 #: Win32/Property_Editors/StrEdit.dfm:71
-#. StrEditDlg..SaveDialog....Filter
+#. StrEditDlg..SaveDialog....HelpContext
 #: Win32/Property_Editors/StrEdit.dfm:80
 msgid "Text files (*.TXT)|*.TXT|Config files (*.SYS;*.INI)|*.SYS;*.INI|Batch "
 "files (*.BAT)|*.BAT|All files (*.*)|*.*"
@@ -19508,10 +19514,10 @@ msgstr ""
 #. Programmer's name for it: RefreshWarning
 #: IntraWeb/IWResourceStrings.pas:276
 msgid "You have attempted to post or refresh data from a page that  depends "
-"on information that is no longer available to the server application.\n"
-"\n"
-"Your attempted changes will be ignored. You will now be resynced to "
-"the current place in the application."
+"on information that is no longer available to the server "
+"application.Your attempted changes will be ignored. You will now be "
+"resynced to the current place in the "
+"application."
 msgstr ""
 
 #. Programmer's name for it: ResourceNotFound
@@ -19541,8 +19547,8 @@ msgstr ""
 
 #. Programmer's name for it: InvalidBrowser
 #: IntraWeb/IWResourceStrings.pas:282
-msgid "Your browser was detected as %s, identifying itself as %s.\n"
-"One of the following browsers is required:\n"
+msgid "Your browser was detected as %s, identifying itself as %s.One of the "
+"following browsers is required:"
 msgstr ""
 
 #. Programmer's name for it: MessageDialog
@@ -19926,8 +19932,7 @@ msgstr ""
 #. Programmer's name for it: LayoutMgrNeeded32
 #: IntraWeb/IWResourceStrings.pas:372
 msgid "For HTML 3.2 a layout manager is required. Make sure that you have "
-"one\n"
-" associated to the form and this it's Able property is set to "
+"one associated to the form and this it's Able property is set to "
 "True"
 msgstr ""
 
@@ -20184,8 +20189,8 @@ msgstr ""
 #. TimeEdit
 #. Programmer's name for it: InvalidTimeEditFormat
 #: IntraWeb/IWResourceStrings.pas:442
-msgid "The value of %s is in an incorrect format.\n"
-"Please correct the value."
+msgid "The value of %s is in an incorrect format.Please correct the "
+"value."
 msgstr ""
 
 #. Programmer's name for it: MissingContainerOnFrame
@@ -22237,11 +22242,13 @@ msgid "Overflow while converting variant of type (%s) into type "
 "(%s)"
 msgstr ""
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10911
 msgid "This module was compiled with a trial version of Kylix.\n"
 "The trial period has expired.\n"
 msgstr ""
 
+#. Programmer's name for it: errCaption: array[0..5] of Char
 #: Win32/rtl/sys/System.pas:10916
 msgid "This module was compiled with a trial version of Delphi.\n"
 "The trial period has expired.\n"

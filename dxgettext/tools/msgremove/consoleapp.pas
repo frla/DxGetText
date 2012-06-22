@@ -34,7 +34,6 @@ procedure TConsoleApp.AnalyzeCommandline;
 var
   i:integer;
   param,uparam:string;
-  w: integer;
 begin
   i:=1;
   while i<=paramcount do begin
@@ -43,20 +42,10 @@ begin
     if uparam='-O' then begin
       inc (i);
       engine.outputfilename:=ExpandFileName(paramstr(i));
-    end else
+    end else 
     if uparam='-I' then begin
       inc (i);
       engine.removelistfilename:=ExpandFileName(paramstr(i));
-    end else
-    if Copy(uparam, 7)='--WRAP=' then begin
-      if not TryStrToInt(Copy(uparam, 8), w) or (w < 10) then begin
-        WriteHelp;
-        exit;
-      end;
-      engine.MaxWidth := w;
-    end else
-    if uparam='--NO-WRAP' then begin
-      engine.MaxWidth := 0;
     end else begin
       engine.inputfilename:=ExpandFileName(param);
     end;
@@ -92,13 +81,8 @@ begin
   writeln (_('msgremove usage:'));
   writeln (  '  msgremove default.po -i ignore.po -o output.po');
   writeln;
-  WriteLn (_('Options:'));
-  WriteLn (  '  --wrap=<number>       '+_('Wrap lines at <number> (default: 70, min: 10)'));
-  WriteLn (  '  --no-wrap             '+_('do not wrap lines'));
-  writeln;
   writeln (_('This will generate the file output.po as a copy of default.po, '+sLineBreak+
              'but without all the MsgIds that are listed in ignore.po.'));
-  WriteLn;
 end;
 
 end.

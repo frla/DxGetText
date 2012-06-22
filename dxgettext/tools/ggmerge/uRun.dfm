@@ -4,7 +4,7 @@ object FormRun: TFormRun
   ActiveControl = EditTemplate
   BorderStyle = bsDialog
   Caption = 'Merge translation with new translation template'
-  ClientHeight = 227
+  ClientHeight = 198
   ClientWidth = 464
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,17 +19,17 @@ object FormRun: TFormRun
   OnResize = FormResize
   DesignSize = (
     464
-    227)
+    198)
   PixelsPerInch = 96
   TextHeight = 14
   object ButtonGo: TButton
     Left = 184
-    Top = 193
+    Top = 168
     Width = 105
     Height = 25
     Caption = '&Merge'
     Default = True
-    TabOrder = 9
+    TabOrder = 7
     OnClick = ButtonGoClick
   end
   object EditTranslation: TLabeledEdit
@@ -76,7 +76,7 @@ object FormRun: TFormRun
   end
   object CheckBoxCreateBackup: TCheckBox
     Left = 8
-    Top = 94
+    Top = 96
     Width = 431
     Height = 17
     Anchors = [akLeft, akTop, akRight]
@@ -87,40 +87,21 @@ object FormRun: TFormRun
   end
   object CheckBoxSaveSettings: TCheckBox
     Left = 8
-    Top = 170
+    Top = 144
     Width = 431
     Height = 17
-    TabStop = False
     Anchors = [akLeft, akTop, akRight]
     Caption = 'Remember settings'
-    TabOrder = 8
+    TabOrder = 6
   end
   object CheckBoxNonAscii: TCheckBox
     Left = 8
-    Top = 113
+    Top = 120
     Width = 431
     Height = 17
     Anchors = [akLeft, akTop, akRight]
     Caption = 'Support non-ascii msgid values (not recommended)'
     TabOrder = 5
-  end
-  object cb_CreateRemovedAndNewFile: TCheckBox
-    Left = 8
-    Top = 132
-    Width = 431
-    Height = 17
-    Anchors = [akLeft, akTop, akRight]
-    Caption = 'Create file with removed and new strings'
-    TabOrder = 6
-  end
-  object cb_PreserveStateFuzzy: TCheckBox
-    Left = 8
-    Top = 151
-    Width = 431
-    Height = 17
-    Anchors = [akLeft, akTop, akRight]
-    Caption = 'Preserve state "fuzzy"'
-    TabOrder = 7
   end
   object XPManifest: TXPManifest
     Left = 120

@@ -20,7 +20,7 @@ var
 
 implementation
 
-uses ConsoleAppHandler;
+uses ConsoleApp;
 
 {$R *.dfm}
 

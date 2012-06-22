@@ -9,60 +9,41 @@ unit poparser;
 (*                                                              *)
 (****************************************************************)
 
+// This assumes utf-8 only in the .po files
+
 interface
 
 uses
   Classes;
 
-const
-  PluralSplitter=#12;
-
-const // use these for Get/SetPoHeaderEntry calls
-  PO_HEADER_PROJECT_ID_VERSION = 'Project-Id-Version:';
-  PO_HEADER_LANGUAGE_TEAM = 'Language-Team:';
-  PO_HEADER_LAST_TRANSLATOR = 'Last-Translator:';
-  PO_HEADER_CONTENT_TYPE = 'Content-Type:';
-  PO_HEADER_LANGUAGE = 'X-Poedit-Language:';
-
 type
-  TObjectPascalFormat = (opfTrue, opfFalse, opfUndefined);
   TPoEntry=
     class
-    private
-      FIndex: integer; // remember the entry's index in the original file so we can
-                       // store them in the same order as we read them
     public
-      UserCommentList:TStringList;   // Entire lines
-      AutoCommentList:TStringList;   // Entire lines
-      MsgId:string;              // singular and plural are separated by PluraSPlitter, if plural form is present
-      MsgStr:string;             // plural forms are separated by PluraSPlitter, if present
-      Fuzzy:boolean;                 // If true, msgstr is not the translation, but just a proposal for a translation
-      IsObjectPascalFormat: TObjectPascalFormat;
+      UserCommentList:TStringList;   // Entire lines, utf8!
+      AutoCommentList:TStringList;   // Entire lines, utf8!
+      MsgId:widestring;              // singular and plural are separated by #0, if plural form is present
+      MsgStr:widestring;             // plural forms are separated by #0, if present
       constructor Create;
       destructor Destroy; override;
       procedure Assign (po:TPoEntry);
       procedure Clear;
-      procedure WriteToStream (str:TStream; AWidth: integer = 70);  // Adds an empty line afterwards.
-      function IsPluralForm:boolean;   // Returns true if MsgId is a plural form
+      procedure WriteToStream (str:TStream);  // Adds an empty line afterwards.
     end;
   TPoEntryList=
     class
     private
       list:TStringList; // Strings are searchkeys, objects are TList of TPoEntries
-      function GetSearchKey (MsgId:string):string;
-    function GetHeaderEntry(const _Label: string): string;
+      function GetSearchKey (MsgId:widestring):utf8string;
     public
       constructor Create;
       destructor Destroy; override;
       procedure LoadFromFile (filename:string);
-      procedure SaveToFile (filename:string; AWidth: integer = 70);
+      procedure SaveToFile (filename:string);
       procedure Clear;
-      function Find (MsgId:string):TPoEntry;
-      function Delete (MsgId:string):boolean;  // True if found and deleted, false if not found
+      function Find (MsgId:widestring):TPoEntry;
+      function Delete (MsgId:widestring):boolean;  // True if found and deleted, false if not found
       procedure Add (entry:TPoEntry); // Will fail if MsgId exists. Entry is copied.
-      function Count:integer;
-      function Language: string; // returns the X-Poedit-Language entry in the '' translation
-      function ProjectAndVersion: string; // returns the Project-Id-Version entry in the '' translation
 
       // Iterate through all items. When nil is returned, no more elements are there.
       function FindFirst:TPoEntry;
@@ -86,77 +67,27 @@ type
       // of the times, but it will return an entry each time the whitespace
       // after an entry has been reached. The entry is only valid until the next
       // call to AddLine().
-      function AddLine (line:string):TPoEntry;
+      function AddLine (line:utf8string):TPoEntry;
 
       // Read a couple of lines from file and return next TPoEntry. Returns nil if no more entries.
       function ReadNextEntry (var tf:TextFile):TPoEntry;
       property CurrentLineNumber:integer read LineNumber;
     end;
 
-function GetPoHeaderEntry(const _Header: string; const _Label: string): string;
-procedure SetPoHeaderEntry(var _Header: string; const _Label: string; const _Value: string);
 
-// These use utf-8 when writing!
-procedure StreamWrite (s:TStream;const line:string);
-procedure StreamWriteln (s:TStream;const line:string='');
-procedure StreamWriteMinimumPoHeader (s:TStream;const appname:string);
-procedure StreamWriteDefaultPoTemplateHeader (s:TStream;const appname:string);
+procedure StreamWrite (s:TStream;line:utf8string);
+procedure StreamWriteln (s:TStream;line:utf8string='');
+procedure StreamWriteMinimumPoHeader (s:TStream;appname:widestring);
+procedure StreamWriteDefaultPoTemplateHeader (s:TStream;appname:widestring);
+
 
 implementation
 
 uses
-  Math, SysUtils, gnugettext, u_dzQuicksort, StrUtils;
+  Math, SysUtils, gnugettext;
 
-function GetPoHeaderEntry(const _Header: string; const _Label: string): string;
-var
-  sl: TStringList;
-  s: string;
+procedure StreamWriteMinimumPoHeader (s:TStream;appname:widestring);
 begin
-  Result := '';
-  sl := TStringList.Create;
-  try
-    sl.Text := _Header;
-    for s in sl do begin
-      if StartsText(_Label, s) then begin
-        Result := Trim(Copy(s, Length(_Label) + 1));
-        exit;
-      end;
-    end;
-  finally
-    FreeAndNil(sl);
-  end;
-end;
-
-procedure SetPoHeaderEntry(var _Header: string; const _Label: string; const _Value: string);
-var
-  i: Integer;
-  s: string;
-  sl: TStringList;
-  Found: boolean;
-begin
-  sl := TStringList.Create;
-  try
-    sl.Text := _Header;
-    Found := false;
-    for i := 0 to sl.Count - 1 do begin
-      s := sl[i];
-      if StartsText(_Label, s) then begin
-        Found := true;
-        sl[i] := _Label + ' ' + _Value;
-        break;
-      end;
-    end;
-    if not Found then
-      sl.Add(_Label + ' ' + _Value);
-    _Header := sl.Text;
-  finally
-    FreeAndNil(sl);
-  end;
-end;
-
-procedure StreamWriteMinimumPoHeader (s:TStream;const appname:string);
-begin
-  StreamWriteln(s, '#, fuzzy');
   StreamWriteln(s, 'msgid ""');
   StreamWriteln(s, 'msgstr ""');
   StreamWriteln(s, '"POT-Creation-Date: ' + FormatDateTime('yyyy-mm-dd hh:nn', now) + '\n"');
@@ -165,18 +96,17 @@ begin
   StreamWriteln(s, '"MIME-Version: 1.0\n"');
   StreamWriteln(s, '"Content-Type: text/plain; charset=UTF-8\n"');
   StreamWriteln(s, '"Content-Transfer-Encoding: 8bit\n"');
-  StreamWriteln(s, '"X-Generator: ' + appname + '\n"');
+  StreamWriteln(s, '"X-Generator: ' + utf8encode(appname) + '\n"');
   Streamwriteln(s, '');
 end;
 
-procedure StreamWriteDefaultPoTemplateHeader (s:TStream;const appname:string);
+procedure StreamWriteDefaultPoTemplateHeader (s:TStream;appname:widestring);
 begin
   StreamWriteln(s, '# SOME DESCRIPTIVE TITLE.');
   StreamWriteln(s, '# Copyright (C) YEAR THE PACKAGE''S COPYRIGHT HOLDER');
   StreamWriteln(s, '# This file is distributed under the same license as the PACKAGE package.');
   StreamWriteln(s, '# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.');
-  StreamWriteln(s, '# ');
-  StreamWriteln(s, '#, fuzzy');
+  StreamWriteln(s, '#');
   StreamWriteln(s, 'msgid ""');
   StreamWriteln(s, 'msgstr ""');
   StreamWriteln(s, '"Project-Id-Version: PACKAGE VERSION\n"');
@@ -186,33 +116,27 @@ begin
   StreamWriteln(s, '"MIME-Version: 1.0\n"');
   StreamWriteln(s, '"Content-Type: text/plain; charset=UTF-8\n"');
   StreamWriteln(s, '"Content-Transfer-Encoding: 8bit\n"');
-  StreamWriteln(s, '"X-Generator: ' + appname + '\n"');
+  StreamWriteln(s, '"X-Generator: ' + utf8encode(appname) + '\n"');
   Streamwriteln(s, '');
 end;
 
-procedure StreamWriteln (s:TStream;const line:string='');
+procedure StreamWriteln (s:TStream;line:utf8string='');
 begin
   StreamWrite (s, line);
   StreamWrite (s, sLineBreak);
 end;
 
-procedure StreamWrite (s:TStream;const line:string);
+procedure StreamWrite (s:TStream;line:utf8string);
 var
   len:integer;
-  utf8line:utf8string;
 begin
-  {$ifdef UNICODE} // >=D2009
-  utf8line:=utf8string(line);
-  {$else}
-  utf8line := UTF8Encode(line);
-  {$endif}
-  len:=length(utf8line);
+  len:=length(line);
   if len>0 then
-    if s.Write(utf8line[1],len)<>len then
+    if s.Write(line[1],len)<>len then
       raise Exception.Create (_('Error when writing to stream.'));
 end;
 
-function String2PO (const s:string):string;
+function String2PO (s:utf8string):utf8string;
 // Converts a string to the syntax that is used in .po files
 var
   i: integer;
@@ -224,9 +148,8 @@ begin
   for i := 1 to length(s) do begin
     c := s[i];
     case c of
-      #32..#33, #35..pred('\'), succ('\')..#65535:
+      #32..#33, #35..pred('\'),succ('\')..#255:
         begin
-          // This will also support 20-bit unicode points
           if escnext then Result:=Result+'\';
           Result := Result + c;
           escnext:=False;
@@ -262,10 +185,10 @@ end;
 
 { TPoParser }
 
-function TPoParser.AddLine(line: string):TPoEntry;
+function TPoParser.AddLine(line: utf8string):TPoEntry;
 var
   i:integer;
-  value:string;
+  value:utf8string;
 begin
   try
     Inc (LineNumber);
@@ -275,31 +198,6 @@ begin
         entry.Clear;
         entryhasdata:=False;
       end;
-      if copy(line,1,2)='#,' then
-      begin
-        if (pos(', fuzzy', line) > 0) then
-        begin
-          entry.Fuzzy:=True;
-        end;
-
-        if (pos(', no-object-pascal-format', line) > 0) then
-        begin
-          entry.IsObjectPascalFormat := opfFalse;
-        end
-        else
-        if (pos(', object-pascal-format', line) > 0) then
-        begin
-          entry.IsObjectPascalFormat := opfTrue;
-        end
-        else
-        begin
-          entry.IsObjectPascalFormat := opfUndefined;
-        end;
-      end
-      else
-      if copy(line,1,2)='#~' then
-        entry.AutoCommentList.Add(line)
-      else
       if copy(line,1,2)='# ' then
         entry.UserCommentList.Add(line)
       else
@@ -310,7 +208,7 @@ begin
           IsMsgId:=True;
           delete (line,1,12);
           line:=trim(line);
-          entry.MsgId:=entry.MsgId+PluralSplitter;
+          entry.MsgId:=entry.MsgId+#0;
         end;
         if uppercase(copy(line,1,5))='MSGID' then begin
           IsMsgId:=True;
@@ -322,7 +220,7 @@ begin
           delete (line,1,6);
           if copy(line,1,1)='[' then begin
             if copy(line,2,1)<>'0' then
-              entry.MsgStr:=entry.MsgStr+PluralSplitter;
+              entry.MsgStr:=entry.MsgStr+#0;
             delete (line,1,3);
           end;
           line:=trim(line);
@@ -335,6 +233,7 @@ begin
           if value[i]='\' then begin
             delete (value,i,1);
             case value[i] of
+              '0':value[i]:=#0;
               'n':value[i]:=#10;
               't':value[i]:=#9;
               'x':begin
@@ -347,16 +246,12 @@ begin
           end;
           inc (i);
         end;
-        if IsMsgId then entry.MsgId:=entry.MsgId+value
-                   else entry.MsgStr:=entry.MsgStr+value;
+        if IsMsgId then entry.MsgId:=entry.MsgId+utf8decode(value)
+                   else entry.MsgStr:=entry.MsgStr+utf8decode(value);
       end;
     end;
     if (line='') and entryhasdata then begin
-      if (entry.MsgId='') and (entry.MsgStr='') then begin
-        // This entry contains nothing. It's probably a deleted entry (using #~)
-        Result:=nil;
-      end else
-        Result:=entry;
+      Result:=entry;
     end else begin
       Result:=nil;
     end;
@@ -379,21 +274,12 @@ begin
   inherited;
 end;
 
-{$ifndef UNICODE} // <D2009
-function UTF8ToUnicodeString(aText: RawByteString): string;
-begin
-  result := Utf8ToAnsi(aText);
-end;
-{$endif}
-
 function TPoParser.ReadNextEntry(var tf: TextFile): TPoEntry;
 var
-  rline:RawByteString;
   line:string;
 begin
   while not eof(tf) do begin
-    Readln (tf, rline);
-    line:= UTF8ToUnicodeString(rline);
+    Readln (tf, line);
     Result:=AddLine(line);
     if Result<>nil then
       exit;
@@ -408,30 +294,20 @@ procedure TPoEntry.Assign(po: TPoEntry);
 begin
   UserCommentList.Assign(po.UserCommentList);
   AutoCommentList.Assign(po.AutoCommentList);
-
-  FIndex := po.FIndex;
-  MsgId     := po.MsgId;
-  MsgStr    := po.MsgStr;
-  Fuzzy     := po.Fuzzy;
-  IsObjectPascalFormat := po.IsObjectPascalFormat;
+  MsgId:=po.MsgId;
+  MsgStr:=po.MsgStr;
 end;
 
 procedure TPoEntry.Clear;
 begin
   UserCommentList.Clear;
   AutoCommentList.Clear;
-
-  FIndex := -1;
-  MsgId     := '';
-  MsgStr    := '';
-  Fuzzy     := False;
-  IsObjectPascalFormat := opfUndefined;
+  MsgId:='';
+  MsgStr:='';
 end;
 
 constructor TPoEntry.Create;
 begin
-  inherited Create;
-  FIndex := -1; // invalid
   UserCommentList:=TStringList.Create;
   AutoCommentList:=TStringList.Create;
 end;
@@ -443,26 +319,17 @@ begin
   inherited;
 end;
 
-function TPoEntry.IsPluralForm: boolean;
-begin
-  Result:=pos(PluralSplitter,MsgId)>=1;
-end;
-
-function FindBestBreak (s:string;LineWidth:integer):integer;
+function FindBestBreak (s:widestring;LineWidth:integer):integer;
 // Returns number of characters to include in the line
 var
   spacepos:integer;
   i,p:integer;
   MaxLength:integer;
 begin
-  if LineWidth = 0 then begin
-    // no line wrapping unless there is a linefeed in the string
-    LineWidth := MaxInt;
-  end;
   p:=pos(#10,s);
   spacepos:=0;
   MaxLength:=min(length(s),LineWidth);
-  if (p>0) and (p<MaxLength) then begin
+  if (p>2) and (p<MaxLength) then begin
     Result:=p;
     exit;
   end;
@@ -493,72 +360,38 @@ begin
   end;
 end;
 
-procedure TPoEntry.WriteToStream (str:TStream; AWidth: integer = 70);
-  procedure WritePart (token:string;msg:string);
+procedure TPoEntry.WriteToStream(str: TStream);
+  procedure WritePart (token:utf8string;msg:widestring);
   var
-    IsFirst: boolean;
     p:integer;
-    part:string;
+    part:widestring;
   begin
-    IsFirst := true;
     StreamWrite (str, token+' ');
     while true do begin
-      p:=FindBestBreak (msg,AWidth);
+      p:=FindBestBreak (msg,70);
       part:=copy(msg,1,p);
       delete (msg,1,length(part));
-      if IsFirst and (msg <> '') then begin
-        // prefix any multiline strings with an empty string as the gnu tools do
-        IsFirst := false;
-        StreamWriteln(str, String2po(''));
-      end;
-      StreamWriteln (str, String2PO(part));
+      StreamWriteln (str, String2PO(utf8encode(part)));
       if msg='' then
         break;
     end;
   end;
 var
-  s:string;
+  s:utf8string;
   p:integer;
   idx:integer;
   isplural:boolean;
-  MsgStrCopy:string;
 begin
   // Write comments
-  s := trim(UserCommentList.Text);
-  if s <> '' then
-    s := s + sLineBreak;
-  StreamWrite(str, s);
-
-  s := trim(AutoCommentList.Text);
-  if s <> '' then
-    s := s + sLineBreak;
-  StreamWrite(str, s);
-
-  //*** when fussy or object-pascal-format is set, add a special comment line
-  //    with the key-words
-  if Fuzzy or
-     (IsObjectPascalFormat <> opfUndefined) then
-  begin
-    s := '#';
-
-    // Fuzzy?
-    if Fuzzy then
-      s := s + ', fuzzy';
-
-    //*** object-pascal-Format?
-    case IsObjectPascalFormat of
-      opfTrue : s := s + ', object-pascal-format';
-      opfFalse: s := s + ', no-object-pascal-format';
-      opfUndefined:; //*** do nothing
-    else
-      raise Exception.Create(_('unknown State of IsObjectPascalFormat'));
-    end;
-
-    StreamWriteln(str, s);
-  end;
+  s:=trim(UserCommentList.Text);
+  if s<>'' then s:=s+sLineBreak;
+  StreamWrite (str, s);
+  s:=trim(AutoCommentList.Text);
+  if s<>'' then s:=s+sLineBreak;
+  StreamWrite (str, s);
 
   // Write msgid and msgstr
-  p:=pos(PluralSplitter,MsgId);
+  p:=pos(#0,MsgId);
   isplural:=p<>0;
   if not isplural then
     WritePart ('msgid',MsgId)
@@ -566,23 +399,21 @@ begin
     WritePart ('msgid',copy(MsgId,1,p-1));
     WritePart ('msgid_plural',copy(MsgId,p+1,maxint));
   end;
-  p:=pos(PluralSplitter,MsgStr);
+  p:=pos(#0,MsgStr);
   if (p=0) and (not isplural) then
     WritePart ('msgstr',MsgStr)
   else begin
     idx:=0;
-    MsgStrCopy := MsgStr;
     while true do begin
       if p<>0 then begin
         WritePart ('msgstr['+IntToStr(idx)+']',copy(MsgStr,1,p-1));
         delete (MsgStr,1,p);
       end else begin
         WritePart ('msgstr['+IntToStr(idx)+']',MsgStr);
-        Msgstr := MsgStrCopy;
         break;
       end;
       inc (idx);
-      p:=pos(PluralSplitter,MsgStr);
+      p:=pos(#0,MsgStr);
     end;
   end;
 
@@ -598,7 +429,7 @@ var
   l:TList;
   idx:integer;
   po:TPoEntry;
-  searchkey:string;
+  searchkey:utf8string;
 begin
   searchkey:=GetSearchKey(entry.MsgId);
   if list.Find(searchkey,idx) then begin
@@ -631,11 +462,6 @@ begin
   list.Clear;
 end;
 
-function TPoEntryList.Count: integer;
-begin
-  Result:=list.Count;
-end;
-
 constructor TPoEntryList.Create;
 begin
   list:=TStringList.Create;
@@ -644,7 +470,7 @@ begin
   list.Sorted:=True;
 end;
 
-function TPoEntryList.Delete(MsgId: string): boolean;
+function TPoEntryList.Delete(MsgId: widestring): boolean;
 var
   p:Integer;
   l:TList;
@@ -677,7 +503,7 @@ begin
   inherited;
 end;
 
-function TPoEntryList.Find(MsgId: string):TPoEntry;
+function TPoEntryList.Find(MsgId: widestring):TPoEntry;
 var
   p:Integer;
   l:TList;
@@ -734,38 +560,16 @@ begin
   end;
 end;
 
-function TPoEntryList.GetSearchKey(MsgId: string): string;
+function TPoEntryList.GetSearchKey(MsgId: widestring): utf8string;
 var
   p:integer;
 begin
   p:=pos(#10,MsgId);
   if p<>0 then begin
-    Result:=copy(MsgId,1,p-1);
+    Result:=utf8encode(copy(MsgId,1,p-1));
   end else begin
-    Result:=MsgId;
+    Result:=utf8encode(MsgId);
   end;
-end;
-
-function TPoEntryList.GetHeaderEntry(const _Label: string): string;
-var
-  Entry: TPoEntry;
-begin
-  Result := '';
-  Entry :=  Find('');
-  if not Assigned(Entry) then
-    exit;
-
-  Result := GetPoHeaderEntry(Entry.MsgStr, _Label);
-end;
-
-function TPoEntryList.ProjectAndVersion: string;
-begin
-  Result := GetHeaderEntry(PO_HEADER_PROJECT_ID_VERSION);
-end;
-
-function TPoEntryList.Language: string;
-begin
-  Result := GetHeaderEntry(PO_HEADER_LANGUAGE);
 end;
 
 procedure TPoEntryList.LoadFromFile(filename: string);
@@ -773,21 +577,17 @@ var
   tf:TextFile;
   pop:TPoParser;
   pe:TPoEntry;
-  Idx: integer;
 begin
   FileMode:=fmOpenRead;
   AssignFile (tf,filename);
   Reset (tf);
   try
-    Idx := 0;
     pop:=TPoParser.Create;
     try
       while true do begin
         pe:=pop.ReadNextEntry(tf);
         if pe=nil then
           break;
-        pe.FIndex := Idx;
-        Inc(Idx);
         Add (pe);
       end;
     finally
@@ -798,119 +598,27 @@ begin
   end;
 end;
 
-type
-  TPoEntrySorter = class
-  private
-    FMaxIdx: integer;
-    FLst: TList;
-    function doCompare(AIdx1, AIdx2: integer): integer;
-    procedure doSwap(AIdx1, AIdx2: integer);
-    function GetItems(AIdx: integer): TPoEntry;
-  public
-    constructor Create;
-    destructor Destroy; override;
-    procedure Add(Ape: TPoEntry);
-    procedure Sort;
-    function Count: integer;
-    property Items[AIdx: integer]: TPoEntry read GetItems; default;
-  end;
-
-function TPoEntrySorter.Count: integer;
-begin
-  Result := FLst.Count;
-end;
-
-constructor TPoEntrySorter.Create;
-begin
-  inherited Create;
-  FLst := TList.Create;
-end;
-
-destructor TPoEntrySorter.Destroy;
-begin
-  FreeAndNil(FLst);
-  inherited;
-end;
-
-procedure TPoEntrySorter.Add(Ape: TPoEntry);
-begin
-  if Ape.FIndex > FMaxIdx then
-    FMaxIdx := Ape.FIndex;
-  Flst.Add(Ape);
-end;
-
-procedure TPoEntrySorter.Sort;
-var
-  i: integer;
-  pe: TPoEntry;
-begin
-  for i := 0 to Flst.Count - 1 do begin
-    pe := Flst[i];
-    if pe.FIndex = -1 then begin
-      Inc(FMaxIdx);
-      pe.FIndex := FMaxIdx;
-    end;
-  end;
-  u_dzQuicksort.QuickSort(0, Flst.Count - 1, doCompare, doSwap);
-end;
-
-function TPoEntrySorter.doCompare(AIdx1, AIdx2: integer): integer;
-var
-  pe1: TPoEntry;
-  pe2: TPoEntry;
-begin
-  pe1 := FLst[AIdx1];
-  pe2 := FLst[AIdx2];
-  Result := CompareValue(pe1.FIndex, pe2.FIndex);
-end;
-
-procedure TPoEntrySorter.doSwap(AIdx1, AIdx2: integer);
-begin
-  FLst.Exchange(AIdx1, AIdx2);
-end;
-
-function TPoEntrySorter.GetItems(AIdx: integer): TPoEntry;
-begin
-  Result := FLst[AIdx];
-end;
-
-procedure TPoEntryList.SaveToFile (filename:string; AWidth: integer = 70);
+procedure TPoEntryList.SaveToFile(filename: string);
 var
   outfile:TFileStream;
   pe:TPoEntry;
-  i: Integer;
-  Sorter: TPoEntrySorter;
 begin
-  outfile := nil;
-  Sorter := TPoEntrySorter.Create;
+  outfile:=TFileStream.Create (filename, fmCreate);
   try
-    outfile:=TFileStream.Create (filename, fmCreate);
     // Write header
     pe:=Find('');
     if pe<>nil then
-      Sorter.Add(pe);
+      pe.WriteToStream(outfile);
 
     // Write the rest
     pe:=FindFirst;
     while pe<>nil do begin
       if pe.MsgId<>'' then
-        Sorter.Add(pe);
+        pe.WriteToStream(outfile);
       pe:=FindNext (pe);
-    end;
-
-    Sorter.Sort;
-
-    for i := 0 to Sorter.Count - 1 do begin
-      pe := Sorter[i];
-      if pe.MsgId='' then
-        // always wrap the header
-        pe.WriteToStream(outfile, 70)
-      else
-        pe.WriteToStream(outfile, AWidth);
     end;
   finally
     FreeAndNil (outfile);
-    FreeAndNil(Sorter);
   end;
 end;
 

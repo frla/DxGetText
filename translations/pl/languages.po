@@ -5,33 +5,30 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: DXGETTEXT LANGUAGES\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2003-05-05 12:39\n"
-"PO-Revision-Date: 2005-12-03 22:10+0100\n"
+"PO-Revision-Date: 2005-03-24 09:45+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: dxgettext 1.4\n"
-"Last-Translator: Mateusz Gola <dr.prozac@neostrada.pl>\n"
-"Language-Team: Mateusz Gola <dr.prozac@neostrada.pl>\n"
-"X-Poedit-Language: Polish\n"
-"X-Poedit-Country: POLAND\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Last-Translator: Mateusz [PEYN] Adamus <peyn@tlen.pl>\n"
+"Language-Team: \n"
 
 #. Language in the asian country of approximately the same name
 msgid "Abkhazian"
-msgstr "Abchaski"
+msgstr ""
 
 #. Dutch-like language in South Africa
 msgid "Afrikaans"
-msgstr "Afrykanerski"
+msgstr ""
 
 #. Language in Albania
 msgid "Albanian"
 msgstr "Albański"
 
 msgid "American English"
-msgstr "Angielski (Stany Zjednoczone)"
+msgstr "Angielski amerykański"
 
 msgid "Arabic"
 msgstr "Arabski"
@@ -41,10 +38,10 @@ msgid "Armenian"
 msgstr "Armeński"
 
 msgid "Australian English"
-msgstr "Angielski (Australia)"
+msgstr "Angielski australijski"
 
 msgid "Austrian German"
-msgstr "Niemiecki (Austria)"
+msgstr "Niemiecki austriacki"
 
 #. Asian language from a nation of the same name
 msgid "Azerbaijani"
@@ -68,15 +65,15 @@ msgstr "Bośniacki"
 
 #. Language in small part of France
 msgid "Breton"
-msgstr "Bretoński"
+msgstr ""
 
 #. Language of Brazil
 msgid "Brazilian Portuguese"
-msgstr "Portugaliski (Brazylia)"
+msgstr "Portugalski brazylijski"
 
 #. Language of England
 msgid "British English"
-msgstr "Angielski (Wielka Brytania)"
+msgstr "Angielski brytyjski"
 
 #. Language of Bulgaria, Europe
 msgid "Bulgarian"
@@ -84,10 +81,10 @@ msgstr "Bułgarski"
 
 #. Language of Burma, Asia
 msgid "Burmese"
-msgstr "Burmeński"
+msgstr "Burmański"
 
 msgid "Canadian English"
-msgstr "Angielski (Kanada)"
+msgstr "Angielski kanadyjski"
 
 #. Language of Andorra, a small part of France and a small part of Spain
 msgid "Catalan"
@@ -106,7 +103,7 @@ msgstr "Korsykański"
 
 #. Croatia is just east of Italy
 msgid "Croatian"
-msgstr "Chorwacki"
+msgstr ""
 
 #. Language of the Czech Republic, Europe
 msgid "Czech"
@@ -133,7 +130,7 @@ msgstr "Estoński"
 
 #. Faroese is spoken on the Faroe islands, which is part of Denmark, Europe
 msgid "Faroese"
-msgstr "Faroese"
+msgstr ""
 
 #. The same language as Dutch, but the version that is spoken in Belgium, Europe
 msgid "Flemish"
@@ -173,7 +170,7 @@ msgstr "Grenlandzki"
 
 #. A language spoken in India
 msgid "Gujarati"
-msgstr "Gudżarati"
+msgstr ""
 
 #. Language spoken on haiti and The Bahamas (amongst immigrants). Also named Creole.
 msgid "Haitian"
@@ -185,7 +182,7 @@ msgstr "Hebrajski"
 
 #. The largest language in India
 msgid "Hindi"
-msgstr "Hinduski"
+msgstr "Hindi"
 
 #. The language of Hungary, Europe
 msgid "Hungarian"
@@ -221,7 +218,7 @@ msgstr "Kaszmirski"
 
 #. Language of Kazakhstan, a former soviet republic
 msgid "Kazakh"
-msgstr "Kazachski"
+msgstr "Kazaski"
 
 #. Language of Cambodia, Asia
 msgid "Khmer"
@@ -241,7 +238,7 @@ msgstr "Kurdyjski"
 
 #. Language of the ancient romans. Language used by the catholic christian church.
 msgid "Latin"
-msgstr "Łaciński"
+msgstr "Łacina"
 
 #. Language of Latvia, North Europe
 msgid "Latvian"
@@ -249,7 +246,7 @@ msgstr "Łotewski"
 
 #. Language in Congo, Africa
 msgid "Lingala"
-msgstr "Lingala"
+msgstr ""
 
 #. Language of Lithuania, North Europe
 msgid "Lithuanian"
@@ -265,7 +262,7 @@ msgstr "Macedoński"
 
 #. Language on Malta, an Island in the mediterranean, the ocean between europe and africa
 msgid "Maltese"
-msgstr "Maltański"
+msgstr ""
 
 #. The language of Moldavia, Asia
 msgid "Moldavian"
@@ -277,23 +274,25 @@ msgstr "Mongolski"
 
 #. An official language in New Zealand (besides English)
 msgid "Maori"
-msgstr "Maori"
+msgstr ""
 
 #. Language of the country Nepal
 msgid "Nepali"
-msgstr "Nepalski"
+msgstr ""
 
 #. The common name of the language, which in Norway, Europe, is named "Bokmaal"
 msgid "Norwegian"
 msgstr "Norweski"
 
 #. The language in Norway, Europe, that is very close to Danish
+#, fuzzy
 msgid "Norwegian Bokmaal"
-msgstr "Norweski (Bokmal)"
+msgstr "Norweski Bokmaal"
 
 #. The language that is spoken in mostly western Norway
+#, fuzzy
 msgid "Norwegian Nynorsk"
-msgstr "Norweski (Nynorsk)"
+msgstr "Norweski Nynorsk"
 
 #. Language of Iran, Asia
 msgid "Persian"
@@ -309,7 +308,7 @@ msgstr "Portugalski"
 
 #. Language in a part of Switzerland, Europe
 msgid "Raeto-Romance"
-msgstr "Retormański"
+msgstr ""
 
 #. Language of Romania, Europe
 msgid "Romanian"
@@ -333,7 +332,7 @@ msgstr "Słoweński"
 
 #. Language of Somalia, East Africa
 msgid "Somali"
-msgstr "Somalijski"
+msgstr ""
 
 #. Language of Spain, Europe
 msgid "Spanish"
@@ -345,15 +344,15 @@ msgstr "Swahili"
 
 #. Language of Sweden, North Europe
 msgid "Swedish"
-msgstr "Szwedzki"
+msgstr "Szwecki"
 
 #. Most widely spoken language in Switzerland
 msgid "Swiss German"
-msgstr "Niemiecki (Szwajcaria)"
+msgstr "Niemiecki szwajcarski"
 
 #. Language of Tajikistan, a former soviet republic
 msgid "Tajik"
-msgstr "Tadżycki"
+msgstr ""
 
 #. Language in the northern part of Sri Lanka, an island close to India
 msgid "Tamil"
@@ -369,7 +368,7 @@ msgstr "Tybetański"
 
 #. Language of Turkmenistan, a former soviet republic
 msgid "Turkmen"
-msgstr "Turkmeński"
+msgstr ""
 
 #. Language of Turkey
 msgid "Turkish"
@@ -381,7 +380,7 @@ msgstr "Ukraiński"
 
 #. A language spoken in various countries
 msgid "Urdu"
-msgstr "Urdu"
+msgstr ""
 
 #. language of Uzbekistan, a former soviet republic
 msgid "Uzbek"
@@ -393,7 +392,7 @@ msgstr "Wietnamski"
 
 #. The french spoken in south Belgium, Europe
 msgid "Walloon"
-msgstr "Waloński"
+msgstr ""
 
 #. The language in Wales, Great Britain, Europe
 msgid "Welsh"
@@ -401,5 +400,5 @@ msgstr "Walijski"
 
 #. Language spoken in South Africa
 msgid "Zulu"
-msgstr "Zulu"
+msgstr ""
 

@@ -27,8 +27,7 @@ uses
   xgettext in 'xgettext.pas',
   xgettexttools in 'xgettexttools.pas',
   consoleapp in 'consoleapp.pas',
-  consoleoutput in 'consoleoutput.pas',
-  ignoredetector in 'ignoredetector.pas';
+  consoleoutput in 'consoleoutput.pas';
 
 { Main }
 

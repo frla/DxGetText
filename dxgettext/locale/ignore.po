@@ -16,56 +16,6 @@ msgstr ""
 msgid "..."
 msgstr ""
 
-#. frmMain..panelClient..panel1..lbLoadInfo..Caption
-#: bplPoMerge/main_translation.dfm:155
-#. frmMain..panelClient..panel1..lbEntriesInfo..Caption
-#: bplPoMerge/main_translation.dfm:162
-msgid "-"
-msgstr ""
-
-#. frmMain..panelClient..panel1..edBPL..Text
-#: bplPoMerge/main_translation.dfm:170
-msgid "c:\\winnt\\system32\\*.bpl"
-msgstr ""
-
-#. frmMain..panelClient..panel1..edLang..Text
-#: bplPoMerge/main_translation.dfm:178
-msgid ".de"
-msgstr ""
-
-#. frmMain..MainMenu1..N1..Caption
-#: bplPoMerge/main_translation.dfm:241
-msgid "&?"
-msgstr ""
-
-#: msgimport/consoleapp.pas:74
-msgid "msgimport %s"
-msgstr ""
-
-#: msgmkignore/consoleapp.pas:74
-msgid "msgmkignore %s"
-msgstr ""
-
-#: msgremove/consoleapp.pas:79
-msgid "msgremove %s"
-msgstr ""
-
-#. Programmer's name: BLOCK
-#: dxgreg/test.rc:14
-msgid "StringFileInfo"
-msgstr ""
-
-#. Programmer's name: BLOCK
-#: dxgreg/test.rc:16
-msgid "040904B0"
-msgstr ""
-
-#. FormConfig..EditMask..Text
-#: uconfig.dfm:37
-msgid "*.pas *.dfm *.c *.cpp *.inc *.rc *.dfm *.xfm "
-"*.dpr"
-msgstr ""
-
 #. FormConfig..EditMask..Text
 #: uconfig.dfm:42
 msgid "*.pas *.dfm"
